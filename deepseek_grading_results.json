@@ -1,0 +1,4890 @@
+[
+  {
+    "qid": "Problemone",
+    "subid": null,
+    "subquestion": "A single die is tossed; then n coins are tossed where n is the number shown on the die. Show that the probability of exactly two heads is close to 0.2578.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear and rigorous reasoning. Each step is accurately calculated and logically structured.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of the probability for each die outcome."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate calculation of the probability for exactly 2 heads when n=2."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation for exactly 2 heads when n=3."
+      },
+      {
+        "step": 4,
+        "comment": "Proper calculation for exactly 2 heads when n=4."
+      },
+      {
+        "step": 5,
+        "comment": "Accurate probability for exactly 2 heads when n=5."
+      },
+      {
+        "step": 6,
+        "comment": "Correct computation for exactly 2 heads when n=6."
+      },
+      {
+        "step": 7,
+        "comment": "Proper setup for the total probability calculation."
+      },
+      {
+        "step": 8,
+        "comment": "Correct simplification and combination of terms."
+      },
+      {
+        "step": "final",
+        "comment": "Accurate final probability calculation and decimal conversion."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "1",
+    "subquestion": "Verify that F_X(x) = 1 - 1/x² (x ≥ 1) is a valid cumulative distribution function.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly verified all necessary conditions for a valid CDF with clear and rigorous reasoning.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly computes the derivative of F_X(x)."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly evaluates the derivative to ensure non-negativity for x ≥ 1."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly checks the limit as x approaches 1 from the right."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly checks the limit as x approaches infinity."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly verifies right-continuity of F_X(x)."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that F_X(x) is a valid CDF."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2",
+    "subquestion": "Find the probability density function f_X(x), and specify it on the entire real axis.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student correctly differentiated the CDF to find the PDF and specified it accurately on the entire real axis. The solution is well-structured and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the need to differentiate the CDF to find the PDF."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately computes the derivative, resulting in the correct expression for the PDF."
+      },
+      {
+        "step": 3,
+        "comment": "Properly specifies the PDF on the entire real axis, including the condition for x < 1."
+      },
+      {
+        "step": "final",
+        "comment": "Clearly presents the final PDF with correct conditions, demonstrating a complete understanding."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "3",
+    "subquestion": "Let the low-water mark be reset to 0, and define Z = 10(X - 1). Find the CDF and PDF of Z.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear and rigorous reasoning. Each step logically follows from the previous one, and the final expressions for the CDF and PDF of Z are accurate.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the transformation from X to Z."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately expresses X in terms of Z."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly sets up the CDF of Z using the transformation."
+      },
+      {
+        "step": 4,
+        "comment": "Properly substitutes X in terms of Z to simplify the inequality."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly uses the CDF of X to find F_Z(z)."
+      },
+      {
+        "step": 6,
+        "comment": "Simplifies the expression for F_Z(z) accurately."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly identifies the need to differentiate F_Z(z) to find the PDF."
+      },
+      {
+        "step": 8,
+        "comment": "Accurately differentiates F_Z(z) to find f_Z(z)."
+      },
+      {
+        "step": "final",
+        "comment": "Provides the correct final expressions for both the CDF and PDF of Z."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "a",
+    "subquestion": "Find the posterior distribution for θ given prior Gamma(α, β) and i.i.d. Poisson(θ) data.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step is logically structured and accurately executed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly writes the likelihood function for the Poisson data."
+      },
+      {
+        "step": 2,
+        "comment": "Properly simplifies the likelihood function."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately writes the prior distribution for θ."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly applies Bayes' theorem to write the unnormalized posterior."
+      },
+      {
+        "step": 5,
+        "comment": "Substitutes the expressions accurately."
+      },
+      {
+        "step": 6,
+        "comment": "Combines the terms correctly to simplify the expression."
+      },
+      {
+        "step": 7,
+        "comment": "Identifies the form of the posterior distribution accurately."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly concludes the posterior distribution for θ is a Gamma distribution."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "b",
+    "subquestion": "Determine the Bayes estimator of θ under quadratic loss L(a, θ) = (a − θ)².",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and logically structured. The student demonstrates a clear understanding of the Bayes estimator under quadratic loss.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the posterior distribution form."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate likelihood function for Poisson data."
+      },
+      {
+        "step": 3,
+        "comment": "Correct prior distribution for θ, specified as a Gamma distribution."
+      },
+      {
+        "step": 4,
+        "comment": "Proper combination of likelihood and prior to form the posterior."
+      },
+      {
+        "step": 5,
+        "comment": "Correct identification of the posterior as a Gamma distribution."
+      },
+      {
+        "step": 6,
+        "comment": "Correct determination of the Bayes estimator under quadratic loss."
+      },
+      {
+        "step": 7,
+        "comment": "Accurate computation of the expectation of the posterior Gamma distribution."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final expression for the Bayes estimator."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "c",
+    "subquestion": "Given observations [4,0,1,0,0,2,3,1,1,0] and prior α=2, β=1, test H₀: θ ≤ 1.2 vs H₁: θ > 1.2 using zero-one loss.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct with a minor error in the posterior parameter calculation. The decision-making process is clear and follows the zero-one loss criterion correctly.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of the sum of observed data."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the number of observations."
+      },
+      {
+        "step": 3,
+        "comment": "Flawed: The beta_post calculation is incorrect. It should be beta_post = beta / (1 + n * beta)."
+      },
+      {
+        "step": 4,
+        "comment": "Correct calculation of the posterior mean given the parameters."
+      },
+      {
+        "step": 5,
+        "comment": "Correct calculation of the posterior probability P(θ > 1.2) using the given parameters."
+      },
+      {
+        "step": "final",
+        "comment": "Correct decision based on zero-one loss, given the calculated probability."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "a",
+    "subquestion": "Define a suitable loss function L(θ, a) for action space A = {a₀, a₁} and states Θ = {θ₀, θ₁}.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student has correctly defined the loss function for all combinations of θ and a, with clear and logical steps. The final summary is also accurate and well-presented.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. The loss is appropriately defined as 0 when the action matches the financially viable state."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The loss is correctly set to 1 for not taking the action when it is financially viable."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The loss is appropriately higher (3) for taking the action when it is not financially viable."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The loss is correctly set to 0 for not taking the action when it is not financially viable."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The summary accurately represents the loss function for all combinations."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "b",
+    "subquestion": "Compute the pmf of X under both θ₀ and θ₁.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear and rigorous reasoning. Each step is accurately executed, and the final pmf summaries are correct.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the probability under θ₀."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly defines the complementary probability under θ₀."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly defines the probability under θ₁."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly defines the complementary probability under θ₁."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly computes P(X=0 | θ₀)."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly computes P(X=1 | θ₀), including the binomial coefficient."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly computes P(X=2 | θ₀)."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly computes P(X=0 | θ₁)."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly computes P(X=1 | θ₁), including the binomial coefficient."
+      },
+      {
+        "step": 10,
+        "comment": "Correctly computes P(X=2 | θ₁)."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly summarizes the pmf for both θ₀ and θ₁."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "c",
+    "subquestion": "List all non-randomized decision rules D based on x.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student has correctly listed all non-randomized decision rules based on x, with clear and accurate steps.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly lists all possible actions for x = 0."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly lists all possible actions for x = 1."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly lists all possible actions for x = 2."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly combines all actions to list all non-randomized decision rules."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "d",
+    "subquestion": "Compute the risk points for all non-randomized rules in D.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step is accurately executed and clearly explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the loss function."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate computation of the pmf under θ₀."
+      },
+      {
+        "step": 3,
+        "comment": "Accurate computation of the pmf under θ₁."
+      },
+      {
+        "step": 4,
+        "comment": "Correct risk computation for d₁."
+      },
+      {
+        "step": 5,
+        "comment": "Correct risk computation for d₂."
+      },
+      {
+        "step": 6,
+        "comment": "Correct risk computation for d₃."
+      },
+      {
+        "step": 7,
+        "comment": "Correct risk computation for d₄."
+      },
+      {
+        "step": 8,
+        "comment": "Correct risk computation for d₅."
+      },
+      {
+        "step": 9,
+        "comment": "Correct risk computation for d₆."
+      },
+      {
+        "step": 10,
+        "comment": "Correct risk computation for d₇."
+      },
+      {
+        "step": 11,
+        "comment": "Correct risk computation for d₈."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "e",
+    "subquestion": "Find the minimax rule(s) among the non-randomized rules in D.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step is accurately executed, and the final minimax rule is correctly identified.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the loss function based on the problem statement."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately computes the pmf for X under θ₀ with correct values."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately computes the pmf for X under θ₁ with correct values."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly lists all non-randomized decision rules in D."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly computes the risk for each decision rule under θ₀."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly computes the risk for each decision rule under θ₁."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly identifies the minimax rule by finding the smallest maximum risk."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly concludes with the identified minimax rule."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "f",
+    "subquestion": "Sketch the risk set of all randomized rules D and identify admissible rules.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the risk calculation for some decision rules. The identification of admissible rules is accurate.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the loss function based on the problem statement."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately computes the probability mass functions for both states of nature."
+      },
+      {
+        "step": 3,
+        "comment": "Comprehensively lists all non-randomized decision rules."
+      },
+      {
+        "step": 4,
+        "comment": "Mostly correct risk calculations, but there are minor errors in the risk values for some rules (e.g., d₇ and d₈)."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly describes the plotting of the risk set, though no plot is provided."
+      },
+      {
+        "step": 6,
+        "comment": "Accurately identifies the admissible rules from the risk set."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly finalizes the admissible rules, consistent with the previous step."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "g",
+    "subquestion": "Find the risk point of the minimax rule in the randomized set D and compare to the non-randomized.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the explanation and missing values in some steps.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the loss function. Clear and accurate."
+      },
+      {
+        "step": 2,
+        "comment": "Correct computation of pmf under θ₀. Values are accurate."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of pmf under θ₁. Values are accurate."
+      },
+      {
+        "step": 4,
+        "comment": "Correct approach to compute risk, but lacks computed values for each rule."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies the minimax rule among non-randomized rules."
+      },
+      {
+        "step": 6,
+        "comment": "Correct approach for randomized rules, but lacks computed values."
+      },
+      {
+        "step": 7,
+        "comment": "Correct comparison, but lacks detailed justification or values."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion, but could be more detailed."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "h",
+    "subquestion": "Define the minimax rule in the set D in terms of rules in D.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the presentation of the final step.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the loss function."
+      },
+      {
+        "step": 2,
+        "comment": "Correct formula for computing the risk, though the actual computation is not shown."
+      },
+      {
+        "step": 3,
+        "comment": "Correct approach to list risks, but specific values are not provided."
+      },
+      {
+        "step": 4,
+        "comment": "Correct method to identify the maximum risk for each rule."
+      },
+      {
+        "step": 5,
+        "comment": "Correct selection of the minimax rule, but the reasoning could be more detailed."
+      },
+      {
+        "step": "final",
+        "comment": "Correct definition of the minimax rule, but the presentation could be clearer."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "i",
+    "subquestion": "For which prior on {θ₀, θ₁} is the minimax rule in D also a Bayes rule?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with minor issues in the explanation and calculation steps. The final prior values are correct, but some intermediate steps could be more detailed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the minimax rule."
+      },
+      {
+        "step": 2,
+        "comment": "Correct definition of the risk function, but could include more context."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the risk under θ₀, but the expression could be simplified."
+      },
+      {
+        "step": 4,
+        "comment": "Correct computation of the risk under θ₁, but the expression could be simplified."
+      },
+      {
+        "step": 5,
+        "comment": "Correct setup of the Bayes risk expression."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly equates the Bayes risk to the minimax risk, but lacks explanation."
+      },
+      {
+        "step": 7,
+        "comment": "Correct solution for the prior, but the derivation could be more detailed."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final answer for the prior."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "j",
+    "subquestion": "Assume prior P(θ₀) = 0.5. Find the Bayes rule and the Bayes risk.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only a minor error in the calculation of P(θ₀|X=2). The Bayes rule and Bayes risk are correctly determined based on the given steps.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the loss function based on the problem statement."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately computes the probability mass function for X under θ₀."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately computes the probability mass function for X under θ₁."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly sets up the expression for posterior probabilities using Bayes' theorem."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly computes P(X=x) for each x using the law of total probability."
+      },
+      {
+        "step": 6,
+        "comment": "Minor error in P(θ₀|X=2) calculation (should be 0.64 / 0.50 = 1.28, but P(θ₀|X=x) should not exceed 1). This indicates a miscalculation or misunderstanding."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly determines the Bayes action for each x by minimizing expected loss, despite the previous error."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly sets up the expression for Bayes risk."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly calculates the Bayes risk based on the given values."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly summarizes the Bayes rule and Bayes risk, despite the earlier minor error."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "k",
+    "subquestion": "For ε = 0.1, illustrate on the risk set the ε-minimax rules and their risk points.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the explanation of ε-minimax rules. The steps logically follow each other, and the approach is sound. The main improvement needed is in the clarity of defining ε-minimax rules and their graphical representation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. The student identifies the risk points for non-randomized rules, which is essential for the analysis."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The student correctly determines the minimax risk point among non-randomized rules."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The calculation of ε-minimax risk by adding ε to the minimax risk is accurate."
+      },
+      {
+        "step": 4,
+        "comment": "Minor flaw. The explanation could be clearer about how ε-minimax rules are identified (e.g., rules with risk within ε of the minimax risk)."
+      },
+      {
+        "step": 5,
+        "comment": "Minor flaw. The step is correct but could benefit from more detail on how the graphical representation is constructed."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final step logically concludes the process, though the graphical representation could be described more precisely."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "a",
+    "subquestion": "Denoting by F_T(t) and f_T(t) the cdf and the density of T respectively, show that\n\nh_T(t) = f_T(t) / (1 - F_T(t)) = -d/dt log(1 - F_T(t)).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step logically follows from the previous one, and the final conclusion is accurately derived.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly starts with the definition of the hazard function."
+      },
+      {
+        "step": 2,
+        "comment": "Properly applies the definition of conditional probability."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately expresses the probability in terms of the CDF."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly expresses the survival function in terms of the CDF."
+      },
+      {
+        "step": 5,
+        "comment": "Substitutes the expressions correctly into the hazard function."
+      },
+      {
+        "step": 6,
+        "comment": "Recognizes the limit as the derivative of the CDF, which is the density function."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly expresses the hazard function in terms of the density and survival function."
+      },
+      {
+        "step": 8,
+        "comment": "Accurately links the hazard function to the derivative of the log survival function."
+      },
+      {
+        "step": "final",
+        "comment": "Concludes with the correct and complete expression for the hazard function."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "b",
+    "subquestion": "Verify that if T is exponentially distributed, i.e.,\\n\\nf_T(t) = β e^{-tβ}, t > 0\\n\\nwhere β > 0 is a parameter of the distribution then h_T(t) = β, that is, the hazard function is a constant for the exponential distribution.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear understanding of the exponential distribution and hazard function.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the PDF of the exponential distribution."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly derives the CDF from the PDF."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly computes the survival function from the CDF."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly states the definition of the hazard function."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly substitutes the PDF and survival function into the hazard function."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly simplifies the hazard function to a constant."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that the hazard function is constant for the exponential distribution."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "c",
+    "subquestion": "Verify that if T is logistic with parameters μ (real) and β > 0, i.e.,\\n\\nF_T(t) = 1 / (1 + exp(-(t - μ)/β))\n\nthen h_T(t) = (1/β) F_T(t).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear and rigorous reasoning. Each step is logically sound and accurately executed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies and writes the survival function in terms of the CDF."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately simplifies the survival function expression."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly states the definition of the hazard function in terms of the PDF and survival function."
+      },
+      {
+        "step": 4,
+        "comment": "Accurately differentiates the CDF to find the PDF."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly substitutes and simplifies the expressions for the hazard function."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly recognizes and matches the final expression to the required form."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "a",
+    "subquestion": "Show that Yi = logXi is normally distributed and determine its mean and variance. Hence find E[(log(Xi))²].",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear understanding of the problem.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the distribution of Xi as Log-Normal(0, θ)."
+      },
+      {
+        "step": 2,
+        "comment": "Properly defines Yi as the logarithm of Xi."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately determines the distribution of Yi as Normal(0, θ)."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly identifies the mean of Yi as 0."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies the variance of Yi as θ."
+      },
+      {
+        "step": 6,
+        "comment": "Applies the correct formula for E[Yi^2] using properties of normal distribution."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly computes E[Yi^2] as θ."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "b",
+    "subquestion": "Find the Fisher information about θ in one observation and in the sample of n observations.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and clearly reasoned. The student demonstrates a strong understanding of the Fisher information calculation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct log-likelihood function for one observation."
+      },
+      {
+        "step": 2,
+        "comment": "Correct first derivative with respect to θ."
+      },
+      {
+        "step": 3,
+        "comment": "Correct second derivative with respect to θ."
+      },
+      {
+        "step": 4,
+        "comment": "Correct setup for Fisher information using the expected value of the second derivative."
+      },
+      {
+        "step": 5,
+        "comment": "Correct computation of E[[log(x)]²] for a log-normal distribution."
+      },
+      {
+        "step": 6,
+        "comment": "Correct substitution into the Fisher information expression."
+      },
+      {
+        "step": 7,
+        "comment": "Correct simplification of the Fisher information for one observation."
+      },
+      {
+        "step": "final",
+        "comment": "Correct computation of the Fisher information for the sample of n observations."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "c",
+    "subquestion": "Find the MLE of h(θ) = θ and show that it is unbiased. Is it the UMVUE? Justify.",
+    "score": 5,
+    "total": 5,
+    "feedback": "The student's solution is excellent, with correct and rigorous reasoning throughout. Each step is well-justified and logically structured, leading to the correct conclusion.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct likelihood function for the log-normal distribution."
+      },
+      {
+        "step": 2,
+        "comment": "Correct log-likelihood derivation."
+      },
+      {
+        "step": 3,
+        "comment": "Correct differentiation of the log-likelihood."
+      },
+      {
+        "step": 4,
+        "comment": "Correct setting of the derivative to zero for MLE."
+      },
+      {
+        "step": 5,
+        "comment": "Correct solution for the MLE of θ."
+      },
+      {
+        "step": 6,
+        "comment": "Correct setup for checking unbiasedness."
+      },
+      {
+        "step": 7,
+        "comment": "Correct calculation showing the MLE is unbiased."
+      },
+      {
+        "step": 8,
+        "comment": "Correct justification for UMVUE."
+      },
+      {
+        "step": "final",
+        "comment": "Correct and concise conclusion."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "d",
+    "subquestion": "Find the MLE of h̃(θ) = √θ and determine its asymptotic distribution.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the asymptotic distribution derivation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct log-likelihood function for the log-normal distribution."
+      },
+      {
+        "step": 2,
+        "comment": "Correct differentiation of the log-likelihood function."
+      },
+      {
+        "step": 3,
+        "comment": "Correct setting of the derivative to zero for MLE."
+      },
+      {
+        "step": 4,
+        "comment": "Correct solution for the MLE of θ."
+      },
+      {
+        "step": 5,
+        "comment": "Correct application of the transformation to find the MLE of h̃(θ)."
+      },
+      {
+        "step": 6,
+        "comment": "Correct asymptotic distribution of θ̂, but the variance could be more clearly derived."
+      },
+      {
+        "step": 7,
+        "comment": "Correct use of the delta method, but the variance expression could be more precise."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final expression for the MLE and its asymptotic distribution, though the variance could be more rigorously justified."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "e",
+    "subquestion": "Prove the family L(X, θ) has a monotone likelihood ratio in T = ∑(log(Xi))².",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step logically follows from the previous one, and the conclusion is correctly derived.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly writes the likelihood function for the log-normal distribution."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly takes the natural logarithm to simplify the likelihood function."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly simplifies the log-likelihood function."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly rearranges terms to isolate the sum of squares of log(Xi)."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies T as the statistic of interest."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly expresses the log-likelihood in terms of T."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly considers the likelihood ratio for two parameter values."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly expresses the log of the likelihood ratio."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly determines the sign of the derivative of log R(T) with respect to T."
+      },
+      {
+        "step": 10,
+        "comment": "Correctly concludes that the derivative is positive given θ1 < θ2."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly concludes that the likelihood ratio is increasing in T, proving monotone likelihood ratio."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "f",
+    "subquestion": "Argue that a UMP α-size test of H₀: θ ≤ θ₀ vs. H₁: θ > θ₀ exists and describe it.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the distribution of the test statistic under H₀ and the critical value calculation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the distribution of log(Xi)."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the sample mean of log(Xi) as a sufficient statistic."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly determines the distribution of the sample mean Y."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly formulates the test statistic T."
+      },
+      {
+        "step": 5,
+        "comment": "Flawed: The distribution of T under H₀ should be θ₀ * χ²(1), not just χ²(1)."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly identifies the critical region for the test."
+      },
+      {
+        "step": 7,
+        "comment": "Flawed: The critical value c should account for θ₀, i.e., c = θ₀ * χ²(1, 1-α)."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly describes the UMP test, but the critical value should be adjusted as noted."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "g",
+    "subquestion": "Find the threshold constant and determine the UMP α-size test φ∗ for H₀: θ ≤ θ₀ vs. H₁: θ > θ₀.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the explanation of the likelihood ratio test statistic and its simplification. The steps logically lead to the correct UMP test, but some expressions could be clarified.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the likelihood function for the given distribution."
+      },
+      {
+        "step": 2,
+        "comment": "The likelihood ratio test statistic is correctly formulated, but the notation could be clearer (e.g., specifying θ as θ₁ in the alternative hypothesis)."
+      },
+      {
+        "step": 3,
+        "comment": "Simplification is correct, but the explanation could be more detailed to show the steps taken."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly identifies the test statistic T(X) for the UMP test."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies the critical region for the test."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly sets up the equation for the threshold constant c, though the notation could be more precise."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly defines the UMP α-size test φ∗, clearly stating the decision rule."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "a",
+    "subquestion": "Show that the family {L(X, θ)}, θ > 0 has a monotone likelihood ratio in X(n).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identified the likelihood function, sufficient statistic, and demonstrated the monotone likelihood ratio property rigorously and clearly.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the likelihood function for the given uniform distribution."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately identifies the sufficient statistic X(n) as the maximum order statistic."
+      },
+      {
+        "step": 3,
+        "comment": "Properly expresses the likelihood function in terms of X(n)."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly sets up the likelihood ratio for two different θ values."
+      },
+      {
+        "step": 5,
+        "comment": "Accurately analyzes and concludes the increasing nature of the likelihood ratio in X(n)."
+      },
+      {
+        "step": "final",
+        "comment": "Valid conclusion that the family has a monotone likelihood ratio in X(n)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "b",
+    "subquestion": "Use a) (or otherwise) to determine the UMP α-size test of H₀: θ ≤ 3 vs. H₁: θ > 3.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identified the test statistic, determined its distribution under H0, set the critical region, and solved for the critical value c. The final UMP test is correctly stated.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the test statistic for the Uniform distribution."
+      },
+      {
+        "step": 2,
+        "comment": "Correct determination of the distribution of the test statistic under H0."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly sets the critical region for the UMP test."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly determines the condition for the critical value c for size α."
+      },
+      {
+        "step": 5,
+        "comment": "Correct calculation of the probability for the critical region."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly solves for c in terms of α."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly states the UMP α-size test."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "c",
+    "subquestion": "Find the power function of the test in b) and sketch Eθφ∗.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and logically structured. The student demonstrates a clear understanding of the problem and provides a rigorous solution.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the hypotheses."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the test statistic."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly determines the rejection region."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly finds the distribution under H0."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly sets up the equation for the critical value."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly solves for the critical value c."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly defines the power function."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly calculates the power function."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly substitutes and simplifies the power function."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly simplifies the final expression for the power function."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "d",
+    "subquestion": "Show that X(1)/X(n) and X(n) are independent by finding their joint density.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identifies the order statistics, performs the transformation, and verifies independence through factorization of the joint density. Each step is clear and accurate.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of order statistics."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate joint distribution of order statistics."
+      },
+      {
+        "step": 3,
+        "comment": "Proper transformation to new variables."
+      },
+      {
+        "step": 4,
+        "comment": "Correct calculation of the Jacobian."
+      },
+      {
+        "step": 5,
+        "comment": "Correct expression of original variables in terms of new ones."
+      },
+      {
+        "step": 6,
+        "comment": "Proper substitution into the joint density."
+      },
+      {
+        "step": 7,
+        "comment": "Correct simplification of the joint density."
+      },
+      {
+        "step": 8,
+        "comment": "Accurate factorization into marginal densities."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion of independence."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "1",
+    "subquestion": "Why is T = ∑ log(Xi) complete and minimal sufficient for θ?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, but lacks detailed justification for the completeness and minimal sufficiency of T. The steps are logically coherent, but some explanations could be more rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the pdf."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly writes the likelihood function."
+      },
+      {
+        "step": 3,
+        "comment": "Correct simplification of the likelihood function."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly takes the log of the likelihood function."
+      },
+      {
+        "step": 5,
+        "comment": "Correct identification of the sufficient statistic."
+      },
+      {
+        "step": 6,
+        "comment": "Correct application of the factorization theorem."
+      },
+      {
+        "step": 7,
+        "comment": "Correct conclusion that T is sufficient."
+      },
+      {
+        "step": 8,
+        "comment": "Correct idea but lacks detailed justification for completeness."
+      },
+      {
+        "step": 9,
+        "comment": "Correct conclusion but needs more rigorous proof for completeness."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion but minimal sufficiency is not fully justified."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "2",
+    "subquestion": "If h(θ) = 1/(1+θ), argue that the MLE ĥ is unbiased.",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but contains some errors in the likelihood function and the MLE derivation. The final conclusion about unbiasedness is correct, but the steps leading to it have flaws.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Incorrect likelihood function. The correct form should be L(θ; X) = Π (1 + θ)x_i^(-θ)."
+      },
+      {
+        "step": 2,
+        "comment": "Log-likelihood function is incorrect due to the error in step 1."
+      },
+      {
+        "step": 3,
+        "comment": "Derivative is incorrect due to the error in step 2."
+      },
+      {
+        "step": 4,
+        "comment": "Setting the derivative to zero is correct, but the derivative itself is incorrect."
+      },
+      {
+        "step": 5,
+        "comment": "Incorrect MLE for θ due to previous errors."
+      },
+      {
+        "step": 6,
+        "comment": "Correct substitution of θ̂ into h(θ)."
+      },
+      {
+        "step": 7,
+        "comment": "Correct simplification given the previous steps, but based on incorrect θ̂."
+      },
+      {
+        "step": 8,
+        "comment": "Correct setup for calculating the expected value."
+      },
+      {
+        "step": 9,
+        "comment": "Correct use of linearity of expectation."
+      },
+      {
+        "step": 10,
+        "comment": "Correct recognition of E(log(x_i))."
+      },
+      {
+        "step": 11,
+        "comment": "Correct substitution into E(ĥ)."
+      },
+      {
+        "step": 12,
+        "comment": "Correct simplification."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion about unbiasedness, despite earlier errors."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3",
+    "subquestion": "State the asymptotic distribution of √n(ĥ− h(θ)).",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but contains some flaws in the reasoning and computation of Fisher Information. The main steps are correct, but the explanation and details could be improved.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the parameter of interest and its estimator."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly defines the estimator for the parameter."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly states the asymptotic distribution of the estimator."
+      },
+      {
+        "step": 4,
+        "comment": "Flawed. The Fisher Information expression is not clearly derived or justified."
+      },
+      {
+        "step": 5,
+        "comment": "Flawed. The computation of Fisher Information is incorrect or lacks proper derivation."
+      },
+      {
+        "step": "final",
+        "comment": "The final asymptotic distribution is stated correctly, but the derivation leading to it is flawed."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "4",
+    "subquestion": "Let g(θ1, θ2) = (θ1+1)/(θ2+1). Show √n(ĝ − g(θ1, θ2)) → N(0, 2(θ1 + 1)²/(θ2 + 1)²).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the assumptions about the covariance matrix and variances. The Delta method is applied correctly, and the final result matches the required asymptotic distribution.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of the estimator for g(θ1, θ2)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct application of the Delta method."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the gradient of g(θ1, θ2)."
+      },
+      {
+        "step": 4,
+        "comment": "Correct assumption about the asymptotic normality of the estimators."
+      },
+      {
+        "step": 5,
+        "comment": "Flawed assumption about the diagonal covariance matrix without justification. The problem does not specify independence of θ̂1 and θ̂2."
+      },
+      {
+        "step": 6,
+        "comment": "Correct computation of the asymptotic variance using the Delta method, but relies on the flawed assumption from step 5."
+      },
+      {
+        "step": 7,
+        "comment": "Assumes specific forms for σ1² and σ2² without justification. The problem does not provide these details."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion given the assumptions, but the assumptions themselves are not fully justified."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "1",
+    "subquestion": "Find the numerical value of E(X(2)).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identified the distribution, applied the expected value formula accurately, and computed the final value correctly. Each step is clear and logically structured.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the distribution for order statistics."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly specified the Beta distribution for X(2) with n=4."
+      },
+      {
+        "step": 3,
+        "comment": "Accurate recall of the expected value formula for a Beta distribution."
+      },
+      {
+        "step": 4,
+        "comment": "Proper substitution of parameters into the expected value formula."
+      },
+      {
+        "step": "final",
+        "comment": "Correct computation of the expected value."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "2",
+    "subquestion": "Find the density of M = 1/2(X(1) + X(4)), in exponential form.",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student has a good grasp of the method but makes some errors in the joint distribution of order statistics and the final density expression. The steps are logically structured but need correction in key areas.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the distribution of X(i)."
+      },
+      {
+        "step": 2,
+        "comment": "Incorrect joint distribution. The correct joint density should account for the order statistics and the exponential distribution parameters properly."
+      },
+      {
+        "step": 3,
+        "comment": "Correct definition of M."
+      },
+      {
+        "step": 4,
+        "comment": "Correct transformation setup."
+      },
+      {
+        "step": 5,
+        "comment": "Correct approach to find the distribution of Y, but relies on the incorrect joint density from step 2."
+      },
+      {
+        "step": 6,
+        "comment": "Correct method for change of variables, but the result is based on previous errors."
+      },
+      {
+        "step": "final",
+        "comment": "Incorrect final density. The correct density should be derived from the proper joint distribution."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "3",
+    "subquestion": "Find P(M > 1/2).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, but there is a minor error in the PDF derivation (step 4) which does not affect the final answer. The rest of the steps are accurate and well-reasoned.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the distribution of X(i)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct identification of M as X(4)."
+      },
+      {
+        "step": 3,
+        "comment": "Correct derivation of the CDF of M."
+      },
+      {
+        "step": 4,
+        "comment": "Flawed derivation of the PDF. The expression is incorrect, but it is not used in subsequent steps."
+      },
+      {
+        "step": 5,
+        "comment": "Correct approach to find P(M > 1/2)."
+      },
+      {
+        "step": 6,
+        "comment": "Correct evaluation of F_M(1/2)."
+      },
+      {
+        "step": 7,
+        "comment": "Correct computation of e^{-1}."
+      },
+      {
+        "step": 8,
+        "comment": "Correct computation of [1 - e^{-1}]^4."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final answer for P(M > 1/2)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1a",
+    "subquestion": "What is the largest covariance matrix C that can be stored in the cache memory of the workstation using IEEE double precision?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and logically structured. The student demonstrates a clear understanding of the problem and provides a rigorous solution.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. Double precision numbers are indeed 8 bytes."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The calculation of total cache memory in bytes is accurate."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The number of double precision numbers that can fit in the cache is calculated correctly."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The number of elements in an n x n matrix is n^2."
+      },
+      {
+        "step": 5,
+        "comment": "Correct. The inequality is set up properly to determine the largest n."
+      },
+      {
+        "step": 6,
+        "comment": "Correct. The largest integer n is solved accurately."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final answer is precise and well-justified."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1b",
+    "subquestion": "Estimate the speed of the workstation in Gflops per second.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly calculated the speed of the workstation in Gflops per second with clear and accurate steps.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly calculated the number of floating point operations per second per core."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately scaled the operations to all cores."
+      },
+      {
+        "step": "final",
+        "comment": "Properly converted the result to Gflops."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1c",
+    "subquestion": "What is the largest value of n so that a linear system Cx = b can be solved in 1 minute on this workstation?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct with a minor error in the flops calculation for the workstation. The steps are logically structured and well-organized, but the initial flops expression could be more precise.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the flops for LU factorization and back substitution, but the expression could be simplified more accurately."
+      },
+      {
+        "step": 2,
+        "comment": "Flawed. The calculation of flops is incorrect. The correct flops should be 2.4 * 10^9 * 8, not multiplied by 4."
+      },
+      {
+        "step": 3,
+        "comment": "Correct conversion to Gflops, but based on the incorrect value from step 2."
+      },
+      {
+        "step": 4,
+        "comment": "Correct calculation of total flops in 1 minute, but based on the incorrect Gflops value."
+      },
+      {
+        "step": 5,
+        "comment": "Correct setup of the inequality, but the flops value is incorrect."
+      },
+      {
+        "step": 6,
+        "comment": "Correct method to solve the inequality, but the result is based on incorrect values."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly determines the largest integer value of n, but based on previous errors."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1d",
+    "subquestion": "Analyst 1 claims that the simulation will take 2Nn^3/3 flops while Analyst 2 claims the simulation will take n^3/3 + O(Nn^2) flops. Explain why you agree with one or neither of the analysts.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of the computational costs. The final conclusion aligns with Analyst 2's claim, which is accurate. However, the student could have clarified the simplification of the total cost expression in step 7.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the operations needed for the density function."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the cost of Cholesky factorization."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly calculates the cost of solving Cx = b using Cholesky factorization."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly estimates the cost of evaluating the quadratic form."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies the cost of computing the determinant."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly sums the costs, though the simplification could be clearer."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly estimates the total cost for N evaluations, but the explanation could be more detailed."
+      },
+      {
+        "step": 8,
+        "comment": "Correct comparison of the analysts' claims."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that Analyst 2 is more accurate, with a good explanation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1e",
+    "subquestion": "Explain how you would efficiently calculate f(x_j), j = 1, ..., N.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student has provided a fully correct, well-organized, and rigorous step-by-step method for efficiently calculating f(x_j).",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. Cholesky decomposition is the right approach for symmetric positive definite matrices."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The determinant computation using the Cholesky factor is accurate."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. Precomputing the constant factor is efficient and correctly derived."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. Computing the difference from the mean is necessary for the density calculation."
+      },
+      {
+        "step": 5,
+        "comment": "Correct. Forward substitution is the right method for solving Lz = y_j."
+      },
+      {
+        "step": 6,
+        "comment": "Correct. Backward substitution is the right method for solving L^T w = z."
+      },
+      {
+        "step": 7,
+        "comment": "Correct. The exponent term is correctly computed."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final density function is accurately computed using the precomputed constant and exponent term."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2a",
+    "subquestion": "Is the matrix C nonsingular?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly followed the steps to determine if the matrix is nonsingular by checking its determinant and concluding appropriately. The reasoning is clear and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly checks the determinant of matrix C."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly determines nonsingularity based on the determinant."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that C is not nonsingular since its determinant is 0."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2b",
+    "subquestion": "Is the matrix C positive definite?",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but has some issues in interpretation and clarity. The main steps are present, but the reasoning could be more precise.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly checks the Cholesky decomposition output, but 'posdef' is not clearly defined."
+      },
+      {
+        "step": 2,
+        "comment": "Correct interpretation of 'posdef == 0', but the variable 'posdef' should be explained."
+      },
+      {
+        "step": 3,
+        "comment": "Correct logic but the explanation is unclear. Should explicitly state that 'posdef == 0' implies C is not positive definite."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion, but the reasoning leading to it could be more detailed."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2c",
+    "subquestion": "Are your answers to parts a) and b) consistent? If not, explain any inconsistencies.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student correctly evaluated the matrix properties and concluded consistency between parts a and b. The reasoning is clear and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the matrix as singular by evaluating its determinant."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly determines the matrix is not positive definite using Cholesky decomposition."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly concludes consistency between the two properties."
+      },
+      {
+        "step": "final",
+        "comment": "Clear and accurate conclusion summarizing the consistency."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2d",
+    "subquestion": "What does the output tell you about the condition number κ(C)?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student correctly understands and applies the relationship between rcond and the condition number, and performs the calculation accurately.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct understanding of the relationship between rcond and the condition number."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly rearranges the formula to find the condition number."
+      },
+      {
+        "step": 3,
+        "comment": "Proper substitution of the given rcond value into the expression."
+      },
+      {
+        "step": "final",
+        "comment": "Accurate calculation of the condition number."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2e",
+    "subquestion": "The elements of C are known “exactly”, and x to Cx = b must have at least 4 significant figures. How accurate must b be?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in rounding and precision handling.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the condition number from the reciprocal condition number."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate calculation of the condition number κ(C)."
+      },
+      {
+        "step": 3,
+        "comment": "Correct determination of significant figures lost due to conditioning."
+      },
+      {
+        "step": 4,
+        "comment": "Correct calculation of the required accuracy of b, though the rounding could be more precise."
+      },
+      {
+        "step": "final",
+        "comment": "Rounding up is appropriate, but the explanation could be clearer about why 14 significant figures are necessary."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3a",
+    "subquestion": "Show that B is positive definite.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student clearly understands the concept of positive definiteness and applies it rigorously to show that B is positive definite. Each step is logically sound and well-explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of positive definiteness."
+      },
+      {
+        "step": 2,
+        "comment": "Correct substitution of B into the expression."
+      },
+      {
+        "step": 3,
+        "comment": "Proper distribution of x^T."
+      },
+      {
+        "step": 4,
+        "comment": "Correct use of the positive definiteness of C."
+      },
+      {
+        "step": 5,
+        "comment": "Accurate statement about the non-negativity of α_k."
+      },
+      {
+        "step": 6,
+        "comment": "Correct non-negative contribution from each term."
+      },
+      {
+        "step": 7,
+        "comment": "Valid conclusion about the sum of non-negative terms."
+      },
+      {
+        "step": "final",
+        "comment": "Correct and clear conclusion that B is positive definite."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3b",
+    "subquestion": "Why is explicitly forming B^(-1) not a good idea?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is well-structured and mostly correct, with only minor issues in the explanation of the sparsity impact on B^(-1).",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the size of matrix B and notes that n is large."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately describes the structure of B as a sum of a sparse matrix and low-rank updates."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly notes the O(n^3) computational cost of inverting B."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly identifies the O(n^2) storage cost of B^(-1)."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly notes that C is sparse, but could clarify why B^(-1) is likely dense due to the low-rank updates."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly concludes the inefficiency due to high computational and storage costs."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3c",
+    "subquestion": "How can you calculate y = Bx efficiently for a given x ∈ R^n?",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but contains some flaws in the explanation and structure. The main idea is correct, but the steps could be clearer and more precise.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Incorrect initialization. The problem asks for y = Bx, not y = Cx. This is a fundamental misunderstanding."
+      },
+      {
+        "step": 2,
+        "comment": "Correct setup for iteration, but lacks clarity on how K relates to the problem."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the inner product, but the purpose of β_k is not clearly explained."
+      },
+      {
+        "step": 4,
+        "comment": "Correct update step, but the notation and explanation could be more precise."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final result, but the steps leading to it are flawed."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ia",
+    "subquestion": "What is the degree n of this polynomial?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identified the number of data points and accurately determined the degree of the interpolating polynomial. The steps are clear, logical, and well-organized.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly determined the number of data points (m = 18)."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly applied the formula n = m - 1 to find the degree of the polynomial."
+      },
+      {
+        "step": "final",
+        "comment": "Accurately concluded that the degree of the polynomial is n = 17."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ib",
+    "subquestion": "Intern 1 solved Ax = r where A is the Vandermonde matrix with A_ij = t_i^{j-1}. They used MATLAB:\n  Acnd = cond(A) → 3.2705e+14\n  x = A \\ rdat;\n  rpolchk = norm(A*tdat - rdat) → 1.6801e+03，what is your explanation for this?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of the residual norm's implications.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the problem by calculating the condition number."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately notes the high condition number implies numerical instability."
+      },
+      {
+        "step": 3,
+        "comment": "Correct conclusion about the matrix being ill-conditioned."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly identifies the effect on the numerical solution."
+      },
+      {
+        "step": 5,
+        "comment": "Accurate calculation of the residual norm."
+      },
+      {
+        "step": 6,
+        "comment": "Explanation could be clearer about why the residual is large due to ill-conditioning."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion about the inaccuracy of polynomial interpolation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ic",
+    "subquestion": "What else is wrong with Intern 1’s approach?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is well-structured and mostly correct, addressing key issues with high-degree polynomial interpolation. Minor improvements could be made in explicitly linking Runge's phenomenon to the specific context and clarifying the residual norm's interpretation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the problem with high-degree polynomial interpolation."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly mentions Runge's phenomenon, but could explicitly link it to the given problem."
+      },
+      {
+        "step": 3,
+        "comment": "Correct calculation of the condition number, indicating numerical instability."
+      },
+      {
+        "step": 4,
+        "comment": "Accurate interpretation of the high condition number's implications."
+      },
+      {
+        "step": 5,
+        "comment": "Correct calculation of the residual norm, but could clarify why it indicates a poor fit."
+      },
+      {
+        "step": 6,
+        "comment": "Valid conclusion about the poor fit, though slightly informal."
+      },
+      {
+        "step": "final",
+        "comment": "Strong conclusion summarizing the key issues, but could be more concise."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iia",
+    "subquestion": "Explain what an interpolating cubic spline s(t) is.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the boundary conditions explanation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of a cubic spline as a piecewise polynomial of degree 3."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate explanation of the interpolation property, stating the spline passes through all data points."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly describes the continuity conditions for the first and second derivatives."
+      },
+      {
+        "step": 4,
+        "comment": "Minor flaw: The boundary conditions described are specific to natural splines, but not all interpolating cubic splines use these conditions."
+      },
+      {
+        "step": "final",
+        "comment": "Good summary of the properties, though it could mention that boundary conditions can vary."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iib",
+    "subquestion": "The spline approximation gives a low predicted yield at t = 1.5 years? Explain why this has occurred.",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but contains some inaccuracies. The main issue is the incorrect claim that t = 1.5 is outside the range of t_i, which is not true since t_i includes values up to 17. The explanation about spline behavior outside the data range is not relevant here. However, the conclusion about extrapolation is partially correct but misapplied.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the range of the data used for spline interpolation."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly determines the range of the spline interpolation."
+      },
+      {
+        "step": 3,
+        "comment": "Incorrect: t = 1.5 is within the range of t_i, not outside."
+      },
+      {
+        "step": 4,
+        "comment": "Misleading: The issue is not about extrapolation but possibly about the spline's local behavior."
+      },
+      {
+        "step": "final",
+        "comment": "Partially correct but misapplied: The low yield is not due to extrapolation but possibly due to the spline's local approximation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iic",
+    "subquestion": "How could knowledge of the slopes r\u0002 (t1) and r\u0002 (t18) be used to im\u0002prove the spline approximation.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of boundary conditions and the use of 'clamped' splines.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the problem with the current spline approximation."
+      },
+      {
+        "step": 2,
+        "comment": "Understands the role of boundary conditions but could clarify the difference between s'(t) and r'(t)."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly determines the slopes at the boundaries from the data."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly incorporates boundary slopes, but the 'clamped' condition could be better explained."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly concludes the improvement in approximation with clamped conditions."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiia",
+    "subquestion": "Intern 3 used the yield r9 = 2.285% at 8 months and the yield r13 = 2.425% at 1 year to provide the bounds 0.2975 ≤ B(0.5, 1) ≤ 0.3190. Calculate lower and upper bounds on B(0.5, 1) using     r9 and r13. Do you agree with Intern 3?",
+    "score": 2,
+    "total": 5,
+    "feedback": "The student's solution contains significant errors in the calculation of bounds and misinterpretation of the problem. The bounds calculated are incorrect and do not match the expected format or values provided by Intern 3.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct conversion of percentages to decimals."
+      },
+      {
+        "step": 2,
+        "comment": "Incorrect calculation for the lower bound. The student used the wrong time period and yield."
+      },
+      {
+        "step": 3,
+        "comment": "Incorrect calculation for the upper bound. The student used the wrong time period and yield."
+      },
+      {
+        "step": "final",
+        "comment": "The final bounds are incorrect and do not align with Intern 3's bounds. The student misunderstood the problem requirements."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiib",
+    "subquestion": "Use a quadrature rule of your choice and the data in Table 2.1 to estimate the value at t = 0.5 of $1 million received at T = 1.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the choice of quadrature rule and the interpretation of yields.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the relevant yields for the interval [0.5, 1]."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate conversion of yields from percentages to decimals."
+      },
+      {
+        "step": 3,
+        "comment": "The trapezoidal rule is a reasonable choice, but the student should clarify why it's appropriate here."
+      },
+      {
+        "step": 4,
+        "comment": "Correct application of the trapezoidal rule, but the student should explain the assumption of linearity between the points."
+      },
+      {
+        "step": 5,
+        "comment": "Correct calculation of the discount factor using the integral result."
+      },
+      {
+        "step": "final",
+        "comment": "Accurate final value calculation based on the discount factor."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiicA",
+    "subquestion": "Explain how the Gauss-Legendre nodes and weights can be used to estimate B(0.5, 1).",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but has some issues, particularly in the initial definition of the integral and the transformation steps. The Gauss-Legendre quadrature application is correctly outlined, but the setup could be clearer.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Flawed. The integral definition for B(0.5, 1) is incorrect. The Beta function is not defined as an exponential of an integral of r(s)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct transformation, but the context is unclear due to the incorrect setup in step 1."
+      },
+      {
+        "step": 3,
+        "comment": "Correct change of variables, but again, the integral's purpose is unclear due to step 1."
+      },
+      {
+        "step": 4,
+        "comment": "Correct application of Gauss-Legendre quadrature for the given integral."
+      },
+      {
+        "step": 5,
+        "comment": "Correct approximation of the integral using the quadrature rule."
+      },
+      {
+        "step": "final",
+        "comment": "The final step logically follows from the previous steps, but the initial setup was incorrect."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiicB",
+    "subquestion": "Intern 3 used the cubic spline and the Gauss-Legendre nodes to estimate B(0.5, 1) to high accuracy, but needed a large number of nodes N. Explain why this happens.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of why a large number of nodes is needed. The steps correctly identify the piecewise nature of cubic splines and the need for numerical integration, but could better emphasize the trade-off between accuracy and computational cost.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the use of cubic splines for interpolation."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately describes cubic splines as piecewise polynomials."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly notes the need to integrate each segment separately."
+      },
+      {
+        "step": 4,
+        "comment": "Properly introduces Gauss-Legendre quadrature for numerical integration."
+      },
+      {
+        "step": 5,
+        "comment": "Valid point about high accuracy requiring more nodes, but could elaborate on why."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly links the number of nodes to segments, but could clarify the accuracy trade-off."
+      },
+      {
+        "step": "final",
+        "comment": "Good conclusion, but could better explain the computational cost of high accuracy."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiid",
+    "subquestion": "How can you estimate B(0.5, 1) accurately using the cubic spline and Simpson’s rule?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues such as the lack of explicit values for the spline evaluation and the final result.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the interval for integration."
+      },
+      {
+        "step": 2,
+        "comment": "Appropriate choice of subintervals for Simpson's rule."
+      },
+      {
+        "step": 3,
+        "comment": "Correct calculation of the step size h."
+      },
+      {
+        "step": 4,
+        "comment": "Accurate generation of points for Simpson's rule."
+      },
+      {
+        "step": 5,
+        "comment": "Correct approach to evaluate the cubic spline, but lacks explicit values."
+      },
+      {
+        "step": 6,
+        "comment": "Proper application of Simpson's rule, but the result is not computed."
+      },
+      {
+        "step": 7,
+        "comment": "Correct formula for B(0.5, 1), but the final value is missing."
+      },
+      {
+        "step": "final",
+        "comment": "The final step is correctly stated but lacks the computed result."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5i",
+    "subquestion": "Carefully explain what the “initial” conditions are for this problem.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student clearly and correctly identified the initial conditions for the problem, with each step logically leading to the final conclusion. The solution is well-structured and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the context of the problem as the Black-Scholes PDE."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately recognizes the domain of the problem."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly identifies the expiry condition."
+      },
+      {
+        "step": 4,
+        "comment": "Defines the payoff function at expiry accurately."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly determines the initial condition for the PDE."
+      },
+      {
+        "step": "final",
+        "comment": "Clearly states the initial condition for the problem, summarizing the payoff function correctly."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iia",
+    "subquestion": "Find expressions for\n    ∂W/∂τ,     ∂W/∂y,     ∂²W/∂y²\nin terms of the partial derivatives of V(S, t).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step logically follows from the previous one, and all transformations are accurately executed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the change of variables."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately expresses S in terms of y and X."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly relates ∂W/∂τ to ∂V/∂t."
+      },
+      {
+        "step": 4,
+        "comment": "Properly sets up the chain rule for ∂W/∂y."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly computes ∂S/∂y."
+      },
+      {
+        "step": 6,
+        "comment": "Accurately substitutes ∂S/∂y into ∂W/∂y."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly sets up the second derivative ∂²W/∂y²."
+      },
+      {
+        "step": 8,
+        "comment": "Applies the product rule accurately."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly substitutes ∂S/∂y into the expression for ∂²W/∂y²."
+      },
+      {
+        "step": "final",
+        "comment": "Final expressions are all correct and well-presented."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iib",
+    "subquestion": "Show that the Black and Scholes PDE (3.1) is equivalent to\n    -∂W/∂τ + (r − σ²/2) ∂W/∂y + (σ²/2) ∂²W/∂y² = rW        (3.2)\nin terms of the log-moneyness y and the time to expiry τ.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step is logically sound and leads to the correct transformation of the Black-Scholes PDE.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly expresses S in terms of y and X."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly expresses t in terms of τ and T."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly relates V(S, t) to W(y, τ)."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly finds ∂V/∂t in terms of ∂W/∂τ."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly finds ∂V/∂S in terms of ∂W/∂y."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly finds ∂²V/∂S² in terms of ∂²W/∂y² and ∂W/∂y."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly substitutes expressions into the Black-Scholes PDE."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly simplifies the equation."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly combines terms to match the given form."
+      },
+      {
+        "step": "final",
+        "comment": "The transformed PDE is correctly shown to be equivalent to the given form."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iic",
+    "subquestion": "What are the initial conditions for the transformed problem?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the final step's expression.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the initial condition in the original problem."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately expresses the initial condition in terms of transformed variables."
+      },
+      {
+        "step": 3,
+        "comment": "Properly substitutes S = X * exp(y) into the payoff function."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly solves for y in terms of K1 and K2."
+      },
+      {
+        "step": "final",
+        "comment": "Minor issue: The expression for W(y, 0) should be in terms of exp(y - y1) and exp(y - y2) for consistency with the transformation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iiiaA",
+    "subquestion": "central difference approximations of O((Δy)²) for the partial derivatives ∂W/∂y and ∂²W/∂y².",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student has provided fully correct and well-organized central difference approximations for both the first and second derivatives. The reasoning is clear and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct central difference approximation for the first derivative. Well-defined and accurate."
+      },
+      {
+        "step": 2,
+        "comment": "Correct central difference approximation for the second derivative. Precise and correctly formatted."
+      },
+      {
+        "step": "final",
+        "comment": "Clear and concise summary of both approximations. Excellent presentation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iiiaB",
+    "subquestion": "forward difference approximation of O(Δτ) for the partial derivative ∂W/∂τ.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student correctly identified and applied the forward difference approximation for the partial derivative. The steps are clear, logically structured, and accurate.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the forward difference formula for the first derivative with respect to time."
+      },
+      {
+        "step": "final",
+        "comment": "Proper application of the forward difference approximation to the partial derivative, with clear notation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iiib",
+    "subquestion": "Show that the finite difference equation for the PDE (3.2) has the form\n    W^{ℓ+1}_j = α W^ℓ_{j−1} + β W^ℓ_j + γ W^ℓ_{j+1}     (3.3)\nand find the coefficients α, β and γ.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates rigorous and clear reasoning. Each step is logically sound and correctly executed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct central difference approximation for ∂W/∂y."
+      },
+      {
+        "step": 2,
+        "comment": "Correct central difference approximation for ∂²W/∂y²."
+      },
+      {
+        "step": 3,
+        "comment": "Correct forward difference approximation for ∂W/∂τ."
+      },
+      {
+        "step": 4,
+        "comment": "Correct substitution of finite difference approximations into the PDE."
+      },
+      {
+        "step": 5,
+        "comment": "Correct rearrangement to solve for W^{ℓ+1}_j."
+      },
+      {
+        "step": 6,
+        "comment": "Correct collection of terms to match the desired form."
+      },
+      {
+        "step": "final",
+        "comment": "Correct identification of coefficients α, β, and γ."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iiiic",
+    "subquestion": "A student claims that as the initial conditions are at expiry and the time stepping is from expiry at t_m = T back to t_0 = 0, equation (3.3) represents an implicit method so there are no restrictions on the values for Δτ and Δy that can be used. Is this correct? Justify your answer.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, but there is a minor flaw in step 1 where the method is incorrectly identified as explicit. The rest of the steps follow correctly from this initial misidentification, but the conclusion is still accurate.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Flawed. The method described is actually implicit, not explicit. The equation given represents an implicit method because it involves solving a system of equations for W^{ℓ+1}_j."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The time-stepping direction is accurately identified as backward in time."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The assessment of stability conditions for explicit methods is accurate, though the method is implicit."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The student correctly evaluates the claim as incorrect, despite the initial misidentification of the method."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The conclusion that restrictions exist and the claim is incorrect is accurate."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5iva",
+    "subquestion": "Give an approximation for the option Delta Δ.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of the change of variables and the approximation step.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of Delta."
+      },
+      {
+        "step": 2,
+        "comment": "Correct but could clarify the change of variables more explicitly."
+      },
+      {
+        "step": 3,
+        "comment": "Correct expression for S in terms of y and X."
+      },
+      {
+        "step": 4,
+        "comment": "Correct application of the chain rule."
+      },
+      {
+        "step": 5,
+        "comment": "Correct calculation of ∂y/∂S."
+      },
+      {
+        "step": 6,
+        "comment": "Correct substitution into the expression for ∂V/∂S."
+      },
+      {
+        "step": 7,
+        "comment": "Correct approximation but could mention the choice of Δy."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final expression for Delta approximation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfive",
+    "subid": "5ivb",
+    "subquestion": "Give an approximation for the option Gamma Γ.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in notation and clarity.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of Gamma in terms of W. The notation could be clearer by specifying the relationship between V and W."
+      },
+      {
+        "step": 2,
+        "comment": "Correct use of central difference approximation for ∂²W/∂y². The notation W^ℓ_j is slightly informal but acceptable."
+      },
+      {
+        "step": 3,
+        "comment": "Correct substitution into the expression for Gamma. The use of S₀² is a bit abrupt; it should be clarified that S₀ is the current stock price."
+      },
+      {
+        "step": "final",
+        "comment": "The final approximation is correct. The notation could be improved for clarity, but the reasoning is sound."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6ia",
+    "subquestion": "Define the corresponding cumulative distribution function (cdf) P.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student correctly identified and applied the definition of the cumulative distribution function (cdf) for the given probability density function (pdf), adjusting the limits of integration appropriately. The solution is well-structured and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the general definition of the cdf for a pdf."
+      },
+      {
+        "step": 2,
+        "comment": "Appropriately adjusts the lower limit of integration based on the given condition that p(x) = 0 for all x < 0."
+      },
+      {
+        "step": "final",
+        "comment": "Accurately defines the cdf P(x) for the given pdf p(x)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6ib",
+    "subquestion": "What properties does P possess?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates a clear understanding of the properties of a cumulative distribution function.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the cdf P(x) in terms of the pdf p(t)."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately identifies the range of P(x) as [0, 1]."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly states that P(0) = 0, which is a fundamental property of cdfs."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly states that P(∞) = 1, another key property of cdfs."
+      },
+      {
+        "step": 5,
+        "comment": "Properly establishes the non-decreasing nature of P(x)."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly identifies the right-continuity property of P(x)."
+      },
+      {
+        "step": "final",
+        "comment": "Summarizes the properties of P(x) accurately and concisely."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6ic",
+    "subquestion": "Use the cdf P to transform the expected value E[h] into an integral over [0, 1].",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear and rigorous reasoning. Each step logically follows from the previous one, and the transformation is correctly applied.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the cdf P in terms of the pdf p."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly sets up the change of variables with u = P(x) and du = p(x)dx."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately determines the new limits of integration as 0 to 1."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly expresses the expected value E[h] in terms of the new variable u."
+      },
+      {
+        "step": "final",
+        "comment": "The final expression for E[h] is correctly transformed into an integral over [0, 1]."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iia",
+    "subquestion": "Explain what the star discrepancy D^*(x₁,...,x_N) is.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent explanation of star discrepancy. The steps are clear, correct, and well-organized.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of star discrepancy with the supremum over the set J."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate identification of the set J as the collection of subintervals [0,u)."
+      },
+      {
+        "step": 3,
+        "comment": "Correct explanation of λ(B) as the Lebesgue measure for the interval B."
+      },
+      {
+        "step": 4,
+        "comment": "Clear explanation of how star discrepancy quantifies deviation from uniformity."
+      },
+      {
+        "step": "final",
+        "comment": "Proper conclusion linking lower star discrepancy to better uniformity."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iib",
+    "subquestion": "Outline the key steps in a Monte-Carlo method to estimate (4.1).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the definition of the function to be integrated. The steps logically follow the Monte-Carlo method for estimating variance.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "The function definition is slightly flawed. It should be g(x) = (f(x) - μ)^2, but μ is not defined here. The student should clarify that μ is the mean of f(x)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. Generating random points uniformly over the domain is a key step in Monte-Carlo integration."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. Evaluating the function at each random point is necessary for the Monte-Carlo method."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. Computing the average of the function values is the core of the Monte-Carlo estimate."
+      },
+      {
+        "step": 5,
+        "comment": "Correct. The average is used to estimate the variance, which is the integral of interest."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final step returns the estimated variance as desired."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iiic",
+    "subquestion": "Compare the integration errors when using a Monte-Carlo method with using a “low-discrepancy” point set.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the explanation of the Koksma-Hlawka inequality and the asymptotic behavior comparison.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of the Monte-Carlo integration error."
+      },
+      {
+        "step": 2,
+        "comment": "Correct use of the Koksma-Hlawka inequality, but could clarify that V(f) is the Hardy-Krause variation."
+      },
+      {
+        "step": 3,
+        "comment": "Correct expression for the Monte-Carlo error in terms of variance and sample size."
+      },
+      {
+        "step": 4,
+        "comment": "Correct bound for the low-discrepancy error, but could mention that c_d is a constant depending on dimension d."
+      },
+      {
+        "step": 5,
+        "comment": "Correct comparison of asymptotic behavior, but could emphasize that the advantage of low-discrepancy sets is more pronounced for moderate d."
+      },
+      {
+        "step": "final",
+        "comment": "Valid conclusion, but could be more precise about the conditions under which low-discrepancy sets outperform Monte-Carlo."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iidA",
+    "subquestion": "Evaluate (log N)^{d−1} and N^{1/2}.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct with a minor flaw in step 2 where the value of 'd' is not clearly defined. The rest of the steps are accurate and well-executed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of log N for N = 10^20."
+      },
+      {
+        "step": 2,
+        "comment": "The calculation is correct, but the value of 'd' is not specified in the problem, which could lead to confusion."
+      },
+      {
+        "step": 3,
+        "comment": "Correct calculation of N^(1/2) for N = 10^20."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iidB",
+    "subquestion": "What are the implications for using a “low-discrepancy” point set satisfying (4.2)?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the comparison step. The implications are correctly identified, but the comparison could be more rigorously justified.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the star discrepancy expression from the given inequality."
+      },
+      {
+        "step": 2,
+        "comment": "Correct evaluation of (log N)^{d−1} for the given values of d and N."
+      },
+      {
+        "step": 3,
+        "comment": "Correct evaluation of N^{1/2} for the given N."
+      },
+      {
+        "step": 4,
+        "comment": "The comparison is correct in terms of magnitude, but a more detailed explanation or numerical comparison would strengthen the argument."
+      },
+      {
+        "step": 5,
+        "comment": "Correct determination of the implications, clearly stating the benefit of low-discrepancy point sets in high dimensions."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iie",
+    "subquestion": "Outline the key ideas in using a function g which approximates f² in a variance reduction technique to estimate Var[f].",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of variance reduction and the role of g.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the variance expression."
+      },
+      {
+        "step": 2,
+        "comment": "Valid point about inefficiency, but could elaborate on why variance reduction is needed."
+      },
+      {
+        "step": 3,
+        "comment": "Correct introduction of g, but should clarify how g reduces variance."
+      },
+      {
+        "step": 4,
+        "comment": "Correct decomposition of variance."
+      },
+      {
+        "step": 5,
+        "comment": "Correct approximation, but should explain why g is a better estimator of E[f^2]."
+      },
+      {
+        "step": 6,
+        "comment": "Correct numerical estimation method."
+      },
+      {
+        "step": 7,
+        "comment": "Correct computation, but could link back to variance reduction."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final expression, but lacks discussion on variance reduction benefits."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iiia",
+    "subquestion": "Derive an expression for S_{t+dt} from (4.4).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the final step. The approximation in step 4 is correctly derived, but the final expression could be more precise.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly starts with the given SDE for the CEV model."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly rearranges the SDE to express dS_t."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly integrates both sides to find S_{t+dt}."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly approximates the integrals over the small interval [t, t+dt]."
+      },
+      {
+        "step": "final",
+        "comment": "Minor issue: The final expression should retain the γ exponent as in step 4 for precision."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iiib",
+    "subquestion": "What are the key properties of a Wiener process W_t?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student has clearly and accurately described all the key properties of a Wiener process. The steps are well-organized, and the reasoning is rigorous and clear.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. The starting point of a Wiener process is indeed W_0 = 0."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The independent increments property is accurately stated."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The normal distribution of increments with mean 0 and variance s is correctly specified."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The continuity property of the Wiener process is accurately described."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The summary accurately captures all the key properties of a Wiener process."
+      }
+    ]
+  },
+  {
+    "qid": "Problemsix",
+    "subid": "6iiic",
+    "subquestion": "Let the time interval [0, T] be discretized by:\n    t_i = iΔt,    i = 0,...,m,     Δt = T / m.\nWrite down the formula for a discrete approximation Ŝ_i ≈ S_{t_i},  i = 1,...,m of the CEV process (4.4).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only a minor issue in the final step where the expression could be slightly simplified for clarity. The steps logically follow from the SDE to the discrete approximation using the Euler-Maruyama method.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the SDE for the CEV model."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately discretizes the time interval."
+      },
+      {
+        "step": 3,
+        "comment": "Properly applies the Euler-Maruyama approximation to the SDE."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly expresses the discrete approximation for S_{t_i}."
+      },
+      {
+        "step": 5,
+        "comment": "Accurately defines the Wiener increment ΔW_i."
+      },
+      {
+        "step": "final",
+        "comment": "The final formula is correct but could be written more compactly as Ŝ_{i+1} = Ŝ_i(1 + μ Δt + σ Ŝ_i^{γ−1} ΔW_i) for clarity."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1ia",
+    "subquestion": "Explain why the polynomial approximation does not agree with the interest rate data, for example at t₆ = 2.5, t₇ = 3 or t₈ = 3.5 years.",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but has some issues. The main steps are correct, but the conclusion about underfitting is not fully justified, and the condition number calculation, while correct, is not clearly linked to the poor fit at specific points.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the polynomial degree."
+      },
+      {
+        "step": 2,
+        "comment": "Correct count of data points."
+      },
+      {
+        "step": 3,
+        "comment": "Correct calculation of the number of coefficients."
+      },
+      {
+        "step": 4,
+        "comment": "Correct comparison, but the conclusion about underfitting is not fully justified."
+      },
+      {
+        "step": 5,
+        "comment": "Underfitting is not the primary issue here; overfitting or numerical instability is more likely."
+      },
+      {
+        "step": 6,
+        "comment": "Correct setup for the condition number calculation."
+      },
+      {
+        "step": 7,
+        "comment": "Correct computation of the condition number."
+      },
+      {
+        "step": 8,
+        "comment": "Correct assessment of sensitivity, but not clearly linked to the poor fit at specific points."
+      },
+      {
+        "step": 9,
+        "comment": "Conclusion is partially correct but lacks clarity on why specific points are poorly approximated."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1ib",
+    "subquestion": "What is the rank of the matrix A? Give reasons for your answer",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of singular values.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the matrix dimensions."
+      },
+      {
+        "step": 2,
+        "comment": "Correct calculation of the number of singular values."
+      },
+      {
+        "step": 3,
+        "comment": "The statement 'All 6 singular values are non-zero' is correct but lacks detail on how this was verified."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion based on non-zero singular values."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1ic",
+    "subquestion": "Estimate the condition number κ₂(A) of A.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student correctly identified the formula for the condition number, retrieved the correct singular values, and performed the calculation accurately. The solution is well-structured and clear.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the formula for κ₂(A) using singular values."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately retrieves the maximum singular value σ_max."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately retrieves the minimum singular value σ_min."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly sets up the calculation for κ₂(A) using the given singular values."
+      },
+      {
+        "step": "final",
+        "comment": "Accurately computes the final value of κ₂(A)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1id",
+    "subquestion": "Estimate the relative change in the polynomial coefficients a if there is a one basis point (0.01 of a percent) decrease in the interest rate at some time t_i. What confidence do you have in the values of a?",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but has some issues in the order of steps and clarity of expressions. The main method is correct, but the presentation could be improved for better understanding.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of the condition number using singular values."
+      },
+      {
+        "step": 2,
+        "comment": "Flawed because it uses relative_change_rd before defining it in step 3."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the relative change in rd, but should come before step 2."
+      },
+      {
+        "step": 4,
+        "comment": "Correct calculation of the relative change in a, but the expression could be clearer."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion about low confidence due to high sensitivity."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1iia",
+    "subquestion": "Explain what a “cubic spline interpolant” is.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent explanation of a cubic spline interpolant. The steps are logically structured, rigorous, and cover all key aspects of the definition and properties of cubic splines.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the cubic spline interpolant as a piecewise-defined function."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately specifies the intervals for the spline."
+      },
+      {
+        "step": 3,
+        "comment": "Properly defines the cubic polynomial for each interval."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly states the continuity condition at each data point."
+      },
+      {
+        "step": 5,
+        "comment": "Accurately ensures smoothness with first derivative continuity."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly ensures curvature continuity with second derivative continuity."
+      },
+      {
+        "step": 7,
+        "comment": "Properly specifies natural spline boundary conditions."
+      },
+      {
+        "step": "final",
+        "comment": "Summarizes the cubic spline interpolant accurately and concisely."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1iib",
+    "subquestion": "Why do the two cubic spline interpolants predict very different esti\u0002mates for the interest rate at t = 4.5 years?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, but could benefit from more detailed explanations on how the boundary conditions specifically affect the extrapolation behavior.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the natural spline boundary conditions."
+      },
+      {
+        "step": 2,
+        "comment": "Correct identification of the clamped spline boundary conditions."
+      },
+      {
+        "step": 3,
+        "comment": "Correct but could elaborate more on how boundary conditions influence spline shape."
+      },
+      {
+        "step": 4,
+        "comment": "Correct but could provide more detail on why extrapolation differs."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion, but could be more specific about the impact of boundary conditions on extrapolation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1iii",
+    "subquestion": "Suppose that m ≥ n and that the rectangular matrix A ∈ ℝ^{m×n} has the singular value decomposition\n    A = U [Σ; 0] Vᵀ = Y Σ Vᵀ = Σ_{j=1}^n σ_j u_j v_jᵀ,\nwhere:\n    U = [Y Z] ∈ ℝ^{m×m},\n    Y = [u₁ u₂ ⋯ uₙ] ∈ ℝ^{m×n},\n    Z = [u_{n+1} ⋯ u_m] ∈ ℝ^{m×(m−n)},\n    Σ = diag(σ₁, σ₂, ..., σₙ) ∈ ℝ^{n×n},\n    V = [v₁ v₂ ⋯ vₙ] ∈ ℝ^{n×n},\nwith σ₁ ≥ σ₂ ≥ ⋯ ≥ σₙ ≥ 0.",
+    "score": 5,
+    "total": 5,
+    "feedback": "The student's solution is excellent, with all steps correctly identified and logically structured. The SVD decomposition and its components are accurately described.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the given SVD of matrix A."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately expresses A in terms of its SVD components."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly expresses A as a sum of rank-1 matrices."
+      },
+      {
+        "step": 4,
+        "comment": "Accurately identifies all components of the SVD."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly states the condition on singular values."
+      },
+      {
+        "step": "final",
+        "comment": "Concludes with the correct expression of A using SVD."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1iv",
+    "subquestion": "State the definition of an orthogonal matrix Q ∈ ℝ^{n×n}.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent response. The student clearly and correctly defines an orthogonal matrix with all necessary properties.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the matrix Q as an n×n real matrix."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately states the key property of an orthogonal matrix: QᵀQ = QQᵀ = I."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly concludes that Qᵀ = Q⁻¹, which is a direct consequence of the property stated in step 2."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1v",
+    "subquestion": "Show that if Q is orthogonal then ∥Qx∥₂ = ∥x∥₂ for all x ∈ ℝⁿ. Hint: (∥x∥₂)² = xᵀx.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly follows the logical steps to prove the given statement, using the properties of orthogonal matrices and the definition of the 2-norm. Each step is clear, correct, and well-justified.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly starts with the definition of the 2-norm squared."
+      },
+      {
+        "step": 2,
+        "comment": "Appropriately considers the vector Qx and applies the 2-norm definition."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly uses the property of matrix transposition to rearrange the expression."
+      },
+      {
+        "step": 4,
+        "comment": "Accurately substitutes QᵀQ with the identity matrix I, leveraging the orthogonal matrix property."
+      },
+      {
+        "step": 5,
+        "comment": "Properly simplifies the expression using the identity matrix property."
+      },
+      {
+        "step": "final",
+        "comment": "Concludes correctly that the norms are equal, completing the proof."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "1vi",
+    "subquestion": "For b ∈ ℝᵐ and y = Vᵀx, show that ∥Ax − b∥₂ is minimized when ∥Σy − Yᵀb∥₂ is minimized.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student demonstrates a clear understanding of the SVD and how to use it to minimize the 2-norm. Each step is logically sound and well-explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly expresses Ax using the SVD of A."
+      },
+      {
+        "step": 2,
+        "comment": "Proper substitution of y = Vᵀx into the expression for Ax."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly sets up the 2-norm of the difference Ax - b."
+      },
+      {
+        "step": 4,
+        "comment": "Applies the orthogonality of U to simplify the expression accurately."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly partitions Uᵀb into components Yᵀb and Zᵀb."
+      },
+      {
+        "step": 6,
+        "comment": "Accurately expresses the norm in terms of the partitioned components."
+      },
+      {
+        "step": 7,
+        "comment": "Uses the property of 2-norm for block vectors correctly."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly identifies that minimizing ∥Σy - Yᵀb∥₂ is key."
+      },
+      {
+        "step": "final",
+        "comment": "Concludes the argument logically and correctly."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2i",
+    "subquestion": "i) Explain how to use MATLAB to estimate the exponential growth underlying the price of this asset (shown by the dashed curve) P_j ≈ α * exp(β * t_j)    for j = 0, ..., N-1.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student clearly understands the process of linearizing the exponential model and using MATLAB to estimate the parameters. All steps are correct and well-explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. The natural logarithm linearizes the exponential model effectively."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The setup for linear regression in MATLAB is accurate."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. Using the backslash operator is the right approach for solving the linear regression problem."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The coefficients are extracted properly from the regression result."
+      },
+      {
+        "step": 5,
+        "comment": "Correct. The exponential growth parameters are computed accurately."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final estimated model is presented correctly."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2iia",
+    "subquestion": "a) Show that GN—k = J, = complex conjugate of % for k=1,2,...,N—-1.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly follows the steps to show that T_{N-k} is the complex conjugate of T_k, with clear and rigorous reasoning.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of the DFT."
+      },
+      {
+        "step": 2,
+        "comment": "Correct expression for the (N-k)th term of the DFT."
+      },
+      {
+        "step": 3,
+        "comment": "Proper simplification of the exponential term."
+      },
+      {
+        "step": 4,
+        "comment": "Correct use of the periodicity property of the exponential function."
+      },
+      {
+        "step": 5,
+        "comment": "Correct substitution leading to the expression for T_{N-k}."
+      },
+      {
+        "step": 6,
+        "comment": "Accurate recognition of the complex conjugate relationship."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that T_{N-k} is the complex conjugate of T_k."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2iib",
+    "subquestion": "b) Let n = 260 so that N = 2n. Show that\nYj =a + S- [a;, cos(2rkt;/T) + bj, sin(Qrkt ;/T)]\nk=l\nfor 7 = 0, 1, 2,..., N—1 and express the real coefficients ag, and by in\nterms of the (complex) transform %j,. You may assume the inversion\nformula\n{82\not ~ i2njk/N\nYj —_ N » YRE 7 .",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the final expression and the handling of the constant term 'a'.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly starts with the given inversion formula."
+      },
+      {
+        "step": 2,
+        "comment": "Correct application of Euler's formula."
+      },
+      {
+        "step": 3,
+        "comment": "Proper substitution of Euler's formula into the inversion formula."
+      },
+      {
+        "step": 4,
+        "comment": "Correct separation of real and imaginary parts."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies that the imaginary part must be zero for real Y_j."
+      },
+      {
+        "step": 6,
+        "comment": "Focuses correctly on the real part of the expression."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly expresses a_k and b_k in terms of T_k."
+      },
+      {
+        "step": 8,
+        "comment": "Minor issue: the constant term 'a' is not clearly defined or derived."
+      },
+      {
+        "step": "final",
+        "comment": "Minor issue: the summation limit should be N/2, not N/2-1, and 'a' is not properly addressed."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2iic",
+    "subquestion": "c) Define the power spectrum in terms of the Discrete Fourier Trans-\nform jy, fork =0,...,N—-1.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly defined the DFT and the power spectrum, and provided a clear and rigorous explanation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of the Discrete Fourier Transform (DFT)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct definition of the power spectrum in terms of the DFT."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly states that the power spectrum is the squared magnitude of the DFT coefficients, with a precise expression."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "2iid",
+    "subquestion": "d) Justify or refute the claim that the data in Figure 2 has both yearly\nand monthly cycles of roughly the same intensity.",
+    "score": 3,
+    "total": 5,
+    "feedback": "The student's solution is satisfactory but has some issues in step 2 and step 3. The method is generally correct, but the conversion of frequencies to DFT indices and the handling of non-integer indices could be improved.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of frequencies for yearly and monthly cycles."
+      },
+      {
+        "step": 2,
+        "comment": "Flawed. The conversion to DFT indices is incorrect for non-integer values. k_monthly should be rounded or handled differently."
+      },
+      {
+        "step": 3,
+        "comment": "Flawed. The power spectrum should be examined at the correct indices, considering rounding or interpolation for non-integer k."
+      },
+      {
+        "step": 4,
+        "comment": "Correct approach, but depends on accurate values from previous steps."
+      },
+      {
+        "step": "final",
+        "comment": "Correct logic, but conclusion depends on accurate comparisons from flawed steps."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3i",
+    "subquestion": "What tests should you apply to check that a provided matrix C is a valid covariance matrix for use in calculating p(x)?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and clearly reasoned.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. A covariance matrix must be square."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. A covariance matrix must be symmetric."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. A covariance matrix must be positive semi-definite."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. All checks must pass for a valid covariance matrix."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iia",
+    "subquestion": "evaluate √det(C) efficiently;",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly applies Cholesky factorization and efficiently computes the determinant using the properties of triangular matrices. Each step is logically sound and clearly explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. Cholesky factorization is a valid method for symmetric positive definite matrices."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. The determinant property for matrices of the form C = RᵀR is accurately stated."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The determinant of an upper triangular matrix is indeed the product of its diagonal elements."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The square root of the determinant is correctly related to the absolute value of the determinant of R."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final expression efficiently computes the desired value using the product of diagonal elements of R."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iib",
+    "subquestion": "evaluate p(x) efficiently.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and logically structured. The student demonstrates a clear understanding of the method.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. Checking symmetry and positive definiteness is essential for Cholesky factorization."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. Cholesky factorization is accurately described."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. The inverse computation using Cholesky factors is properly expressed."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. The determinant computation using Cholesky factors is accurate."
+      },
+      {
+        "step": 5,
+        "comment": "Correct. The square root of the determinant is correctly derived."
+      },
+      {
+        "step": 6,
+        "comment": "Correct. The quadratic form is efficiently computed using the Cholesky factor."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final evaluation of p(x) is accurately presented using all previous steps."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iiia",
+    "subquestion": "Show that the substitution x = μ + Rᵀy, where R is the Cholesky factor of C, gives p(x₁, x₂) = ϕ(y₁)ϕ(y₂) / (R₁₁ R₂₂)",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of the transformation and the determinant step. The final result is correct and well-justified.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct substitution setup."
+      },
+      {
+        "step": 2,
+        "comment": "Correct transformation, but could clarify the inversion of Rᵀ."
+      },
+      {
+        "step": 3,
+        "comment": "Correct substitution into p(x), but the expression could be more detailed."
+      },
+      {
+        "step": 4,
+        "comment": "Correct use of Cholesky factorization for C⁻¹."
+      },
+      {
+        "step": 5,
+        "comment": "Correct simplification of the exponent."
+      },
+      {
+        "step": 6,
+        "comment": "Correct substitution back into p(x)."
+      },
+      {
+        "step": 7,
+        "comment": "Correct determinant expression, but could explain why det(C) = (R₁₁ R₂₂)²."
+      },
+      {
+        "step": 8,
+        "comment": "Correct substitution of det(C)."
+      },
+      {
+        "step": 9,
+        "comment": "Correct recognition of the standard normal pdf."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final expression for p(x₁, x₂)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iiib",
+    "subquestion": "Transform the expected value to E[f(X₁, X₂)] = ∬[0 to 1] F(z₁, z₂) dz₁ dz₂ and find an expression for the function F.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of the transformation and the substitution steps.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct transformation setup using the Cholesky factor."
+      },
+      {
+        "step": 2,
+        "comment": "Correct substitution into the PDF, but the division by R₁₁ R₂₂ should be justified or derived."
+      },
+      {
+        "step": 3,
+        "comment": "Correct expression of the expected value using the transformed variables."
+      },
+      {
+        "step": 4,
+        "comment": "Correct change of variables using the standard normal CDF."
+      },
+      {
+        "step": 5,
+        "comment": "Correct inversion of the CDF to express y in terms of z."
+      },
+      {
+        "step": 6,
+        "comment": "Correct substitution into the integral, but the Jacobian of the transformation should be explicitly mentioned."
+      },
+      {
+        "step": "final",
+        "comment": "Correct identification of the function F(z₁, z₂)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iiicA",
+    "subquestion": "Briefly describe how you would use the Monte Carlo method to compute a numerical approximation to the integral (2).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of the transformation step.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. Generating random samples from the standard normal distribution is a valid starting point for Monte Carlo integration."
+      },
+      {
+        "step": 2,
+        "comment": "Flawed. The transformation step is correct mathematically, but the description lacks clarity on how R and μ relate to the integral being approximated."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. Evaluating the function at each sample point is a key step in Monte Carlo integration."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. Computing the average of the function values is the standard way to approximate the expected value in Monte Carlo methods."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. The final step appropriately summarizes the Monte Carlo approximation."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iiicB",
+    "subquestion": "What can you say about the accuracy of the Monte Carlo method?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the explanation of the convergence rate and dimensionality independence.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct introduction to the Monte Carlo method's accuracy. The notation is appropriate."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the standard error as a key factor in determining accuracy."
+      },
+      {
+        "step": 3,
+        "comment": "Accurate definition of σ as the standard deviation of the function being integrated."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly states that accuracy improves with the number of samples N."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly notes the slow convergence rate, but could clarify why it's considered slow compared to other methods."
+      },
+      {
+        "step": "final",
+        "comment": "Good summary, but the claim about dimensionality independence could be slightly more nuanced to acknowledge potential practical challenges in high dimensions."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "3iiicC",
+    "subquestion": "How could you improve the accuracy of the Monte Carlo method?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is well-structured and covers key techniques to improve the accuracy of the Monte Carlo method. There are minor issues in the expressions and some steps could be more detailed, but overall, the solution is strong.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct. Identifying variance reduction techniques is a valid first step."
+      },
+      {
+        "step": 2,
+        "comment": "Correct. Antithetic variates are a valid technique, but the expression could be clarified."
+      },
+      {
+        "step": 3,
+        "comment": "Correct. Control variates are a valid technique, but the expression is slightly informal."
+      },
+      {
+        "step": 4,
+        "comment": "Correct. Importance sampling is a valid technique, but the expression could be more precise."
+      },
+      {
+        "step": 5,
+        "comment": "Correct. Increasing the number of samples is a valid approach, and the standard error expression is accurate."
+      },
+      {
+        "step": 6,
+        "comment": "Correct. Stratified sampling is a valid technique, but the step lacks detail."
+      },
+      {
+        "step": "final",
+        "comment": "Correct. Combining techniques is a good conclusion, but it could be expanded."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4i",
+    "subquestion": "Carefully explain what the 'initial' conditions are for this problem.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the initial step's condition.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "The condition 'if S < B' is misplaced here. The payoff at expiry should be defined unconditionally for all S, not just S < B."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the payout if the barrier is hit before expiry."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly defines the initial condition at expiry for S < B."
+      },
+      {
+        "step": "final",
+        "comment": "Good summary, but the initial condition should clarify that the payoff at expiry is defined for all S, not just S < B."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ii",
+    "subquestion": "Carefully explain what the boundary conditions are for this problem.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student correctly identified and explained both boundary conditions, and the solution is well-structured and clear.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the boundary condition at S = 0."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the boundary condition at S = B."
+      },
+      {
+        "step": "final",
+        "comment": "Summarizes the boundary conditions accurately and concisely."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiiaA",
+    "subquestion": "At time t_ℓ and value S_j, give central difference approximations of O(ΔS²) for partial derivatives ∂V/∂S and ∂²V/∂S².",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student provided fully correct and well-organized central difference approximations for both the first and second derivatives. The solution is rigorous and clear.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct central difference approximation for the first derivative ∂V/∂S. The expression is accurate and clearly defined."
+      },
+      {
+        "step": 2,
+        "comment": "Correct central difference approximation for the second derivative ∂²V/∂S². The expression is accurate and clearly defined."
+      },
+      {
+        "step": "final",
+        "comment": "The final expressions for both derivatives are correctly summarized and match the individual steps. A model solution."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiiaB",
+    "subquestion": "Give a forward difference approximation of O(Δt) for ∂V/∂t.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work. The student correctly applied the forward difference approximation and provided a clear and accurate solution.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the forward difference formula for the time derivative."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately substitutes the grid notation into the formula."
+      },
+      {
+        "step": "final",
+        "comment": "Provides a correct and clear forward difference approximation for the time derivative."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiibA",
+    "subquestion": "Show that the finite difference equation has the form: α_j v_{j−1}^ℓ + β_j v_j^ℓ + γ_j v_{j+1}^ℓ = v_j^{ℓ+1}, and find α_j, β_j, γ_j.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the identification of the implicit method coefficients. The steps logically follow from the Black-Scholes PDE to the finite difference equation, but the final coefficients could be more clearly derived for the implicit method.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly starts with the Black-Scholes PDE. Good foundation."
+      },
+      {
+        "step": 2,
+        "comment": "Appropriate use of central difference for ∂V/∂S. Accurate."
+      },
+      {
+        "step": 3,
+        "comment": "Correct central difference approximation for ∂²V/∂S². Well done."
+      },
+      {
+        "step": 4,
+        "comment": "Proper forward difference for ∂V/∂t. Suitable choice."
+      },
+      {
+        "step": 5,
+        "comment": "Correct substitution of finite differences into the PDE. Logical progression."
+      },
+      {
+        "step": 6,
+        "comment": "Accurate rearrangement to isolate V(S_j, t_{ℓ+1}). Clear and correct."
+      },
+      {
+        "step": 7,
+        "comment": "Coefficients are identified but should clarify if this is for explicit or implicit method. Minor issue."
+      },
+      {
+        "step": "final",
+        "comment": "Correct form of the finite difference equation, but coefficients could be more explicitly derived for clarity."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiibB",
+    "subquestion": "What are the discrete “initial” conditions?",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the final step's expression.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the initial condition for the option value at expiry time T."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly translates the initial condition into a discrete form at time step ℓ = m."
+      },
+      {
+        "step": "final",
+        "comment": "Minor issue: The expression should clarify that S_j = jΔS, but the logic is correct."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iiibC",
+    "subquestion": "What are the discrete boundary conditions?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student correctly identified and stated the discrete boundary conditions with clear and accurate reasoning.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the boundary condition at S = 0."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the boundary condition at S = B."
+      },
+      {
+        "step": "final",
+        "comment": "Accurately summarizes the discrete boundary conditions."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4iva",
+    "subquestion": "Define the entries a_{i,j} of matrix A = (a_{i,j}). What structure does A have?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear understanding of the problem. Each step is logically structured and rigorously reasoned.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the finite difference equation form."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately expresses α_j in terms of given parameters."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly expresses β_j in terms of given parameters."
+      },
+      {
+        "step": 4,
+        "comment": "Accurately expresses γ_j in terms of given parameters."
+      },
+      {
+        "step": 5,
+        "comment": "Properly defines the entries a_{i,j} of matrix A."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly identifies the structure of matrix A as tridiagonal."
+      },
+      {
+        "step": "final",
+        "comment": "Concludes with a precise and correct representation of matrix A."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ivb",
+    "subquestion": "Is the matrix A sparse? Calculate its sparsity.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identifies the structure of the matrix, calculates the number of non-zero elements, and accurately computes the sparsity. Each step is logically sound and well-explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the matrix A as tridiagonal, which is essential for understanding its sparsity."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately states the size of the matrix as n x n, which is necessary for further calculations."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly calculates the number of non-zero elements in a tridiagonal matrix as 3n - 2."
+      },
+      {
+        "step": 4,
+        "comment": "Accurately calculates the total number of elements in the matrix as n^2."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly sets up the sparsity calculation as 1 - (3n - 2) / n^2."
+      },
+      {
+        "step": "final",
+        "comment": "Final expression for sparsity is correctly computed and matches the setup from previous steps."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ivc",
+    "subquestion": "How can the structure of the matrix A be exploited to make time\u0002stepping as efficient as possible?",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly identifies the structure of the matrix, recognizes the advantage of tridiagonal matrices, chooses an appropriate algorithm, estimates computational complexity, and concludes effectively.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the matrix as tridiagonal."
+      },
+      {
+        "step": 2,
+        "comment": "Accurately notes the efficiency of solving linear systems with tridiagonal matrices."
+      },
+      {
+        "step": 3,
+        "comment": "Appropriately selects the Thomas algorithm for efficient solving."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly estimates the computational complexity as O(n)."
+      },
+      {
+        "step": "final",
+        "comment": "Effectively concludes the use of the Thomas algorithm for efficient time-stepping."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": "4ivd",
+    "subquestion": "Provide an estimation of the number of flops needed to compute the vector v^0.",
+    "score": 4,
+    "total": 5,
+    "feedback": "Good job overall, but there's a minor issue in step 2 that affects the final calculation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly identifies the size of the vector."
+      },
+      {
+        "step": 2,
+        "comment": "Assumes 3 non-zero entries per row without justification. This should be specified or derived."
+      },
+      {
+        "step": 3,
+        "comment": "Correct calculation based on the given assumption."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly calculates the flops for vector addition."
+      },
+      {
+        "step": "final",
+        "comment": "Correct summation based on previous steps, but depends on the assumption in step 2."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": null,
+    "subquestion": "Determine whether the following function h on the region Ω₀ is convex, strictly convex, concave, strictly concave, or neither.\nh(x₁, x₂) = x₁² / x₂,  where  Ω₀ = { (x₁, x₂) ∈ ℝ²  |  x₂ > 0 }",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only a minor issue in the final conclusion about strict convexity. The steps are logically ordered and the calculations are accurate.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the function."
+      },
+      {
+        "step": 2,
+        "comment": "Correct first partial derivative with respect to x1."
+      },
+      {
+        "step": 3,
+        "comment": "Correct first partial derivative with respect to x2."
+      },
+      {
+        "step": 4,
+        "comment": "Correct second partial derivative with respect to x1."
+      },
+      {
+        "step": 5,
+        "comment": "Correct second partial derivative with respect to x2."
+      },
+      {
+        "step": 6,
+        "comment": "Correct mixed partial derivative."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly forms the Hessian matrix."
+      },
+      {
+        "step": 8,
+        "comment": "Correct setup for the determinant calculation."
+      },
+      {
+        "step": 9,
+        "comment": "Correct simplification of the determinant."
+      },
+      {
+        "step": 10,
+        "comment": "Correct evaluation of the sign of ∂²h/∂x1²."
+      },
+      {
+        "step": "final",
+        "comment": "The conclusion that h is convex is correct, but it should also be noted that h is strictly convex since the Hessian is positive semidefinite and the function is not linear in any direction."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "i",
+    "subquestion": "i) Find the five stationary points of f on R^2.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, but there is a minor error in the final list of stationary points. The student missed the points (±√(2/3), ±√(1/3)) in the final list.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct approach to find stationary points."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly sets the first component of the gradient to zero."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly solves the equation from step 2."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly sets the second component of the gradient to zero."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly solves the equation from step 4."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly combines solutions to find (0, 0)."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly combines solutions to find (0, ±1)."
+      },
+      {
+        "step": 8,
+        "comment": "Correctly combines solutions to find (±1, 0)."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly combines solutions to find (±√(2/3), ±√(1/3))."
+      },
+      {
+        "step": "final",
+        "comment": "Incorrect final list of stationary points. Missed (±√(2/3), ±√(1/3))."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "ii",
+    "subquestion": "ii) Identify, as far as possible using Hessian information, the five stationary points of f as (strict) local minimizers, (strict) local maximizers or saddle points, etc.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the classification of (0, 1) and (0, -1). The reasoning is clear and follows a logical progression.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly lists all stationary points."
+      },
+      {
+        "step": 2,
+        "comment": "Correct evaluation of the Hessian at (0, 0)."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly identifies (0, 0) as a local maximizer."
+      },
+      {
+        "step": 4,
+        "comment": "Correct evaluation of the Hessian at (1, 0)."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly identifies (1, 0) as a saddle point."
+      },
+      {
+        "step": 6,
+        "comment": "Correct evaluation of the Hessian at (-1, 0)."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly identifies (-1, 0) as a saddle point."
+      },
+      {
+        "step": 8,
+        "comment": "Correct evaluation of the Hessian at (0, 1)."
+      },
+      {
+        "step": 9,
+        "comment": "Incorrect classification: (0, 1) should be considered a degenerate saddle point due to one zero eigenvalue."
+      },
+      {
+        "step": 10,
+        "comment": "Correct evaluation of the Hessian at (0, -1)."
+      },
+      {
+        "step": 11,
+        "comment": "Incorrect classification: (0, -1) should be considered a degenerate saddle point due to one zero eigenvalue."
+      },
+      {
+        "step": "final",
+        "comment": "Summary is mostly correct but should note the degenerate nature of (0, 1) and (0, -1)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": "iii",
+    "subquestion": "iii) Does the function f have a global maximizer on R^2? Give reasons for your answer.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly analyzed the behavior of the function and concluded that it does not have a global maximizer on R². The reasoning is clear and rigorous.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct analysis of the function's behavior as x approaches infinity."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies that the function is not bounded above."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that the function does not have a global maximizer on R²."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": null,
+    "subquestion": "Let A be a real (n × n) square matrix. Let a_ii and a_jj be the iᵗʰ and jᵗʰ diagonal elements of A respectively, where i, j ∈ {1, ..., n} and i ≠ j.\nUsing the definition of an indefinite matrix, show that if a_ii a_jj < 0, then A is indefinite.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and logically structured, with only minor issues in the explanation of how the submatrix B relates to the original matrix A.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct definition of an indefinite matrix."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies a 2x2 principal submatrix of A."
+      },
+      {
+        "step": 3,
+        "comment": "Appropriate choice of vector x for the submatrix B."
+      },
+      {
+        "step": 4,
+        "comment": "Correct computation of x^T B x."
+      },
+      {
+        "step": 5,
+        "comment": "Appropriate choice of vector y for the submatrix B."
+      },
+      {
+        "step": 6,
+        "comment": "Correct computation of y^T B y."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly checks the signs of the quadratic forms."
+      },
+      {
+        "step": 8,
+        "comment": "Correct conclusion that B is indefinite."
+      },
+      {
+        "step": "final",
+        "comment": "Minor issue: should explicitly state that the indefiniteness of a principal submatrix implies the indefiniteness of the original matrix A."
+      }
+    ]
+  },
+  {
+    "qid": "Problemfour",
+    "subid": null,
+    "subquestion": "Let C be an m × n matrix, d ∈ ℝᵐ, a ∈ ℝⁿ and r ∈ ℝ. Show that\nΩ = { x ∈ ℝⁿ :  ‖Cx − d‖ ≤ aᵀx + r }\nis a convex set for any norm ‖·‖ on ℝᵐ.\nState any properties of a norm that you use.",
+    "score": 5,
+    "total": 5,
+    "feedback": "The student's solution is excellent. It is well-structured, logically rigorous, and correctly applies the properties of norms and linearity to prove the convexity of the set Ω. Each step is clear and correctly reasoned.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the set Ω and the condition for convexity."
+      },
+      {
+        "step": 2,
+        "comment": "Properly assumes x₁, x₂ ∈ Ω and θ ∈ [0, 1]."
+      },
+      {
+        "step": 3,
+        "comment": "Accurately expresses the conditions for x₁ and x₂ being in Ω."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly considers the convex combination y = θx₁ + (1-θ)x₂."
+      },
+      {
+        "step": 5,
+        "comment": "Applies the triangle inequality property of norms correctly."
+      },
+      {
+        "step": 6,
+        "comment": "Uses the linearity of the inner product accurately."
+      },
+      {
+        "step": 7,
+        "comment": "Combines inequalities correctly to show y ∈ Ω."
+      },
+      {
+        "step": 8,
+        "comment": "Simplifies the right-hand side accurately."
+      },
+      {
+        "step": "final",
+        "comment": "Concludes correctly that Ω is convex."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "i",
+    "subquestion": "(i) Calculate the Newton direction s^(1) for h at x^(1).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and clearly reasoned. The student demonstrates a thorough understanding of the Newton direction calculation.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct computation of the gradient."
+      },
+      {
+        "step": 2,
+        "comment": "Accurate evaluation of the gradient at the given point."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the Hessian matrix."
+      },
+      {
+        "step": 4,
+        "comment": "Correct evaluation of the Hessian at the given point."
+      },
+      {
+        "step": 5,
+        "comment": "Correct setup for the Newton direction calculation."
+      },
+      {
+        "step": 6,
+        "comment": "Accurate calculation of the inverse Hessian."
+      },
+      {
+        "step": 7,
+        "comment": "Correct multiplication to find the Newton direction."
+      },
+      {
+        "step": "final",
+        "comment": "Final answer is correct and well-presented."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "ii",
+    "subquestion": "(ii) Is the Newton direction s^(1) a descent direction for h at x^(1)? Give reasons.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear understanding of the problem. Each step is logically structured and rigorously executed.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of the gradient at x^(1)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct Hessian matrix calculation."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the Newton direction."
+      },
+      {
+        "step": 4,
+        "comment": "Correct dot product to check descent direction."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion based on the dot product result."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "iii",
+    "subquestion": "(iii) Find the next Newton iterate x^(2).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent work! The student's solution is fully correct, well-organized, and demonstrates clear understanding of the Newton's method for optimization.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of the gradient at x^(1)."
+      },
+      {
+        "step": 2,
+        "comment": "Correct Hessian matrix calculation."
+      },
+      {
+        "step": 3,
+        "comment": "Correct computation of the Newton direction."
+      },
+      {
+        "step": 4,
+        "comment": "Correct update to the next Newton iterate."
+      },
+      {
+        "step": "final",
+        "comment": "Correct final answer for x^(2)."
+      }
+    ]
+  },
+  {
+    "qid": "Problemone",
+    "subid": "iv",
+    "subquestion": "(iv) Show that x^(2) is the unique global minimiser for h.",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. All steps are correct, well-organized, and clearly reasoned.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct calculation of the gradient."
+      },
+      {
+        "step": 2,
+        "comment": "Correct Hessian matrix."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly sets gradient to zero for critical points."
+      },
+      {
+        "step": 4,
+        "comment": "Correct solution for critical points."
+      },
+      {
+        "step": 5,
+        "comment": "Correct Hessian evaluation at critical point."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly checks positive definiteness of Hessian."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion of unique global minimiser."
+      }
+    ]
+  },
+  {
+    "qid": "Problemtwo",
+    "subid": null,
+    "subquestion": "Consider the equality constrained optimization problem (P₁):\n    min_{x ∈ ℝ³} −x₁x₂x₃\n    s.t. x₁ + x₂ + x₃ − 40 = 0,\n         x₁ + x₂ − x₃ = 0.\n\nIt is given that x* = (10, 10, 20)ᵀ is a regular constrained stationary point for (P₁)\nwith Lagrange multipliers λ₁* = 150 and λ₂* = 50.\n\nUsing second-order sufficient optimality conditions, determine whether x* is a strict local minimiser.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only a minor error in the null space computation. The reasoning is clear and follows the necessary steps to determine the optimality condition.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defines the Lagrangian function."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly computes the gradient of the Lagrangian."
+      },
+      {
+        "step": 3,
+        "comment": "Correctly evaluates the gradient at the given point and multipliers."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly computes the Hessian of the Lagrangian."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly evaluates the Hessian at the given point."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly defines the constraint gradients."
+      },
+      {
+        "step": 7,
+        "comment": "Correctly forms the matrix of constraint gradients."
+      },
+      {
+        "step": 8,
+        "comment": "Incorrect null space computation. The null space should be a single vector, not two."
+      },
+      {
+        "step": 9,
+        "comment": "Correctly computes the reduced Hessian based on the provided null space."
+      },
+      {
+        "step": 10,
+        "comment": "Correctly checks the eigenvalues, but the conclusion is based on an incorrect null space."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion based on the provided reduced Hessian, but the null space error affects the validity."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "i",
+    "subquestion": "(i) Find a constrained stationary point z* of the problem (P₂).",
+    "score": 5,
+    "total": 5,
+    "feedback": "Excellent solution. The student correctly applied the method of Lagrange multipliers, solved the system of equations accurately, and arrived at the correct constrained stationary point. Each step is logically sound and well-explained.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correctly defined the Lagrangian for the problem."
+      },
+      {
+        "step": 2,
+        "comment": "Correct partial derivative with respect to x₁."
+      },
+      {
+        "step": 3,
+        "comment": "Correct partial derivative with respect to x₂."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly set the partial derivative to zero."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly set the partial derivative to zero."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly simplified the system of equations."
+      },
+      {
+        "step": 7,
+        "comment": "Correct conclusion that x₁ = x₂."
+      },
+      {
+        "step": 8,
+        "comment": "Correct substitution into the constraint."
+      },
+      {
+        "step": 9,
+        "comment": "Correct simplification to solve for x₁."
+      },
+      {
+        "step": 10,
+        "comment": "Correct solution for x₁."
+      },
+      {
+        "step": 11,
+        "comment": "Correct solution for x₂ using symmetry."
+      },
+      {
+        "step": "final",
+        "comment": "Correctly identified the constrained stationary point."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "ii",
+    "subquestion": "(ii) Is z* the only constrained stationary point for (P₂)? Give reasons.",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in verifying other potential solutions.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the Lagrangian."
+      },
+      {
+        "step": 2,
+        "comment": "Correct computation of the gradient."
+      },
+      {
+        "step": 3,
+        "comment": "Correct setting of the gradient to zero."
+      },
+      {
+        "step": 4,
+        "comment": "Correct simplification to e^{x₁} = e^{x₂}."
+      },
+      {
+        "step": 5,
+        "comment": "Correct substitution into the constraint."
+      },
+      {
+        "step": 6,
+        "comment": "Correct solution for e^{x₁}."
+      },
+      {
+        "step": 7,
+        "comment": "Correct solution for x₁ and x₂."
+      },
+      {
+        "step": 8,
+        "comment": "Minor issue: Verification of other solutions could be more rigorous."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion, but could be more detailed in reasoning."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "iii",
+    "subquestion": "(iii) Explain why the constrained stationary point z* of part (i) is a global minimizer for the problem (P2).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the explanation of convexity and the KKT conditions. The conclusion is accurate and well-supported by the steps.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the objective function and constraint."
+      },
+      {
+        "step": 2,
+        "comment": "The convexity of the objective function is correctly identified, but the reasoning could be more detailed."
+      },
+      {
+        "step": 3,
+        "comment": "The convexity of the constraint function is correctly identified, but the explanation is brief."
+      },
+      {
+        "step": 4,
+        "comment": "Correctly identifies the feasible region as a convex set."
+      },
+      {
+        "step": 5,
+        "comment": "Correct setup of the Lagrangian for the KKT conditions."
+      },
+      {
+        "step": 6,
+        "comment": "Correct computation of the gradient of the Lagrangian."
+      },
+      {
+        "step": 7,
+        "comment": "Correct solution of the KKT conditions, but the explanation could be more detailed."
+      },
+      {
+        "step": 8,
+        "comment": "Correct verification that the solution satisfies the constraint."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion that z* is a global minimizer."
+      }
+    ]
+  },
+  {
+    "qid": "Problemthree",
+    "subid": "iv",
+    "subquestion": "(iv) Stating clear reasons, show that z* of part (i) is the unique global minimizer for the problem (P2).",
+    "score": 4,
+    "total": 5,
+    "feedback": "The student's solution is mostly correct and well-structured, with only minor issues in the verification of the KKT conditions and the second-order conditions. The conclusion about uniqueness due to convexity is correct but could be more rigorously justified.",
+    "step_feedback": [
+      {
+        "step": 1,
+        "comment": "Correct identification of the objective function and constraint."
+      },
+      {
+        "step": 2,
+        "comment": "Correctly identifies the feasible region."
+      },
+      {
+        "step": 3,
+        "comment": "Correct formulation of the Lagrangian."
+      },
+      {
+        "step": 4,
+        "comment": "Correct computation of the gradient of the Lagrangian."
+      },
+      {
+        "step": 5,
+        "comment": "Correctly sets the gradient to zero for stationarity."
+      },
+      {
+        "step": 6,
+        "comment": "Correctly solves the system to find equality of x_1 and x_2."
+      },
+      {
+        "step": 7,
+        "comment": "Correct use of the constraint to find x_1 and x_2."
+      },
+      {
+        "step": 8,
+        "comment": "Correct solution for x_1 and x_2."
+      },
+      {
+        "step": 9,
+        "comment": "Minor issue: Verification of KKT conditions could be more detailed."
+      },
+      {
+        "step": 10,
+        "comment": "Minor issue: The positive semidefiniteness of the Hessian should be explicitly checked."
+      },
+      {
+        "step": 11,
+        "comment": "Correct conclusion that z* is a global minimizer."
+      },
+      {
+        "step": "final",
+        "comment": "Correct conclusion about uniqueness, but could be more rigorously justified."
+      }
+    ]
+  }
+]
