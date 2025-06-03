@@ -1,0 +1,2161 @@
+Actual question number,Question number,AI answer,Correct answer,Mark,Shortcoming
+opt-1,1,"To determine the convexity or concavity of the function \( h(x_1, x_2) = \frac{x_1^2}{x_2} \) on the region \( \Omega_0 = \{ (x_1, x_2) \in \mathbb{R}^2 \mid x_2 > 0 \} \), we need to compute the Hessian matrix and analyze its properties.
+
+First, we find the first-order partial derivatives:
+\[
+\frac{\partial h}{\partial x_1} = \frac{2x_1}{x_2}, \quad \frac{\partial h}{\partial x_2} = -\frac{x_1^2}{x_2^2}.
+\]
+
+Next, we find the second-order partial derivatives:
+\[
+\frac{\partial^2 h}{\partial x_1^2} = \frac{2}{x_2}, \quad
+\frac{\partial^2 h}{\partial x_2^2} = \frac{2x_1^2}{x_2^3}, \quad
+\frac{\partial^2 h}{\partial x_1 \partial x_2} = \frac{\partial^2 h}{\partial x_2 \partial x_1} = -\frac{2x_1}{x_2^2}.
+\]
+
+The Hessian matrix is then given by:
+\[
+H(x_1, x_2) = \begin{bmatrix}
+\frac{2}{x_2} & -\frac{2x_1}{x_2^2} \\
+-\frac{2x_1}{x_2^2} & \frac{2x_1^2}{x_2^3}
+\end{bmatrix}.
+\]
+
+To determine the definiteness of the Hessian, we need to examine its leading principal minors. The first leading principal minor is \( \frac{2}{x_2} \), which is positive since \( x_2 > 0 \).
+
+The determinant of the Hessian is:
+\[
+\det(H) = \left( \frac{2}{x_2} \right) \left( \frac{2x_1^2}{x_2^3} \right) - \left( -\frac{2x_1}{x_2^2} \right)^2 = \frac{4x_1^2}{x_2^4} - \frac{4x_1^2}{x_2^4} = 0.
+\]
+
+Since the determinant is 0 and the first leading principal minor is positive, the Hessian is positive semidefinite.
+
+This indicates that the function \( h(x_1, x_2) \) is convex on \( \Omega_0 \). It is not strictly convex since the determinant is zero. Therefore, the function is convex.
+
+-- The function \( h(x_1, x_2) = \frac{x_1^2}{x_2} \) on the region \( \Omega_0 = \{ (x_1, x_2) \in \mathbb{R}^2 \mid x_2 > 0 \} \) is convex, but not strictly convex, because the Hessian matrix is positive semidefinite and not positive definite.
+","\textbf{Solution.} The gradient and the Hessian of \( h \) are given by
+
+\[
+\nabla h(x_1, x_2) = \begin{pmatrix}
+\frac{2x_1}{x_2} \\
+-\frac{x_1^2}{x_2^2}
+\end{pmatrix}, \quad
+\nabla^2 h(x_1, x_2) = \begin{pmatrix}
+\frac{2}{x_2} & -\frac{2x_1}{x_2^2} \\
+-\frac{2x_1}{x_2^2} & \frac{2x_1^2}{x_2^3}
+\end{pmatrix}.
+\]
+
+Then,
+\[
+\mathrm{tr}(\nabla^2 h(x_1, x_2)) = \frac{2}{x_2} + \frac{2x_1^2}{x_2^3} > 0 \quad \text{on } \Omega_0,
+\]
+
+and
+\[
+\det(\nabla^2 h(x_1, x_2)) = \frac{4x_1^2}{x_2^4} - \frac{4x_1^2}{x_2^4} = 0,
+\]
+
+implying that one of the eigenvalues is zero and the other is positive. Hence, \( \nabla^2 h(x_1, x_2) \) is positive semidefinite on \( \Omega_0 \), and \( h \) is a convex function on \( \Omega_0 \).
+",5,1.does not explicitly mention the eigenvalues or use the trace
+opt-2-i,2,"\text{To find the stationary points of the function } f(\mathbf{x}) = x_1^4 + 2x_2^4 + 2x_1^2 x_2^2 - 2x_1^2 - 4x_2^2 + 2, \text{ we need to solve the system of equations given by } \nabla f(\mathbf{x}) = 0, \text{ which is } 4x_1(x_1^2 + x_2^2 - 1) = 0 \text{ and } 4x_2(x_1^2 + 2x_2^2 - 2) = 0. \text{ From the first equation, either } x_1 = 0 \text{ or } x_1^2 + x_2^2 = 1. \text{ If } x_1 = 0, \text{ the second equation becomes } 4x_2(2x_2^2 - 2) = 0, \text{ leading to } x_2 = 0 \text{ or } x_2^2 = 1, \text{ so } x_2 = \pm 1. \text{ If } x_1^2 + x_2^2 = 1, \text{ we substitute } x_1^2 = 1 - x_2^2 \text{ into the second equation, giving } x_2(1 - x_2^2 + 2x_2^2 - 2) = 0, \text{ so } x_2(x_2^2 - 1) = 0, \text{ thus } x_2 = 0 \text{ or } x_2 = \pm 1. \text{ If } x_2 = 0, \text{ then } x_1^2 = 1, \text{ so } x_1 = \pm 1. \text{ If } x_2 = \pm 1, \text{ then } x_1^2 = 0, \text{ so } x_1 = 0. \text{ Therefore, the five stationary points are } (0,0), (0,1), (0,-1), (1,0), \text{ and } (-1,0).
+","\text{Solving } \nabla f(x) = 0 \text{ requires that}
+\\
+x_1(x_1^2 + x_2^2 - 1) = 0, \tag{1}
+\\
+x_2(x_1^2 + 2x_2^2 - 2) = 0. \tag{2}
+\\
+\text{It follows from Eqn. (1) that } x_1 = 0 \text{ or } x_1^2 + x_2^2 - 1 = 0. \text{ When } x_1 = 0, \text{ Eqn. (2) gives } x_2 = 0 \text{ or } x_2 = \pm1, \text{ so } (0,0), (0,1), (0,-1) \text{ are stationary points. When } x_1^2 + x_2^2 - 1 = 0, \text{ we require } x_2 = 0 \text{ or } x_1^2 + 2x_2^2 - 2 = 0 \text{ from Eqn. (2). Solving } x_1^2 + x_2^2 = 1 \text{ and } x_2 = 0 \text{ gives the stationary points } (1,0) \text{ and } (-1,0). \text{ Finally, solving } x_1^2 + x_2^2 - 1 = 0 \text{ and } x_1^2 + 2x_2^2 - 2 = 0 \text{ gives the stationary points } (0,1) \text{ and } (0,-1). \text{ In conclusion, the stationary points are }
+\\
+\mathbf{a} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, 
+\mathbf{b} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, 
+\mathbf{c} = \begin{pmatrix} -1 \\ 0 \end{pmatrix}, 
+\mathbf{d} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}, 
+\mathbf{e} = \begin{pmatrix} 0 \\ -1 \end{pmatrix}.
+",5,1. less formal structure 2. no summary step 3.assume reader infers reasoning
+opt-2-ii,3,"\text{To classify the stationary points using the Hessian, we evaluate the Hessian matrix } \nabla^2 f(\mathbf{x}) = 4 \begin{pmatrix} 3x_1^2 + x_2^2 - 1 & 2x_1 x_2 \\ 2x_1 x_2 & x_1^2 + 6x_2^2 - 2 \end{pmatrix} \text{ at each stationary point.} \\
+\text{At } (0,0), \nabla^2 f(0,0) = 4 \begin{pmatrix} -1 & 0 \\ 0 & -2 \end{pmatrix}, \text{ which is negative definite, so } (0,0) \text{ is a local maximizer.} \\
+\text{At } (0,1), \nabla^2 f(0,1) = 4 \begin{pmatrix} 0 & 0 \\ 0 & 4 \end{pmatrix}, \text{ which is positive semidefinite, and at } (0,-1), \nabla^2 f(0,-1) = 4 \begin{pmatrix} 0 & 0 \\ 0 & 4 \end{pmatrix}, \text{ which is also positive semidefinite.} \\
+\text{At } (1,0), \nabla^2 f(1,0) = 4 \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}, \text{ which is indefinite, so } (1,0) \text{ is a saddle point.} \\
+\text{At } (-1,0), \nabla^2 f(-1,0) = 4 \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}, \text{ which is also indefinite, so } (-1,0) \text{ is a saddle point.} \\
+\text{Thus, } (0,0) \text{ is a local maximizer, } (1,0) \text{ and } (-1,0) \text{ are saddle points, and } (0,1) \text{ and } (0,-1) \text{ are not strictly local minimizers or maximizers but are local minimizers in the direction of } x_2.
+","\textbf{Solution.}
+\begin{itemize}
+  \item \text{For } \mathbf{a} = (0,0)^T, \text{ the Hessian matrix is } \nabla^2 f(\mathbf{a}) = 4 \begin{pmatrix} -1 & 0 \\ 0 & -2 \end{pmatrix}. \text{ The eigenvalues of } \nabla^2 f(\mathbf{a}) \text{ are } -4 \text{ and } -8, \text{ so } \nabla^2 f(\mathbf{a}) \text{ is negative definite. By the second-order sufficient optimality conditions, } \mathbf{a} \text{ is a strict local maximiser of } f.
+  
+  \item \text{For } \mathbf{b} = (1,0)^T, \nabla^2 f(\mathbf{b}) = 4 \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}. \text{ The eigenvalues are } \lambda_1 = 8 > 0 \text{ and } \lambda_2 = -4 < 0, \text{ so } \nabla^2 f(\mathbf{b}) \text{ is indefinite, and } \mathbf{b} \text{ is a saddle point of } f.
+  
+  \item \text{For } \mathbf{c} = (-1,0)^T, \nabla^2 f(\mathbf{c}) = 4 \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}, \text{ which is indefinite, and } \mathbf{c} \text{ is a saddle point of } f.
+  
+  \item \text{For } \mathbf{d} = (0,1)^T, \nabla^2 f(\mathbf{d}) = 4 \begin{pmatrix} 0 & 0 \\ 0 & 4 \end{pmatrix}, \text{ which is positive semi-definite as the eigenvalues are } 0 \text{ and } 16. \text{ It is not enough to conclude that } \mathbf{d} \text{ is a local minimiser, but we can conclude that } \mathbf{d} \text{ is not a local maximiser by the second-order necessary conditions for a local maximizer.}
+  
+  \item \text{For } \mathbf{e} = (0,-1)^T, \nabla^2 f(\mathbf{e}) = 4 \begin{pmatrix} 0 & 0 \\ 0 & 4 \end{pmatrix}, \text{ which is positive semi-definite, so } \mathbf{e} \text{ cannot be a local maximiser of } f \text{ by the second-order necessary conditions for a local maximizer.}
+\end{itemize}
+",4,1.lacks eigenvalue justification 2.missing formal optimality conditions 3.less precise terminology
+opt-2-iii,4,"\text{To determine if } f(\mathbf{x}) = x_1^4 + 2x_2^4 + 2x_1^2 x_2^2 - 2x_1^2 - 4x_2^2 + 2 \text{ has a global maximizer on } \mathbb{R}^2, \text{ we analyze its behavior as } \|\mathbf{x}\| \to \infty. \text{ We can write } f(\mathbf{x}) = x_1^4 + 2x_2^4 + 2x_1^2 x_2^2 - 2x_1^2 - 4x_2^2 + 2 = (x_1^2 + x_2^2)^2 + x_2^4 - 2x_1^2 - 4x_2^2 + 2. \text{ As } \|\mathbf{x}\| \to \infty, \text{ the quartic terms dominate, so } f(\mathbf{x}) \to \infty. \text{ Thus, the function is unbounded above, and there is no global maximizer on } \mathbb{R}^2.
+","\textbf{Solution.} \text{ The function } f \text{ does not have a global maximiser because }
+f(x_1, 0) = x_1^4 - 2x_1^2 + 2 = (x_1^2 - 1)^2 + 1 \to +\infty
+\text{ as } x_1 \to +\infty, \text{ and the function is not bounded above on } \mathbb{R}^2.
+",5,no
+opt-3,5,"Let \( A \) be a real \( n \times n \) square matrix, and let \( a_{ii} \) and \( a_{jj} \) be the \( i^{\text{th}} \) and \( j^{\text{th}} \) diagonal elements of \( A \) respectively, where \( i, j \in \{1, 2, \ldots, n\} \) and \( i \ne j \). If \( a_{ii}a_{jj} < 0 \), then \( a_{ii} \) and \( a_{jj} \) have opposite signs. We can construct vectors \( x \) and \( y \) such that \( x_i = 1, x_k = 0 \text{ for } k \ne i \), and \( y_j = 1, y_k = 0 \text{ for } k \ne j \). Then \( x^T A x = a_{ii} \) and \( y^T A y = a_{jj} \). Since \( a_{ii}a_{jj} < 0 \), it follows that \( x^T A x \) and \( y^T A y \) have opposite signs. By definition, a matrix is indefinite if there exist vectors \( u \) and \( v \) such that \( u^T A u > 0 \) and \( v^T A v < 0 \). Since we have found such vectors \( x \) and \( y \), we conclude that \( A \) is indefinite.
+","\textbf{Proof.} We take the standard basis vectors \( e_i \in \mathbb{R}^n \), which has entry 1 on the \( i \)-th component and zero otherwise, and \( e_j \in \mathbb{R}^n \), which has entry 1 on the \( j \)-th component and zero otherwise, \( e_i \ne e_j \). Then, \( e_i^T A e_i = a_{ii} \) and \( e_j^T A e_j = a_{jj} \). We consider two scenarios when \( a_{ii}a_{jj} < 0 \), i.e., \( a_{ii} < 0, a_{jj} > 0 \) or \( a_{ii} > 0, a_{jj} < 0 \). For the former scenario, \( e_i^T A e_i < 0 \) and \( e_j^T A e_j > 0 \). By the definition, \( A \) is an indefinite matrix. For the latter scenario, \( e_i^T A e_i > 0 \) and \( e_j^T A e_j < 0 \), again implying that \( A \) is indefinite. \(\square\)
+",5,1.not explicitly naming the standard basis vectors or splitting into cases
+opt-4,6,"\text{Let } C \text{ be an } m \times n \text{ matrix},\ d \in \mathbb{R}^m,\ a \in \mathbb{R}^n \text{ and } r \in \mathbb{R}.
+\text{We want to show that } \Omega = \left\{ x \in \mathbb{R}^n : \|Cx - d\| \leq a^\top x + r \right\} 
+\text{ is a convex set for any norm } \|\cdot\| \text{ on } \mathbb{R}^m.
+
+\text{Let } x_1, x_2 \in \Omega \text{ and } \lambda \in [0,1]. \text{ We need to show that } \lambda x_1 + (1 - \lambda)x_2 \in \Omega.
+
+\text{By definition of } \Omega, \text{ we have } \|Cx_1 - d\| \leq a^\top x_1 + r \text{ and } \|Cx_2 - d\| \leq a^\top x_2 + r.
+
+\text{Now, consider } \|C(\lambda x_1 + (1 - \lambda)x_2) - d\| = \| \lambda Cx_1 + (1 - \lambda)Cx_2 - (1 - \lambda)d - \lambda d \| 
+= \| \lambda(Cx_1 - d) + (1 - \lambda)(Cx_2 - d) \| \leq \lambda\|Cx_1 - d\| + (1 - \lambda)\|Cx_2 - d\|
+
+\text{ (by the triangle inequality of the norm)}.
+
+\text{Using the given inequalities, we have: }
+
+\lambda \|Cx_1 - d\| + (1 - \lambda)\|Cx_2 - d\| \leq \lambda(a^\top x_1 + r) + (1 - \lambda)(a^\top x_2 + r) 
+= \lambda a^\top x_1 + \lambda r + (1 - \lambda)a^\top x_2 + (1 - \lambda)r 
+= a^\top (\lambda x_1 + (1 - \lambda)x_2) + r
+
+\Rightarrow \|C(\lambda x_1 + (1 - \lambda)x_2) - d\| \leq a^\top (\lambda x_1 +_
+","\textit{Proof.} \text{ Let } \boldsymbol{x}, \boldsymbol{y} \in \Omega \text{ and } \theta \in (0,1) \text{ be arbitrary. Then, } \|C\boldsymbol{x} - \boldsymbol{d}\| \leq \boldsymbol{a}^\top \boldsymbol{x} + r \text{ and } \|C\boldsymbol{y} - \boldsymbol{d}\| \leq \boldsymbol{a}^\top \boldsymbol{y} + r.
+
+\text{Define } \boldsymbol{z} = \theta \boldsymbol{x} + (1 - \theta)\boldsymbol{y}. \text{We need to show that } \boldsymbol{z} \in \Omega.
+
+\|C\boldsymbol{z} - \boldsymbol{d}\| 
+= \|C(\theta \boldsymbol{x} + (1 - \theta)\boldsymbol{y}) - \boldsymbol{d}\| 
+= \|\theta C\boldsymbol{x} + (1 - \theta)C\boldsymbol{y} - \boldsymbol{d}\| 
+= \|\theta(C\boldsymbol{x} - \boldsymbol{d}) + (1 - \theta)(C\boldsymbol{y} - \boldsymbol{d})\| 
+\leq \|\theta(C\boldsymbol{x} - \boldsymbol{d})\| + \|(1 - \theta)(C\boldsymbol{y} - \boldsymbol{d})\| \quad \text{(triangle inequality)} \\
+= |\theta|\|C\boldsymbol{x} - \boldsymbol{d}\| + |1 - \theta|\|C\boldsymbol{y} - \boldsymbol{d}\| \quad \text{(positive homogeneity)} 
+= \theta\|C\boldsymbol{x} - \boldsymbol{d}\| + (1 - \theta)\|C\boldsymbol{y} - \boldsymbol{d}\| \quad (\theta > 0, 1 - \theta > 0)
+
+\leq \theta(\boldsymbol{a}^\top \boldsymbol{x} + r) + (1 - \theta)(\boldsymbol{a}^\top \boldsymbol{y} + r) 
+= \boldsymbol{a}^\top (\theta \boldsymbol{x} + (1 - \theta)\boldsymbol{y}) + r 
+= \boldsymbol{a}^\top \boldsymbol{z} + r
+
+\Rightarrow \boldsymbol{z} \in \Omega \Rightarrow \Omega \text{ is convex}.
+",5,1.slightly more roundabout 2.lacks side comments/annotations
+opt-1-i,7,"\text{To find the Newton direction for the given function } h(x_1, x_2) = x_1^2 + x_2^2 - x_1 x_2 + 3x_2 - 1 \text{ at the point } \mathbf{x}^{(1)} = (1, 1)^T, \text{ we first compute the gradient and Hessian. The gradient is }
+
+\nabla h(x_1, x_2) = (2x_1 - x_2, 2x_2 - x_1 + 3)^T, \text{ and the Hessian is } \nabla^2 h(x_1, x_2) = \begin{pmatrix} 2 & -1 \\ -1 & 2 \end{pmatrix}.
+
+\text{Evaluating the gradient at } \mathbf{x}^{(1)} = (1, 1)^T \text{ gives } \nabla h(1, 1) = (1, 4)^T.
+
+\text{The Newton direction is given by } \mathbf{s}^{(1)} = -(\nabla^2 h(1, 1))^{-1} \nabla h(1, 1). \text{ The inverse of the Hessian is } (\nabla^2 h(1, 1))^{-1} = \frac{1}{3} \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}.
+
+\text{Thus, the Newton direction is } \mathbf{s}^{(1)} = -\frac{1}{3} \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} 1 \\ 4 \end{pmatrix} = -\frac{1}{3} \begin{pmatrix} 6 \\ 9 \end{pmatrix} = \begin{pmatrix} -2 \\ -3 \end{pmatrix}.
+
+\text{Therefore, the Newton direction is } \mathbf{s}^{(1)} = (-2, -3)^T.
+","\text{Solution. The gradient and Hessian are given by }
+
+\nabla h(\mathbf{x}) = \begin{pmatrix} 2x_1 - x_2 \\ 2x_2 - x_1 + 3 \end{pmatrix}, \quad \nabla^2 h(\mathbf{x}) = \begin{pmatrix} 2 & -1 \\ -1 & 2 \end{pmatrix}.
+
+\text{The Newton direction } \mathbf{s}^{(1)} \text{ satisfies }
+
+\nabla^2 h(\mathbf{x}^{(1)}) \mathbf{s}^{(1)} = \begin{pmatrix} 2 & -1 \\ -1 & 2 \end{pmatrix} \mathbf{s}^{(1)} = -\nabla h(\mathbf{x}^{(1)}) = \begin{pmatrix} -1 \\ -4 \end{pmatrix}.
+
+\text{By row reduction: }
+
+\left( \begin{array}{cc|c} 2 & -1 & -1 \\ -1 & 2 & -4 \end{array} \right) 
+\rightarrow \left( \begin{array}{cc|c} 1 & -\frac{1}{2} & -\frac{1}{2} \\ 1 & -2 & -4 \end{array} \right) 
+\rightarrow \left( \begin{array}{cc|c} 0 & \frac{3}{2} & \frac{9}{2} \end{array} \right),
+
+\text{giving } \mathbf{s}^{(1)} = (-2, -3)^T.
+",5,1.skip the equation-solving step
+opt-1-ii,8,"\text{To determine if the Newton direction } \mathbf{s}^{(1)} = (-2, -3)^T \text{ is a descent direction for } h \text{ at } \mathbf{x}^{(1)} = (1, 1)^T, \text{ we need to check if the directional derivative } \nabla h(\mathbf{x}^{(1)})^T \mathbf{s}^{(1)} \text{ is negative.}
+
+\text{We already found that } \nabla h(1, 1) = (1, 4)^T. \text{ So, } \nabla h(1, 1)^T \mathbf{s}^{(1)} = (1, 4) \cdot (-2, -3) = 1(-2) + 4(-3) = -2 - 12 = -14.
+
+\text{Since } -14 < 0, \text{ the directional derivative is negative, indicating that the Newton direction } \mathbf{s}^{(1)} = (-2, -3)^T \text{ is indeed a descent direction for } h \text{ at } \mathbf{x}^{(1)} = (1, 1)^T.
+","\text{Solution. It is a descent direction as }
+
+\nabla h(\mathbf{x}^{(1)})^T \mathbf{s}^{(1)} = (1 \quad 4) \begin{pmatrix} -2 \\ -3 \end{pmatrix} = -14 < 0.
+",5,no
+opt-1-iii,9,"\text{To find the next Newton iterate } \mathbf{x}^{(2)}, \text{ we use the formula } \mathbf{x}^{(2)} = \mathbf{x}^{(1)} + \mathbf{s}^{(1)}.
+
+\text{We have } \mathbf{x}^{(1)} = (1, 1)^T \text{ and } \mathbf{s}^{(1)} = (-2, -3)^T.
+
+\text{Therefore, } \mathbf{x}^{(2)} = (1, 1)^T + (-2, -3)^T = (1 - 2, 1 - 3)^T = (-1, -2)^T.
+
+\text{Thus, the next Newton iterate is } \mathbf{x}^{(2)} = (-1, -2)^T.
+","\text{Solution. } \mathbf{x}^{(2)} = \mathbf{x}^{(1)} + \mathbf{s}^{(1)} = (1, 1)^T + (-2, -3)^T = (-1, -2)^T.
+",5,no
+opt-1-iv,10,"\text{To show that } \mathbf{x}^{(2)} = (-1, -2)^T \text{ is the unique global minimizer for } h(x_1, x_2) = x_1^2 + x_2^2 - x_1 x_2 + 3x_2 - 1, \text{ we can analyze the Hessian matrix.}
+
+\text{The Hessian is } \nabla^2 h(x_1, x_2) = \begin{pmatrix} 2 & -1 \\ -1 & 2 \end{pmatrix}.
+
+\text{The determinant is } 2(2) - (-1)(-1) = 4 - 1 = 3 > 0, \text{ and the trace is } 2 + 2 = 4 > 0.
+
+\text{Since the determinant and trace are both positive, the eigenvalues of the Hessian are positive, meaning the Hessian is positive definite.}
+
+\text{This implies that the function } h \text{ is strictly convex. For a strictly convex function, any critical point is a unique global minimizer.}
+
+\text{Since } \mathbf{x}^{(2)} \text{ is the result of one Newton iteration, it is a critical point where the gradient is zero.}
+
+\text{Therefore, } \mathbf{x}^{(2)} = (-1, -2)^T \text{ is the unique global minimizer for the function } h.
+","\text{Solution. The point } \mathbf{x}^{(2)} \text{ is a stationary point because }
+
+\nabla h(\mathbf{x}^{(2)}) = \begin{pmatrix} 2(-1) - (-2) \\ 2(-2) - (-1) + 3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}.
+
+\text{Moreover, } \nabla^2 h(x) = \begin{pmatrix} 2 & -1 \\ -1 & 2 \end{pmatrix} \text{ with } \mathrm{tr}(\nabla^2 h(x)) = 4 > 0 \text{ and } \det(\nabla^2 h(x)) = 3 > 0 \text{ has positive eigenvalues,}
+
+\text{so } \nabla^2 h(x) \text{ is positive definite for all } \mathbf{x} \in \mathbb{R}^2. \text{ Hence, } h \text{ is a strictly convex function over } \mathbb{R}^2.
+
+\text{Hence, the stationary point } \mathbf{x}^{(2)} \text{ is the unique global minimiser.}
+",5,1.minor CoT omission
+opt-2,11,"\text{Let } f(\mathbf{x}) = -x_1x_2x_3, \; c_1(\mathbf{x}) = x_1 + x_2 + x_3 - 40, \text{ and } c_2(\mathbf{x}) = x_1 + x_2 - x_3. \\
+\text{The Lagrangian is } L(\mathbf{x}, \boldsymbol{\lambda}) = -x_1x_2x_3 + \lambda_1(x_1 + x_2 + x_3 - 40) + \lambda_2(x_1 + x_2 - x_3). \\
+\text{We are given } \mathbf{x}^* = (10, 10, 20)^T, \; \lambda_1^* = 150, \text{ and } \lambda_2^* = 50. \\
+\text{The gradients are } \nabla f(\mathbf{x}) = (-x_2x_3, -x_1x_3, -x_1x_2)^T, \\
+\nabla c_1(\mathbf{x}) = (1,1,1)^T, \; \nabla c_2(\mathbf{x}) = (1,1,-1)^T. \\
+\text{The Hessian of the Lagrangian is } \nabla^2 L(\mathbf{x}, \boldsymbol{\lambda}) = 
+\begin{bmatrix}
+0 & -x_3 & -x_2 \\
+-x_3 & 0 & -x_1 \\
+-x_2 & -x_1 & 0
+\end{bmatrix}. \\
+\text{At } \mathbf{x}^*, \; \nabla^2 L(\mathbf{x}^*, \boldsymbol{\lambda}^*) =
+\begin{bmatrix}
+0 & -20 & -10 \\
+-20 & 0 & -10 \\
+-10 & -10 & 0
+\end{bmatrix}. \\
+\text{The tangent space is } T(\mathbf{x}^*) = \{\mathbf{d} \in \mathbb{R}^3 : \nabla c_1(\mathbf{x}^*)^T \mathbf{d} = 0, \nabla c_2(\mathbf{x}^*)^T \mathbf{d} = 0\}, \text{ which gives } d_1 + d_2 + d_3 = 0 \text{ and } d_1 + d_2 - d_3 = 0. \\
+\text{Solving this, we get } d_3 = 0 \text{ and } d_1 = -d_2. \text{ Thus, } T(\mathbf{x}^*) = \{(-d_2, d_2, 0)^T : d_2 \in \mathbb{R}\}. \\
+\text{For } \mathbf{d} \in T(\mathbf{x}^*), \; \mathbf{d}^T \nabla^2 L(\mathbf{x}^*, \boldsymbol{\lambda}^*) \mathbf{d} = (-d_2, d_2, 0)
+\begin{bmatrix}
+0 & -20 & -10 \\
+-20 & 0 & -10 \\
+-10 & -10 & 0
+\end{bmatrix}
+\begin{bmatrix}
+-d_2 \\
+d_2 \\
+0
+\end{bmatrix} \\
+= (-d_2, d_2, 0)
+\begin{bmatrix}
+-20d_2 \\
+20d_2 \\
+0
+\end{bmatrix} = 40d_2^2 > 0 \text{ for } d_2 \neq 0. \text{ Therefore, } \mathbf{x}^* \text{ is a strict local minimizer}.
+","\text{The Lagrangian function is } L(\mathbf{x}, \boldsymbol{\lambda}) = f(\mathbf{x}) + \lambda_1 c_1(\mathbf{x}) + \lambda_2 c_2(\mathbf{x}), \text{ with gradient and Hessian} \\
+\nabla L(\mathbf{x}, \boldsymbol{\lambda}) = 
+\begin{pmatrix}
+-x_2x_3 + \lambda_1 + \lambda_2 \\
+-x_1x_3 + \lambda_1 + \lambda_2 \\
+-x_1x_2 + \lambda_1 - \lambda_2
+\end{pmatrix}, \quad
+\nabla^2 L(\mathbf{x}, \boldsymbol{\lambda}) = 
+\begin{pmatrix}
+0 & -x_3 & -x_2 \\
+-x_3 & 0 & -x_1 \\
+-x_2 & -x_1 & 0
+\end{pmatrix}, \quad
+\nabla^2 L(\mathbf{x}^*, \boldsymbol{\lambda}^*) = 
+\begin{pmatrix}
+0 & -20 & -10 \\
+-20 & 0 & -10 \\
+-10 & -10 & 0
+\end{pmatrix}. \\
+\text{The matrix } \nabla^2 L(\mathbf{x}^*, \boldsymbol{\lambda}^*) \text{ is not positive definite. So, to calculate the reduced Hessian, we want to find } Z^* = (\alpha, \beta, \gamma)^T \in \mathbb{R}^{3 \times 1} \\
+\text{such that } (Z^*)^T (\nabla c_1(\mathbf{x}^*) \; \nabla c_2(\mathbf{x}^*)) = 
+(Z^*)^T \begin{pmatrix}
+1 & 1 \\
+1 & 1 \\
+1 & -1
+\end{pmatrix} = (\alpha + \beta + \gamma, \alpha + \beta - \gamma) = (0, 0). \\
+\text{This gives } \gamma = 0, \; \alpha = -\beta. \text{ So } Z^* = (-\beta, \beta, 0)^T, \; \beta \neq 0. \text{ Choose } Z^* = (-1, 1, 0)^T. \\
+\text{The reduced Hessian is } W^* = (Z^*)^T \nabla^2 L(\mathbf{x}^*, \boldsymbol{\lambda}^*) Z^* = (-1, 1, 0)
+\begin{pmatrix}
+0 & -20 & -10 \\
+-20 & 0 & -10 \\
+-10 & -10 & 0
+\end{pmatrix}
+\begin{pmatrix}
+-1 \\
+1 \\
+0
+\end{pmatrix} = 40. \\
+\text{Since 40 > 0, by the second-order sufficient optimality condition, } \mathbf{x}^* \text{ is a strict local minimizer}.
+",5,"1.uses an equivalent but more direct vector substitution method into the Hessian, which works well for this small-dimensional problem but is less scalable 2.No mention of definiteness of full Hessian 3.No formal notation for projection matrix or null space basis"
+opt-3-i,12,"L(x_1, x_2, \lambda) = e^{-2(x_1 + x_2)} + \lambda (e^{x_1} + e^{x_2} - 4)
+
+\frac{\partial L}{\partial x_1} = -2e^{-2(x_1 + x_2)} + \lambda e^{x_1} = 0 \\
+\frac{\partial L}{\partial x_2} = -2e^{-2(x_1 + x_2)} + \lambda e^{x_2} = 0 \\
+\frac{\partial L}{\partial \lambda} = e^{x_1} + e^{x_2} - 4 = 0
+
+\Rightarrow \lambda e^{x_1} = \lambda e^{x_2} \Rightarrow e^{x_1} = e^{x_2} \Rightarrow x_1 = x_2
+
+2e^{x_1} = 4 \Rightarrow e^{x_1} = 2 \Rightarrow x_1 = x_2 = \ln 2
+
+\text{Substitute into first equation: } \lambda = \frac{2e^{-4\ln 2}}{e^{\ln 2}} = \frac{2}{16 \cdot 2} = \frac{1}{16}
+
+\Rightarrow z^* = (\ln 2, \ln 2), \quad \lambda = \frac{1}{16}
+","c_1(x_1, x_2) := e^{x_1} + e^{x_2} - 4 \\
+L(x, \lambda_1) = e^{-2(x_1 + x_2)} + \lambda_1(e^{x_1} + e^{x_2} - 4)
+
+\text{Stationary condition: } \nabla_z L(z^*, \lambda_1^*) = 0, \quad c_1(z^*) = 0
+
+-2e^{-2(z_1^* + z_2^*)} + \lambda_1^* e^{z_1^*} = 0 \quad \text{(1)} \\
+-2e^{-2(z_1^* + z_2^*)} + \lambda_1^* e^{z_2^*} = 0 \quad \text{(2)} \\
+e^{z_1^*} + e^{z_2^*} - 4 = 0 \quad \text{(3)}
+
+\text{From (1)-(2): } \lambda_1^* (e^{z_2^*} - e^{z_1^*}) = 0 \Rightarrow z_1^* = z_2^*
+
+\text{From (3): } 2e^{z_1^*} = 4 \Rightarrow e^{z_1^*} = 2 \Rightarrow z_1^* = z_2^* = \log 2
+
+\text{From (1): } \lambda_1^* = 2^{-4}
+
+\Rightarrow z^* = (\log 2, \log 2), \quad \lambda_1^* = 2^{-4}
+",4,1.Constraint Activeness Not Justified 2.Lack of Symbolic Simplification Insight 3.Missing Labeling and Structuring of Conditions
+opt-3-ii,13,"z^* = (\ln 2, \ln 2) \text{ is the only constrained stationary point for the problem (P2)}.
+
+\text{From the Lagrangian analysis in part (i), we derived the equations:} \\
+-2e^{-2(x_1 + x_2)} + \lambda e^{x_1} = 0, \\
+-2e^{-2(x_1 + x_2)} + \lambda e^{x_2} = 0, \\
+e^{x_1} + e^{x_2} - 4 \leq 0.
+
+\text{The first two equations imply } x_1 = x_2 \text{ since } \lambda \neq 0. \\
+\text{Substituting } x_1 = x_2 \text{ into the constraint: } 2e^{x_1} \leq 4 \Rightarrow e^{x_1} \leq 2.
+
+\text{If } e^{x_1} < 2 \Rightarrow x_1 < \ln 2 \Rightarrow e^{x_1} + e^{x_2} < 4, 
+\text{ constraint is inactive, and } \lambda = 0.
+
+\text{But } \lambda = 0 \Rightarrow -2e^{-2(x_1 + x_2)} = 0, \text{ which is impossible.}
+
+\text{Therefore, constraint must be active: } e^{x_1} + e^{x_2} = 4 \Rightarrow x_1 = x_2 = \ln 2.
+
+\text{Hence } z^* = (\ln 2, \ln 2) \text{ is the only constrained stationary point.}
+","\text{Suppose the constraint is not active at } z^*, \text{ i.e., } e^{z_1^*} + e^{z_2^*} - 4 < 0.
+
+\text{Then the first-order necessary optimality condition requires:}
+
+\nabla_z (e^{-2(z_1^* + z_2^*)}) = \begin{pmatrix} -2e^{-2(z_1^* + z_2^*)} \\ -2e^{-2(z_1^* + z_2^*)} \end{pmatrix}
+= \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+
+\text{which is not possible.}
+
+\text{Hence, } z^* = (\log 2, \log 2) \text{ is the only constrained stationary point.}
+",5,1.slightly verbose and indirect 2. less concise
+opt-3-iii,14,"\text{To show that } z^* = (\ln 2, \ln 2) \text{ is a global minimizer, we observe that the objective function } 
+f(x_1, x_2) = e^{-2(x_1 + x_2)} \text{ is convex since its Hessian is positive semidefinite: } 
+\nabla^2 f(x_1, x_2) = 4e^{-2(x_1 + x_2)} 
+\begin{pmatrix}
+1 & 1 \\
+1 & 1
+\end{pmatrix}.
+
+\text{The constraint function } g(x_1, x_2) = e^{x_1} + e^{x_2} - 4 \text{ is also convex, since its Hessian is positive definite: } 
+\nabla^2 g(x_1, x_2) = 
+\begin{pmatrix}
+e^{x_1} & 0 \\
+0 & e^{x_2}
+\end{pmatrix}.
+
+\text{Since the objective function is convex, the constraint set is convex, and the problem is a convex optimization problem, 
+any local minimum is a global minimum. We found that } z^* = (\ln 2, \ln 2) \text{ is the unique constrained stationary point, 
+which must be the global minimizer.}
+
+\text{Therefore, } z^* = (\ln 2, \ln 2) \text{ is the global minimizer for the problem (P2).}
+","\text{It is given that } (P_2) \text{ is a convex problem, and we have found } \lambda_1^* > 0 
+\text{ for the active inequality constraint.} 
+
+\text{By the KKT sufficient optimality conditions, the constrained stationary point } 
+z^* \text{ is a global minimiser.}
+",4,1.Lack of Explicit Verification of Convexity 2.Skipped Mention of Convex Constraint Set 3.Did Not Justify Uniqueness of Solution
+opt-3-iv,15,"\text{To establish that } z^* = (\ln 2, \ln 2) \text{ is the unique global minimizer for (P2), 
+we verify the convexity of the objective and constraint functions.}
+
+\text{The objective function } f(x_1, x_2) = e^{-2(x_1 + x_2)} \text{ has a Hessian } 
+\nabla^2 f(x_1, x_2) = 4e^{-2(x_1 + x_2)} 
+\begin{pmatrix}
+1 & 1 \\
+1 & 1
+\end{pmatrix},
+\text{ which is positive semidefinite, proving } f \text{ is convex.}
+
+\text{The constraint function } g(x_1, x_2) = e^{x_1} + e^{x_2} - 4 
+\text{ has a Hessian } \nabla^2 g(x_1, x_2) = 
+\begin{pmatrix}
+e^{x_1} & 0 \\
+0 & e^{x_2}
+\end{pmatrix}, 
+\text{ which is positive definite, confirming } g \text{ is convex.}
+
+\text{The constraint set defined by } g(x_1, x_2) \leq 0 \text{ is therefore convex.}
+
+\text{The Lagrangian analysis in part (i) yielded a unique constrained stationary point } 
+z^* = (\ln 2, \ln 2).
+
+\text{Since the problem is convex, any local minimum is a global minimum, 
+and since we have a unique stationary point, it must be the unique global minimizer.}
+
+\text{Thus, } z^* = (\ln 2, \ln 2) \text{ is the unique global minimizer for the problem (P2).}
+","\text{Suppose that } y^* = (y_1^*, y_2^*) \text{ is another global minimizer for } (P_2). 
+
+\text{Then, it is a regular local minimizer because } \nabla c_1(y^*) = (e^{y_1^*}, e^{y_2^*})^\top \neq 0. 
+
+\text{So, by the first-order necessary optimality conditions, 
+it must be a constrained stationary point for } (P_2). 
+
+\text{By part (ii), } z^* \text{ is the only constrained stationary point for } (P_2), 
+\text{ so } z^* = y^*.
+
+\text{Note that the constraint cannot be active at } y^*. \text{ Otherwise, 
+the first-order necessary optimality condition gives:}
+
+\nabla_{y^*}(e^{-2(y_1^* + y_2^*)}) = 
+\begin{pmatrix}
+-2e^{-2(y_1^* + y_2^*)} \\
+-2e^{-2(y_1^* + y_2^*)}
+\end{pmatrix}
+= 
+\begin{pmatrix}
+0 \\
+0
+\end{pmatrix}, 
+\text{ which is not possible.}
+
+\text{Hence, } z^* \text{ is the unique global minimizer for } (P_2).
+",5,1.No Direct Use of Necessary Conditions for Other Points 2.Did Not Explicitly Use Gradient Contradiction
+fin-1-i-a,16,"\text{The problem requires finding the largest covariance matrix } C \text{ that can be stored in the 20 MB cache memory of the workstation using IEEE double precision.}
+
+\text{Since IEEE double precision uses 8 bytes per element, and the matrix } C \text{ is of size } n \times n, \text{ the total memory required is } 8n^2 \text{ bytes.}
+
+\text{We convert 20 MB to bytes: } 20 \times 2^{20} \text{ bytes. Setting } 8n^2 \leq 20 \times 2^{20}, \text{ we solve for } n: n^2 \leq \frac{20 \times 2^{20}}{8} = 2.5 \times 2^{20} = 2.5 \times 1024^2.
+
+\text{Taking the square root, } n \leq \sqrt{2.5 \times 1024^2} \approx 1612.45.
+
+\text{Since } n \text{ must be an integer, the largest possible value for } n \text{ is } 1612. \text{ Therefore, the largest covariance matrix } C \text{ that can be stored in the cache memory is } 1612 \times 1612.
+","\text{IEEE double precision uses 8 bytes per floating point number and the } n \times n \text{ matrix } C \text{ has } n^2 \text{ elements, so for the cache memory}
+
+8n^2 = 20 \text{ MB.}
+
+\text{Using } 1 \text{ MB} = 2^{20} \text{ bytes,}
+
+8n^2 = 20 \times 2^{20} \Rightarrow n^2 = 10 \times 2^{18} \Rightarrow n = 1.61908616 \times 10^3,\\
+\text{so } n = 1619 \text{ or more sensibly } n \approx 1600.
+
+\text{Alternatively, using } 1 \text{ MB} = 10^6 \text{ bytes,}
+
+8n^2 = 20 \times 10^6 \Rightarrow n^2 = \frac{5}{42} \times 10^6 \Rightarrow n = 1.58113883 \times 10^3,\\
+\text{so } n = 1581.
+
+\text{A covariance matrix must be symmetric } (C^T = C \text{ or } C_{ji} = C_{ij} \text{ for all } i \neq j), \text{ so only the diagonal elements and either the strict lower or strict upper triangle needs to be stored, requiring } \frac{n(n+1)}{2} \text{ elements.}
+
+\text{Using } 1 \text{ MB} = 2^{20} \text{ bytes, this gives}
+
+8 \times \frac{n(n+1)}{2} = 20 \times 2^{20} \Rightarrow n^2 \approx 5 \times 2^{20} \Rightarrow n \approx 2289.
+",3,1.Lack of multiple unit systems consideration 2.No discussion of matrix symmetry 3.No mention of rounding or practical integer values 4.No upper bound scenario
+fin-1-i-b,17,"\text{The workstation has an 8-core processor running at 2.4 GHz, and each core performs 4 floating-point operations per clock cycle.}
+
+\text{Thus, each core performs } 2.4 \times 10^9 \text{ cycles/sec } \times 4 \text{ flops/cycle } = 9.6 \times 10^9 \text{ flops/sec.}
+
+\text{Since there are 8 cores, the total speed is } 8 \times 9.6 \times 10^9 \text{ flops/sec } = 76.8 \times 10^9 \text{ flops/sec } = 76.8 \text{ Gflops/sec.}
+
+\text{Therefore, the estimated speed of the workstation is 76.8 Gflops/sec.}
+","\text{The speed of the workstation is estimated as}
+
+\begin{align*}
+\text{Speed} &= \text{GHz} \times 10^9 \times \text{number cores} \times \text{flops per cycle per core} \\
+&= 2.4 \times 10^9 \times 8 \times 4 = 7.68 \times 10^{10} \text{ flops/sec} \\
+&= 76.8 \text{ Gflops/sec}.
+\end{align*}
+
+\text{GHz and Gflops both use factors of } 10^9, \text{ not } 2^{30} \text{ which is used for memory (Cache, RAM).}
+",5,1.need Explicit expression of the speed formula 2.need Clarification about units
+fin-1-i-c,18,"\text{To solve the linear system } Cx = b, \text{ we can use LU factorization, which has a computational cost of } \frac{2}{3}n^3 + O(n^2) \text{ flops.}
+
+\text{We want to find the largest } n \text{ such that this operation can be performed in 1 minute (60 seconds) on the workstation with a speed of 76.8 Gflops/sec.}
+
+\text{Thus, we have the inequality } \frac{2}{3}n^3 \leq 76.8 \times 10^9 \text{ flops/sec } \times 60 \text{ sec.}
+
+\text{Solving for } n, \text{ we get } n^3 \leq \frac{3}{2} \times 76.8 \times 10^9 \times 60 = 6912 \times 10^9.
+
+\text{Taking the cube root, } n \leq \sqrt[3]{6912 \times 10^9} \approx 1905.7.
+
+\text{Since } n \text{ must be an integer, the largest value of } n \text{ is 1905.}
+
+\text{Therefore, the largest value of } n \text{ so that the linear system } Cx = b \text{ can be solved in 1 minute is 1905.}
+","\text{As } C \text{ is a non-singular covariance matrix, } C \text{ must be positive definite, so the major cost in solving the linear system } Cx = b \text{ is the Cholesky factorization requiring } \frac{n^3}{3} \text{ flops.}
+
+\text{Thus in 1 minute = 60 seconds,}
+
+\frac{n^3}{3} = 76.8 \times 10^9 \times 60 \Rightarrow n^3 = 1.3824 \times 10^{13} \Rightarrow n \approx 24,000.
+",3,1.Incorrect factorization method 2.Incorrect operation count 3.Missing physical interpretation
+fin-1-i-d,19,"\text{The simulation requires evaluating the multivariate density function at } N \text{ vectors, each involving the inverse of the covariance matrix } C \text{ of size } n \times n.
+
+\text{The most computationally expensive part is computing } C^{-1}, \text{ which is typically done using LU factorization with a cost of } \frac{2}{3}n^3 + O(n^2) \text{ flops.}
+
+\text{Since this operation is performed once for each of the } N \text{ vectors, the total cost is } N\left(\frac{2}{3}n^3 + O(n^2)\right) = \frac{2}{3}Nn^3 + O(Nn^2) \text{ flops.}
+
+\text{Analyst 1's claim of } 2Nn^3/3 \text{ flops is a leading-order approximation, ignoring lower-order terms.}
+
+\text{Analyst 2's claim of } n^3/3 + O(Nn^2) \text{ flops is incorrect because it doesn't account for the } N \text{ evaluations.}
+
+\text{Therefore, Analyst 1 is more accurate as it correctly captures the dominant term, but it's incomplete without the lower-order terms.}
+
+\text{I agree with Analyst 1, but with the caveat that the } O(Nn^2) \text{ terms should be acknowledged for a more precise estimation.}
+","\text{The key observation is that the matrix } C \text{ does not change with each different point } x_j, \text{ so the Cholesky factorization with a cost of } \frac{n^3}{3} \text{ flops should only be calculated once.}
+
+\text{Thus Analyst 1 is incorrect. Analyst 1 has also incorrectly used the LU factorization requiring } \frac{2n^3}{3} \text{ flops, rather than exploiting the structure of the covariance matrix.}
+
+\text{For each of the } N \text{ points } x_j, j = 1, \ldots, N, \text{ evaluating } f(x_j) \text{ can be done in } O(n^2) \text{ flops, once the Cholesky factorisation has been calculated.}
+
+\text{Thus Analyst 2 is correct.}
+",2,1.Misunderstanding of matrix reuse 2.Incorrect choice of factorization 3.Incorrect conclusion 4.Overlooks structural matrix properties
+fin-1-i-e,20,"\text{To efficiently calculate } f(x_j) \text{ for } j = 1, \ldots, N, \text{ we first need to precompute the inverse of the covariance matrix } C^{-1} \text{ using LU decomposition, which has a cost of } \frac{2}{3}n^3 + O(n^2) \text{ flops.}
+
+\text{Then, for each } x_j, \text{ we compute } (x_j - \mu)^T C^{-1} (x_j - \mu), \text{ which involves two matrix-vector multiplications and a vector dot product, costing } O(n^2) \text{ flops.}
+
+\text{We also need to compute } \det(C), \text{ which can be obtained as the product of the pivots from the LU decomposition, requiring } O(n) \text{ flops.}
+
+\text{Finally, we compute the exponential and the normalizing factor } \sqrt{(2\pi)^n \det(C)}, \text{ which are } O(1) \text{ operations.}
+
+\text{Since we perform these operations } N \text{ times, the total cost is } \frac{2}{3}n^3 + O(n^2) + NO(n^2) + O(n) + NO(1).
+
+\text{The dominant term is } Nn^2, \text{ making the overall complexity } O(Nn^2).
+
+\text{Therefore, the efficient approach involves precomputing } C^{-1} \text{ and } \det(C) \text{ once, and then performing the } O(n^2) \text{ operations for each } x_j.
+","\text{The key steps in evaluating } f(x_j) \text{ for } j = 1, \ldots, N \text{ are}
+
+\begin{itemize}
+  \item \text{Calculate the Cholesky factorization } C = R^T R, \text{ where } R \text{ is upper triangular, once.}
+  \item \text{Calculate } c_0 = \sqrt{\det(C)} = \sqrt{\det(R^T) \det(R)} = \det(R) = \prod_{j=1}^n R_{jj}
+  \item \text{Calculate } c_1 = (2\pi)^{-n/2} / c_0
+  \item \text{For each } j = 1, \ldots, N
+  \begin{itemize}
+    \item \text{Solve } R^T y = (x_j - \mu) \text{ by forward substitution}
+    \item \text{Calculate } f(x_j) = c_1 \exp(- y^T y / 2), \text{ where } y^T y = \sum_{i=1}^n y_i^2
+  \end{itemize}
+\end{itemize}
+
+\text{Only the last two steps are repeated for each value of } j = 1, \ldots, N.
+
+\text{As } C^{-1} = R^{-1} R^{-T},
+
+y^T y = (x_j - \mu)^T R^{-1} R^{-T} (x_j - \mu) = (x_j - \mu)^T C^{-1} (x_j - \mu).
+",3,1.Suboptimal matrix inversion strategy 2.Incorrect reuse structure 3.Determinant computation method 4.Flawed computational model 5.No explicit reuse of decomposition in algorithm steps
+fin-1-ii-a,21,"\text{The MATLAB output indicates that the Cholesky decomposition of the covariance matrix } C \text{ failed, as } \texttt{posdef} \text{ is 0, implying } C \text{ is not positive definite.}
+
+\text{Furthermore, the determinant of } C \text{ is 0, confirming that } C \text{ is singular.}
+
+\text{The condition number } \texttt{rcond(C)} \text{ is } 2.0128 \times 10^{-10}, \text{ which is very close to zero, suggesting that } C \text{ is ill-conditioned and close to singular.}
+
+\text{Therefore, the matrix } C \text{ is \textbf{not} nonsingular.}
+","\text{The matrix } C \text{ is not nonsingular as } \det(C) = 0, \text{ indicating it is singular.}
+",3,1.Partial diagnostic reasoning 2.No mention of numerical conditioning 3.No structural interpretation 4.No final consolidated reasoning
+fin-1-ii-b,22,"\text{The MATLAB output shows that the Cholesky decomposition of } C \text{ resulted in } \texttt{posdef} = 0.
+
+\text{The Cholesky decomposition can only be computed for positive definite matrices. Since } \texttt{posdef} \text{ is 0, the decomposition failed, indicating that } C \text{ is \textbf{not} positive definite.}
+","\text{The second output argument for the MATLAB function } \texttt{chol} \text{ is 0 if and only if the matrix is positive definite.}
+
+\text{Thus as } \texttt{posdef} \text{ has the value 0, } C \text{ is positive definite.}
+
+\text{(If } C \text{ is not positive definite this argument has the index in } \{1, \ldots, n\} \text{ when the Cholesky factorization failed).}
+",1,"1.Incorrect interpretation of posdef = 0 2.Misunderstanding of MATLAB chol function behavior 3.Correct general concept, but flawed execution"
+fin-1-ii-c,23,"\text{Yes, the answers to parts a) and b) are consistent.}
+
+\text{In part a), we concluded that } C \text{ is not nonsingular (i.e., it is singular) because its determinant is 0.}
+
+\text{In part b), we concluded that } C \text{ is not positive definite because the Cholesky decomposition failed.}
+
+\text{A positive definite matrix must be nonsingular (i.e., its determinant must be non-zero).}
+
+\text{Since } C \text{ is not positive definite, it is consistent that it is also not nonsingular.}
+
+\text{If } C \text{ were positive definite, it would have to be nonsingular, but since it is not positive definite, it can be singular, as confirmed by the determinant being 0.}
+","\text{A positive definite matrix has all eigenvalues } \lambda_i > 0, \, i = 1, \ldots, n, \text{ so } \det(C) = \prod_{i=1}^n \lambda_i > 0.
+
+\text{Thus } C \text{ being positive definite contradicts the result that } \det(C) = 0, \text{ so they are not consistent.}
+
+\text{If } n \text{ is large, the product of a large number of small values (but still larger than the machine precision } \epsilon \text{) may underflow to zero.}
+
+\text{MATLAB uses the Cholesky (or LU when the matrix is not symmetric positive definite) factorization to calculate the determinant, so}
+
+\[
+\det(C) = \det(R)^2 = \left( \prod_{i=1}^n R_{ii} \right)^2 < \texttt{realmin} \approx 2 \times 10^{-308},
+\]
+
+\text{even though } R_{ii} > \epsilon = 2.2 \times 10^{-16} \text{ for all } i = 1, \ldots, n.
+",2,1.Answer built on incorrect premise 2.Missed opportunity to discuss machine precision 3.Overly binary reasoning
+fin-1-ii-d,24,"\text{The MATLAB output shows that the reciprocal condition number } \texttt{rcond(C)} \text{ is } 2.0128 \times 10^{-10}.
+
+\text{The condition number } \kappa_1(C) \text{ is the reciprocal of } \texttt{rcond(C)}.
+
+\text{Therefore, } \kappa_1(C) = \frac{1}{2.0128 \times 10^{-10}} \approx 4.968 \times 10^9.
+
+\text{A large condition number indicates that the matrix } C \text{ is ill-conditioned, meaning that small changes in the input can lead to large changes in the output.}
+
+\text{Thus, the output tells us that the condition number } \kappa_1(C) \text{ is very large, indicating that } C \text{ is poorly conditioned.}
+","\text{The MATLAB function } \texttt{rcond} \text{ gives an estimate of the reciprocal of the 1-norm condition number, so}
+
+\[
+\kappa_1(C) = \frac{1}{\texttt{rcond(C)}} = \frac{1}{2.0128 \times 10^{-10}} \approx 5 \times 10^9.
+\]
+
+\text{Such a large condition number (on a scale of } 1 = 10^0 \text{ to } 1/\epsilon \approx 5 \times 10^{15}) \text{ indicates the problem is ill-conditioned.}
+
+\text{The condition number must satisfy } \kappa \geq 1. \text{ An answer } \kappa = 4968203497 \text{ is not really sensible, as it contains many more significant figures than the data!}
+",4,1.Lack of context about significant digits 2.No reference to the scale of condition numbers 3.No mention of the lower bound
+fin-1-ii-e,25,"\text{The condition number } \kappa_1(C) \text{ is approximately } 4.968 \times 10^9.
+
+\text{To achieve 4 significant figures in the solution } x \text{ of } Cx = b, \text{ the relative error in } b \text{ must be smaller than the relative error in } x \text{ divided by the condition number.}
+
+\text{The relative error in } x \text{ is approximately } 10^{-4} \text{ (since we want 4 significant figures).}
+
+\text{Thus, the relative error in } b \text{ must be less than } \frac{10^{-4}}{4.968 \times 10^9} \approx 2.013 \times 10^{-14}.
+
+\text{Therefore, } b \text{ must be accurate to at least 14 significant figures.}
+","\text{An estimate of the relative error } \mathrm{re}(x) \text{ in the computed solution to } Cx = b \text{ is}
+
+\[
+\mathrm{re}(x) \leq \kappa(C) \left( \mathrm{re}(C) + \mathrm{re}(b) \right).
+\]
+
+\text{The same norm should be used to measure the condition number and all the relative errors.}
+
+\text{The computed solution has at least 4 significant figures if}
+
+\[
+\kappa(C) \left( \mathrm{re}(C) + \mathrm{re}(b) \right) \leq 0.5 \times 10^{-4}.
+\]
+
+\text{As } C \text{ is known exactly, } \mathrm{re}(C) = \epsilon = 2.2 \times 10^{-16}, \text{ so}
+
+\[
+\mathrm{re}(b) \leq \frac{0.5 \times 10^{-4}}{\kappa(C)} - \epsilon = \frac{0.5 \times 10^{-4}}{5 \times 10^9} - 2 \times 10^{-16} \approx 10^{-14}.
+\]
+
+\text{The required relative error in } b \text{ is } 10^{-14} < 0.5 \times 10^{-13}, \text{ so } b \text{ should have elements with at least 13 significant figures.}
+
+\text{This may (just) be possible when using double precision floating point arithmetic, but is not possible if only single precision arithmetic is used.}
+",4,1.Missing full relative error bound formula 2.Omission of machine precision 3.No discussion of feasibility 4.Norm-related caution is absent
+fin-1-iii-a,26,"\text{To prove that } B \text{ is positive definite, we need to show that } u^T B u > 0 \text{ for any non-zero vector } u.
+
+\text{Substituting the expression for } B, \text{ we have }
+
+u^T B u = u^T \left(C + \sum_{k=1}^{K} \alpha_k v_k v_k^T \right) u = u^T C u + \sum_{k=1}^{K} \alpha_k (u^T v_k)(v_k^T u).
+
+\text{Since } C \text{ is positive definite, } u^T C u > 0 \text{ for all non-zero } u.
+
+\text{Also, } \alpha_k \geq 0 \text{ and } (u^T v_k)(v_k^T u) = (u^T v_k)^2 \geq 0 \text{ for all } k.
+
+\text{Therefore, } u^T B u \text{ is the sum of a positive term and non-negative terms, which implies } u^T B u > 0 \text{ for all non-zero } u.
+
+\text{Hence, } B \text{ is positive definite.}
+","\text{The matrix } B \text{ is positive definite } \iff u^T B u > 0 \text{ for all } u \in \mathbb{R}^n, u \ne 0.
+
+\text{Here }
+
+\[
+u^T B u = u^T \left( C + \sum_{k=1}^K \alpha_k v_k v_k^T \right) u = u^T C u + \sum_{k=1}^K \alpha_k (u^T v_k)(v_k^T u).
+\]
+
+\text{As } u, v_k \in \mathbb{R}^n, v_k^T u = u^T v_k \text{ as they are both scalars, so the sum is }
+
+\[
+\sum_{k=1}^K \alpha_k (u^T v_k)(v_k^T u) = \sum_{k=1}^K \alpha_k (u^T v_k)^2 \geq 0,
+\]
+
+\text{as } \alpha_k \geq 0 \text{ for } k = 1, \ldots, K.
+
+\text{As } C \text{ is positive definite, } u^T C u > 0 \text{ for all } u \ne 0, \text{ so } u^T B u > 0 \text{ for all } u \ne 0 \text{ and } B \text{ is positive definite.}
+",5,1.Minor omission of notation context
+fin-1-iii-b,27,"\text{Explicitly forming } B^{-1} \text{ is not a good idea because it would be computationally expensive and memory-intensive.}
+
+\text{The matrix } B \text{ is given as } B = C + \sum_{k=1}^K \alpha_k v_k v_k^T, \text{ where } C \text{ is a sparse } n \times n \text{ matrix and } n \gg K.
+
+\text{Computing the inverse of } B \text{ directly would require } O(n^3) \text{ operations.}
+
+\text{Since } C \text{ is sparse, storing it requires much less than } O(n^2) \text{ memory. However, } B \text{ is likely to be dense due to the outer product terms, and thus } B^{-1} \text{ would also be dense, requiring } O(n^2) \text{ storage.}
+
+\text{Furthermore, the summation term involves } K \text{ outer products, which would contribute to the density of } B.
+
+\text{Therefore, explicitly forming } B^{-1} \text{ is inefficient compared to iterative methods that exploit the structure of } B \text{ and } C \text{ to solve linear systems involving } B.
+","\text{Explicitly forming } B^{-1} \text{ is not a good idea as the sparse structure of } C \text{ will be lost, and the inverse can be dense even if the matrix is sparse.}
+
+\text{Here } B \text{ also contains some hidden structure in the low rank corrections in the sum which will be lost if } B^{-1} \text{ is calculated.}
+
+\text{Explicitly forming } B^{-1} \text{ is also computationally more expensive than solving a linear system } Bx = b \text{ using an appropriate matrix factorization}
+
+\text{(in this case a Cholesky factorization as } B \text{ is symmetric positive definite).}
+",5,1.No explicit mention of structure loss in low-rank updates 2.No mention of Cholesky factorization
+fin-1-iii-c,28,"\text{To efficiently calculate } y = Bx \text{ for a given } x \in \mathbb{R}^n, \text{ we can exploit the structure of }
+
+B = C + \sum_{k=1}^K \alpha_k v_k v_k^T.
+
+\text{First, compute } Cx, \text{ which is efficient since } C \text{ is sparse. Then, for each } k \text{ from } 1 \text{ to } K, \text{ calculate the scalar } v_k^T x \text{ and multiply it by } \alpha_k v_k.
+
+\text{Finally, sum the result with } Cx \text{ to obtain } y.
+
+\text{This method avoids explicitly forming } B, \text{ reducing the computational cost from } O(n^3) \text{ for matrix-vector multiplication with a dense matrix to }
+
+O(n \cdot \text{nnz}(C) + Kn^2), \text{ where } \text{nnz}(C) \text{ is the number of non-zero elements in } C.
+
+\text{Since } C \text{ is sparse and } K \ll n, \text{ this approach is significantly more efficient.}
+","\text{The question asks for the matrix-vector product (an essential step in many iterative methods for solving a linear system), not the solution of the linear system. Thus}
+
+\[
+y = Bx = \left(C + \sum_{k=1}^K \alpha_k v_k v_k^T \right)x = Cx + \sum_{k=1}^K (\alpha_k v_k^T x)v_k.
+\]
+
+\text{The sparsity of } C \text{ can be used to calculate the matrix-vector product } Cx \text{ very efficiently.}
+
+\text{For each } k, \, \alpha_k v_k^T x \in \mathbb{R} \text{ is a scalar, so the sum just consists of the inner product } v_k^T x \text{ (2n flops) to find the scalar,}
+
+\text{then adding up } K \text{ scalars times vectors (3Kn flops), both of which are very efficient for } K \ll n.
+",5,1.Less detailed flop count
+fin-2-i-a,29,"Intern 1 approximated the data with a polynomial of degree \( n \) such that \( n + 1 \) data points are used. Given that there are 18 data points, the lowest degree polynomial that interpolates all the data points is \( n = 17 \). This is because a polynomial of degree \( n \) can pass through at most \( n + 1 \) points. Since all 18 data points are used, the degree must be \( 18 - 1 = 17 \). Therefore, the degree \( n \) of the polynomial is 17.","\textbf{Answer:} A polynomial \(\sum_{k=0}^{n}a_{k}t^{k}\) of degree \(n\) has \(n+1\) coefficients \(a_{k},k=0,\ldots,n\). Thus a degree 17 polynomial is required to fit the \(m=18\) data values in the table.",4,1.lack Clarity of Mathematical Foundation 2. lack conciseness 3.lack formality 4.lack logical flow
+fin-2-i-b,30,"The high condition number \( A \text{and} = 3.2705e+14 \) indicates that the Vandermonde matrix \( A \) is ill-conditioned, meaning small changes in the input data can lead to large changes in the solution. This ill-conditioning is typical for Vandermonde matrices of high order, which are used for polynomial interpolation, especially when the data points are not well-spaced. The large residual \( \text{rpolchk} = 1.6801e+03 \) further confirms this, showing that the computed solution \( x \) (the coefficients of the interpolating polynomial) does not accurately satisfy the equation \( Ax = rdat \). This is because the numerical instability caused by the ill-conditioned matrix leads to significant errors in the computed coefficients, resulting in a poor fit to the data points despite the polynomial theoretically passing through all points. In essence, while the method should work in exact arithmetic, the numerical computation suffers from rounding errors amplified by the ill-conditioning.","\textbf{Answer:} The value of rpolchk = 1.6e+03 indicates that the 2-norm of the residuals, and hence at least some of the residuals, are very large. This contradicts the plot, where the polynomial visually goes through all the data points, so the residuals should be small.
+
+Examination of the Matlab code shows that \textbf{intern 1} has \textbf{not} calculated the norm of the residuals \( r = A*x - rdat \), but incorrectly used the vector tdat of data times, rather than the estimated parameters \( x \).",3,1.Misdiagnosis of the Primary Issue 2.Overemphasis on Secondary Factors 3.lack logical flow 4.precise
+fin-2-i-c,31,"Besides the numerical instability due to the ill-conditioned Vandermonde matrix, Intern 1's approach is flawed because using a high-degree polynomial (degree 17 in this case) to interpolate data with potential noise or measurement errors is prone to overfitting. Overfitting means the polynomial fits the data points very closely, including any noise, leading to wild oscillations between the data points and poor generalization to unseen data. This is evident in Figure 2.1 where the cubic spline and interpolating polynomial show significant fluctuations, especially at the edges, suggesting the high-degree polynomial is capturing noise rather than the underlying trend of the data. In essence, while the polynomial passes through all points, it does not provide a reliable or smooth representation of the yield curve, making it unsuitable for practical applications like forecasting or risk management.  ","\textbf{Answer:} The choice of a high degree polynomial, which must go to \(\pm\infty\) as \(t\) gets large, and may have large oscillations (see plot for \(t\in[0,0.2]\)), is not appropriate for interest rate data.  
+
+Secondly, the use of the monomial basis \(\{1,t,t^{2},t^{3},\ldots,t^{m-1}\}\) and equally spaced data produces a very ill-conditioned coefficient matrix \(A\) with \(\kappa_{2}(A)=3\times 10^{14}\). Thus any errors in the data (which is only given to 4 significant figures) may be amplified when solving for the polynomial coefficients.  ",4,1.Missing Mathematical Specificity 2.Less Emphasis on Data Precision 3.Structural Flow 4.Practical vs. Theoretical Balance
+fin-2-ii-a,32,"An interpolating cubic spline \( s(t) \) is a piecewise cubic polynomial function that passes through a given set of data points \((t_i, r_i)\). The spline is constructed by fitting a cubic polynomial between each pair of consecutive data points, ensuring that the function values match the given data points at the knots \( t_i \). Additionally, to guarantee smoothness, the first and second derivatives of the cubic polynomials are made continuous at the interior knots. This results in a smooth curve that interpolates the data points, avoiding the oscillations often seen with high-degree polynomial interpolation. In essence, the cubic spline provides a smooth, piecewise cubic approximation that fits the data points and has continuous first and second derivatives, making it a good choice for approximating functions without introducing excessive oscillations.  ","\textbf{Answer:} An interpolating cubic spline \(s(t)\) is a piecewise cubic function such that  
+
+* *\(s(t)=s_{i}(t)\in\mathbb{P}_{3}\) for \(t\in[t_{i},t_{i+1}]\), \(i=1,\ldots,m\), so \(s_{i}\) is a cubic (degree 3 polynomial) on each interval.  
+
+* *The function \(s(t)\), its first derivative \(s^{\prime}(t)\) and second derivative \(s^{\prime\prime}(t)\) are continuous at all the interior knots \(t_{i}\), \(i=2,\ldots,m-1\).  
+
+* *The spline interpolates the data, \(s(t_{i})=r_{i}\) for \(i=1,\ldots,m\).  ",5,1.Mathematical Formality 2.Explicit vs. Implicit Structure 3.Minor Omission
+fin-2-ii-b,33,"The low predicted yield at \( t = 1.5 \) years in the spline approximation occurs because the spline's behavior is influenced by the data points near the edge, specifically the last two data points at \( t = 17/12 \) and \( t = 18/12 \) years. Since these last two data points show a decreasing trend, the cubic spline extrapolates this trend beyond the last data point, resulting in a lower predicted yield at \( t = 1.5 \) years. Cubic splines are designed to provide smooth interpolation within the data range but are not inherently designed for accurate extrapolation, making their behavior beyond the data range sensitive to the end points' trends. In essence, the spline's extrapolation is affected by the decreasing trend of the last few data points, leading to a lower yield prediction at \( t = 1.5 \) years.  ","\textbf{Answer:} The interpolation and continuity conditions still leave 2 degrees of freedom in the choice of the parameters for the cubic spline. When predicting values outside the range of the data (extrapolation), for example at \(t=1.5\), the choice of these two degree of freedom can have a major affect on the approximation. Here Matlab has used the default not-a-knot end conditions, so a single cubic is used for all \(t\geq t_{16}=15/12=1.25\) years, resulting in an unreasonably low prediction of the rate at \(t=1.5\).  ",4,1.Lack of Mathematical Depth 2.Omission of Implementation Details 3.Precision in Terminology
+fin-2-ii-c,34,"Knowledge of the slopes \( r'(t_1) \) and \( r'(t_{18}) \) could be used to improve the spline approximation by providing additional constraints at the endpoints, leading to a more accurate and stable spline, especially when extrapolating beyond the data range. By incorporating these slope conditions, we can enforce a specific trend at the boundaries, preventing the spline from exhibiting unrealistic behavior like the drop observed at \( t = 1.5 \, \text{years} \). Using these slopes, we can construct a ""clamped"" or ""complete"" spline, ensuring that the first derivatives of the spline match the given slopes at the endpoints. This would provide a more constrained fit, reducing the sensitivity to the end data points and improving the overall accuracy of the spline, particularly near the edges and during extrapolation. In essence, incorporating the slopes at the endpoints adds constraints that guide the spline's behavior, leading to a more robust and reliable approximation.  ","\textbf{Answer:} If the slopes \(r^{\prime}(t_{1})\) at the first knot and \(r^{\prime}(t_{m})\) at the last knot are known, then these can be used to satisfy the two degrees of freedom in the cubic spline. This is known as the ""clamped"" cubic spline. This \textbf{may} help improve the extrapolated value at \(t=1.5\).  ",5,1.Terminology Precision
+fin-2-iii-a,35,"To calculate the bounds for \( B(0.5, 1) \), we use the given formula \( B(t, T) = \exp \left( - \int_{t}^{T} r(s) ds \right) \).  
+
+Since \( r_9 = 2.285\% \) at \( t_9 = 8/12 \) years and \( r_{13} = 2.425\% \) at \( t_{13} = 1 \) year, we can approximate the integral using these values. For the lower bound, assume \( r(s) = 2.425\% \) for \( 0.5 \leq s \leq 1 \), giving \( B(0.5, 1) = \exp(-0.02425 \times (1 - 0.5)) \approx 0.98797 \). For the upper bound, assume \( r(s) = 2.285\% \) for \( 0.5 \leq s \leq 8/12 \) and \( r(s) = 2.425\% \) for \( 8/12 \leq s \leq 1 \), giving \( B(0.5, 1) = \exp(-0.02285 \times (8/12 - 0.5) - 0.02425 \times (1 - 8/12)) \approx 0.98801 \).  
+
+Therefore, the bounds are approximately \( 0.98797 \leq B(0.5, 1) \leq 0.98801 \), which contradicts Intern 3's bounds of \( 0.2975 \leq B(0.5, 1) \leq 0.3190 \). Thus, I do not agree with Intern 3.  ","\textbf{Answer:} For \( B(0.5,1) \) we are only interested in the values of \( r(s) \) for \( s\in[0.5,1] \). Over this interval  
+
+\[ r_{9}=2.285\approx\min_{s\in[0.5,1]}r(s),\qquad r_{13}=2.425\approx\max_{s\in[0.5,1]}r(s). \]  
+
+These bounds are only estimates, as \( r(s) \) may be lower or higher in between the data points. Hence, using rectangles of width \( 1-0.5=0.5 \) to approximate the area under the graph,  
+
+\[ 0.5\ \frac{2.285}{100}=0.011425\leq\int_{0.5}^{1}r(s)\,ds\leq 0.5\ \frac{2.425}{100}=0.012125. \]  
+
+As \( B(0.5,1)=\exp\left(-\int_{0.5}^{1}r(s)\,ds\right) \), and with the negative sign reversing the inequalities,  
+
+\[ \exp(-0.012125)=0.987948\leq B(0.5,1)\leq\exp(-0.011425)=0.988640. \]  
+
+\textbf{Intern 3 is incorrect.} They have omitted to convert the interest rate data into fractions by dividing by 100.  
+
+\textbf{Reality check:} There is no way 0.3 will grow to 1 in 1/2 a year with annualised interest rates of just over 2\%, so the bounds must be wrong!  ",4,1.root cause analysis 2.lack validation
+fin-2-iii-b,36,"To estimate the value at \( t = 0.5 \) of \$1 million received at \( T = 1 \), we need to calculate  
+\[B(0.5, 1) = \exp\left(-\int_{0.5}^{1} r(s) ds\right)\] using the data in Table 2.1 and a quadrature rule. We'll use the trapezoidal rule for simplicity. The relevant data points are from \( t = 6/12 \) to \( t = 12/12 \) years, corresponding to yields \( r_6 \) to \( r_{13} \). We approximate the integral as  
+\[\int_{0.5}^{1} r(s) ds \approx \frac{1}{2} \sum_{i=6}^{12} (r_i + r_{i+1}) \times \frac{1}{12},\]  
+where \( r_{13} \) is used for the last interval. Plugging in the yield values and performing the calculation yields  
+\[\int_{0.5}^{1} r(s) ds \approx 0.0120958.\]  
+Thus,  
+\[B(0.5, 1) = \exp(-0.0120958) \approx 0.98797.\]  
+Therefore, the value at \( t = 0.5 \) of \$1 million received at \( T = 1 \) is approximately 0.98797 million.","\textbf{Answer:} To estimate \(B(0.5,1)\) use the 7 data values \(r_{i}\), \(i=7,\ldots,13\), going from \(t_{7}=6\) months to \(t_{13}=12\) months, with an interval width of \(h=1/12\) years. Using the Trapezoidal rule  
+
+\[\int_{0.5}^{1}r(s)ds \approx \frac{h}{100}\left[\frac{2.305}{2}+2.295+2.285+2.290+2.330+2.380+ \frac{2.425}{2}\right]\]  
+\[= 0.01162083.\]  
+
+Hence  
+
+\[B(0.5,1)=\exp(-0.01162083)=0.9884463.\]  
+
+The the value at \(t=0.5\) of \$1 million received at \(T=1\) is  
+
+\[B(0.5,1)\times 10^{6}=\$988,446,\]  
+
+rounding to the nearest dollar.  
+
+Alternatively, using Simpson's rule  
+
+\[\int_{0.5}^{1}r(s)ds \approx \frac{h}{300}\left[2.305+4\times 2.295+2\times 2.285+4\times 2.290+\right.\]  
+\[\left.\phantom{\frac{h}{300}}\phantom{\frac{h}{300}}2\times 2.330+4 \times 2.380+2.425\right]\]  
+\[= 0.01161666.\]  
+
+Hence  
+
+\[B(0.5,1)=\exp(-0.01161666)=0.9884505\]  
+
+so the value at \(t=0.5\) of \$1 million received at \(T=1\) is  
+
+\[B(0.5,1)\times 10^{6}=\$988,451,\]  
+
+rounding to the nearest dollar.  
+
+The values for \(B(0.5,1)\) should satisfy the correct bounds from part a).  
+
+What accuracy should the answer be given to? The interest rate data in Table 2.1 is given to the nearest 0.005\%, that is with absolute error of up to 0.0025\% or 0.000025 as a fraction.",3,1.Data Selection Error 2.Unit Conversion Missed 3.lack Precision and Presentation
+fin-2-iii-c-A,37,"To estimate \( B(0.5, 1) \) using Gauss-Legendre quadrature, we first need to transform the integral  
+\[\int_{0.5}^{1} r(s) ds\]  
+from the interval \([0.5, 1]\) to \([-1, 1]\). We use the linear transformation  
+\[s = \frac{1}{4} u + \frac{3}{4} t,\]  
+where \(u\) is in \([-1, 1]\). This gives  
+\[ds = \frac{1}{4} du,\]  
+and the integral becomes  
+\[\int_{-1}^{1} r\left(\frac{1}{4} u + \frac{3}{4}\right)\frac{1}{4} du.\]  
+We can then apply the Gauss-Legendre quadrature rule, approximating the integral as  
+\[\sum_{j=1}^{N} w_j r\left(\frac{1}{4} z_j + \frac{3}{4}\right)\frac{1}{4},\]  
+where \(z_j\) and \(w_j\) are the Gauss-Legendre nodes and weights obtained from \(\text{gouleg}(N)\). Finally, we compute  
+\[B(0.5, 1) = \exp(-\sum_{j=1}^{N} w_j r\left(\frac{1}{4} z_j + \frac{3}{4}\right)\frac{1}{4}).\]  
+In essence, we transform the integration interval, apply Gauss-Legendre quadrature to approximate the integral of the yield curve, and then use the exponential function to compute the bond price.","\textbf{Answer:} The Gauss-Legendre nodes and weights are given for the interval \([-1,1]\). The first step is to use a linear transformation \(s=\alpha+\beta z\) to map \(z\in[-1,1]\) to \(s\in[0.5,1]\). The transformation is given by the corresponding end-points:  
+
+\[z=-1 \iff s=0.5\implies\alpha-\beta=0.5\]  
+\[z=1 \iff s=1\implies\alpha+\beta=1\]  
+\[\implies \alpha=\frac{3}{4},\quad\beta=\frac{1}{4},\]  
+
+so \(s=\frac{3}{4}+\frac{1}{4}z\) and \(ds=\frac{1}{4}dz\). Then  
+
+\[\int_{0.5}^{1}r(s)\,ds=\int_{-1}^{1}r\left(\frac{3}{4}+\frac{1}{4}z\right)\frac{1}{4}dz\approx Q^{GL}_{N}:=\sum_{j=1}^{N}\frac{w_{j}}{4}\,r\left(\frac{3}{4}+\frac{1}{4}z_{j}\right).\]  
+
+Finally \(B(0.5,1)=\exp\left(-Q^{GL}_{N}\right)\).",4,1.Uses a less clear variable 2.Misses the explicit derivation
+fin-2-iii-c-B,38,"Intern 3 needed a large number of nodes \( N \) for high accuracy when using Gauss-Legendre quadrature with the cubic spline because the cubic spline, while smooth, is still a piecewise polynomial approximation of the yield curve. To accurately integrate the exponential of the negative integral of the spline, especially within the interval \([0.5, 1]\), the quadrature rule needs to capture the spline's variations. Since splines can have complex behavior between data points, a higher number of nodes is required to accurately approximate the integral. Furthermore, the exponential function can amplify errors, requiring a more precise integral approximation for a reliable result. In essence, the piecewise nature of the cubic spline necessitates a higher number of nodes in the Gauss-Legendre quadrature to achieve the desired accuracy in approximating \( B(0.5, 1) \) due to the spline's local variations and the sensitivity of the exponential function to integration errors.","\textbf{Answer:} The Gauss-Legendre rule with \(N\) nodes assumes the integrand is \(2N\) times continuously differentiable, in which case the integration error reduces rapidly with \(N\). However a cubic spline is only twice continuously differentiable, with discontinuities in the third derivatives at the knot points. Hence a large number of points were need to achieve high accuracy.",3,1.Lacks mathematical precision 2.Overemphasizes secondary factors
+fin-2-iii-d,39,"To accurately estimate \( B(0.5, 1) \) using the cubic spline and Simpson's rule, we first evaluate the cubic spline \( r(s) \) at equally spaced points within the interval \([0.5, 1]\). We then apply Simpson's rule to approximate the integral \(\int_{0.5}^{1} r(s) ds\) using these sampled points. Simpson's rule, which uses quadratic polynomials to approximate the integrand, is generally more accurate than the trapezoidal rule for smooth functions like the cubic spline. The formula for Simpson's rule is  
+\[\frac{h}{3} [f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + f(x_n)],\]  
+where \( h \) is the spacing between the points and \( f(x_i) \) are the function values at these points. Finally, we compute \( B(0.5, 1) = \exp(-\int_{0.5}^{1} r(s) ds) \). In essence, we sample the spline at equally spaced points, use Simpson's rule to approximate the integral of the yield curve, and then calculate the bond price using the exponential function.","\textbf{Answer:} Simpson's rule has degree of precision 3, meaning that it is exact for cubic polynomials. The spline is a piecewise cubic polynomial. It is not a cubic over the whole interval \([0.5,1]\), but just on each subinterval \([t_{i},t_{i+1}]\). Simpson's rule requires an even number of intervals, so we need to add the midpoint to each sub-interval, get its value using the cubic spline and then integrate each cubic piece using Simpson's rule. This will give the exact integral of the cubic spline as  
+
+\[\int_{0.5}^{1}r(s)ds=\sum_{i=7}^{12}\int_{t_{i}}^{t_{i+1}}r(s)\,ds=\sum_{i=7}^{1 2}\frac{1}{72}\left(r_{i}+4r_{i+\frac{1}{2}}+r_{i+1}\right),\]  
+
+where \(r_{i},r_{i+1}\) are data values in the table and \(r_{i+\frac{1}{2}}\) is the value of \(r(s)\) at the midpoint \((t_{i}+t_{i+1})/2\), evaluated using the cubic spline, and \(h=1/24\) is the interval width after adding a midpoint to subdivide each monthly interval \([t_{i},t_{i+1}]\).",3,1.Misses the piecewise nature 2.Omits the midpoint evaluation 3.Lacks specificity
+fin-3-i,40,"The Black-Scholes PDE, given by \(\frac{\partial V}{\partial t} + r S \frac{\partial V}{\partial S} + \frac{\sigma^2 S^2}{2} \frac{\partial^2 V}{\partial S^2} = rV\), describes the value \(V(S,t)\) of an option on an underlying asset with price \(S\) at time \(t\). The ""initial"" condition, which is actually the terminal condition at expiry \(T\), is defined by the payoff function \(f(S) : V(S,T) = f(S)\), where \(f(S) = 0\) if \(S < K_1\), \(f(S) = S - K_1\) if \(K_1 \leq S \leq K_2\), and \(f(S) = K_2 - K_1\) if \(S > K_2\). This condition specifies the option's value at expiry based on the asset price \(S\) and the strikes \(K_1\) and \(K_2\). To solve the Black-Scholes PDE with this terminal condition, we would typically use methods like risk-neutral valuation and Feynman-Kac theorem to find the option price \(V(S,t)\) for \(t < T\), but an analytical closed-form solution is generally complex and involves integrating the discounted expected payoff under the risk-neutral measure.","**Answer:** The ""initial"" conditions are at expiry \( t = T \) where the value of the option is defined to be the payoff, so
+
+\[V(S,T) = f(S) = 
+\begin{cases} 
+0 & \text{if } S < K_1; \\ 
+S - K_1 & \text{if } K_1 \leq S \leq K_2; \\ 
+K_2 - K_1 & \text{if } S > K_2.
+\end{cases}\]",4,1.could be more concise and focused to match the precise requirements of the question
+fin-3-ii-a,41,"Given the change of variables \( y = \log(S / X) \) and \( \tau = T - t \), we have \( W(y, \tau) = V(S, t) \).
+
+Using the chain rule, we find  
+\[\frac{\partial W}{\partial \tau} = \frac{\partial V}{\partial t} \frac{\partial t}{\partial \tau} = -\frac{\partial V}{\partial t} \cdot \frac{\partial W}{\partial y} = \frac{\partial V}{\partial S} \frac{\partial S}{\partial y} = \frac{\partial V}{\partial S} S, \text{ and } \frac{\partial^2 W}{\partial y^2} = \]  
+\[\frac{\partial}{\partial y} \left( \frac{\partial V}{\partial S} S \right) = \frac{\partial^2 V}{\partial S^2} S^2 + \frac{\partial V}{\partial S} S.\]  
+Therefore, the expressions for the partial derivatives of \( W \) in terms of the partial derivatives of \( V \) are  
+\[\frac{\partial W}{\partial \tau} = -\frac{\partial V}{\partial t} \cdot \frac{\partial W}{\partial y} = S \frac{\partial V}{\partial S}, \text{ and } \frac{\partial^2 W}{\partial y^2} = S^2 \frac{\partial^2 V}{\partial S^2} + S \frac{\partial V}{\partial S}.\]","**Answer:** The new variables are  
+
+\[y=\log(S/X)\iff S=Xe^{y}\implies\frac{dS}{dy}=Xe^{y}=S,\]  
+
+\[\tau=T-t\iff t=T-\tau\implies\frac{dt}{d\tau}=-1.\]  
+
+Using these relations with \(W(y,\tau)=V(S,t)\) and the chain rule,  
+
+\[\frac{\partial W}{\partial\tau} = \frac{\partial V}{\partial t}\times\frac{dt}{d\tau}=-\frac{\partial V}{\partial t},\]  
+
+\[\frac{\partial W}{\partial y} = \frac{\partial V}{\partial S}\times\frac{dS}{dy}=S\frac{\partial V}{\partial S},\]  
+
+\[\frac{\partial^{2}W}{\partial y^{2}} = \frac{\partial}{\partial y}\frac{\partial W}{\partial y}=\frac{\partial}{\partial S}\left(S\frac{\partial V}{\partial S}\right)\times\frac{dS}{dy}\]  
+\[= \left(\frac{\partial V}{\partial S}+S\frac{\partial^{2}V}{\partial S^{2}}\right)S=S\frac{\partial V}{\partial S}+S^{2}\frac{\partial^{2}V}{\partial S^{2}}.\]",4,1.Explicitly stating intermediate derivatives 2.Better separation of steps for clarity. 3.More rigorous justification for second-order derivatives.
+fin-3-ii-b,42,"Substituting the expressions for $\frac{\partial W}{\partial \tau}$ and $\frac{\partial W}{\partial y}$ from part (a) into the Black-Scholes PDE (3.1), we get:  
+\[
+-\frac{\partial W}{\partial \tau} + r \frac{\partial W}{\partial y} + \frac{\sigma^2}{2} \left( \frac{\partial^2 W}{\partial y^2} - \frac{\partial W}{\partial y} \right) = rW.
+\]  
+Rearranging the terms, we obtain:  
+\[
+-\frac{\partial W}{\partial \tau} + \left(r - \frac{\sigma^2}{2}\right) \frac{\partial W}{\partial y} + \frac{\sigma^2}{2} \frac{\partial^2 W}{\partial y^2} = rW,
+\]  
+which is the desired equation (3.2).","**Answer:** The expressions in part a) for the partial derivatives give:  
+\[
+\frac{\partial V}{\partial t} = -\frac{\partial W}{\partial \tau}, \quad S \frac{\partial V}{\partial S} = \frac{\partial W}{\partial y}, \quad S^2 \frac{\partial^2 V}{\partial S^2} = \frac{\partial^2 W}{\partial y^2} - \frac{\partial W}{\partial y}.
+\]  
+Substituting in the Black-Scholes PDE (3.1) gives:  
+\[
+-\frac{\partial W}{\partial \tau} + r \frac{\partial W}{\partial y} + \frac{\sigma^2}{2} \left( \frac{\partial^2 W}{\partial y^2} - \frac{\partial W}{\partial y} \right) = rW.
+\]  
+Collecting the terms in the derivatives gives:  
+\[
+-\frac{\partial W}{\partial \tau} + \left(r - \frac{\sigma^2}{2}\right) \frac{\partial W}{\partial y} + \frac{\sigma^2}{2} \frac{\partial^2 W}{\partial y^2} = rW,
+\]  
+as required.",3,1.Lack of explicit intermediate steps. 2.Notation errors and typos.  3.Less rigorous justification for term rearrangement.
+fin-3-ii-c,43,"The initial conditions for the transformed problem are obtained by expressing the original terminal conditions in terms of \( y \) and \( \tau \). We have \( W(y,0) = V(S,T) = f(S) \), where \( y = \log(S/X) \). Thus, the transformed conditions are \( W(y,0) = 0 \) if \( S < K_1, W(y,0) = S - K_1 \) if \( K_1 \leq S \leq K_2 \), and \( W(y,0) = K_2 - K_1 \) if \( S > K_2 \). We express \( S \) in terms of \( y \) as \( S = Xe^y \). Therefore, the transformed initial conditions are \( W(y,0) = 0 \) if \( Xe^y < K_1, W(y,0) = Xe^y - K_1 \) if \( K_1 \leq Xe^y \leq K_2 \), and \( W(y,0) = K_2 - K_1 \) if \( Xe^y > K_2 \). In terms of \( y \), this means \( W(y,0) = 0 \) if \( y < \log(K_1/X), W(y,0) = Xe^y - K_1 \) if \( \log(K_1/X) \leq y \leq \log(K_2/X) \), and \( W(y,0) = K_2 - K_1 \) if \( y > \log(K_2/X) \).","**Answer:** The initial conditions for the transformed problem are at \(\tau=0\), (as option expiry at \(t=T\iff\tau=T-t=0\))
+
+\[W(y,0)=f(Xe^{y}) = \left\{\begin{array}[]{ll}0&\mbox{if }Xe^{y}<K_{1};\\ Xe^{y}-K_{1}&\mbox{if }K_{1}\leq Xe^{y}\leq K_{2};\\ K_{2}-K_{1}&\mbox{if }Xe^{y}>K_{2},\end{array}\right.\] \[= \left\{\begin{array}[]{ll}0&\mbox{if }y<\log(K_{1}/X);\\ Xe^{y}-K_{1}&\mbox{if }\log(K_{1}/X)\leq y\leq\log(K_{2}/X);\\ K_{2}-K_{1}&\mbox{if }y>\log(K_{2}/X).\end{array}\right.\]",4,1.Less optimal presentation 2.Lack of explicit time-transformation justification  3.Slight verbosity 
+fin-3-iii-a,44,"For the central difference approximations of \( O((\Delta y)^2) \) for \(\frac{\partial W}{\partial y}\) and \(\frac{\partial^2 W}{\partial y^2}\), we have
+\[
+\frac{\partial W}{\partial y}(y_j, \tau_\ell) \approx \frac{W_{j+1}^\ell - W_{j-1}^\ell}{2\Delta y} \text{ and } \frac{\partial^2 W}{\partial y^2}(y_j, \tau_\ell) \approx \frac{W_{j+1}^\ell - 2W_{j+1}^\ell + W_{j-1}^\ell}{(\Delta y)^2}
+\]
+For the forward difference approximation of \( O(\Delta\tau) \) for \(\frac{\partial W}{\partial\tau}\), we have
+\[
+\frac{\partial W}{\partial\tau}(y_j, \tau_\ell) \approx \frac{W_{j+1}^\ell - W_{j-1}^\ell}{\Delta\tau}
+\]
+These approximations are obtained by using Taylor series expansions and truncating the higher-order terms, leading to the desired orders of accuracy.","**Answer:** At time to expiry \(\tau_{\ell}\) and log-moneyness \(y_{j}\), finite difference approximations of the derivatives are
+\[
+\left.\frac{\partial W}{\partial y}\right|_{\tau_{\ell},y_{j}} = \frac{W_{j+1}^{\ell}-W_{j-1}^{\ell}}{2\Delta y}+O((\Delta y)^{2}),
+\]
+\[
+\left.\frac{\partial^{2}W}{\partial y^{2}}\right|_{\tau_{\ell},y_{j}} = \frac{W_{j+1}^{\ell}-2W_{j}^{\ell}+W_{j-1}^{\ell}}{(\Delta y)^{2}}+O((\Delta y)^{2}),
+\]
+\[
+\left.\frac{\partial W}{\partial\tau}\right|_{\tau_{\ell},y_{j}} = \frac{W_{j}^{\ell+1}-W_{j}^{\ell}}{\Delta\tau}+O(\Delta\tau).
+\]",2,1.Incorrect indices 2.Omitted error terms  3.Less precise notation and justification.
+fin-3-iii-b,45,"Substituting the finite difference approximations from part (a) into the PDE (3.2), we get
+\[
+-\frac{W_{j}^{t+1}-W_{j}^{\ell}}{\Delta \tau} + \left( r - \frac{\sigma^2}{2} \right) \frac{W_{j+1}^\ell-W_{j-1}^\ell}{2\Delta y} + \frac{\sigma^2}{2} \frac{W_{j+1}^\ell-2W_{j}^\ell+W_{j-1}^\ell}{(\Delta y)^2} = rW_{j}^\ell.
+\]
+Multiplying by \( -\Delta \tau \) and rearranging, we obtain
+\[
+W_{j}^{t+1} = W_{j}^\ell + \Delta \tau \left( r - \frac{\sigma^2}{2} \right) \frac{W_{j+1}^\ell-W_{j+1}^\ell}{2\Delta y} - \Delta \tau \frac{\sigma^2}{2} \frac{W_{j+1}^\ell-2W_{j}^\ell+W_{j-1}^\ell}{(\Delta y)^2} - r \Delta \tau W_{j}^\ell.
+\]
+Comparing this with
+\[
+W_{j}^{t+1} = \alpha W_{j-1}^\ell + \beta W_{j}^\ell + \gamma W_{j+1}^\ell,
+\]
+we identify the coefficients as
+\[
+\alpha = \frac{\Delta \tau}{2\Delta y} \left( r - \frac{\sigma^2}{2} \right) + \frac{\Delta \tau \sigma^2}{2(\Delta y)^2}, \quad \beta = 1 - r \Delta \tau - \frac{\Delta \tau \sigma^2}{(\Delta y)^2},
+\]
+and
+\[
+\gamma = -\frac{\Delta \tau}{2\Delta y} \left( r - \frac{\sigma^2}{2} \right) + \frac{\Delta \tau \sigma^2}{2(\Delta y)^2}.
+\]","**Answer:** Ignoring the \(O((\Delta y)^{2})\) and \(O(\Delta\tau)\) terms in the finite difference approximations and substituting in the transformed PDE (3.2)
+\[
+-\left(\frac{W_{j}^{\ell+1}-W_{j}^{\ell}}{\Delta\tau}\right)+\left(r-\frac{\sigma ^{2}}{2}\right)\left(\frac{W_{j+1}^{\ell}-W_{j-1}^{\ell}}{2\Delta y}\right)+ \frac{\sigma^{2}}{2}\left(\frac{W_{j+1}^{\ell}-2W_{j}^{\ell}+W_{j-1}^{\ell}}{( \Delta y)^{2}}\right)=rW_{j}^{\ell}.
+\]
+Multiplying through by \(-\Delta\tau\) and collecting terms gives
+\[
+W_{j}^{\ell+1} = W_{j-1}^{\ell}\Delta\tau\left(-\frac{\left(r-\frac{\sigma^{2}}{2} \right)}{2\Delta y}+\frac{\sigma^{2}}{2(\Delta y)^{2}}\right)+
+\]
+\[
+W_{j}^{\ell}\left(1-r\Delta\tau-\frac{\sigma^{2}\Delta\tau}{( \Delta y)^{2}}\right)+
+\]
+\[
+W_{j+1}^{\ell}\Delta\tau\left(\frac{\left(r-\frac{\sigma^{2}}{2} \right)}{2\Delta y}+\frac{\sigma^{2}}{2(\Delta y)^{2}}\right).
+\]
+Hence
+\[
+\alpha = \frac{\sigma^{2}\Delta\tau}{2(\Delta y)^{2}}-\left(r-\frac{\sigma^ {2}}{2}\right)\frac{\Delta\tau}{2\Delta y},
+\]
+\[
+\beta = 1-r\Delta\tau-\frac{\sigma^{2}\Delta\tau}{(\Delta y)^{2}},
+\]
+\[
+\gamma = \frac{\sigma^{2}\Delta\tau}{2(\Delta y)^{2}}+\left(r-\frac{\sigma^ {2}}{2}\right)\frac{\Delta\tau}{2\Delta y}.
+\]",3,1.Notational and algebraic errors. 2.Less explicit justification 3.Less streamlined presentation
+fin-3-iii-c,46,"The student's claim is incorrect. While the time stepping is backward from expiry to \( t = 0 \), equation (3.3) represents an explicit method, not an implicit one. In an explicit method, the solution at the next time step \((W_{j}^{\ell+1})\) is calculated directly using the solutions at the current time step \((W_{j-1}^{\ell}, W_{j}^{\ell}, W_{j+1}^{\ell})\). In contrast, an implicit method would require solving a system of equations to find the solution at the next time step. Because (3.3) is explicit, it suffers from stability restrictions. For the numerical scheme to be stable, the coefficients \(\alpha\), \(\beta\), and \(\gamma\) must satisfy certain conditions, which impose restrictions on the values of \(\Delta\tau\) and \(\Delta y\). Specifically, the method is conditionally stable, requiring \(\Delta\tau \leq \frac{(\Delta y)^2}{\sigma^2}\) to prevent oscillations and ensure convergence. Therefore, there are indeed restrictions on the values of \(\Delta\tau\) and \(\Delta y\) that can be used.","**Answer:** After the transformation, the initial conditions are at \(\tau=0\), so the method time steps forward from \(\tau_{0}=0\) to \(\tau_{m}=T\). Thus the values at time step \(\ell\) are known and (3.3) is an explicit formula for the unknown values at time step \(\ell+1\). An explicit method does require a stability restriction of the form
+\[
+\frac{\Delta\tau}{(\Delta y)^{2}}<\rho
+\]
+to ensure that rounding errors in the initial conditions do not get amplified until they completely destroy the numerical solution. The student is incorrect, having forgotten to take account of the change of variables to time to expiry \(\tau\).",4,1.Transformation Context Missing 2.Less Precise Stability Condition 3.Verbose Explanation
+fin-3-iv-a,47,"The option Delta, denoted as \(\Delta\), is the sensitivity of the option's value to a change in the underlying asset's price, given by \(\Delta = \frac{\partial V}{\partial S}\). We have \(W(y, \tau) = V(S, t)\), so \(\frac{\partial W}{\partial y} = \frac{\partial V}{\partial S} \frac{\partial S}{\partial y} = S \frac{\partial V}{\partial S}\). Therefore, \(\Delta = \frac{\partial V}{\partial S} = \frac{1}{S} \frac{\partial W}{\partial y}\). Using the central difference approximation for \(\frac{\partial W}{\partial y}\) at \(y_0\), we get \(\Delta \approx \frac{1}{S_0} \frac{W_1^m - W_{-1}^m}{2\Delta y}\), where \(S_0 = X e^{y_0}\) is the current asset price at \(t = 0\), and \(W_1^m\) and \(W_{-1}^m\) are the approximate option values at \(y_1 = y_0 + \Delta y\) and \(y_{-1} = y_0 - \Delta y\), respectively, at time \(\tau_m = T\), which corresponds to \(t = 0\).","**Answer:** The option Delta \(\Delta\) is the first derivative of the option value with respect to the asset, evaluated at the current time \(t=0\) and asset value \(S=S_{0}\). This corresponds to log-moneyness \(y_{0}=\log(S_{0}/X)\) and time to expiry \(\tau=T\). In terms of the values \(W^{{\ell}}_{j}\) produced by the numerical method,
+\[
+\Delta=\left.\frac{\partial V}{\partial S}\right|_{S=S_{0},t=0}=\left.\frac{1}{ S}\frac{\partial W}{\partial y}\right|_{y=y_{0},\tau=T}\approx\frac{1}{Xe^{y_{j_ {0}}}}\frac{W^{m}_{j_{0}+1}-W^{m}_{j_{0}-1}}{2\Delta y}.
+\]",4,1.Verbosity 2.Non-Standard Notation 3.Less Explicit Evaluation Points 4.Minor Formatting Issues
+fin-3-iv-b,48,"The option Gamma, denoted as \(\Gamma\), is the sensitivity of the option's Delta to a change in the underlying asset's price, given by \( \Gamma = \frac{\partial^2 V}{\partial S^2} \). We have \( \frac{\partial W}{\partial y} = S \frac{\partial V}{\partial S} \), so \( \frac{\partial^2 W}{\partial y^2} = S^2 \frac{\partial^2 V}{\partial S^2} + S \frac{\partial V}{\partial S} \).
+
+Rearranging, we get \( \Gamma = \frac{\partial^2 V}{\partial S^2} = \frac{1}{S^2} \left( \frac{\partial^2 W}{\partial y^2} - \frac{\partial W}{\partial y} \right) \). Using the central difference approximations for \( \frac{\partial W}{\partial y} \) and \( \frac{\partial^2 W}{\partial y^2} \) at \( y_0 \), we have \( \Gamma \approx \frac{1}{S_0^2} \left( \frac{W_m^n - 2W_{m-1}^n + W_m^n}{(\Delta y)^2} - \frac{W_m^n - W_m^n}{2\Delta y} \right) \), where \( S_0 = X e^{y_0} \) is the current asset price at \( t = 0 \), and \( W_1^m, W_0^m, W_{-1}^m \) are the approximate option values at \( y_1 = y_0 + \Delta y, y_0, \) and \( y_{-1} = y_0 - \Delta y \), respectively, at time \( \tau_m = T \), which corresponds to \( t = 0 \).","**Answer:** The option Gamma \(\Gamma\) is the second derivative of the option value with respect to the underlying asset, evaluated at the current time \(t=0\) and asset value \(S=S_{0}\). In terms of the transformed quantities
+\[
+\Gamma = \left.\frac{\partial^{2}V}{\partial S^{2}}\right|_{S=S_{0},t=0}
+\]
+\[
+= \left.\frac{1}{S^{2}}\left(\frac{\partial^{2}W}{\partial y^{2}}- \frac{\partial W}{\partial y}\right)\right|_{y=y_{0},\tau=T}
+\]
+\[
+\approx \left.\frac{1}{X^{2}e^{2y_{j_{0}}}}\left(\frac{W_{j_{0}+1}^{m}-2W_{j_{0}}^{m}+W_{j_{0}-1}^{m}}{(\Delta y)^{2}}-\frac{W_{j_{0}+1}^{m}-W_{j_{0}-1}^{m}}{2\Delta y}\right).
+\]",2,1.Incorrect finite difference stencils (critical error). 2.Unclear notation and missing evaluation points. 3.Less organized presentation.
+fin-4-i-a,49,"The cumulative distribution function (CDF) \( P(x) \) for a probability density function (PDF) \( p(x) \) is defined as the integral of the PDF from the lower bound of its support up to \( x \). Given that  
+\[p(x) = 0 \text{ for } x < 0 \text{ and } p(x) > 0 \text{ for } x > 0, \]  
+the CDF is defined as  
+\[P(x) = \int_{-\infty}^{x} p(t) dt. \]  
+Since  
+\[p(x) = 0 \text{ for } x < 0, \]  
+the integral becomes  
+\[P(x) = \int_{0}^{x} p(t) dt \text{ for } x \geq 0, \]  
+and  
+\[P(x) = 0 \text{ for } x < 0. \]  
+Therefore, the CDF \( P(x) \) is given by  
+\[P(x) = \int_{0}^{x} p(t) dt \text{ for } x \geq 0 \text{ and } 0 \text{ for } x < 0.\]","The cumulative distribution function (cdf) \(P\) is
+
+\[P(x)=\mbox{Prob}(X\leq x)=\left\{\begin{array}{ll}0&x\leq 0;\\ \int_{0}^{x}p(u)\,du&x>0.\end{array}\right.\]
+
+Make sure the limit of integration and the dummy variable of integration are different (\(\int_{0}^{x}p(x)\,dx\) is not correct), and the behaviour for \(x<0\) is defined.",4,1.lacks the explicit mention of the importance of the dummy variable and the piecewise notation used in the correct answer
+fin-4-i-b,50,"The cumulative distribution function (CDF) \( P(x) \) possesses several key properties: it is monotonically non-decreasing, meaning that if \( x_1 \leq x_2 \), then \( P(x_1) \leq P(x_2) \), as it represents the accumulated probability up to a point; it satisfies \( P(-\infty) = 0 \) and \( P(\infty) = 1 \), representing the fact that the probability of an event less than or equal to \( -\infty \) is zero, and the probability of an event less than or equal to \(\infty\) is one; it is right-continuous, meaning \(\lim_{x \to a^+} P(x) = P(a)\), due to the nature of integration; and it is related to the probability density function (PDF) \( p(x) \) by  
+\[P(x) = \int_{-\infty}^{x} p(t) dt,\]  
+indicating that the CDF's derivative, where it exists, is the PDF, i.e.,  
+\[P'(x) = p(x).\]","**Answer:** Two key properties are
+
+* *\(P(0)=0\) and \(\lim\limits_{x\to\infty}P(x)=1\).
+
+* *As \(p(x)>0\) for all \(x>0\), the cdf \(P(x)\) is strictly increasing on \([0,\infty)\). Hence the function \(P:[0,\infty)\to[0,1]\) has an inverse.
+
+Note that \(P\) is not strictly increasing on the whole of \({\mathbb{R}}\), and does not have an inverse as a function \(P:{\mathbb{R}}\to[0,1]\).",3,1.does not fully address the specific properties  2.lacks focus on the problem's context
+fin-4-i-c,51,"To transform the expected value \( E[h] = \int_{0}^{\infty} h(x)p(x)dx \) into an integral over \([0, 1]\) using the cumulative distribution function (CDF) \( P(x) \), we perform a change of variables. Let \( u = P(x) \), so \( x = P^{-1}(u) \), where \( P^{-1} \) is the inverse function of \( P \). Then \( du = p(x)dx \), and the limits of integration change from \( x = 0 \) to \( u = P(0) = 0 \), and \( x \to \infty \) to \( u = P(\infty) = 1 \). Substituting these into the expected value integral, we get \( E[h] = \int_{0}^{1} h(P^{-1}(u))du \). Thus, the expected value is transformed into an integral over \([0, 1]\) as \( E[h] = \int_{0}^{1} h(P^{-1}(u))du \).","**Answer:** Let \(z=P(x)\) for \(x\geq 0\), so the inverse \(P^{-1}\) exists and \(x=P^{-1}(z)\). Then
+
+* *For \(z\in[0,1]\), \(x=P^{-1}(z)\in[0,\infty)\).
+
+* *The derivative \(\frac{dz}{dz}=P^{\prime}(x)=p(x)\), so \(dz=p(x)\,dx\).
+
+* *The limits of integration are: \(x=0\iff z=P(0)=0\) and \(x=\infty\iff z=P(\infty)=1\).
+
+Thus
+
+\[\mathbb{E}[h]=\int_{0}^{\infty}h(x)p(x)\,dx=\int_{0}^{1}h(P^{-1}(z))\,dz.\]",4,1.lacks some of the explicit intermediate reasoning and formal notation
+fin-4-ii-a,52,"The star discrepancy \( D^*(x_1, \ldots, x_N) \) measures how evenly a set of points \(\{x_1, \ldots, x_N\}\) is distributed within the \(d\)-dimensional unit cube \([0, 1]^d\). It is defined as the supremum of the absolute difference between the proportion of points falling within any axis-aligned box anchored at the origin and the volume of that box. Mathematically, \( D^*(x_1, \ldots, x_N) = \sup_{J \subseteq [0, 1]^d} \left| \frac{1}{N} \sum_{i=1}^N 1_{x_i \in J} - \text{vol}(J) \right| \), where \( J \) is an axis-aligned box anchored at the origin, \( 1_{x_i \in J} \) is an indicator function that is 1 if \( x_i \) is in \( J \) and 0 otherwise, and \(\text{vol}(J)\) is the volume of \( J \). In essence, a smaller star discrepancy indicates a more uniform distribution of points.","Answer: The star discrepancy of a set \(\{x_1, \ldots, x_N\}\) of points in \([0, 1]^d\) is
+
+\[D^*(x_1, \ldots, x_N) = \sup_{y \in [0, 1]^d} \left| \frac{\#x_j \in [0, y]}{N} - \frac{\prod_{j=1}^d y_j}{1} \right|.\]
+
+This is the largest difference between the proportion of the points lying in the rectangular box with vertices at the origin and the point \(y \in [0, 1]^d\) with sides parallel to the axes and the volume of the box (as a proportion of the unit cube which has volume 1). The supremum (least upper bound, or maximum if it is achieved) is taken over all points \(y \in [0, 1]^d\), so over all such rectangular boxes in the unit cube. The star discrepancy measures the uniformity of the distribution of the points \(x_j, j = 1, \ldots, N\) in the unit cube.",4,1.lacks some of the illustrative details and explicit geometric interpretation
+fin-4-ii-b,53,"To estimate the variance \(\text{Var}[f] = \int_{[0,1]^d} (f(\mathbf{x}) - \mu)^2 p(\mathbf{x}) \, d\mathbf{x}\) using a Monte Carlo method, we first generate \(N\) random samples \(\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N\) from the probability density function \(p(\mathbf{x})\) over the domain \([0, 1]^d\). Then, we calculate the function values \(f(\mathbf{x}_i)\) for each sample point. Next, we estimate the mean \(\mu\) using the sample mean \(\hat{\mu} = \frac{1}{N} \sum_{i=1}^N f(\mathbf{x}_i)\). Finally, we estimate the variance by calculating the sample variance using the formula \(\text{Var}[f] \approx \frac{1}{N} \sum_{i=1}^N (f(\mathbf{x}_i) - \hat{\mu})^2\). This provides an approximation of the integral using the average of the squared differences between the function values and the estimated mean.  ","**Answer:** The Monte-Carlo method generates points \(\boldsymbol{x}_{j}, j=1,\ldots,N\) uniformly distributed over the unit cube \([0,1]^{d}\) and then uses the sample mean to estimate the expected value (4.1), so  
+
+\[\int_{[0,1]^{d}}(f(\boldsymbol{x})-\mu)^{2}p(\boldsymbol{x})d\boldsymbol{x}\approx \frac{1}{N}\sum_{j=1}^{N}(f(\boldsymbol{x}_{j})-\mu)^{2}p(\boldsymbol{x}_{j}).\]  
+
+Alternatively, you can generate the points \(\boldsymbol{x}_{j}, j=1,\ldots,N\) uniformly distributed **according to the distribution defined by the pdf \(p(\boldsymbol{x})\)**, then  
+
+\[\int_{[0,1]^{d}}(f(\boldsymbol{x})-\mu)^{2}p(\boldsymbol{x})d\boldsymbol{x}\approx \frac{1}{N}\sum_{j=1}^{N}(f(\boldsymbol{x}_{j})-\mu)^{2}.\]  ",3,1.misses the distinction between uniform sampling and importance sampling 2.less precise
+fin-4-ii-c,54,"When comparing integration errors between a standard Monte Carlo method and a method using a ""low-discrepancy"" point set, the key difference lies in the convergence rate. Standard Monte Carlo methods typically have a convergence rate of \( O(N^{-1/2}) \), where \( N \) is the number of samples, due to the central limit theorem, regardless of the dimension \( d \). In contrast, methods using ""low-discrepancy"" point sets, often called quasi-Monte Carlo methods, can achieve convergence rates closer to \( O((\log N)^d/N) \) as indicated by the Koksma-Hlawka inequality, where the error is bounded by the product of the total variation of the integrand and the star discrepancy of the point set. Thus, for high-dimensional problems, quasi-Monte Carlo methods can offer significantly faster convergence and reduced integration errors compared to standard Monte Carlo methods, especially when the integrand has bounded variation.  ","**Answer:** The Monte-Carlo method has root mean square (RMS) error of the form  
+
+\[\frac{\sigma(f)}{N^{\frac{1}{2}}}.\]  
+
+The key advantage is that this does not depend directly on the dimension \(d\) (the variance \(\sigma^{2}(f)\) of the function does depend on the dimension \(d\)). The disadvantage is that the convergence rate of \(O(N^{-\frac{1}{2}})\) is slow.  
+
+For ""low-discrepancy"" point sets, the Koksma-Hlawka inequality shows that the error for numerical integration is bounded by  
+
+\[V(f)\ c_{d}\ \frac{(\log N)^{d-1}}{N}.\]  
+
+For small dimensions \(d\) and large \(N\), this behaves like \(O\left(\frac{1}{N}\right)\) which should be better than the Monte-Carlo method. However for modest/higher values of \(d\), the \(\log(N)^{d-1}\) term cannot be treated as a constant, unless \(N\) is very very large (so large that computation is unrealistic).  ",4,1.lacks the explicit error formulas and the nuanced discussion of dimensional trade-offs
+fin-4-ii-d,55,"A) For \( d = 20 \) and \( N = 10^{20} \), we have \( (\log N)^{d-1} = (\log 10^{20})^{19} = (20 \log 10)^{19} \approx (20 \times 2.3026)^{19} \approx 46.052^{19} \approx 1.25 \times 10^{31} \) and \( N^{-1/2} = (10^{20})^{-1/2} = 10^{-10} \).  
+
+B) The implication is that \( (\log N)^{d-1} \) is significantly larger than \( N^{1/2} \) for this high-dimensional problem. Specifically, \( (\log N)^{d-1} \) is approximately \( 10^{41} \) times larger than \( N^{-1/2} \), suggesting that the error bound for a ""low-discrepancy"" point set, which is proportional to \( (\log N)^{d-1}/N \), will be much larger than the error bound for a standard Monte Carlo method, which is proportional to \( N^{-1/2} \). This means that using a ""low-discrepancy"" point set satisfying the given condition may not provide a benefit over standard Monte Carlo in this case, and might even be worse, due to the large dimensionality.  ","**Answer:**  
+
+A) For \(d=20\) and \(N=10^{20}\):  
+
+\[(\log N)^{d-1}=(\log 10^{20})^{19}=4\times 10^{31},\qquad N^{\frac{1}{2}}=10^{10}.\]  
+
+B) Ignoring constants and the variation of the integrand, the bound on the numerical integration error for a ""low-discrepancy"" point set is better than the RMS error for the Monte-Carlo method when  
+
+\[\frac{(\log N)^{d-1}}{N}<\frac{1}{N^{\frac{1}{2}}}\iff(\log N)^{d-1}<N^{\frac{1}{2}}.\]  
+
+For \(d=20\) and \(N=10^{20}\) this is nowhere near being true, indicating that for these values the Monte-Carlo method would be preferable. For large enough \(N\) the low-discrepancy bound would be smaller, but the values of \(N\) required would make it totally unrealistic for use with today's computers.  ",3,1.lacks the explicit inequality comparison and the practical computational insight 2.less precise calculations
+fin-4-ii-e,56,"To reduce the variance in estimating $\text{Var}[f] = \int_{[0,1]^d} (f(\mathbf{x}) - \mu)^2 p(\mathbf{x}) d\mathbf{x}$, we can use a control variate technique by introducing a function \( g \) that approximates \( f^2 \). We rewrite the variance as $\text{Var}[f] = \int_{[0,1]^d} f^2(\mathbf{x}) p(\mathbf{x}) d\mathbf{x} - \mu^2$, where \(\mu = \int_{[0,1]^d} f(x)p(x)dx\). We then introduce a control variate \( g \) such that \(\int_{[0,1]^d} g(x)p(x)dx\) is known or easily computable. We estimate \(\int_{[0,1]^d} f^2(x)p(x)dx\) using \(\int_{[0,1]^d} g(x)p(x)dx + \int_{[0,1]^d}(f^2(x) - g(x))p(x)dx\), where the latter integral is estimated via Monte Carlo. If \( g \) is a good approximation of \( f^2 \), the variance of the Monte Carlo estimate of \(\int_{[0,1]^d}(f^2(x) - g(x))p(x)dx\) will be smaller than the variance of the direct Monte Carlo estimate of \(\int_{[0,1]^d} f^2(x)p(x)dx\), leading to a reduced variance in the overall estimate of $\text{Var}[f]$.  ","**Answer:** The expected value \(\mu=\mathbb{E}[f]\) is known, so the variance of \(f\) is calculated by  
+
+\[\text{Var}[f]=\mathbb{E}[(f-\mu)^{2}]=\mathbb{E}[f^{2}]-\mu^{2}.\]  
+
+Let \(g\) be a function which approximates \(f^{2}\) such that \(\mathbb{E}[g]\) is known analytically. Then, using the linearity of the expectation,  
+
+\[\text{Var}[f]=\mathbb{E}[f^{2}-g+g]-\mu^{2}=\mathbb{E}[f^{2}-g]+\mathbb{E}[g]-\mu^{2}.\]  
+
+If \(g\) is a good approximation of \(f^{2}\), so that \(\sigma(f^{2}-g)\ll\sigma(f^{2})\) (variance reduction), then using a numerical method to approximate \(\mathbb{E}[f^{2}-g]\) and adding \(\mathbb{E}[g]-\mu^{2}\) should produce a more accurate estimate of \(\text{Var}[f]\) than numerically calculating \(\mathbb{E}[f^{2}]\) directly.  
+
+For a Monte-Carlo method using points uniformly distributed in \([0,1]^{d}\),  
+
+\[\mathbb{E}[f^{2}-g]\approx\frac{1}{N}\sum_{j=1}^{N}\left(f(\boldsymbol{x}_{j})^{2}-g(\boldsymbol{x}_{j})\right)p(\boldsymbol{x}_{j}).\]  ",4,1.mathematical rigor 2.completeness of the model solution
+fin-4-iii-a,57,"To derive an expression for \( S_{t+dt} \) from the given stochastic differential equation (SDE)  
+\[\frac{dS_t}{S_t} = \mu dt + \sigma S_t^{\gamma-1} dW_t\]  
+we multiply both sides by \( S_t \) to get  
+\[dS_t = \mu S_t dt + \sigma S_t^{\gamma} dW_t\]  
+Then, we integrate both sides from \( t \) to \( t + dt \). Assuming that \( dt \) is small, we can approximate the integral using the Euler-Maruyama method, which gives us  
+\[S_{t+dt} - S_t \approx \mu S_t dt + \sigma S_t^{\gamma}(W_{t+dt} - W_t)\]  
+Rearranging for \( S_{t+dt} \), we get  
+\[S_{t+dt} \approx S_t + \mu S_t dt + \sigma S_t^{\gamma} \sqrt{dt} Z\]  
+where \( Z \) is a standard normal random variable representing the increment of the Wiener process \( W_{t+dt} - W_t \). Thus, the expression for \( S_{t+dt} \) is  
+\[S_{t+dt} \approx S_t (1 + \mu dt) + \sigma S_t^{\gamma} \sqrt{dt} Z.\]  ","**Answer:** From the CEV model  
+
+\[dS_{t}=S_{t}\left(\mu dt+\sigma S_{t}^{\gamma-1}dW_{t}\right).\]  
+
+Hence  
+
+\[S_{t+dt}\approx S_{t}+dS_{t}=S_{t}\left(1+\mu dt+\sigma S_{t}^{\gamma-1}dW_{t}\right)=S_{t}+\mu S_{t}dt+\sigma S_{t}^{\gamma}dW_{t}.\]  ",5,1.verbosity
+fin-4-iii-b,58,"A Wiener process \( W_t \), also known as a Brownian motion, has several key properties: it starts at zero, i.e., \( W_0 = 0 \); it has independent increments, meaning that for any times \( 0 \leq t_1 < t_2 < \cdots < t_n \), the increments \( W_{t_2} - W_{t_1}, W_{t_3} - W_{t_2}, \ldots, W_{t_n} - W_{t_{n-1}} \) are independent; its increments are normally distributed, specifically \( W_{t+s} - W_t \sim N(0, s) \) for \( s \geq 0 \); and it has continuous paths, meaning that \( W_t \) is a continuous function of \( t \). These properties characterize the Wiener process as a fundamental stochastic process used in modeling phenomena with random fluctuations.","**Answer:** A Wiener process \( W_t \) satisfies  
+- \( W_0 = 0 \) with probability 1,  
+- \( W_t \) is continuous (almost surely),  
+- \( W_t \) has increments \( W_t - W_s \sim N(0,t-s) \), so they are normally distributed with mean 0 and variance \( t-s \).  
+- The increments \( W_t - W_s \) and \( W_u - W_v \) are independent for \( 0 \leq s < t \leq u < v \).",4,1.verbose 2.less precise
+fin-4-iii-c,59,"To discretize the CEV process given by \(\frac{dS_t}{S_t} = \mu dt + \sigma S_t^{\gamma-1} dW_t\) over the time interval \([0, T]\) with discretization \(t_i = i\Delta t\) and \(\Delta t = T/m\), we use the Euler-Maruyama method. We approximate \(S_{t_{i+1}}\) using the value of \(S_{t_i}\), which we denote as \(\bar{S}_i\). Applying the method, we have \(\bar{S}_{i+1} - \bar{S}_i \approx \mu \bar{S}_i \Delta t + \sigma \bar{S}_i^{\gamma} \Delta W_i\), where \(\Delta W_i = W_{t_{i+1}} - W_{t_i} \sim N(0, \Delta t)\). Thus, the discrete approximation for \(\bar{S}_{i+1}}\) is given by \(\bar{S}_{i+1}} = \bar{S}_i + \mu \bar{S}_i \Delta t + \sigma \bar{S}_i^{\gamma} \sqrt{\Delta t} Z_i\), where \(Z_i\) are independent standard normal random variables. Therefore, the formula for the discrete approximation \(\bar{S}_i \approx S_{t_i}\) is \(\bar{S}_{i+1}} = \bar{S}_i (1 + \mu \Delta t) + \sigma \bar{S}_i^{\gamma} \sqrt{\Delta t} Z_i\) for \(i = 0, 1, \ldots, m-1\), with \(\bar{S}_0 = S_0\).","**Answer:** The discrete approximation of the CEV process satisfies
+
+\[\bar{S}_{i+1}=\bar{S}_{i}\left(1+\mu\Delta t+\sigma S_{i}^{\gamma-1}\sqrt{ \Delta t}\,Z_{i}\right)\]
+
+where \(Z_{i}\) are independent standard normal \(N(0,1)\) random variables. Starting from a given \(S_{0}\) this can be used to simulate the CEV process.",4,1.verbose 2.latex formatting issues
+fin-1-i-a,60,"The polynomial approximation in Figure 1 does not agree with the interest rate data at \( t_6 = 2.5 \), \( t_7 = 3 \), or \( t_8 = 3.5 \) years because the Vandermonde matrix \( \mathbf{A} \) is ill-conditioned, as indicated by the large condition number (ratio of maximum to minimum singular values, \( \frac{sv_{\max}}{sv_{\min}} = \frac{1.2235 \times 10^3}{6.4320 \times 10^{-2}} \approx 19022 \)). This ill-conditioning leads to significant numerical instability when solving the linear system \( \mathbf{Ac} = \mathbf{rd} \) for the polynomial coefficients \( \mathbf{c} \), causing large errors in the resulting polynomial fit. Consequently, the polynomial deviates substantially from the actual data points at these specific time values, demonstrating the Runge phenomenon where high-degree polynomial interpolation can introduce oscillations and inaccuracies between data points, especially near the edges of the interval.
+","\textbf{Answer:} We have 9 data points and use a polynomial of degree 5. The polynomial has 6 coefficients which we can choose. Hence in general it is not possible to fit the polynomial such that it goes through all 9 data points (in general it can only go through at most 6 data points, which is the case in this example).
+",3,1.Missing the fundamental modeling mismatch 2.No mention of underfitting due to degree mismatch 3.Too much emphasis on the condition number 4.Does not state why deviations occur at specific points
+fin-1-i-b,61,"The rank of matrix \( \mathbf{A} \) is 6. The matrix \( \mathbf{A} \) is a Vandermonde matrix constructed from the time values \( t_i \) for \( i = 1, \ldots, 9 \), with each column representing powers of \( t_i \) up to degree 5. Since we are fitting a polynomial of degree \( n = 5 \) to 9 distinct data points, the matrix \( \mathbf{A} \) is a 9×6 matrix. The rank of a Vandermonde matrix is equal to the number of columns if the nodes \( t_i \) are distinct, which is the case here. Thus, the rank is 6, indicating that the columns are linearly independent and span a 6-dimensional subspace.
+","\textbf{Answer:} All singular values are positive and hence the matrix has full rank, which is 6.
+",5,no
+fin-1-i-c,62,"The condition number \( \kappa_2(\mathbf{A}) \) of matrix \( \mathbf{A} \) is estimated using the singular values obtained from the SVD of \( \mathbf{A} \). The MATLAB commands \texttt{sv = svd(A)} calculate the singular values, and the condition number is the ratio of the largest singular value ( \texttt{svmax = sv(1)} ) to the smallest singular value ( \texttt{svmin = sv(end)} ). From the given values, \( \texttt{svmax} = 1.2235 \times 10^3 \) and \( \texttt{svmin} = 6.4320 \times 10^{-2} \). Therefore, the condition number is
+
+\[
+\kappa_2(\mathbf{A}) = \frac{\texttt{svmax}}{\texttt{svmin}} = \frac{1.2235 \times 10^3}{6.4320 \times 10^{-2}} \approx 19022.
+\]
+","\[
+\kappa_2(A) = \frac{\text{svmax}}{\text{svmin}} = \frac{1.2235 * 10^3}{6.4320 * 10^{-2}} = 1.9022 * 10^4
+\]
+",5,no
+fin-1-i-d,63,"The relative change in the polynomial coefficients \( \mathbf{a} \) due to a one basis point (0.01\%) decrease in the interest rate at some time \( t_i \) can be estimated using the condition number \( \kappa_2(\mathbf{A}) \). The relative change in the coefficients is bounded by \( \kappa_2(\mathbf{A}) \times \text{(relative change in the data)} \). With \( \kappa_2(\mathbf{A}) \approx 19022 \) and a relative change in the data of \( \frac{0.01}{3.5} \approx 0.00286 \) (assuming the smallest interest rate of 3.5\%), the relative change in the coefficients is approximately \( 19022 \times 0.00286 \approx 54.3 \). This indicates that a small change in the data can lead to a very large relative change in the coefficients, suggesting low confidence in the values of \( \mathbf{a} \) due to the ill-conditioning of the Vandermonde matrix \( \mathbf{A} \).
+","\textbf{Answer:} The relative change is
+\[
+0.01 \kappa_2(A) = 10^{-4} \times 1.9022 \times 10^4 = 1.9022.
+\]
+Since the relative change is larger than 1, I don’t have any confidence in the solution.
+",5,no
+fin-1-ii-a,64,"A cubic spline interpolant is a piecewise cubic polynomial function that passes through a given set of data points. It is constructed by fitting a separate cubic polynomial to each interval between consecutive data points, ensuring that the function values, first derivatives, and second derivatives match at the data points (knots). This continuity of derivatives results in a smooth curve without sharp corners, unlike high-degree polynomial interpolations that can exhibit oscillations. Cubic splines are preferred for interpolation because they provide a good balance between smoothness and accuracy, avoiding the Runge phenomenon observed with high-degree polynomials.
+","A cubic spline interpolant is a piecewise polynomial of degree 3 which goes through all the data points such that the resulting function is twice continuously differentiable.
+",4,1. lacks depth and application-oriented explanation
+fin-1-ii-b,65,"The two cubic spline interpolants, \texttt{rsp1} and \texttt{rsp2}, predict very different estimates for the interest rate at \( t = 4.5 \) years because they are constructed using different sets of data points. \texttt{rsp1} interpolates the original data points directly, while \texttt{rsp2} interpolates the data points augmented with an additional zero value at the beginning and end, effectively forcing the spline to pass through zero at \( t = 0 \) and \( t = 4.5 \). This additional constraint in \texttt{rsp2} significantly alters the shape of the spline, especially near the boundaries, leading to a different prediction at \( t = 4.5 \) compared to \texttt{rsp1}, which does not have this constraint. The difference highlights the sensitivity of spline interpolation to boundary conditions and the importance of carefully selecting the data points to accurately reflect the underlying trend.
+","The cubic spline requires two additional conditions to be defined uniquely. These two conditions at the end points are different for those two splines, yielding different behaviour outside the range. (Spline 2 has derivative 0 at the end points, whereas Spline 1 is a not-a-knot spline.)
+",4,1.lack Terminology clarity
+fin-1-iii/iv,66,"The singular value decomposition (SVD) of a rectangular matrix \( A \in \mathbb{R}^{m \times n} \) with \( m \geq n \) is given by
+\[
+A = U \Sigma V^T,
+\]
+where \( U \) is an \( m \times m \) orthogonal matrix, \( \Sigma \) is an \( m \times n \) diagonal matrix with non-negative singular values \( \sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_n \geq 0 \), and \( V \) is an \( n \times n \) orthogonal matrix.
+
+This decomposition can be expressed as
+\[
+A = Y \Sigma V^T = \sum_{j=1}^{n} \sigma_j \mathbf{u}_j \mathbf{v}_j^T,
+\]
+where \( U = [Y \quad Z] \), 
+\[
+Y = [\mathbf{u}_1 \quad \mathbf{u}_2 \quad \cdots \quad \mathbf{u}_n], \quad
+Z = [\mathbf{u}_{n+1} \quad \mathbf{u}_{n+2} \quad \cdots \quad \mathbf{u}_m],
+\]
+\[
+\Sigma = \mathrm{diag}(\sigma_1, \sigma_2, \ldots, \sigma_n), \quad
+V = [\mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n].
+\]
+
+An orthogonal matrix \( Q \in \mathbb{R}^{n \times n} \) is a square matrix whose columns and rows are orthonormal vectors, meaning
+\[
+Q^T Q = Q Q^T = I,
+\]
+where \( I \) is the identity matrix. This implies that the inverse of \( Q \) is its transpose, i.e., \( Q^{-1} = Q^T \).
+","\textbf{Answer:} The matrix \( Q \) is orthogonal if \( QQ^T = I \), where \( I \) is the identity matrix.
+",4,1.Incomplete characterization 2.Lack of generality and interpretation
+fin-1-v,67,"To show that if \( Q \) is orthogonal, then \( \|Q\mathbf{x}\|_2 = \|\mathbf{x}\|_2 \) for all \( \mathbf{x} \in \mathbb{R}^n \), we start with the definition of the 2-norm squared: \( \|Q\mathbf{x}\|_2^2 = (Q\mathbf{x})^T(Q\mathbf{x}) \). Using the property \( (AB)^T = B^TA^T \), we have
+\[
+\|Q\mathbf{x}\|_2^2 = \mathbf{x}^T Q^T Q \mathbf{x}.
+\]
+Since \( Q \) is orthogonal, \( Q^T Q = I \), where \( I \) is the identity matrix. Thus,
+\[
+\|Q\mathbf{x}\|_2^2 = \mathbf{x}^T I \mathbf{x} = \mathbf{x}^T \mathbf{x} = \|\mathbf{x}\|_2^2.
+\]
+Taking the square root of both sides gives \( \|Q\mathbf{x}\|_2 = \|\mathbf{x}\|_2 \), proving that orthogonal matrices preserve the 2-norm.
+","\textbf{Answer:} We have
+\[
+\|Q\mathbf{x}\|_2^2 = (Q\mathbf{x})^T \cdot (Q\mathbf{x}) = \mathbf{x}^T Q^T Q \mathbf{x} = \mathbf{x}^T \mathbf{x} = \|\mathbf{x}\|_2^2.
+\]
+The result follows now by taking square roots on both sides.
+",5,no
+fin-1-vi,68,"Given \( A = U \Sigma V^T \) and \( \mathbf{y} = V^T \mathbf{x} \), we want to show that minimizing \( \|A\mathbf{x} - \mathbf{b}\|_2 \) is equivalent to minimizing \( \|\Sigma \mathbf{y} - Y^T \mathbf{b}\|_2 \). We have
+\[
+\|A\mathbf{x} - \mathbf{b}\|_2 = \|U \Sigma V^T \mathbf{x} - \mathbf{b}\|_2.
+\]
+Since \( U \) is orthogonal, \( \|U \mathbf{z}\|_2 = \|\mathbf{z}\|_2 \), so
+\[
+\|U \Sigma V^T \mathbf{x} - \mathbf{b}\|_2 = \|\Sigma V^T \mathbf{x} - U^T \mathbf{b}\|_2.
+\]
+Substituting \( \mathbf{y} = V^T \mathbf{x} \), we get
+\[
+\|\Sigma \mathbf{y} - U^T \mathbf{b}\|_2.
+\]
+Since \( U = \begin{bmatrix} Y & Z \end{bmatrix} \), we have
+\[
+U^T \mathbf{b} = \begin{bmatrix} Y^T \\ Z^T \end{bmatrix} \mathbf{b}.
+\]
+Thus, the first \( n \) components of \( U^T \mathbf{b} \) are \( Y^T \mathbf{b} \), and the remaining components are \( Z^T \mathbf{b} \).
+
+The minimization of \( \|\Sigma \mathbf{y} - U^T \mathbf{b}\|_2 \) involves only the first \( n \) components because \( \Sigma \) is \( m \times n \). Therefore, minimizing \( \|A \mathbf{x} - \mathbf{b}\|_2 \) is equivalent to minimizing \( \|\Sigma \mathbf{y} - Y^T \mathbf{b}\|_2 \).
+","\textbf{Answer:} We have
+\[
+\|A\mathbf{x} - \mathbf{b}\|_2^2 = \left\| \begin{bmatrix} \Sigma \\ 0 \end{bmatrix} V^T \mathbf{x} - \mathbf{b} \right\|_2^2 = \left\| \begin{bmatrix} \Sigma \\ 0 \end{bmatrix} \mathbf{y} - \mathbf{b} \right\|_2^2.
+\]
+Since \( U \) and also \( U^T \) is an orthogonal matrix, we have by the answer to the previous question that
+\[
+\|A\mathbf{x} - \mathbf{b}\|_2^2 = \|U^T A \mathbf{x} - U^T \mathbf{b}\|_2^2 = \left\| U^T \begin{bmatrix} \Sigma \\ 0 \end{bmatrix} \mathbf{y} - U^T \mathbf{b} \right\|_2^2.
+\]
+Using Pythagoras' Theorem we obtain
+\[
+\|A\mathbf{x} - \mathbf{b}\|_2^2 = \left\| \begin{bmatrix} \Sigma \\ 0 \end{bmatrix} \mathbf{y} - U^T \mathbf{b} \right\|_2^2 = \|\Sigma \mathbf{y} - Y^T \mathbf{b}\|_2^2 + \|Z^T \mathbf{b}\|_2^2.
+\]
+The term \( \|Z^T \mathbf{b}\|_2^2 \) does not depend on \( \mathbf{x} \) and \( \mathbf{y} \), hence \( \|A\mathbf{x} - \mathbf{b}\|_2^2 \) is minimized if and only if \( \|\Sigma \mathbf{y} - Y^T \mathbf{b}\|_2^2 \) is minimized.
+",5,no
+fin-2-i,69,"To estimate the exponential growth underlying the price data, we can utilize MATLAB's curve fitting capabilities. First, we define the exponential model 
+\[ P_j \approx a e^{c t_j} \]
+where \( P_j \) represents the price at time \( t_j \). We then use the \texttt{fit} function in MATLAB with the \texttt{fittype} set to \texttt{exp1} (for a single-term exponential model) and the provided price \( P \) and time \( t \) vectors as input. This function determines the optimal values for the coefficients \( a \) and \( c \) that best fit the data in a least-squares sense. Finally, we plot the fitted exponential curve alongside the original price data to visually assess the fit and ensure the exponential growth is accurately captured. The resulting fitted curve, represented by 
+\[ P_j = a e^{c t_j}, \]
+provides the desired exponential growth model for the asset's price.
+","\textbf{Answer:} Taking logarithms we obtain 
+\[ \log P_j \approx \log \alpha + \beta t_j. \]
+We can now use least-squares to estimate \( \gamma = \log \alpha \) and \( \beta \). Define the matrix \( A \) by
+\[ A = [\text{ones}(N, 1),\ \mathbf{t}] \]
+and solve the normal equations
+\[ A^T A \begin{pmatrix} \gamma \\ \beta \end{pmatrix} = A^T \log \mathbf{P} \]
+using 
+\[ [\gamma,\ \beta]^T = A \backslash \log \mathbf{P}. \]
+Then set 
+\[ \alpha = \exp(\gamma). \]
+",3,1.misses the key transformation and linearization idea through logarithms
+fin-2-ii-a,70,"To show that \( \hat{y}_{N-k} = \overline{\hat{y}_k} \) for \( k = 1, 2, \ldots, N-1 \), we start with the definition of the discrete Fourier transform (DFT): 
+\[
+\hat{y}_k = \sum_{j=0}^{N-1} y_j e^{-i 2\pi jk / N}.
+\]
+Taking the complex conjugate of \( \hat{y}_k \), we get
+\[
+\overline{\hat{y}_k} = \sum_{j=0}^{N-1} y_j e^{i 2\pi jk / N}.
+\]
+Now, we consider
+\[
+\hat{y}_{N-k} = \sum_{j=0}^{N-1} y_j e^{-i 2\pi j (N-k)/N}.
+\]
+Simplifying the exponent, we have
+\[
+-i2\pi j (N - k)/N = -i2\pi j + i2\pi jk / N.
+\]
+Since \( e^{-i2\pi j} = 1 \), we get
+\[
+\hat{y}_{N-k} = \sum_{j=0}^{N-1} y_j e^{i 2\pi jk / N},
+\]
+which is exactly \( \overline{\hat{y}_k} \). Therefore, we have shown that \( \hat{y}_{N-k} = \overline{\hat{y}_k} \).
+","\textbf{Answer:} We have
+\[
+\hat{y}_{N-k} = \sum_{j=0}^{N-1} y_j e^{-i2\pi j(N-k)/N}
+= \sum_{j=0}^{N-1} y_j e^{i2\pi jk/N} e^{-i2\pi j}
+= \sum_{j=0}^{N-1} y_j e^{i2\pi jk/N}
+= \sum_{j=0}^{N-1} \overline{y_j} e^{-i2\pi jk/N}
+= \overline{\sum_{j=0}^{N-1} y_j e^{-i2\pi jk/N}} = \overline{\hat{y}_k},
+\]
+where we used that \( \overline{y_j} = y_j \) (i.e., \( y_j \) is real).
+",4,1.missed one subtle and essential assumption
+fin-2-ii-b,71,"Given \( N = 2n \) and the inversion formula 
+\[
+y_j = \frac{1}{N} \sum_{k=0}^{N-1} \hat{y}_k e^{i 2\pi jk / N},
+\]
+we can rewrite \( e^{i 2\pi jk / N} \) as 
+\[
+\cos(2\pi jk/N) + i \sin(2\pi jk/N).
+\]
+Separating the sum into real and imaginary parts, and using the property \( \hat{y}_{N-k} = \overline{\hat{y}_k} \), we can express \( y_j \) as a sum of cosine and sine terms. By comparing this expression with the desired form
+\[
+y_j = a_0 + \sum_{k=1}^{n} [a_k \cos(2\pi k t_j / T) + b_k \sin(2\pi k t_j / T)],
+\]
+we can identify the coefficients:
+\[
+a_0 = \frac{1}{N} \hat{y}_0, \quad a_k = \frac{2}{N} \text{Re}(\hat{y}_k), \quad b_k = -\frac{2}{N} \text{Im}(\hat{y}_k)
+\]
+for \( k = 1, 2, \ldots, n \). Therefore, we have expressed the real coefficients \( a_k \) and \( b_k \) in terms of the complex transform \( \hat{y}_k \).
+","\textbf{Answer:} Using Euler’s formula \( e^{i 2\pi x} = \cos(2\pi x) + i \sin(2\pi x) \), we obtain from the inversion formula that
+\[
+y_j = \frac{1}{N} \sum_{k=0}^{N-1} \hat{y}_k e^{i2\pi jk/N}
+= \frac{\hat{y}_0}{N} + \sum_{k=1}^{N-1} \left[ \frac{\hat{y}_k}{N} e^{i2\pi jk/N} + \frac{\hat{y}_{N-k}}{N} e^{i2\pi j(N-k)/N} \right].
+\]
+Since the \( y_j \) are real numbers, the imaginary part in the above expression is 0 and we have
+\[
+y_j = \frac{\text{Re}(\hat{y}_0)}{N} + \sum_{k=1}^{n-1} \left[ \frac{2 \text{Re}(\hat{y}_k)}{N} \cos(2\pi jk/N) - \frac{2 \text{Im}(\hat{y}_k)}{N} \sin(2\pi jk/N) \right].
+\]
+Since \( N = 2n \) is even, for \( k = 1, 2, \ldots, n-1 \), we also have:
+\[
+\cos(2\pi jk/N) + \cos(2\pi j(N-k)/N) = 2 \cos(2\pi jk/N),
+\]
+\[
+\sin(2\pi jk/N) - \sin(2\pi j(N-k)/N) = 2 \sin(2\pi jk/N).
+\]
+Then using \( \hat{y}_{N-k} = \overline{\hat{y}_k} \), we get
+\[
+y_j = \frac{\text{Re}(\hat{y}_0)}{N} + \sum_{k=1}^{n-1} \left[ \frac{2\text{Re}(\hat{y}_k)}{N} \cos(2\pi kt_j / T) - \frac{2\text{Im}(\hat{y}_k)}{N} \sin(2\pi kt_j / T) \right],
+\]
+so we identify
+\[
+a_0 = \frac{\text{Re}(\hat{y}_0)}{N}, \quad a_k = \frac{2 \text{Re}(\hat{y}_k)}{N}, \quad b_k = -\frac{2 \text{Im}(\hat{y}_k)}{N} \quad \text{for } k = 1, 2, \ldots, n-1.
+\]
+We also have \( a_n = \frac{\text{Re}(\hat{y}_n)}{N} \) and \( b_n = 0 \).
+",5,1.omits intermediate justifications 2.assumes the conclusion without explicitly stating
+fin-2-ii-c,72,"The power spectrum is defined as the magnitude squared of the discrete Fourier transform (DFT) coefficients, which represents the distribution of power across different frequencies in a signal. 
+
+Given the DFT coefficients \( \hat{y}_k \) for \( k = 0, 1, \ldots, N - 1 \), the power spectrum \( P_k \) is defined as 
+\[
+P_k = |\hat{y}_k|^2 = \hat{y}_k \overline{\hat{y}_k},
+\]
+where \( \overline{\hat{y}_k} \) is the complex conjugate of \( \hat{y}_k \). 
+
+Thus, the power spectrum is computed by taking the square of the absolute value (or magnitude) of each DFT coefficient, providing a measure of the signal’s energy at each frequency component.
+","\textbf{Answer:} The power spectrum is given by 
+\[
+\frac{|\hat{y}_k|^2}{N}.
+\]
+",4,1.omission of the normalization factor
+fin-2-ii-d,73,"To justify or refute the claim of yearly and monthly cycles in Figure 2, we need to analyze the power spectrum in the bottom plot. Yearly cycles correspond to a frequency of 1 cycle per year, and monthly cycles correspond to a frequency of 12 cycles per year. 
+
+Observing the power spectrum, there is a clear peak at 1 cycle per year, indicating a strong yearly cycle. However, there is no significant peak at 12 cycles per year, suggesting the absence of a strong monthly cycle. 
+
+Thus, the claim that the data has both yearly and monthly cycles of roughly the same intensity is \textbf{refuted}. The data exhibits a prominent yearly cycle but lacks a significant monthly cycle.
+","The third graph in Figure 2 shows peaks at 1 and 12, where 1 and 12 denote the cycles per year. Hence the yearly frequency and the frequency with 12 cycles per year, i.e., a monthly cycle have the most intensity (of roughly the same size).
+",1,1.fail to analyze the actual heights of the peaks 2.either misread the graph or did not assess peak intensity critically
+fin-3-i,74,"\text{To ensure a matrix } C \text{ is a valid covariance matrix for use in the multivariate normal distribution's probability density function } p(\mathbf{x}), \text{ it must be symmetric and positive semi-definite. Symmetry, } C = C^T, \text{ guarantees that the covariance between variables } X_i \text{ and } X_j \text{ is the same as between } X_j \text{ and } X_i. \text{ Positive semi-definiteness, } \mathbf{z}^T C \mathbf{z} \geq 0 \text{ for all non-zero vectors } \mathbf{z}, \text{ ensures that the variances and correlations are physically meaningful, preventing negative variances or undefined distributions. In practice, this can be checked by verifying that all eigenvalues of } C \text{ are non-negative.}
+","\textbf{Answer:} Check that the matrix is symmetric (using a matrix norm and tolerance level) and positive definite (using the \textsc{Matlab} function \texttt{chol}).
+",3,1.Incomplete CoT Reasoning 2.Mistaken Requirement 3.No mention of eigenvalues
+fin-3-ii-a,75,"\text{The Cholesky factorization of a symmetric positive-definite matrix } C \text{ expresses it as } C = R^T R, \text{ where } R \text{ is an upper triangular matrix. The determinant of } C \text{ is then } \det(C) = \det(R^T R) = \det(R^T)\det(R) = \det(R)^2. \text{ Since } R \text{ is triangular, its determinant is simply the product of its diagonal elements, } \det(R) = \prod_{i=1}^n r_{ii}. \text{ Therefore, }
+\[
+\sqrt{\det(C)} = \sqrt{\det(R)^2} = \det(R) = \prod_{i=1}^n r_{ii},
+\]
+\text{ which is efficiently computed by multiplying the diagonal elements of the Cholesky factor } R.
+","\textbf{Answer:} The Cholesky factor $R$ is upper triangular, hence $\det(R) = \prod_i R_{i,i}$, where $R_{i,i}$ are the diagonal elements of $R$. Then
+\[
+\det(C) = \det(R^T R) = \det(R^T)\det(R) = \det(R)\det(R).
+\]
+Thus
+\[
+\sqrt{\det(C)} = \det(R) = \prod_i R_{i,i},
+\]
+i.e., the product of the diagonal elements of $R$.
+",4,1.Missing clarity on the square root step 2.Less explanation
+fin-3-ii-b,76,"\text{To efficiently evaluate } p(\mathbf{x}) \text{ using the Cholesky factorization } C = R^T R, \text{ we rewrite the exponent in the multivariate normal density as } (\mathbf{x} - \boldsymbol{\mu})^T C^{-1} (\mathbf{x} - \boldsymbol{\mu}). \text{ Since } C^{-1} = (R^T R)^{-1} = R^{-1}(R^T)^{-1}, \text{ we have }
+\[
+(\mathbf{x} - \boldsymbol{\mu})^T R^{-1} (R^T)^{-1} (\mathbf{x} - \boldsymbol{\mu}).
+\]
+\text{Let } \mathbf{y} = R^{-1} (\mathbf{x} - \boldsymbol{\mu}), \text{ then the exponent becomes } \mathbf{y}^T \mathbf{y} = \|\mathbf{y}\|^2, \text{ the squared Euclidean norm of } \mathbf{y}. \text{ Solving } R \mathbf{y} = \mathbf{x} - \boldsymbol{\mu} \text{ can be done efficiently using forward/backward substitution as } R \text{ is triangular. Substituting gives:}
+\[
+p(\mathbf{x}) = \frac{\exp(-\|\mathbf{y}\|^2 / 2)}{(2\pi)^{n/2} \det(R)},
+\]
+\text{ where } \det(R) \text{ is the product of the diagonal elements of } R.
+","\textbf{Answer:} Since $C = R^T R$, we have $C^{-1} = R^{-1} R^{-T}$. Hence
+\[
+(\mathbf{x} - \boldsymbol{\mu})^T C^{-1} (\mathbf{x} - \boldsymbol{\mu}) = (\mathbf{x} - \boldsymbol{\mu})^T R^{-1} R^{-T} (\mathbf{x} - \boldsymbol{\mu}) = [R^{-T}(\mathbf{x} - \boldsymbol{\mu})]^T [R^{-T}(\mathbf{x} - \boldsymbol{\mu})].
+\]
+We first compute the Cholesky factor $R$ of $C$. We compute $\sqrt{\det(C)}$ by computing the product of the diagonal elements of $R$. Then we compute $\mathbf{y}$ which satisfies $R^T \mathbf{y} = \mathbf{x} - \boldsymbol{\mu}$ by solving a linear system (using forward substitution). Then we compute
+\[
+\frac{\exp(-\mathbf{y} \cdot \mathbf{y} / 2)}{(2\pi)^{n/2} \prod_i R_{i,i}}
+\]
+to get the value of $p(\mathbf{x})$.
+",5,1.minor divergence in completeness
+fin-3-iii-a,77,"\text{Given the substitution } \mathbf{x} = \boldsymbol{\mu} + R^T \mathbf{y}, \text{ we have } \mathbf{x} - \boldsymbol{\mu} = R^T \mathbf{y}. \text{ Substituting this into the multivariate normal density } p(\mathbf{x}) = \frac{\exp\left(-(\mathbf{x} - \boldsymbol{\mu})^T C^{-1} (\mathbf{x} - \boldsymbol{\mu}) / 2\right)}{(2\pi)^{n/2} \sqrt{\det(C)}} \text{ gives } 
+\[
+p(\mathbf{x}) = \frac{\exp\left(-\mathbf{y}^T R^{-1} (R^T)^{-1} \mathbf{y} / 2\right)}{(2\pi) \sqrt{\det(C)}}.
+\]
+\text{For } n = 2, \text{ since } R^{-1} (R^T)^{-1} = (R^T R)^{-1} = C^{-1}, \text{ we get } p(\mathbf{x}) = \frac{\exp(-\mathbf{y}^T \mathbf{y} / 2)}{(2\pi) \sqrt{\det(C)}}. \text{ Note that } \mathbf{y}^T \mathbf{y} = y_1^2 + y_2^2, \text{ and } \sqrt{\det(C)} = \det(R) = R_{11} R_{22}. \text{ Therefore, }
+\[
+p(x_1, x_2) = \frac{\exp(-(y_1^2 + y_2^2)/2)}{2\pi R_{11} R_{22}} = \frac{\phi(y_1)\phi(y_2)}{R_{11} R_{22}}.
+\]
+","\textbf{Answer:} Using the answer from the previous question, we have
+\[
+p(x_1, x_2) = \frac{\exp\left(-(y_1^2 + y_2^2)/2\right)}{2\pi R_{1,1} R_{2,2}} = \frac{\phi(y_1)\phi(y_2)}{R_{1,1} R_{2,2}}.
+\]
+",5,1.omitted intermediate reasoning
+fin-3-iii-b,78,"\text{To transform the expected value integral from } \mathbb{E}[f(X_1, X_2)] \text{ to the form in equation (2), we first substitute } \mathbf{x} = \boldsymbol{\mu} + R^T \mathbf{y}, \text{ which gives:}
+\[
+\mathbb{E}[f(X_1, X_2)] = \int_{-\infty}^\infty \int_{-\infty}^\infty f(\mu_1 + R_{11} y_1 + R_{21} y_2, \mu_2 + R_{12} y_1 + R_{22} y_2) \phi(y_1) \phi(y_2) \, dy_1 \, dy_2.
+\]
+\text{Let } y_1 = \Phi^{-1}(z_1), \quad y_2 = \Phi^{-1}(z_2), \text{ then } dy_1 = \frac{dz_1}{\phi(\Phi^{-1}(z_1))}, \quad dy_2 = \frac{dz_2}{\phi(\Phi^{-1}(z_2))}.
+\text{This transforms the integral into:}
+\[
+\mathbb{E}[f(X_1, X_2)] = \int_0^1 \int_0^1 f(\mu_1 + R_{11} \Phi^{-1}(z_1) + R_{21} \Phi^{-1}(z_2), \mu_2 + R_{12} \Phi^{-1}(z_1) + R_{22} \Phi^{-1}(z_2)) dz_1 dz_2.
+\]
+\text{Therefore,}
+\[
+F(z_1, z_2) = f(\mu_1 + R_{11} \Phi^{-1}(z_1) + R_{21} \Phi^{-1}(z_2), \mu_2 + R_{12} \Phi^{-1}(z_1) + R_{22} \Phi^{-1}(z_2)).
+\]
+","\textbf{Answer:} We have
+\[
+\mathbb{E}[f(X_1, X_2)] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(\boldsymbol{\mu} + R^T \mathbf{y}) \frac{\phi(y_1)\phi(y_2)}{R_{1,1} R_{2,2}} \, dy_1 \, dy_2.
+\]
+Set \( z_i = \Phi(y_i) \), or in other words \( y_i = \Phi^{-1}(z_i) \), for \( i = 1, 2 \). Then \( dz_i = \phi(y_i) dy_i \) and hence
+\[
+\mathbb{E}[f(X_1, X_2)] = \int_0^1 \int_0^1 \frac{f(\boldsymbol{\mu} + R^T (\Phi^{-1}(z_1), \Phi^{-1}(z_2))^T)}{R_{1,1} R_{2,2}} \, dz_1 \, dz_2.
+\]
+Thus
+\[
+F(z_1, z_2) = \frac{f(\boldsymbol{\mu} + R^T (\Phi^{-1}(z_1), \Phi^{-1}(z_2))^T)}{R_{1,1} R_{2,2}}.
+\]
+",3,1.Unjustified Jacobian 2.Missing Simplification 3.Rigid Format
+fin-3-iii-c-A,79,"\text{To use the Monte Carlo method to compute a numerical approximation to the integral (2), we would generate } N \text{ independent pairs of uniform random numbers } (z_{1,i}, z_{2,i}) \text{ for } i = 1, \ldots, N, \text{ where } z_{1,i}, z_{2,i} \sim U(0,1). \text{ Then, we evaluate the function } F(z_{1,i}, z_{2,i}) \text{ for each pair and compute the average of these function values. The approximation to the integral is then:}
+\[
+\frac{1}{N} \sum_{i=1}^N F(z_{1,i}, z_{2,i}).
+\]
+\text{As } N \to \infty, \text{ this converges to the true value of the integral.}
+","\textbf{Answer:} Generate \( N \) samples \( \mathbf{z}_1, \mathbf{z}_2, \ldots, \mathbf{z}_N \) in the square \([0,1]^2\) where \( \mathbf{z}_n = (z_{n,1}, z_{n,2}) \), and then compute
+\[
+\frac{1}{N} \sum_{n=1}^N F(\mathbf{z}_n)
+\]
+to approximate the integral (2).
+",4,1.Lacks explanation of the rationale
+fin-3-iii-c-B,80,"\text{The accuracy of the Monte Carlo method is related to the number of samples } N \text{ used in the approximation. Specifically, the error in the Monte Carlo estimate typically decreases at a rate of } \frac{1}{\sqrt{N}}, \text{ meaning to reduce the error by a factor of 10, you need to increase the number of samples by a factor of 100. This convergence rate is independent of the dimensionality of the integral, making Monte Carlo particularly useful for high-dimensional problems. However, convergence is slow compared to quadrature in low dimensions, and accuracy is probabilistic—there’s always a chance of a large error, though it becomes less likely as } N \text{ increases.}
+","\textbf{Answer:} The expectation value of the approximation is 
+\[
+\int_{[0,1]^2} F(\mathbf{z})\,d\mathbf{z},
+\]
+and the standard deviation of 
+\[
+\frac{1}{N} \sum_{n=1}^N F(\mathbf{z}_n)
+\]
+is 
+\[
+\frac{\sigma(F)}{\sqrt{N}}.
+\]
+",3,1.Missing practical interpretation of accuracy 2.Lacks comparison to other methods 3.Minimal justification
+fin-3-iii-c-C,81,"\text{The accuracy of the Monte Carlo method can be improved through variance reduction techniques. One common approach is importance sampling, where samples are drawn from a distribution that better reflects the integrand's behavior, concentrating samples in regions that contribute most to the integral. Another technique is stratified sampling, which divides the integration domain into subregions and samples each subregion proportionally to its contribution, reducing variance compared to purely random sampling. Antithetic variates can also be used, where pairs of negatively correlated samples are generated, reducing variance by canceling out errors. Additionally, control variates can be employed, where a function with a known integral is used to reduce the variance of the estimator. Finally, increasing the number of samples } N \text{ directly reduces the error, as the error decreases proportionally to } \frac{1}{\sqrt{N}}.
+","\textbf{Answer:} One could use a control variate \( G \), whose integral can be computed exactly and then approximate the integral over \( F - G \) using Monte Carlo. Another option is to use antithetic variables. The third option is to replace Monte Carlo sampling with Quasi-Monte Carlo sampling.
+",4,1.Missing key variance reduction methods 2.Lacks explanation or rationale
+fin-4-i,82,"The Black-Scholes PDE given by \(\frac{\partial V}{\partial t} + r S \frac{\partial V}{\partial S} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} = rV\) is solved with the initial condition \(V(S, T) = (S - X)^+\) for \(S < B\) and boundary condition \(V(B, t) = B - X\) for \(0 \leq t \leq T\), representing the payoff at expiry and the immediate exercise at the barrier, respectively. The solution is obtained by transforming the PDE into a heat equation and applying the method of images to account for the boundary condition. The final result is a function \(V(S, t)\) representing the price of the exotic option, which can be expressed in terms of the cumulative normal distribution function, incorporating the effects of the barrier and the strike price.","At expiry time \( t = T \) we have  
+\[V(S, T) = 
+\begin{cases} 
+0 & \text{if } 0 \leq S < X, \\ 
+S - X & \text{if } X \leq S < B, \\ 
+B - X & \text{if } B \leq S. 
+\end{cases}\]",3,1.lacks the explicit piecewise definition of the initial condition at expiry 2.Overemphasis on Solution Method
+fin-4-ii,83,"The boundary conditions for this problem are derived from the behavior of the exotic option at specific asset prices. When the asset price \( S \) reaches the barrier \( B \), the option is immediately exercised with a payoff of \( B - X \). This translates to the boundary condition \( V(B, t) = B - X \) for \( 0 \leq t \leq T \). Additionally, as the asset price \( S \) approaches zero, the option value should also approach zero, leading to the boundary condition \( V(0, t) = 0 \) for \( 0 \leq t \leq T \). These boundary conditions, along with the initial condition \( V(S, T) = (S - X)^+ \), uniquely determine the solution to the Black-Scholes PDE for this exotic option.","We have \(V(0,t)=0\) since if the asset price drops to 0 at some time \(t\) it will stay at 0. The option is then never exercised and is therefore worthless. For the case where \(S\to\infty\) we only need to consider \(S=B\), in which case the option is exercised and the price of the option is \(B-X\).",4,1.Unnecessary Inclusion of Initial Condition 2.Less Concise Explanation
+fin-4-iii-a-A,84,"To approximate the partial derivatives \(\frac{\partial V}{\partial S}\) and \(\frac{\partial^2 V}{\partial S^2}\) at the grid point \((S_j, t_l)\) with central difference approximations of order \(O(\Delta S^2)\), we use the following formulas: \(\frac{\partial V}{\partial S}(S_j, t_l) \approx \frac{V(S_{j+1}, t_l) - V(S_{j-1}, t_l)}{2\Delta S}\) and \(\frac{\partial^2 V}{\partial S^2}(S_j, t_l) \approx \frac{V(S_{j+1}, t_l) - 2V(S_j, t_l) + V(S_{j-1}, t_l)}{\Delta S^2}\). Substituting the grid notation \(V(S_j, t_l) = V_j^l\), we obtain \(\frac{\partial V}{\partial S}(S_j, t_l) \approx \frac{V_{j+1}^l - V_{j-1}^l}{2\Delta S}\) and \(\frac{\partial^2 V}{\partial S^2}(S_j, t_l) \approx \frac{V_{j+1}^l - 2V_{j-1}^l}{2\Delta S^2}\). These approximations are used to discretize the Black-Scholes PDE, allowing us to numerically solve for the option value \(V(S, t)\) at the grid points.","\[\frac{\partial V}{\partial S} \approx \frac{v_{j+1}^{\ell} - v_{j-1}^{\ell}}{2\Delta S}\]
+
+\[\frac{\partial^2 V}{\partial S^2} \approx \frac{v_{j+1}^{\ell} - 2v_{j}^{\ell} + v_{j-1}^{\ell}}{\Delta S^2}\]",3,1.Typographical Error 2.verbose 3.Lack of Direct Comparison to Grid Notation
+fin-4-iii-a-B,85,"To approximate the partial derivative \(\frac{\partial V}{\partial t}\) at the grid point \((S_j, t_l)\) with a forward difference approximation of order \(O(\Delta t)\), we use the formula \(\frac{\partial V}{\partial t}(S_j, t_l) \approx \frac{V(S_j, t_{l-1}) - V(S_j, t_l)}{\Delta t}\). Substituting the grid notation \(V(S_j, t_l) = V_j^l\), we obtain \(\frac{\partial V}{\partial t}(S_j, t_l) \approx \frac{V_j^{l+1} - V_j^l}{\Delta t}\). This forward difference approximation is used to discretize the time derivative in the Black-Scholes PDE, allowing us to numerically solve for the option value \(V(S, t)\) at the grid points.",\[\frac{\partial V}{\partial t} \approx \frac{v_{j}^{\ell+1}-v_{j}^{\ell}}{\Delta t}\],3,1.Incorrect Initial Formula 2.Unnecessary Derivation Steps 3.Inconsistent Notation 4.Lack of Precision in Order of Accuracy
+fin-4-iii-b-A,86,"To derive the implicit finite difference equation for the Black-Scholes PDE, we substitute the central difference approximations for \(\frac{\partial V}{\partial S}\) and \(\frac{\partial^2 V}{\partial S^2}\), and the backward difference approximation for \(\frac{\partial V}{\partial t}\) into the PDE. This results in the equation \(\frac{V_j^i - V_j^{i-1}}{\Delta t} + r S_j \frac{V_{j+1}^i - V_{j-1}^i}{2\Delta S} + \frac{1}{2} \sigma^2 S_j^2 \frac{V_{j+1}^i - 2V_j^i + V_{j-1}^i}{\Delta S^2} = r V_j^I\). Rearranging the terms, we obtain the form \(\alpha_j v_{j-1}^I + \beta_j v_j^I + \gamma_j v_{j+1}^I = v_j^{I-1}\), where \(\alpha_j = \frac{r S_j \Delta t}{2\Delta S} - \frac{\sigma^2 S_j^2 \Delta t}{2\Delta S^2}\), \(\beta_j = 1 + r \Delta t + \frac{\sigma^2 S_j^2 \Delta t}{\Delta S^2}\), and \(\gamma_j = -\frac{r S_j \Delta t}{2\Delta S} - \frac{\sigma^2 S_j^2 \Delta t}{2\Delta S^2}\). This equation represents the implicit finite difference scheme for solving the Black-Scholes PDE.","We have
+
+\[\frac{v_{j}^{\ell+1}-v_{j}^{\ell}}{\Delta t}+rS_{j}\frac{v_{j+1}^{ \ell}-v_{j-1}^{\ell}}{2\Delta S}+\frac{1}{2}\sigma^{2}S_{j}^{2}\frac{v_{j+1}^{ \ell}-2v_{j}^{\ell}+v_{j-1}^{\ell}}{\Delta S^{2}}=rv_{j}^{\ell}.\]
+
+By rearranging the terms we get
+
+\[v_{j}^{\ell+1} = \left(\frac{rS_{j}\Delta t}{2\Delta S}-\frac{\Delta t\sigma^{2}S_ {j}}{2\Delta S^{2}}\right)v_{j-1}^{\ell}+\left(1+r\Delta t+\frac{\Delta t \sigma^{2}S_{j}^{2}}{\Delta S^{2}}\right)v_{j}^{\ell}\] \[+\left(-\frac{\Delta trS_{j}}{2\Delta S}-\frac{\Delta t\sigma^{2}S _{j}^{2}}{2\Delta S^{2}}\right)v_{j+1}^{\ell}.\]
+
+Hence we have
+
+\[\alpha_{j}=\frac{rS_{j}\Delta t}{2\Delta S}-\frac{\Delta t\sigma^{2}S_{j}^{2}} {2\Delta S^{2}},\beta_{j}=1+r\Delta t+\frac{\Delta t\sigma^{2}S_{j}^{2}}{\Delta S ^{2}},\gamma_{j}=-\frac{\Delta trS_{j}}{2\Delta S}-\frac{\Delta t\sigma^{2}S_{ j}^{2}}{2\Delta S^{2}}.",2,1.Incorrect time-level indexing 2.Verbose and less structured
+fin-4-iii-b-B,87,"The discrete ""initial"" conditions are obtained by applying the initial condition \( V(S, T) = (S - X)^+ \) to the grid points \((S_j, t_m)\), where \( t_m = T \). This yields \( V(S_j, t_m) = V_j^m = (S_j - X)^+ \), where \( S_j = j \Delta S \) and \( \Delta S = \frac{B}{n+1} \). So, the discrete initial conditions are \( V_j^m = (j \Delta S - X)^+ \) for \( j = 0, 1, 2, ..., n + 1 \). This set of values \( V_j^m \) serves as the starting point for the backward-in-time computation using the implicit finite difference scheme.","\[v_j^m = 
+\begin{cases} 
+0 & \text{if } 0 \leq S_j < X, \\ 
+S_j - X & \text{if } X \leq S_j. 
+\end{cases}\]",3,1.lacks the explicit piecewise representation of the payoff condition 2.Unnecessary Computational Details 3.Inconsistent Variable Notation
+fin-4-iii-b-C,88,"The discrete boundary conditions are derived from the continuous boundary conditions  
+\[V(0, t) = 0 \text{ and } V(B, t) = B - X. \] Applying these to the grid points \((S_j, t_l)\), we obtain  
+\[V(S_0, t_l) = V_0^l = 0 \text{ for } l = 0, 1, ..., m \text{ and } V(S_{n+1}, t_l) = V_{n+1}^l = B - X \text{ for } l = 0, 1, ..., m. \]  
+
+These conditions are used to set the values of \( V \) at the boundaries of the grid during the numerical solution process.","\[v_0^\ell = 0, \quad v_{n+1}^\ell = B - X.\]",4,1.verbosity 2.Less Direct Presentation 3.Minor Notation Inconsistency
+fin-4-iv-a,89,"The matrix \( A \) in the equation \( Av^l + b = v^{l+1} \) is a tridiagonal matrix, derived from the coefficients \( \alpha_j, \beta_j \), and \( \gamma_j \) in the finite difference equation. The entries \( a_{i,j} \) of \( A \) are defined as follows:  
+\[a_{i,i-1} = \alpha_i, \, a_{i,i} = \beta_i, \]  
+and  
+\[a_{i,i+1} = \gamma_i \, \text{for } i = 1, 2, ..., n, \, \text{with all other entries being zero.}\]  
+This tridiagonal structure arises from the central difference approximations used for the spatial derivatives, which only involve neighboring grid points.","**Answer:** The matrix \(A\) is an \(n\times n\) matrix with
+
+\[a_{j,j-1} = \alpha_{j},\quad j=2,3,\ldots,n;\] \[a_{j,j} = \beta_{j},\quad j=1,2,\ldots,n;\] \[a_{j,j+1} = \gamma_{j},\quad j=1,2,\ldots,n-1;\]
+
+The remaining elements are 0. Hence the matrix is tri-diagonal.",4,1.less Indexing Precision 2.verbosity 3.Less Formal Presentation 4.Missing Explicit Zero Statement
+fin-4-iv-b,90,"Yes, the matrix \( A \) is sparse because it is a tridiagonal matrix, meaning it has non-zero elements only on the main diagonal, the sub-diagonal, and the super-diagonal. For an \( n \times n \) matrix, this means there are at most \( 3n - 2 \) non-zero entries. The sparsity of a matrix is defined as the ratio of zero elements to the total number of elements. In this case, the total number of elements is \( n^2 \), and the number of zero elements is \( n^2 - (3n - 2) \). Therefore, the sparsity is given by  
+\[\frac{n^2 - (3n - 2)}{n^2} = 1 - \frac{3n - 2}{n^2},\]  
+which approaches 1 as \( n \) becomes large, confirming that the matrix is indeed sparse.","**Answer:** Yes, the matrix is sparse and its sparsity is
+
+\[\frac{n+2(n-1)}{n^{2}}=\frac{3}{n}-\frac{2}{n^{2}}.\]",3,1.Overcomplication of Sparsity Calculation 2.Unnecessary Explanations 3.Less Direct Presentation 4.Minor Logical Redundancy
+fin-4-iv-c,91,"The tridiagonal structure of matrix \( A \) can be exploited to make time-stepping efficient by using specialized algorithms like the Thomas algorithm, which is a simplified form of Gaussian elimination specifically designed for tridiagonal systems. This algorithm reduces the computational complexity from \( O(n^3) \) for general matrix inversion to \( O(n) \), significantly speeding up the solution process. By storing only the non-zero diagonals, memory usage is also minimized, further enhancing efficiency. This allows for faster computation of \( v^{l+1} \) from \( v^l \) in the time-stepping process, making the numerical solution of the Black-Scholes PDE more practical.","**Answer:** In each timestep we need to solve the linear system \( A \mathbf{v}^\ell = \mathbf{v}^{\ell+1} - \mathbf{b} \), where \( A, \mathbf{v}^{\ell+1}, \mathbf{b} \) are known and \( \mathbf{v}^\ell \) is unknown. The matrix \( A \) is tri-diagonal and hence Gaussian elimination can be simplified using the Thomas algorithm. This algorithm requires only \( O(n) \) operations to solve.",4,1.Missing Explicit Linear System 2.Overemphasis on Secondary Details 3.Less Direct Connection to Time-Stepping 4.verbosity
+fin-4-iv-d,92,"To compute the vector \( v^0 \) using the implicit finite difference scheme, we need to solve the system  
+\[Av^0 + b = v^1. \]  
+Since \( A \) is a tridiagonal matrix, we can use the Thomas algorithm, which requires  
+\( O(n) \) floating-point operations (flops). Specifically, the algorithm involves a forward elimination step and a backward substitution step, each requiring approximately 5n flops. Thus, the total number of flops needed to compute \( v^0 \) is approximately 10n.","**Answer:** Solving the linear system \( Av^\ell = v^{\ell+1} - b \) requires \( O(n) \) flops. This system needs to be solved for each value of \(\ell = m-1, m-2, \ldots, 0\). Hence we require \( O(mn) \) flops.",3,1.Narrow Focus on a Single Timestep 2.Overly Specific Flop Count 3.Misaligned Problem Scope 4.Missing Key Equation
+sta-1,93,"Let \( X \) be the outcome of the die toss, so \( X \) can take values \( 1, 2, 3, 4, 5, 6 \) with equal probability \( \frac{1}{6} \). Let \( Y \) be the number of heads obtained when tossing \( n \) coins. The probability of getting exactly two heads when tossing \( n \) coins is given by the binomial distribution: \( P(Y = 2 \mid X = n) = \binom{n}{2} \left( \frac{1}{2} \right)^n \). 
+
+We want to find the probability of getting exactly two heads, which is \( P(Y = 2) = \sum_{n=1}^6 P(Y = 2 \mid X = n) P(X = n) = \frac{1}{6} \sum_{n=1}^6 \binom{n}{2} \left( \frac{1}{2} \right)^n \).
+
+We compute the sum:
+
+\[
+\frac{1}{6} \left[ \binom{2}{2} \left( \frac{1}{2} \right)^2 + \binom{3}{2} \left( \frac{1}{2} \right)^3 + \binom{4}{2} \left( \frac{1}{2} \right)^4 + \binom{5}{2} \left( \frac{1}{2} \right)^5 + \binom{6}{2} \left( \frac{1}{2} \right)^6 \right]
+\]
+
+\[
+= \frac{1}{6} \left[ \frac{1}{4} + \frac{3}{8} + \frac{6}{16} + \frac{10}{32} + \frac{15}{64} \right] = \frac{1}{6} \left[ \frac{99}{64} \right] = \frac{33}{128} \approx 0.2578125
+\]
+
+Therefore, the probability of exactly two heads is close to 0.2578.
+","\textit{Solution:} Let \( U_1, U_2, \ldots, U_6 \) denote the events ""uppermost 1, 2, \ldots, 6"" respectively and \( A \) denote the event in question. We have \( P(U_1) = \cdots = P(U_6) = \frac{1}{6} \). The formula of total probability gives
+
+\[
+P(A) = P(A \mid U_1) P(U_1) + P(A \mid U_2) P(U_2) + \cdots + P(A \mid U_6) P(U_6) = \frac{1}{6} \left( P(A \mid U_1) + \cdots + P(A \mid U_6) \right).
+\]
+
+Obviously \( P(A \mid U_1) = 0 \) holds. For the remaining conditional probabilities, considering 'Head' as a success and 'Tail' as a failure, we need to get the probability of two successes out of \( i \) independent Bernoulli trials by calculating the ratio
+\[
+\frac{\text{favourable outcomes}}{\text{total number of outcomes}}.
+\]
+The total number of outcomes is \( 2^i \) and the favourable ones are \( \binom{i}{2} \), that is, \( P(A \mid U_i) = \frac{\binom{i}{2}}{2^i},\ i = 2, 3, 4, 5, 6 \). Hence we get
+
+\[
+P(A) = \frac{1}{6} \left( 0 + \frac{1}{4} + \frac{3}{8} + \frac{6}{16} + \frac{20}{64} + \frac{30}{128} \right) = \frac{33}{128} \approx 0.2578.
+\]
+",5,1.without reexplaining the reasoning behind the formula
+sta-2-1,94,"F_X(x) = 1 - \frac{1}{x^2} \text{ is a CDF, we need to show it's non-decreasing, right-continuous, and satisfies } \lim_{x \to -\infty} F_X(x) = 0 \text{ and } \lim_{x \to \infty} F_X(x) = 1. \text{ Since } F_X(x) \text{ is defined for } x \geq 1, \lim_{x \to -\infty} F_X(x) \text{ is not relevant. } F_X(1) = 0 \text{ and } \lim_{x \to \infty} F_X(x) = 1. \text{ The derivative } F_X'(x) = \frac{2}{x^3} \text{ is non-negative for } x \geq 1, \text{ so } F_X(x) \text{ is non-decreasing. It's also continuous, thus right-continuous.}
+","\text{Obviously } \lim_{x \to -\infty} F_X(x) = 0 \text{ (as } F_X(x) \text{ is constant 0 for } x \leq 1). \\
+\lim_{x \to \infty} F_X(x) = \lim_{x \to \infty} 1 - \frac{1}{x^2} = 1. \\
+\text{For } x > 1, \frac{d}{dx}F_X(x) = \frac{2}{x^3} > 0 \text{ which implies that } F_X(x) \text{ is increasing. So—for all } x \text{ on the real axis, } F_X(x) \text{ is non-decreasing.}
+",5,no
+sta-2-2,95,"f_X(x) = F_X'(x) = \frac{2}{x^3} \text{ for } x \geq 1, \text{ and } f_X(x) = 0 \text{ otherwise.}
+","\text{The density as a derivative was calculated in (a) already for } x > 1 \text{ and it is zero for } x \leq 1.
+",5,no
+sta-2-3,96,"\text{Let } Y \text{ be the random variable with the low-water mark at 0. Then } Y = X - 1. \\
+\text{If we use a unit of measurement that is } \frac{1}{10} \text{ of the original, then } Z = 10Y = 10(X - 1). \\
+\text{Thus, } X = \frac{Z}{10} + 1. \text{ The CDF of } Z \text{ is } F_Z(z) = P(Z \leq z) = P(10(X - 1) \leq z) = P(X \leq \frac{z}{10} + 1) = F_X(\frac{z}{10} + 1) \\
+= 1 - \frac{1}{(\frac{z}{10} + 1)^2} \text{ for } z \geq 0, \text{ and } F_Z(z) = 0 \text{ otherwise.} \\
+\text{The density of } Z \text{ is } f_Z(z) = F_Z'(z) = \frac{20}{(z + 10)^3} \text{ for } z \geq 0, \text{ and } f_Z(z) = 0 \text{ otherwise.}
+","F_Z(z) = 1 - \left( \frac{1}{\left( \frac{z}{10} + 1 \right)^2} \right), \quad z > 0 \text{ (and zero else)}. \\
+f_Z(z) = \frac{1}{5(z/10 + 1)^3}, \quad z > 0 \text{ (and zero else)}.
+",4,1.slight algebraic simplification issue
+sta-3-a,97,"a) Posterior Distribution: The posterior distribution of \(\theta\) is proportional to the product of the likelihood and prior. The likelihood function is \(L(\theta|X) = \prod_{i=1}^n \frac{e^{-\theta_i x_i}}{x_i!} = \frac{e^{-n\theta_i \sum x_i}}{\prod x_i!}\). The prior is \(\pi(\theta) = \frac{1}{\Gamma(\alpha)\beta^{\alpha}} \theta^{\alpha-1} e^{-\theta/\beta}\). The posterior is then \(\pi(\theta|X) \propto L(\theta|X) \pi(\theta) = \frac{e^{-n\theta_i \sum x_i}}{\prod x_i!}\).
+
+\[\frac{1}{\Gamma(\alpha)\beta^{\alpha}} \theta^{\alpha-1} e^{-\theta/\beta} \propto \theta^{\sum x_i + \alpha - 1} e^{-\theta(n+1/\beta)}.\]
+
+This is a Gamma distribution with parameters \(\alpha' = \sum x_i + \alpha\) and \(\beta' = \frac{\beta}{n\beta+1}\). Thus, \(\theta|X \sim \text{Gamma}(\sum x_i + \alpha, \frac{\beta}{n\beta+1})\).",1. a) We use the fact that the posterior is proportional to the prior and the likelihood: \[p(\theta|X)\propto L(X|\theta)\tau(\theta)\] \[\qquad\qquad=\frac{e^{-n\theta}\theta^{\sum_{i=1}^{n}X_{i}}}{\prod _{i=1}^{n}x_{i}!}\frac{1}{\Gamma(\alpha)\beta^{\alpha}}\theta^{\alpha-1}e^{-\theta /\beta}\] \[\qquad\qquad\propto\theta^{\alpha+\sum_{i=1}^{n}X_{i}-1}e^{-\theta (n+\frac{1}{\beta})}.\] Hence we recognise this as a gamma density with parameters \[\tilde{\alpha}=\alpha+\sum_{i=1}^{n}X_{i}\qquad\text{and}\qquad\tilde{\beta}= \frac{1}{n+\frac{1}{\beta}}=\frac{\beta}{n\beta+1}\],4,1.Likelihood Typo 2.Less Detailed Derivation
+sta-3-b,98,"b) Bayes Estimator: The Bayes estimator under quadratic loss is the posterior mean. The posterior mean of a Gamma distribution with parameters \(\alpha'\) and \(\beta'\) is \(\alpha' \beta'\). So, the Bayes estimator is \((\sum x_i + \alpha) \frac{\beta}{n\beta+1}\).","2. b) From lectures, the Bayes estimator with respect to quadratic loss is the posterior mean given the sample. \[\hat{\theta}_{\text{bayes}}=E(\theta|X)=\tilde{\alpha}\tilde{\beta}=(\alpha+ \sum_{i=1}^{n}X_{i})(\frac{\beta}{n\beta+1}).\]",5,no
+sta-3-c,99,"c) Hypothesis Testing: Given the observations 4,0,1,0,0,2,3,1,1,0, we have \(\sum x_i = 12\). With \(\alpha = 2\) and \(\beta = 1\), the posterior distribution is \(\text{Gamma}(12 + 2, \frac{1}{10+1}) = \text{Gamma}(14, 1/11)\). We want to find \(P(\theta > 1.2|X)\). This is equivalent to finding \(1 - P(\theta \leq 1.2|X)\). We can use the CDF of the Gamma distribution to find \(P(\theta \leq 1.2|X) = \int_0^{1.2} \frac{1}{\Gamma(14)(1/11)^{14}} \theta^{13} e^{-11\theta} d\theta\). Using the pgamma function in R, we get pgamma(1.2, shape=14, rate=11) ≈ 0.038. Therefore, \(P(\theta > 1.2|X) = 1 - 0.038 = 0.962\). Since \(P(\theta > 1.2|X) > 0.5\), we reject \(H_0\) and conclude that \(\theta > 1.2\).","3. c) The structure of the test is as follows: \[\varphi=\begin{cases}1&\quad\text{if}\quad P(\theta<1.2|X)<0.5\\ 0&\quad\text{if}\quad P(\theta<1.2|X)\geq 0.5\end{cases}\] We have \(n=10\), \(\sum_{i=1}^{10}x_{i}=12\) so the posterior distribution given the sample is: \[\theta|X\sim Gamma\bigg{(}2+12,\frac{1}{10\times 1+1}\bigg{)}=Gamma(14,1/11)\] Then using R we can compute the posterior probability under these conditions as \[P(\theta<1.2|X)=\int_{0}^{1.2}\frac{1}{\Gamma(14)(1/11)^{14}}\theta^{13}e^{-11 \theta}\mathrm{d}\theta\approx 0.44893\] Hence, since the posterior probability is smaller than \(0.50\) we reject",3,1.Hypothesis Test Setup Missing 2.Less Direct Probability Calculation 3.Numerical Error
+sta-4-a,100,"(a) Let \( X \) be the number of experts who predict the extension is financially viable. Since each expert's prediction is independent and has a probability of 0.1 or 0.2 of being correct, \( X \) follows a binomial distribution. If the extension is financially viable (\(\theta = 1\)), the probability of success is \( p = 0.2 \). If it is not financially viable (\(\theta = 0\)), the probability of success is \( p = 0.1 \). Thus, \( X \sim Bin(2, 0.2) \) when \(\theta = 1\) and \( X \sim Bin(2, 0.1) \) when \(\theta = 0\). The probability mass function (pmf) is \( L(x|\theta = 0) = \binom{2}{x}(0.1)^x(0.9)^{2-x} \) and \( L(x|\theta = 1) = \binom{2}{x}(0.2)^x(0.8)^{2-x} \).","_Solution_: a) There are two actions: \(a_{0}\) ; decide to go ahead and \(a_{1}\) ; do not go ahead. Two states of nature, \(\theta_{0}=0\), ""Extension is financially viable"", and \(\theta_{1}=1\) ""Extension is not financially viable"". Let \(x\) be the number of experts predicting financial viability. The loss function is given by
+
+\[L(\theta_{1},a_{0})=3,L(\theta_{1},a_{1})=0,L(\theta_{0},a_{0})=0,L(\theta_{0} ,a_{1})=1.\]",1,1.The student's answer is irrelevant to the question
+sta-4-b,101,"The pmf is:  
+\[L(0|\theta = 0) = 0.81, \, L(1|\theta = 0) = 0.18, \, L(2|\theta = 0) = 0.01\]  
+\[L(0|\theta = 1) = 0.64, \, L(1|\theta = 1) = 0.32, \, L(2|\theta = 1) = 0.04\]","The pmf for both states of nature:
+\[\begin{array}[]{c|ccc}\overline{x}&p(x|\theta=0)&\boxed{}&p(x|\theta=1)\\ \hline 0&\frac{1}{5}\cdot\frac{1}{8}=\frac{1}{25}&\frac{2}{5}\cdot\frac{2}{5}=\frac{1}{25}\\ 1&2\cdot\frac{1}{5}\cdot\frac{1}{8}=\frac{1}{25}&2\cdot\frac{3}{5}\cdot\frac{2}{5}=\frac{13}{25}\\ 2&\frac{4}{5}\cdot\frac{4}{8}=\frac{12}{25}&\frac{3}{5}\cdot\frac{3}{8}=\frac{21}{25}\\ \end{array}\]",2,1.incorrect probabilities instead of the given probabilities
+sta-4-c,102,"The non-randomized decision rules are:  
+\[d_1 = (a_0, a_0, a_0), \, d_2 = (a_0, a_0, a_1), \, d_3 = (a_0, a_1, a_0), \, d_4 = (a_0, a_1, a_1), \, d_5 = (a_1, a_0, a_0), \, d_6 = (a_1, a_0, a_1), \, d_7 = (a_1, a_1, a_0), \, d_8 = (a_1, a_1, a_1).\]","There are \(2^{3}=8\) non-randomized decision rules:
+
+\[
+\begin{array}{c|cccccccc}
+& d_{1} & d_{2} & d_{3} & d_{4} & d_{5} & d_{6} & d_{7} & d_{8} \\
+\hline
+x=0 & a_{0} & a_{1} & a_{0} & a_{1} & a_{0} & a_{1} & a_{0} & a_{1} \\
+x=1 & a_{0} & a_{0} & a_{1} & a_{1} & a_{0} & a_{0} & a_{1} & a_{1} \\
+x=2 & a_{0} & a_{0} & a_{0} & a_{0} & a_{1} & a_{1} & a_{1} & a_{1} \\
+\end{array}
+\]
+
+This leads to the following risk points:
+
+\[
+\begin{array}{c|cccccccc}
+& d_{1} & d_{2} & d_{3} & d_{4} & d_{5} & d_{6} & d_{7} & d_{8} \\
+\hline
+R(\theta_{0},d_{i}) & 0 & \frac{1}{25} & \frac{8}{25} & \frac{9}{25} & \frac{16}{25} & \frac{17}{25} & \frac{24}{25} & 1 \\
+R(\theta_{1},d_{i}) & 3 & \frac{63}{25} & \frac{39}{25} & \frac{27}{25} & \frac{48}{25} & \frac{36}{25} & \frac{12}{25} & 0 \\
+\end{array}
+\]",4,"1.Lacks clarity for quick verification  2.Missing risk points, which are part of the complete answer"
+sta-4-d,103,"The risk points are:  
+\[R(d_1|\theta = 0) = 0, \, R(d_1|\theta = 1) = 3\]  
+\[R(d_2|\theta = 0) = 0.01, \, R(d_2|\theta = 1) = 2.88\]  
+\[R(d_3|\theta = 0) = 0.18, \, R(d_3|\theta = 1) = 2.72\]  
+\[R(d_4|\theta = 0) = 0.19, \, R(d_4|\theta = 1) = 2.56\]  
+\[R(d_5|\theta = 0) = 0.81, \, R(d_5|\theta = 1) = 0.36\]  
+\[R(d_6|\theta = 0) = 0.82, \, R(d_6|\theta = 1) = 0.2\]  
+\[R(d_7|\theta = 0) = 0.99, \, R(d_7|\theta = 1) = 0.04\]  
+\[R(d_8|\theta = 0) = 1, \, R(d_8|\theta = 1) = 0\]","For each non-randomized decision rule, compute the maximum risk:
+\[
+\begin{array}{c|cccccccc}
+& d_{1} & d_{2} & d_{3} & d_{4} & d_{5} & d_{6} & d_{7} & d_{8} \\
+\hline
+\sup_{\theta}R(\theta,d_{i}) & 3 & \frac{63}{25} & \frac{39}{25} & \frac{27}{25} & \frac{48}{25} & \frac{36}{25} & \frac{24}{25} & 1 \\
+\end{array}
+\]
+The minimax rule is \(d_{7}\), with minimax risk \(\frac{24}{25}\).",1,1.No maximum risk computation 2.No minimax rule identification 3.Inconsistent risk values (likely from prior errors)
+sta-4-e,104,The minimax rule among non-randomized rules is \( d_5 \).,e) Sketch of the randomized rules \(\mathcal{D}\) generated by the set of non-randomized decision rules \(D\): see attached graph of the set.,1,1.confusion between previous parts 2.overlooking problem instructions
+sta-4-f,105,"The plot of the risk points for all randomized rules can be generated using R. The admissible decision rules are \( d_5, \, d_6, \, d_7, \, d_8 \), and their randomized combinations.","The admissible rules are those on the ""south-west boundary"" of the risk set: any convex combination of \(d_{8}\) and \(d_{4}\), or \(d_{4}\) and \(d_{2}\), or \(d_{2}\) and \(d_{1}\).The randomized decisions rules that correspond to admissible rules are colored in blue on the graph.",3,1.lacks specificity 2.does not precisely identify the boundary rules
+sta-4-g,106,"The minimax rule among randomized rules is obtained by finding the intersection of the line segments connecting the risk points. The minimax risk is the y-coordinate of the intersection point. The minimax decision rule is the randomized rule corresponding to the intersection point. The minimax risk is approximately 0.48, and the decision rule is a randomized combination of \( d_5 \) and \( d_6 \).","The minimax decision rule in the set is given by the intersection of the lines \(y=x\) and the risk set towards the south-most boundary. The line \(\overline{d_{8}d_{4}}\) has an equation
+\[y=\frac{\frac{27}{25}-0}{\frac{30}{25}-1}(x-1)=-\frac{27}{16}x+\frac{27}{16}\]
+To find the intersection, we solve
+\[x=-\frac{27}{16}x+\frac{27}{16}\]
+which gives \(x=y=\frac{27}{15}=0.627907\) as the coordinates of the intersection point \(M\). Hence the risk point of the minimax rule \(\delta^{-}\) in \(\mathcal{D}\) is \(\delta^{-}=(0.627907,0.627907)\) with a minimax risk of \(0.627907\). We also realize that the risk of the minimax rule in the set \(D\) is reduced further in the larger set of randomized decision rules \(\mathcal{D}\) (as \(24/25=0.96>0.627907\)).",2,1.incorrect in both the minimax risk value and the decision rule 2.lacks the detailed reasoning
+sta-4-h,107,"The minimax rule in the set \( D \) is the randomized rule that minimizes the maximum risk. It can be defined as a combination of the non-randomized rules \( d_5 \) and \( d_6 \). Let \( \alpha \) be the probability of choosing \( d_5 \), then \( 1 - \alpha \) is the probability of choosing \( d_6 \). The minimax rule is the one that equates the risks for \( \theta_0 \) and \( \theta_1 \), i.e., \( R(\alpha d_5 + (1 - \alpha)d_6, \theta_0) = R(\alpha d_5 + (1 - \alpha)d_6, \theta_1) \).
+
+Solving for \( \alpha \) gives the specific randomized rule.","To express the rule \(M\) in terms of \(d_{4}\) and \(d_{8}\) we need to find \(\alpha\in[0,1]\) such that
+
+\[27/43=9/25\alpha+1*(1-\alpha)\text{ and }27/43=27/25\alpha+0*(1-\alpha).\]
+
+Each of these two relations gives the same solution \(\alpha=\frac{25}{43}=0.5814\). Therefore the randomized minimax rule chooses \(d_{4}\) with probability \(\alpha=0.5814\) and \(d_{8}\) with probability \(0.4186\).",2,1.incorrectly identified the rules as components of the minimax rule 2.failed to apply approach correctly to the specific problem
+sta-4-i,108,The minimax rule in \( D \) is a Bayes rule for the prior that makes the maximum risk equal for both states. This can be found by setting the weighted risks equal and solving for the prior probability.,The minimax rule in \( D \) is a Bayes rule for the prior that makes the maximum risk equal for both states. This can be found by setting the weighted risks equal and solving for the prior probability.,1,1.vague and lacks specific calculations or justification 2.missed the connection between the minimax rule and the least favorable prior
+sta-4-j,109,"With a prior of 0.5 for viability, the Bayes rule minimizes the expected risk. This involves calculating the expected risk for each rule and choosing the rule with the smallest expected risk. The Bayes risk is the expected risk of this optimal rule.","The line with normal vector \((\frac{1}{2},\frac{1}{2})\) has slope \(-1\). When moving such a line ""south-west"" as much as possible but retaining intersection with the risk set, we end up with the intersection point \(d_{8}\). Hence \(d_{8}\) is the Bayes decision that corresponds to the manager's prior.
+
+It's Bayes risk is:
+
+\[\frac{1}{2}\times 1+\frac{1}{2}0=1/2\]",3,1.did not identify the specific Bayes rule or compute the Bayes risk
+sta-4-k,110,"For \( \epsilon = 0.1 \), the \( \epsilon \)-minimax rules are those with a maximum risk within 0.1 of the minimax risk. This can be illustrated on the risk set by identifying the rules whose risk points lie within a certain range around the minimax risk point.","The shaded area on the graph. From the point \((27/43+0.1,27/43+0.1)\), put a vertical and a horizontal line. The region in the risk set that is southwest of the quadrant defined by these lines is the relevant one.",2,1.abstract 2.lacks a concrete description or visualization
+sta-5-a,111,"We start with the definition of the hazard function 
+\[
+h_T(t) = \lim_{\eta \to 0} \frac{P(t < T < t+\eta \mid T \ge t)}{\eta}.
+\]
+Using the definition of conditional probability, we have 
+\[
+P(t \le T < t+\eta \mid T \ge t) = \frac{P(t \le T < t+\eta, T \ge t)}{P(T \ge t)} = \frac{P(t \le T < t+\eta)}{P(T \ge t)}.
+\]
+Thus,
+\[
+h_T(t) = \lim_{\eta \to 0} \frac{P(t < T < t+\eta)}{\eta P(T \ge t)} = \frac{f_T(t)}{1 - F_T(t)},
+\]
+since \( P(t \le T < t + \eta) \approx f_T(t)\eta \) and \( P(T \ge t) = 1 - F_T(t) \).
+Also,
+\[
+h_T(t) = \frac{f_T(t)}{1 - F_T(t)} = \frac{F_T'(t)}{1 - F_T(t)} = -\frac{d}{dt} \log(1 - F_T(t)).
+\]","\[P(t\leq T\leq t+\eta|t\leq T)=\frac{P(t\leq T\leq t+\eta)}{P(t\leq T)}=\frac{F_ {T}(t+\eta)-F_{T}(t)}{1-F_{T}(t)}.\]
+
+Therefore
+
+\[h_{T}(t)=\frac{1}{1-F_{T}(t)}\lim_{\eta\to 0}\frac{F_{T}(t+\eta)-F_{T}(t)}{\eta}= \frac{F^{\prime}_{T}(t)}{1-F_{T}(t)}=\frac{f_{T}(t)}{1-F_{T}(t)}.\]
+
+We also see directly that
+
+\[-\frac{d}{dt}(\log[1-F_{T}(t)])=-\frac{f_{T}(t)}{1-F_{T}(t)}=h_{T}(t)\]
+holds.",5,no
+sta-5-b,112,"If \( T \) is exponentially distributed with \( f_T(t) = \beta e^{-\beta t} \) for \( t > 0 \), then \( F_T(t) = 1 - e^{-\beta t} \). Thus,
+\[
+h_T(t) = \frac{\beta e^{-\beta t}}{1 - (1 - e^{-\beta t})} = \frac{\beta e^{-\beta t}}{e^{-\beta t}} = \beta,
+\]
+which is a constant.","Since \(f_{T}(t)=\beta e^{-\beta t},F_{T}(t)=1-e^{-\beta t}\) per definition, direct substitution in the formula for the hazard from a) gives
+
+\[h_{T}(t)=\frac{\beta e^{-\beta t}}{1-(1-e^{-\beta t})}=\beta.\]",5,no
+sta-5-c,113,"If \( T \) is logistic with \( F_T(t) = \frac{1}{1 + \exp\left(-\frac{t - \mu}{\beta}\right)} \), then 
+\[
+f_T(t) = \frac{1}{\beta} \cdot \frac{\exp\left(-\frac{t - \mu}{\beta}\right)}{\left(1 + \exp\left(-\frac{t - \mu}{\beta}\right)\right)^2}.
+\]
+Thus,
+\[
+h_T(t) = \frac{f_T(t)}{1 - F_T(t)} = \frac{\frac{1}{\beta} \cdot \frac{\exp\left(-\frac{t - \mu}{\beta}\right)}{\left(1 + \exp\left(-\frac{t - \mu}{\beta}\right)\right)^2}}{1 - \frac{1}{1 + \exp\left(-\frac{t - \mu}{\beta}\right)}} = \frac{1}{\beta(1 + \exp\left(-\frac{t - \mu}{\beta}\right))} = \frac{1}{\beta} F_T(t).
+\]","Taking the derivative of \(F_{T}(t)\) we get
+
+\[f_{T}(t)=\frac{1}{\beta}\frac{e^{-(t-\mu)/\beta}}{(1+e^{-(t-\mu)/\beta})^{2}}.\]
+
+Direct substitution in the formula for the hazard leads then to
+
+\[h_{T}(t)=\frac{1}{\beta}\frac{e^{-(t-\mu)/\beta}}{(1+e^{-(t-\mu)/\beta})^{2}} \frac{1+e^{-(t-\mu)/\beta}}{e^{-(t-\mu)/\beta}}=\frac{1}{\beta}F_{T}(t).\]",5,no
+sta-1-a,114,"**a)** Let \(X_{i}\) be a random variable with the given density function \(f(x,\theta)\). Define \(Y_{i}=\log X_{i}\), we need to find the distribution of \(Y_{i}\). We have \(X_{1}=e^{Y_{1}}\), so \(\text{W}(Y_{1})=e^{Y_{1}}\). The inverse function is \(\text{W}^{-1}(x)=\log x\). The derivation of \(\text{W}^{-1}(x)\equiv\frac{1}{2}\log x-\frac{1}{2}\). Using the density transformation formula, we have:
+
+\[f_{Y}(y)=f_{X}(e^{y})\left[\frac{1}{e^{y}}+\frac{1}{e^{y\sqrt{2\pi y^ {2}}}}e^{-\frac{\ln y}{\sqrt{2\pi y^2}}}-\frac{1}{e^{y}}-\frac{1}{\sqrt{2\pi y^ {2}}}-\xi\right]\]
+
+This is the density of a normal distribution with mean 0 and variance \(R\log X_{1}-N(0,\theta)\). Therefore, \(E[Y]=\theta\) and \(\text{Var}(Y_{1})=\theta\). Since \(Y_{1}=\log X_{1}\), we have \(E[\log X_{1}]=\theta\) and \(\text{Var}(\log X_{1})=\theta\).","**a)** Setting \( Y_i = \log X_i = W(X_i) \) implies that \( X_i = e^{Y_i} = W^{-1}(Y_i) \). Then \( \frac{dW^{-1}(y)}{dy} = e^y \) and \( y \in (-\infty, \infty) \). Applying the density transformation formula we get  
+
+\[f_{Y_i}(y) = f_{X_i}(e^y)e^y = \frac{e^y}{\sqrt{2\pi\theta}}e^{-\frac{1}{2\theta}\left(\log e^y\right)^2} =\]
+
+\[= \frac{1}{\sqrt{2\pi\theta}}e^{-\frac{(y)^2}{2\theta}}, y \in (-\infty, \infty).\]
+
+which is the density of \( N(0, \theta) \) random variable.  
+Hence \( E(\log(X_i)^2) = E(Y_i^2) = Var(Y) + (E(y))^2 = \theta + 0 = \theta. \)",2,1.transformation formula application is incorrect and messy 2. incorrectly states expectation and variance
+sta-1-b,115,"**b)** The likelihood function for a single observation \(X\) is:
+
+\[L(\theta|x)=\frac{1}{x\sqrt{2\pi\theta}}e^{-\frac{\ln y}{\sqrt{2 \pi\theta}}}.\]
+
+The log-likelihood function is:
+
+\[\log L(\theta|x)=-\log x-\frac{1}{2}\log(2\pi\theta)-\frac{(\log x)^{2}}{2\theta}.\]
+
+Taking the derivative with respect to \(\theta\):
+
+\[\frac{\partial\log L}{\partial\theta}=-\frac{1}{2\theta}+\frac{(\log x)^{2}}{2 \theta^{2}}.\]
+
+Taking the second derivative:
+
+\[\frac{\partial^{2}\log L}{\partial\theta^{2}}=\frac{1}{2\theta^{2}}-\frac{(\log x )^{2}}{\theta^{2}}.\]
+
+The Fisher information for one observation is:
+
+\[I(\theta)=-E\left[\frac{\partial^{2}\log L}{\partial\theta^{2}}\right]-E\left[ \frac{1}{2\theta^{2}}-\frac{(\log X)^{2}}{\theta^{2}}\right]=\frac{1}{\theta^{2}} E[(\log X)^{2}]-\frac{1}{2\theta^{2}}\]
+
+Since \(\log X\sim N(0,\theta)\), we have \(E[\log X)^{2}]=\text{Var}(\log X)+(E[\log X])^{2}=\theta+\theta^{2}=\theta\).
+
+\[I(\theta)=\frac{\theta}{2\theta}-\frac{1}{2\theta^{2}}=\frac{1}{2\theta^{2}}+ \frac{1}{2\theta^{2}}\]
+
+For a observations, the Fisher information is \(I(\theta)=\frac{1}{2\theta}\).","**b)**  
+
+\[\log f(x, \theta) = -\frac{1}{2}\log 2\pi - \frac{1}{2}\log(\theta) - \log(x) - \frac{1}{2\theta}(\log(x))^2,\]
+
+\[\frac{\partial}{\partial\theta}\log f(x, \theta) = -\frac{1}{2\theta} + \frac{1}{2\theta^2}(\log(x))^2\]
+
+\[\frac{\partial^2}{\partial\theta^2}\log f(x, \theta) = \frac{1}{2\theta^2} - \frac{1}{\theta^3}(\log(x))^2.\]
+
+Hence, using a) we get for the information \( I_X_i(\theta) \) about \(\theta\) in one observation:
+
+\[I_X_i(\theta) = -E\left(\frac{\partial^2}{\partial\theta^2}\log f(x, \theta)\right) = -\frac{1}{2\theta^2} + \frac{\theta}{\theta^3} = \frac{1}{2\theta^2}.\]
+
+Due to the additivity property, we get for the information in the sample of size \( n \):
+
+\[I_X(\theta) = \frac{n}{2\theta^2}.\]",3,"1.derivation of the Fisher information is messy 2.incorrectly states the Fisher information for 
+n
+n observations"
+sta-1-c,116,"**c)** The log-likelihood function for a observations is:
+
+\[\log L(\theta|x_{1},\ldots,x_{n})=-\sum_{i=1}^{n}\log x_{i}-\frac{1}{2^{n}}\log (2\pi\theta)^{2}-\frac{1}{2\theta^{2}}\sum_{i=1}^{n}(\log x_{i})^{2}\]
+
+Taking the derivative with respect to \(\theta\) and setting it to 0:
+
+\[\frac{\partial\log L}{\partial\theta}=-\frac{1}{2\theta}+\frac{1}{2\theta^{2}} \sum_{i=1}^{n}(\log x_{i})^{2}=0\]
+
+Solving for \(\theta\),
+
+\[\theta=\frac{1}{n}\sum_{i=1}^{n}(\log x_{i})^{2}\]
+
+Thus, the MLE of \(\theta\) is \(\hat{\theta}=\frac{1}{n}\sum_{i=1}^{n}(\log X_{i})^{2}\).
+
+To check for unbiasedness, we have:
+
+\[E(\hat{\theta})=E\left[\frac{1}{n}\sum_{i=1}^{n}(\log X_{i})^{2}\right]=\frac{1}{n}\sum_{i=1}^{n}E[(\log X_{i})^{2}]=\frac{1}{n}\sum_{i=1}^{n}\theta=\frac{n\theta }{n}=\theta\]
+
+Then, the unbiased.
+
+Since \(\log X_{i}\sim N(0,\theta)\), we have \(\frac{\ln y}{\sqrt{2\pi\theta}}-\chi^{2}(x)\). Then \(\sum_{i=1}^{n}\frac{\ln y}{\sqrt{2\pi\theta}}-\chi^{2}(x)\). Therefore, \(\frac{n\theta}{2}-\chi^{2}(x)\).
+
+If \(\hat{\theta}\) is no LMME, then \(\text{Var}(\hat{\theta})=\frac{1}{n|\hat{\theta}|}=\frac{n\theta}{n}\).
+
+\[\text{Var}(\hat{\theta})=\text{Var}\left(\frac{1}{n}\sum_{i=1}^{n}(\log X_{i})^{2 }\right)=\frac{1}{n^{2}}\sum_{i=1}^{n}\text{Var}((\log X_{i})^{2})\]
+
+Since \(\frac{\ln y}{\sqrt{2\pi\theta}}-\chi^{2}(1)\), we have \(E[(\log X_{i})^{2}]=3\theta^{2}\) and \(E[(\log X_{i})^{2}]=\theta\).
+
+\[\text{Var}((\log X_{i})^{2})=E[(\log X_{i})^{2}]-(E[(\log X_{i})^{2}])^{2}=3\theta ^{2}-\theta^{2}=2\theta^{2}\]
+
+\[\text{Var}(\hat{\theta})=\frac{1}{n^{2}}\sum_{i=1}^{n}2^{i\theta}=\frac{2n\theta ^{2}}{n^{2}}=\frac{n\theta^{2}}{n}\]
+
+Since \(\text{Var}(\hat{\theta})=\frac{1}{n|\hat{\theta}|}\), \(\hat{\theta}\) is no LMME.","**c)** We substitute in \(\log f(x, \theta)\) the data \( x_1, x_2, \ldots, x_n \) and after summing we get
+
+\[\log L(x, \theta) = -\frac{n}{2}\log(2\pi) - \sum_{i=1}^n\log(x_i) - \frac{n\log(\theta)}{2} - \frac{1}{2\theta}\sum_{i=1}^n(\log(x_i))^2.\]
+
+Hence we get for the score
+
+\[V(x, \theta) = \frac{\partial}{\partial\theta}\log L(x, \theta) = -\frac{n}{2\theta} + \frac{1}{2\theta^2}\sum_{i=1}^n(\log(x_i))^2.\]
+
+Setting the score equal to zero (to find a stationary point) and solving the equation w.r. \(\theta\) we get the MLE
+
+\[\hat{\theta} = \frac{\sum_{i=1}^n(\log(x_i))^2}{n}.\]
+
+This stationary point indeed delivers a maximum of the log-likelihood as calculating the second partial derivative at it we get
+
+\[\frac{\partial^2}{\partial\theta^2}\log L(x, \theta)|_{\hat{\theta}} = \frac{n}{2\theta^2} - \frac{n\hat{\theta}}{\theta^3}|_{\hat{\theta}} = -\frac{n}{2\theta} < 0\]
+
+(as \(\hat{\theta}\) is clearly > 0).
+
+The MLE is an unbiased for \(\theta\). Indeed, from a) we know that \( E(\log(X_i)^2) = \theta \) holds, so
+
+\[E(\hat{\theta}) = \frac{n\theta}{n} = \theta.\]
+
+It is also an UMVUE. Indeed, the density \( f(x, \theta) \) belongs to a one-parameter exponential family with \( a(\theta) = \frac{1}{\sqrt{2\pi\theta}}, b(x) = \frac{1}{2}, c(\theta) = -\frac{1}{2\theta}, d(x) = (\log(x))^2 \) hence \(\hat{\theta}\) is a function of the complete and sufficient statistic \(\sum_{i=1}^n d(X_i)\) and was shown to be unbiased. Hence the conclusion follows from the Lehmann-Scheffe theorem.",2,1.lacks clarity 2.does not clearly connect the MLE to the exponential family for justification
+sta-1-d,117,"**d)** Let \(h(y)=\sqrt{\hat{\theta}}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\log X_{i})^{2}}\).
+
+We have \(\frac{n\theta}{2}-\chi^{2}(x)\).
+
+Using the delta method, let \(g(\theta)=\sqrt{\hat{\theta}}\). Then \(g^{\prime}(\theta)=\frac{1}{n\sqrt{\hat{\theta}}}\)
+
+The asymptotic distribution of \(\sqrt{\mu(h(\hat{\theta})}-\sqrt{\theta})\) is \(N(\ln{(g^{\prime}(\theta))^{2}\text{Var}(\hat{\theta})})\).
+
+\[\text{Var}(\hat{\theta}) =\frac{2\theta^{2}}{n}\] \[(g^{\prime}(\theta))^{2} =\frac{1}{4\theta}\] \[(g^{\prime}(\theta))^{2}\text{Var}(\hat{\theta}) =\frac{1}{4\theta}-\frac{2\theta^{2}}{n}-\frac{\theta}{n}\]
+
+Therefore, the asymptotic distribution of \(\sqrt{\mu(h(\hat{\theta})}-\sqrt{\theta})\) is \(N(\ln{\frac{1}{n}})\).","**d)** The MLE (due to the translation-invariance property) is \(\hat{h} = \sqrt{\frac{\sum_{i=1}^n(\log(X_i))^2}{n}}\). We now apply the delta method to find the asymptotic distribution. Note that \(\hat{h}'(\theta) = \frac{1}{\sqrt{\theta}}\). We also have by b):
+
+\[\sqrt{n}(\hat{\theta} - \theta) \leq N(0, I_X_i(\theta)^{-1}) = N(0, 2\theta^2).\]
+
+Hence, by the delta method:
+
+\[\sqrt{n}(\hat{h} - \hat{h}) \leq N(0, \theta/2).\]",3,1.notationally messy 2.incorrectly writes
+sta-1-e,118,"**e)** The likelihood function is:
+
+\[L(\theta|x_{1},\ldots,x_{n})=\prod_{i=1}^{n}\frac{1}{x_{i}\sqrt{2\pi\theta}}e^{-\frac{\ln y}{\sqrt{2\pi\theta}}}=\frac{1}{\prod_{i=1}^{n}x_{i}(2\pi\theta)^{2}}e ^{-\frac{1}{n}\sum_{i=1}^{n}(\log x_{i})^{2}}\]
+
+Let \(T=\sum_{i=1}^{n}(\log X_{i})^{2}\). Then the likelihood function can be written as:
+
+\[L(\theta|x_{1},\ldots,x_{n})=g(\theta)h(x_{1},\ldots,x_{n})e^{-\frac{1}{n\sigma}}\]
+
+where \(g(\theta)=\frac{1}{n|\hat{\theta}|/2\theta}\) and \(h(x_{1},\ldots,x_{n})=\frac{1}{\prod_{i=1}^{n}x_{i}}\).
+
+The ratio of likelihood functions for \(\theta_{k}>0,\frac{n}{2\pi}\).
+
+\[\frac{L(h(x_{1},\ldots,x_{n})}{L(h(x_{1},\ldots,x_{n}))}=\frac{g(h)}{g(\theta)}e^{ -\frac{1}{2\sigma}+\frac{n}{2\sigma}}=\left(\frac{\theta_{k}}{\theta_{1}}\right)^ {2\beta}-1\left(\frac{1}{2}-\frac{1}{2}\right)\]
+
+Since \(\theta_{k}>0,\frac{n}{2\sigma}+\frac{n}{2\sigma}=\frac{n}{2\sigma}<0\). Then, the ratio is a monotonic function of \(T\). Therefore, the family \(L(X_{i},Y_{i})\) has monotone likelihood ratio in \(T=\sum_{i=1}^{n}(\log X_{i})^{2}\).","**e)** The easiest way to show this is by observing that \( f(x, \theta) \) belongs to a one-parameter exponential family (which we already did in c). Note that the function \( c(\theta) = -\frac{1}{2\theta} \) is strictly monotonically increasing in \(\theta\). Hence we have the MLR property in the statistic \( T = \sum_{i=1}^n d(X_i) = \sum_{i=1}^n(\log(X_i))^2 \).  ",2,1.explanation is overly complicated and contains errors 2.does not clearly connect the exponential family property to MLR
+sta-1-f,119,"**f)** By the scalar fields between them, they are family-like; a monotonic likelihood ratio is \(T=\sum_{i=1}^{n}(\log X_{i})^{2}\). Here exists a uniform point around \((1000)\) orbits total for testing \(H_{s}\in S\) (by optimal \(H_{s}\): \(\phi>0\)).
+
+The structure of the MAP test is to reject \(H_{s}\) if \(T>c\), where \(c\) is a constant chosen to satisfy the star condition: \(P(T>\alpha t)=\theta_{k}\).","**f)** As we have shown the MLR property in the statistic \( T \), we know from the Blackwell-Girshick Theorem that a UMP \(\alpha\)-size test \(\phi^*\) of \( H_0 : \theta \leq \theta_0 \) against \( H_1 : \theta > \theta_0 \) exists and its structure is
+
+\[\phi^*(X) = 
+\begin{cases}
+1 & \text{if } T > k \\
+0 & \text{if } T \leq k
+\end{cases}\]",1,1.incoherent 2.does not address the UMP test structure
+sta-1-g,120,"**g)** We know that \(\frac{n\theta}{2}-\frac{1}{n^{2}}>\chi^{2}(x)\).
+
+Under \(H_{s}\cdot t^{2}=0\), we have \(\frac{n\theta}{2}-\chi^{2}(x)\).
+
+We reject \(H_{s}\) if \(\frac{n}{2}>\chi^{2}_{k,s-s}\), where \(\chi^{2}_{k,s-s}\) is the \((1-\alpha)\)-quantile of the \(\chi^{2}(x)\) distribution.
+
+Therefore, the MAP or class test is to reject \(H_{s}\) if \(T>0,\chi^{2}_{k,s-s}\).
+
+The threshold constraint is \(t^{2}=\theta_{k}\chi^{2}_{k,s-s}\).
+
+The uniformly most powerful or class test \(g^{*}\) is:
+
+\[g^{*}(x_{1},\ldots,x_{n})=\left\{\begin{array}{ll}1&\mbox{if $\sum_{i=1}^{n}(\log x_{i })^{2}>0,\chi^{2}_{k,s-s}$}\\ 0&\mbox{if $\sum_{i=1}^{n}(\log x_{i})^{2}\leq 0,\chi^{2}_{k,s-s}$}\end{array}\right.\]","**g)** To determine the threshold constant, we observe that we need to ""exhaust"" the level at the borderline value \(\theta_0\) hence \( P_\theta(T > k) = \alpha \) must hold. First we note that from a) we have \( Y_i/\sqrt{\theta} \sim N(0, 1) \) which implies that \(\sum_{i=1}^n Y_i^2/\theta \sim \chi^2_\alpha\). Now we have to ""exhaust the level"":
+
+\[P_\theta(\sum_{i=1}^n(\log(X_i))^2 > k) = P_\theta(\sum_{i=1}^n Y_i^2/\theta_0 > k/\theta_0) = P(\chi^2_\alpha > k/\theta_0) = \alpha.\]
+
+Hence \( k/\theta_0 = \chi^2_\alpha \), where \(\chi^2_\alpha\) is the upper \(\alpha \times 100\%\) point of the \(\chi^2_\alpha\) distribution. The threshold constant (and in this way) the test is completely determined: \( k = \theta_0 \times \chi^2_\alpha \).",2,1.notationally incorrect  2.does not clearly explain the threshold determination
+sta-2-a,121,"a) The likelihood function is given by \[L(X,\theta)=\prod_{i=1}^{n}f(x_{i},\theta)=\begin{cases}\frac{1}{\theta^{n}}&\text{if }0<x_{i}<\theta\text{ for all }i\\ 0&\text{otherwise}\end{cases}\]
+
+The condition \(0<x_{i}<\theta\) for all \(i\) is equivalent to \(0<x_{(n)}<\theta\).
+
+Thus,
+
+\[L(X,\theta)=\begin{cases}\frac{1}{\theta^{n}}&\text{if }x_{(n)}<\theta\\ 0&\text{otherwise}\end{cases}\]
+
+Let \(\theta_{1}<\theta_{2}\). Then the likelihood ratio is
+
+\[\frac{L(X,\theta_{2})}{L(X,\theta_{1})}=\frac{\theta_{1}^{n}}{\theta_{2}^{n}} \text{ if }x_{(n)}<\theta_{1}\]
+
+and \(0\) if \(x_{(n)}>\theta_{2}\), and undefined if \(\theta_{1}<x_{(n)}<\theta_{2}\).
+
+If \(x_{(n)}<\theta_{1}\), then \(\frac{L(X,\theta_{1})}{L(X,\theta_{1})}=\left(\frac{\theta_{1}}{\theta_{2}}\right)^{n}\) which is a constant.
+
+If \(x_{(n)}>\theta_{2}\), then \(\frac{L(X,\theta_{2})}{L(X,\theta_{1})}=\frac{n}{\theta}\) which is undefined.
+
+If \(\theta_{1}<x_{(n)}<\theta_{2}\), then \(\frac{L(X,\theta_{2})}{L(X,\theta_{1})}=\frac{1/\theta_{2}^{n}}{\theta}=\infty\).
+
+Thus, for \(x_{(n)}<\theta_{1}<\theta_{2}\), the likelihood ratio is constant, and for \(x_{(n)}>\theta_{1}\), the likelihood ratio is an increasing function of \(x_{(n)}\).
+
+Therefore, the family \(\{L(X,\theta)\}\), \(\theta>0\) has a monotone likelihood ratio in \(X_{(n)}\).","a) We have \(L(\mathbf{X},\theta)=\frac{1}{d^{n}}I_{(0,\theta)}(x_{(n)})\). Choose \(0<\theta^{\prime}<\theta^{\prime\prime}\) and consider the Likelihood ratio
+
+\[\frac{L(\mathbf{X},\theta^{\prime\prime})}{L(\mathbf{X},\theta^{\prime})}=\left (\frac{\theta^{\prime}}{\theta^{\prime\prime}}\right)^{n}\frac{I_{(0,\theta^{\prime\prime})}(x_{(n)})}{I_{(0,\theta^{\prime})}(x_{(n)})}.\]
+
+Analyzing this ratio as a function of \(X_{(n)}\in(0,\infty)\) we see that it is:
+
+* *is equal to \(\left(\frac{\theta^{\prime}}{\theta^{\prime\prime}}\right)^{n}>0\) when \(0<X_{(n)}<\theta^{\prime}\)
+
+* *is equal to \(\infty\) when \(X_{(n)}\in[\theta^{\prime},\theta^{\prime\prime})\)
+
+* *not defined when \(X_{(n)}\geq\theta^{\prime\prime}\)
+
+Hence, in the area where it is defined \(((0,\theta^{\prime\prime}))\) this ratio is non-decreasing as a function of \(X_{(n)}\) and we have a MLR property in \(X_{(n)}\).",4,1.less detailed 2.less precise
+sta-2-b,122,"b) Since the family has a monotone likelihood ratio in \(X_{(n)}\), the UMP test is of the form: reject \(H_{0}\) if \(X_{(n)}>c\).
+
+The size of the test is \(\alpha=P_{\theta=3}(X_{(n)}>c)\).
+
+The CDF of \(X_{(n)}\) is \(F_{X_{(n)}}(x)=P(X_{(n)}\leq x)=P(X_{1}\leq x,...,X_{n}\leq x)=\prod_{i=1}^{n}P (X_{i}\leq x)=(x/\theta)^{n}\) for \(0\leq x\leq\theta\).
+
+Then \(P_{\theta=3}(X_{(n)}>c)=1-P_{\theta=3}(X_{(n)}\leq c)=1-(c/3)^{n}\).
+
+We want \(1-(c/3)^{n}=\alpha\), so \((c/3)^{n}=1-\alpha\), and \(c=3(1-\alpha)^{1/n}\).
+
+The UMP test is to reject \(H_{0}\) if \(X_{(n)}>3(1-\alpha)^{1/n}\).","b) In a) we have shown MLR ratio in the statistic \(X_{(n)}\). Therefore the UMP \(\alpha\)-size test \(\varphi^{*}\) exists due to the Blackwell Girshick Theorems and its structure is given by
+
+\[\varphi^{*}(\mathbf{X})=\left\{\begin{array}{l}1\text{ if }X_{(n)}>k\\ 0\text{ if }X_{(n)}\leq k\end{array}\right.\]
+
+To determine \(k\) we must ""exhaust"" the level \(\alpha\) at the borderline value \(\theta_{0}\). This means
+
+\[\alpha=E_{\theta_{0}}\varphi^{*}=P_{\theta_{0}}(X_{(n)}>k)=1-P_{\theta_{0}}(X_{(n)}\leq k)=1-\left(P_{\theta_{0}}(X_{1}<k)\right)^{n}=1-(k/\theta_{0})^{n}\]
+
+From this relation we find that \(k=\theta_{0}(1-\alpha)^{1/n}\). As \(\theta_{0}=3\) in this example, we get \(k=3(1-\alpha)^{1/n}\), and the UMP \(\alpha\)-size test is completely determined.",5,1.Theoretical Justification 2.Formal Structure
+sta-2-c,123,"c) The power function is \(\pi(\theta)=P_{\theta}(X_{(n)}>3(1-\alpha)^{1/n})=1-P_{\theta}(X_{(n)}\leq 3(1-\alpha)^{1/n})=1-\left(\frac{3(1-\alpha)^{1/n}}{\theta}\right)^{n}\) for \(\theta\geq 3(1-\alpha)^{1/n}\), and \(0\) otherwise.
+
+Sketch:
+
+* *\(\pi(\theta)=0\) for \(\theta<3(1-\alpha)^{1/n}\).
+
+* *\(\pi(3(1-\alpha)^{1/n})=0\).
+
+* *\(\pi(\theta)\) is increasing in \(\theta\) for \(\theta>3(1-\alpha)^{1/n}\).
+
+* *\(\lim_{\theta\to\infty}\pi(\theta)=1\).","c) For any fixed \(\theta>0\) the power function is given by
+
+\[E_{\theta}\varphi^{*}=P_{\theta}(X_{(n)}>3(1-\alpha)^{1/n})=\int_{3(1-\alpha)^{1/n}}^{\theta}\frac{nx^{n-1}}{\theta^{n}}dx=\left(\frac{x}{\theta}\right)^{n}[\delta_{|(1-\alpha)/n}=1-(1-\alpha)(\frac{3}{\theta})^{n}\]
+
+when \(\theta>k=3(1-\alpha)^{1/n}\). When \(0<\theta\leq 3(1-\alpha)^{1/n}\), the power function is equal to zero. The function is sketched below.",5,1.does not show the integration step
+sta-2-d,124,"d) The joint density of \(X_{(1)}\) and \(X_{(n)}\) is
+
+\[f_{X_{(1)},X_{(n)}}(u,v)=n(n-1)\frac{1}{\theta^{n}}\left(\frac{v-u}{\theta}\right)^{n-2}\text{ for }0\leq u\leq v\leq\theta\]
+
+Let \(Y=X_{(1)}/X_{(n)}\) and \(Z=X_{(n)}\). Then \(X_{(n)}=Z\) and \(X_{(1)}=YZ\).
+
+The Jacobian is \(|J|=|z|\).
+
+The joint density of \(Y\) and \(Z\) is
+
+\[f_{Y,Z}(y,z)=f_{X_{(1)},X_{(n)}}(yz,z)|z|=n(n-1)\frac{1}{\theta^{n}}\left(\frac{z -yz}{\theta}\right)^{n-2}z=n(n-1)\frac{z^{n-1}}{\theta^{n}}(1-y)^{n-2}\]
+
+for \(0\leq y\leq 1\) and \(0\leq z\leq\theta\).
+
+The marginal density of \(Y\) is
+
+\[f_{Y}(y)=\int_{0}^{\theta}n(n-1)^{2}\frac{z^{n-1}}{\theta^{n}}(1-y)^{n-2}dz=n(n -1)(1-y)^{n-2}\frac{1}{\theta^{n}}\frac{\theta^{n}}{n}=(n-1)(1-y)^{n-2}\]
+
+for \(0\leq y\leq 1\).
+
+The marginal density of \(Z\) is
+
+\[f_{Z}(z)=\int_{0}^{1}n(n-1)^{2}\frac{z^{n-1}}{\theta^{n}}(1-y)^{n-2}dy=n(n-1)^{2}\frac{z^{n-1}}{\theta^{n}}\left[-\frac{(1-y)^{n-1}}{n-1}\right]_{0}^{1}=n\frac {z^{n-1}}{\theta^{n}}\]
+
+for \(0\leq z\leq\theta\).
+
+Since \(f_{Y,Z}(y,z)=f_{Y}(y)f_{Z}(z)\), \(Y\) and \(Z\) are independent.
+
+Therefore, \(X_{(1)}/X_{(n)}\) and \(X_{(n)}\) are independent.","d) We need to find the joint density first. Then we will be using a density transformation formula where one of the transformations is \(X_{(1)}/X_{(n)}\) and the other one is kept as \(X_{(n)}\). Note that for the uniform in \((0,\theta)\) random variable we have the density \(f_{X}(x)=\frac{1}{\theta}\) when \(x\in(0,\theta)\) (and zero else). The cdf is \(F_{X}(x)=\frac{2}{\theta}\) when \(x\in(0,\theta)\) (and it is a constant \(0\) when \(x\leq 0\) and a constant \(1\) when \(x\geq\theta\)). The joint density of \(X_{(1)},X_{(n)}\) is given by
+
+\[f_{X_{(1)},X_{(n)}}(x,y)=\frac{n!}{0!(n-2)00}\frac{1}{\theta}\frac{1}{\theta} \left[\frac{y-x}{\theta}\right]^{n-2}=\frac{(n-1)n}{\theta^{n}}(y-x)^{n-2},0<x <y<\theta.\]
+
+Now introduce \(U=X_{(1)}/X_{(n)},V=X_{(n)}.\) Then \(X_{(1)}=UV,x_{(n)}=V\) holds. The constraints \(0<X_{(1)}<X_{(n)}<\theta\) transform into \(0<U<1<\frac{\theta}{\theta}.\) The Jacobian of the transformation \(X_{(1)}=UV,X_{(n)}=V\) is equal to V. Hence the joint density \(f_{UV}(u,v)\) is given by
+
+\[f_{UV}(u,v)=f_{X_{(1)},X_{(n)}}(uv,v)\times v=\frac{(n-1)n}{\theta^{n}}(v-uv)^{n-2}v=\frac{(n-1)n}{\theta^{n}}v^{n-1}(1-u)^{n-2},0<u<1,0<v<\theta.\]
+
+Now, the marginal density of \(V=X_{(n)}\) is of course \(f_{V}(v)=\frac{d}{dv}F_{V}(v)=\frac{d}{dv}(v/\theta)^{n}=\frac{mv^{n-1}}{\theta^{n}}.\) Hence we have that the conditional density
+
+\[f_{UV}(u\mid v)=f_{UV}(u,v)/f_{V}(v)=(n-1)(1-u)^{n-2},0<u<1\]
+
+does not depend on the condition (only depends on \(u\)) which implies that \(U\) and \(V\) are independent. Alternatively, you could have calculated the marginal density of \(U\), as well. For this you integrate out the unwanted variable from the joint:
+
+\[f_{U}(u)=\int_{0}^{\theta}\frac{(n-1)n}{\theta^{n}}v^{n-1}(1-u)^{n-2}dv=(1-u)^{n -2}\frac{(n-1)n}{\theta^{n}}\int_{0}^{\theta}v^{n-1}dv=(n-1)(1-u)^{n-2},\]
+
+which implies that the joint density \(f_{UV}(u,v)\) is a product of the two marginals:
+
+\[f_{UV}(u,v)=\frac{mv^{n-1}}{\theta^{n}}\times(n-1)(1-u)^{n-2}.\]
+
+Hence \(U\) and \(V\) are independent.",5,no
+sta-3-1,125,"The density function \( f(x, \theta) = (1 + \theta)x^\theta \) for \( x \in (0, 1) \) can be written as \( f(x, \theta) = e^{\theta \log(x) + \log(1 + \theta)} \). The joint density of the sample \( X = (X_1, X_2, \ldots, X_n) \) is therefore  
+\[\prod_{i=1}^n f(x_i, \theta) = (1 + \theta)^n \prod_{i=1}^n x_i^\theta = \exp(\theta \sum_{i=1}^n \log(x_i) + n \log(1 + \theta)).\]
+By the Factorization Theorem, \( T = \sum_{i=1}^n \log(X_i) \) is a sufficient statistic for \( \theta \). It is complete and minimal because it is a one-dimensional statistic and the density is in the exponential family.","The density \( f(x, \theta) \) belongs to the one-parameter exponential family with
+\[
+a(\theta) = 1 + \theta, \quad b(x) = 1, \quad c(\theta) = 0, \quad d(x) = \log(x).
+\]
+Hence \( T \) is complete and minimal sufficient (as it equals \( \sum_{i=1}^n \log(X_i) \)).",4,"1.the explanation for completeness and minimal sufficiency is brief 2.lacks the explicit connection to the properties of the exponential family,"
+sta-3-2,126,"If \( h(\theta) = \frac{1}{1+\theta} \), the MLE of \( \theta \) is found by maximizing the likelihood function, which is equivalent to maximizing the log-likelihood. The log-likelihood is \(\log L(\theta) = n \log(1 + \theta) + \theta \sum_{i=1}^n \log(x_i)\). Taking the derivative with respect to \( \theta \) and setting it to zero gives 
+\[\sum_{i=1}^n \log(x_i) = 0,\]
+so
+\[\hat{\theta} = -\frac{n}{\sum_{i=1}^n \log(x_i)} - 1.\]
+Thus,
+\[\hat{h}(\theta) = \frac{1}{1+\theta} = -\frac{1}{1-\frac{n}{\sum_{i=1}^n \log(x_i)}} = \frac{\sum_{i=1}^n \log(x_i)}{\sum_{i=1}^n \log(x_i)-n}.\]
+It is known that \( E[\sum_{i=1}^n \log(X_i)] = -\frac{n}{1+\theta} \), so \( E[\hat{h}(\theta)] = -\frac{n}{1+\theta} - n \cdot \frac{n}{1+\theta} = \frac{-n}{-n(1+\theta)-n(1+\theta)} = \frac{n}{n(1+\theta)+n} = \frac{1}{1+\theta} = h(\theta) \). Thus, \( \hat{h}(\theta) \) is unbiased for \( h(\theta) \).","We first find the MLE. We have:
+\[
+L(\mathbf{X}, \theta) = (1 + \theta)^n \left( \prod_{i=1}^n X_i \right)^\theta
+\]
+\[
+\log L(\mathbf{X}, \theta) = n \log(1 + \theta) + \theta \sum_{i=1}^n \log(X_i)
+\]
+\[
+V(\mathbf{X}, \theta) = \frac{n}{1 + \theta} + \sum_{i=1}^n \log(X_i)
+\]
+Solving the equation of \( V(\mathbf{X}, \theta) = 0 \) gives the MLE as \( \hat{\theta} = \frac{-n}{\sum_{i=1}^n \log(X_i)} - 1 \). As \( h(\theta) = \frac{1}{1 + \theta} \), we can get the MLE \( \hat{h} \) by substituting \( \hat{\theta} \) for \( \theta \) in the formula for \( h \) (due to the invariance property of the MLE). We get then \( \hat{h} = \frac{-n}{\sum_{i=1}^n \log(X_i)} \).
+
+We can argue about unbiasedness as follows. First we have
+\[
+\mathbb{E}(\log X_1) = \int_0^1 \log(x)(1 + \theta)x^\theta dx = \int_0^1 \log(x) dx^{\theta + 1}.
+\]
+We can integrate by parts by noticing that
+\[
+\lim_{x \to 0^+} \log(x)x^{\theta + 1} = 0
+\]
+when \( \theta > -1 \). The integration gives
+\[
+\mathbb{E}(\log X_1) = -\int_0^1 x^{\theta} dx = -\frac{1}{1 + \theta}.
+\]
+Hence
+\[
+\mathbb{E}h = \frac{n}{n(-\mathbb{E}(\log X))} = \frac{1}{1 + \theta}.
+\]",3,1.the explanation for unbiasedness is convoluted and contains algebraic errors
+sta-3-3,127,"The asymptotic distribution of \( \sqrt{n}(\hat{h} - h(\theta)) \) is \( N(0, \frac{1}{nI(\theta)}) \), where \( I(\theta) \) is the Fisher information. The Fisher information is \( I(\theta) = -E\left[ \frac{d^2}{d\theta^2} \log f(X, \theta) \right] = \frac{1}{(1+\theta)^2} \). Therefore, \( \sqrt{n}(\hat{h} - h(\theta)) \) converges in distribution to \( N(0, \frac{1}{(1+\theta)^2}) \).","Using the delta method we have asymptotic normality with a zero mean and an asymptotic variance \( h'(\theta)^2 / I_X(\theta) \). Clearly \( h'(\theta)^2 = \frac{1}{(1 + \theta)^4} \). Also:
+\[
+\frac{\partial^2}{\partial \theta^2} \log L(\mathbf{X}, \theta) = -\frac{n}{(1 + \theta)^2} \Rightarrow - \mathbb{E} \left( \frac{\partial^2}{\partial \theta^2} \log L(\mathbf{X}, \theta) \right) = I_X(\theta) = \frac{n}{(1 + \theta)^2}
+\]
+holds. Therefore
+\[
+\sqrt{n} (\hat{h} - h(\theta)) \xrightarrow{d} \mathcal{N}(0, \frac{1}{(1 + \theta)^2}).
+\]",4,1.does not explicitly derive the second derivative of the log-likelihood
+sta-3-4,128,"For the MLE of \( g(\theta_1, \theta_2) = \frac{\theta_1}{\theta_2+1} \), we have \( \hat{\theta}_1 = -\frac{n}{\sum_{i=1}^n \log(X_i)} - 1 \) and \( \hat{\theta}_2 = -\frac{n}{\sum_{i=1}^n \log(Y_i)} - 1 \). The MLE of \( g(\theta_1, \theta_2) \) is \( \hat{g}(\theta_1, \theta_2) = \frac{\hat{\theta}_1}{\theta_2+1} \). Using the delta method, the asymptotic variance is given by \( \nabla g(\theta_1, \theta_2)^T I(\theta_1, \theta_2)^{-1} \nabla g(\theta_1, \theta_2) \). We have \( \nabla g(\theta_1, \theta_2) = \left( \frac{1}{\theta_2+1}, -\frac{\theta_1}{(\theta_2+1)^2} \right)^T \) and \( I(\theta_1, \theta_2)^{-1} = \text{diag}\left( \frac{1}{nI(\theta_1)}, \frac{1}{nI(\theta_2)} \right) = \text{diag}\left( \frac{(1+\theta_1)^2}{n}, \frac{(1+\theta_2)^2}{n} \right) \). Plugging in the values, we get the asymptotic variance as 
+\[\frac{1}{n} \left( \frac{(1+\theta_1)^2}{(\theta_2+1)^2} + \frac{\theta_1^2}{(\theta_2+1)^2} \right) = \frac{1}{n} \left( \frac{(1+\theta_1)^2 + \theta_1^2}{(\theta_2+1)^2} \right).\]
+Simplifying, we get 
+\[\frac{1}{n} \left( \frac{(1+\theta_1)^2}{(\theta_2+1)^2} + \frac{\theta_1^2}{(\theta_2+1)^2} \right) = \frac{1}{n} \left( \frac{(1+\theta_1)^2 + \theta_1^2}{(\theta_2+1)^2} \right).\]
+Therefore, \( \sqrt{n}(\hat{g} - g(\theta_1, \theta_2)) \) converges in distribution to \( N\left(0, \frac{2\theta_1^2 + 2\theta_1 + 1}{(\theta_2+1)^2}\right) \).","From the lecture notes we have
+\[
+\sqrt{n} \left( \hat{g}(\theta_1, \theta_2) - g(\theta_1, \theta_2) \right) \xrightarrow{d} \mathcal{N} \left( 0, 
+\left\{ 
+\begin{pmatrix}
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_1} & \frac{\partial g(\theta_1, \theta_2)}{\partial \theta_2}
+\end{pmatrix}
+I^{-1}(\theta_1, \theta_2)
+\begin{pmatrix}
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_1} \\
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_2}
+\end{pmatrix}
+\right\} \right).
+\]
+
+Now we have:
+\[
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_1} = \frac{1}{1 + \theta_2}, \quad
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_2} = \frac{\theta_1 + 1}{(1 + \theta_2)^2}
+\]
+
+The \( 2 \times 2 \) information matrix is diagonal as \( X \) and \( Y \) are independent and the expected value of the score is equal to zero. In the same way like in 3.) we have \( I_X(\theta_1) = \frac{1}{(1 + \theta_1)^2} \), \( I_Y(\theta_2) = \frac{1}{(1 + \theta_2)^2} \). 
+
+The information matrix is:
+\[
+I_{X,Y}(\theta_1, \theta_2) = 
+\begin{pmatrix}
+\frac{1}{(1 + \theta_1)^2} & 0 \\
+0 & \frac{1}{(1 + \theta_2)^2}
+\end{pmatrix}
+\]
+with an inverse
+\[
+[I_{X,Y}(\theta_1, \theta_2)]^{-1} = 
+\begin{pmatrix}
+(1 + \theta_1)^2 & 0 \\
+0 & (1 + \theta_2)^2
+\end{pmatrix}.
+\]
+
+Now substituting in the formula for the asymptotic variance we get
+\[
+\begin{pmatrix}
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_1} & \frac{\partial g(\theta_1, \theta_2)}{\partial \theta_2}
+\end{pmatrix}
+[I_{X,Y}(\theta_1, \theta_2)]^{-1}
+\begin{pmatrix}
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_1} \\
+\frac{\partial g(\theta_1, \theta_2)}{\partial \theta_2}
+\end{pmatrix}
+= \frac{1}{(1 + \theta_2)^2}(1 + \theta_1)^2 + \frac{(\theta_1 + 1)^2}{(1 + \theta_2)^2}
+= \frac{2(\theta_1 + 1)^2}{(1 + \theta_2)^2}.
+\]",2,1.misinterprets the function leading to an incorrect asymptotic variance
+sta-4-1,129,"1. \textbf{Find the numerical value of } $\mathbb{E}[X_{(2)}]$.
+
+The probability density function (PDF) for the exponential distribution is given by $f(x) = 2e^{-2x}$ for $x > 0$. The cumulative distribution function (CDF) is $F(x) = \int_0^x 2e^{-2t}dt = 1 - e^{-2x}$. The PDF of the $k$-th order statistic $X_{(k)}$ in a sample of size $n$ is given by:
+\[
+f_{X_{(k)}}(x) = \frac{n!}{(k-1)!(n-k)!} [F(x)]^{k-1} [1 - F(x)]^{n-k} f(x)
+\]
+
+For $X_{(2)}$ where $n = 4$ and $k = 2$, we have:
+\[
+f_{X_{(2)}}(x) = \frac{4!}{1!2!1!}(1 - e^{-2x})(e^{-2x})^2(2e^{-2x}) = 12(1 - e^{-2x})e^{-4x}(2e^{-2x}) = 24(e^{-6x} - e^{-8x})
+\]
+
+Now, we find the expected value:
+\[
+\mathbb{E}[X_{(2)}] = \int_0^\infty x f_{X_{(2)}}(x) dx = \int_0^\infty x(24e^{-6x} - 24e^{-8x}) dx = 24\left(\frac{1}{36} - \frac{1}{64}\right) = 24\left(\frac{64 - 36}{36 \times 64}\right) = 24\left(\frac{28}{36 \times 64}\right) = \frac{7}{24}
+\]
+
+Therefore, $\mathbb{E}[X_{(2)}] = \frac{7}{24} \approx 0.2917$.","\textbf{Solution:}
+
+1) We use the formula in the lecture notes with $f_X(x) = 2e^{-2x}$, $x > 0$ and $F_X(x) = 1 - e^{-2x}$ with $n = 4$ and $r = 2$:
+
+\[
+f_{X_{(r)}, X_{(r+1)}}(y_r, y_{r+1}) = \frac{n!}{(r-1)!(n-r-1)!} [F_X(y_r)]^{r-1} \left[1 - F_X(y_{r+1})\right]^{n-r-1} f_X(y_r) f_X(y_{r+1})
+\]
+
+to obtain
+
+\[
+f_{X_{(2)}}(y_2) = \frac{4!}{(2 - 1)!(4 - 2)!} \left[1 - e^{-2y_2}\right]^1 \left[1 - \left(1 - e^{-2y_2}\right)\right]^{4 - 2} 2e^{-2y_2}
+= 24(1 - e^{-2y_2})e^{-6y_2}
+\]
+
+Therefore,
+
+\[
+\mathbb{E}(X_{(2)}) = \int_0^\infty 24y_2 e^{-6y_2} dy_2 - \int_0^\infty 24y_2 e^{-8y_2} dy_2
+\]
+
+Substituting in the first integral $6y_2 = z$ and in the second integral $8y_2 = z$ leads to
+
+\[
+\mathbb{E}(X_{(2)}) = \frac{24}{36^2} \int_0^\infty z e^{-z} dz = \frac{2}{3} - \frac{3}{8} = \frac{7}{24} = 0.2917
+\]
+
+You could also obtained the latter value via numerical integration in \textbf{R Studio}.",5,no
+sta-4-2,130,"2. \textbf{Find the density of the midrange } $M = \frac{X_{(1)} + X_{(4)}}{2}$.
+
+The joint density of $X_{(1)}$ and $X_{(4)}$ is given by:
+\[
+f_{X_{(1)}, X_{(4)}}(x, y) = n(n-1)[F(y) - F(x)]^{n-2} f(x)f(y)
+\]
+
+For $n = 4$, we have:
+\[
+f_{X_{(1)}, X_{(4)}}(x, y) = 4(3)[F(y) - F(x)]^2 f(x) f(y) = 12(1 - e^{-2y} - (1 - e^{-2x}))^2(2e^{-2x})(2e^{-2y}) = 48(e^{-2x} - e^{-2y})^2 e^{-2x} e^{-2y}
+\]
+
+Let $M = \frac{X_{(1)} + X_{(4)}}{2}$ and $V = X_{(4)} - X_{(1)}$. Then $X_{(1)} = M - \frac{V}{2}$ and $X_{(4)} = M + \frac{V}{2}$. The Jacobian is:
+\[
+J = \left|\frac{\partial x}{\partial m} \frac{\partial x}{\partial v} \atop \frac{\partial y}{\partial m} \frac{\partial y}{\partial v} \right| = \left| \begin{matrix} 1 & -\frac{1}{2} \\ 1 & \frac{1}{2} \end{matrix} \right| = 1
+\]
+
+The joint density of $M$ and $V$ is:
+\[
+f_{M, V}(m, v) = f_{X_{(1)}, X_{(4)}}(m - \frac{v}{2}, m + \frac{v}{2})|J| = 48(e^{-2(m - v/2)} - e^{-2(m + v/2)})^2 e^{-2(m - v/2)} e^{-2(m + v/2)}
+\]
+\[
+f_{M, V}(m, v) = 48(e^{v} - e^{-v})^2 e^{-2m} e^{-v} e^{-2m} e^{v} = 48e^{-8m}(e^v - e^{-v})^2 = 48e^{-8m}(e^{2v} - 2 + e^{-2v})
+\]
+
+The marginal density of $M$ is:
+\[
+f_M(m) = \int_0^\infty 48e^{-8m}(e^{2v} - 2 + e^{-2v}) dv = 48e^{-8m} \int_0^\infty (e^{2v} - 2 + e^{-2v}) dv
+\]
+
+This integral diverges, indicating an error in the process. We need to consider the limits of integration carefully. The correct limits for $V$ are $0 < v < 2m$.
+
+\[
+f_M(m) = 48e^{-8m} \int_0^{2m} (e^{2v} - 2 + e^{-2v}) dv = 48e^{-8m} \left[\frac{1}{2}e^{2v} - 2v - \frac{1}{2}e^{-2v} \right]_0^{2m}
+\]
+
+\[
+f_M(m) = 48e^{-8m} \left[ \frac{1}{2}e^{4m} - 4m - \frac{1}{2}e^{-4m} - (1 - 0 - \frac{1}{2}) \right] = 24e^{-4m} - 192me^{-8m}
+\]
+
+Thus, the density of $M$ is $f_M(m) = 24e^{-4m} - 192me^{-8m}$ for $m > 0$.","2) The joint density of $X_{(i)}$ and $X_{(j)}$ is
+
+\[
+f_{X_{(i)}, X_{(j)}}(x, y) = \frac{n!}{(i - 1)!(j - i - 1)!(n - j)!} f_X(x) f_X(y) [F_X(x)]^{i - 1} [F_X(y) - F_X(x)]^{j - i - 1} [1 - F_X(y)]^{n - j}
+\]
+
+where here we have $i = 1$, $j = 4$, $n = 4$ which gives
+
+\[
+f_{X_{(1)}, X_{(4)}}(x, y) = \frac{4!}{0!2!0!} 2e^{-2x} 2e^{-2y} [1 - e^{-2y} - (1 - e^{-2x})]^2
+= 48e^{-2x} e^{-2y} (e^{-2x} - e^{-2y})^2
+= 48e^{-6x - 2y} + 48e^{-2x - 6y} - 96e^{-4x - 4y}
+\]
+
+for $0 < x < y < \infty$. Now we apply the density transformation formula with
+
+\[
+U = \frac{1}{2}(X_{(1)} + X_{(4)}) \qquad \text{and} \qquad V = X_{(1)}.
+\]
+
+This can equivalently be written as
+
+\[
+X_{(1)} = V \qquad \text{and} \qquad X_{(4)} = 2U - V.
+\]
+
+The value of the Jacobian of this transformation is equal to $-2$ since:
+
+\[
+J(u, v) = \left| \frac{\partial x}{\partial u} \frac{\partial x}{\partial v} \atop \frac{\partial y}{\partial u} \frac{\partial y}{\partial v} \right| = \left| \begin{matrix} 0 & 1 \\ 2 & -1 \end{matrix} \right| = 0 \times -1 - 2 \times 1 = -2
+\]
+
+Therefore the absolute value of the Jacobian is equal to two. Using the density transformation formula we have:
+
+\[
+f_{U,V}(u, v) = f_{X_{(1)}, X_{(4)}}(x_{(1)}(u,v), x_{(4)}(u,v)) |J(u,v)|
+= f_{X_{(1)}, X_{(4)}}(v, 2u - v) \cdot 2
+= 96 \left[ e^{-6v - 2u + v} + e^{-2v - 6u + 3v} - 2e^{-4u} \right]
+= 96 \left[ e^{-4u - v} + e^{-12u + v} - 2e^{-8u} \right]
+\]
+
+for $0 < v < u < \infty$ since $0 < X_{(1)} < \frac{1}{2}(X_{(1)} + X_{(4)}) < \infty$ which implies $2X_{(1)} < X_{(1)} + X_{(4)}$ or $X_{(1)} < X_{(4)}$. Then if $M = \frac{1}{2}(X_{(1)} + X_{(4)})$, then the marginal density can be computed using integration as follows:
+
+\[
+f_M(u) = 96 \int_0^u e^{-4u - v} dv + \int_0^u e^{-12u + v} dv - 2 \int_0^u e^{-8u} dv
+= 24 \left[ e^{-4u}(e^{-4u - 1}) + e^{-12u}(e^u - 1) - 8ue^{-8u} \right]
+= 24 \left[ e^{-4u} - e^{-12u} - 8ue^{-8u} \right]
+\]
+
+for $0 < u < \infty$.",3,1. joint density is not fully expanded and simplified correctly 2.approach to transforming variables and computing the Jacobian is less clear and leads to an incorrect marginal density 3.final expression is incorrect
+sta-4-3,131,"3. \textbf{Find } $P(M > 1/2)$.
+
+We need to compute:
+\[
+P(M > 1/2) = \int_{1/2}^\infty f_M(m)dm = \int_{1/2}^\infty (24e^{-4m} - 192me^{-8m})dm
+\]
+
+\[
+P(M > 1/2) = 24 \int_{1/2}^\infty e^{-4m}dm - 192 \int_{1/2}^\infty me^{-8m}dm
+\]
+
+First integral:
+\[
+24 \int_{1/2}^\infty e^{-4m}dm = 24\left[-\frac{1}{4}e^{-4m}\right]_{1/2}^\infty = 6e^{-2}
+\]
+
+Second integral:
+\[
+192 \int_{1/2}^\infty me^{-8m}dm = 192\left[ -\frac{m}{8}e^{-8m} - \frac{1}{64}e^{-8m} \right]_{1/2}^\infty = 192\left(\frac{1}{16}e^{-4} + \frac{1}{64}e^{-4}\right) = 15e^{-4}
+\]
+
+Therefore:
+\[
+P(M > 1/2) = 6e^{-2} - 15e^{-4} \approx 6(0.1353) - 15(0.0183) \approx 0.8118 - 0.2745 \approx 0.5373
+\]
+
+Thus, $P(M > 1/2) = 6e^{-2} - 15e^{-4} \approx 0.5373$.","3)
+\[
+P(M > 0.5) = \int_{0.5}^\infty 24 \left[ e^{-4u} - e^{-12u} - 8ue^{-8u} \right] du \approx 0.53232
+\]
+
+(using the \texttt{integrate} function in R).",2,1.Incorrect Integrand 2.final probability value is not accurate due to the wrong integrand

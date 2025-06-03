@@ -1,0 +1,501 @@
+Question Number,AI Answer,Correct Answer,Match,Subject,Level
+1,"(3,pi/2)","\left( 3, \frac{\pi}{2} \right)",1,Precalculus,2
+2,$\frac{7}{8} q$,p - q,0,Intermediate Algebra,5
+3,-6.5,\frac{14}{3},0,Algebra,3
+4,9,9,1,Number Theory,3
+5,Evelyn,\text{Evelyn},1,Algebra,2
+6,42,42,1,Prealgebra,2
+7,216,27,0,Number Theory,3
+8,90,90^\circ,1,Precalculus,4
+9,$3\sqrt{13}$,3\sqrt{13},1,Algebra,3
+10,11,4,0,Prealgebra,5
+11,2220,2220,1,Number Theory,3
+12,6/65,\frac{3}{56},0,Intermediate Algebra,5
+13,284,284,1,Number Theory,5
+14,5,5,1,Geometry,2
+15,$\sqrt{51}$,\sqrt{51},1,Precalculus,1
+16,6-5i,6 - 5i,1,Precalculus,5
+17,-50,-50,1,Intermediate Algebra,1
+18,$\pi$,\pi,1,Precalculus,4
+19,31,28,0,Geometry,1
+20,3,3,1,Intermediate Algebra,3
+21,6 + 9i,6+9i,1,Algebra,3
+22,1154,13535,0,Intermediate Algebra,3
+23,4,5,0,Algebra,5
+24,5,x=5,1,Algebra,5
+25,9,10,0,Algebra,5
+26,"1, -1, 0","1,-2",0,Intermediate Algebra,5
+27,24,144,0,Counting & Probability,5
+28,72,78,0,Prealgebra,2
+29,-2 + 7i,-2 + 7i,1,Precalculus,2
+30,5,225,0,Counting & Probability,2
+31,52,52_8,0,Number Theory,3
+32,$11\sqrt{2}$,11\sqrt2,1,Prealgebra,4
+33,720,720,1,Counting & Probability,4
+34,$\frac{27}{125}$,\frac{243}{625},0,Algebra,4
+35,-78.125,-125,0,Counting & Probability,4
+36,0,3,0,Number Theory,2
+37,5,"3, 5, 7",0,Intermediate Algebra,2
+38,72,72,1,Geometry,3
+39,2000,2000,1,Algebra,1
+40,23,23,1,Number Theory,3
+41,12,12,0,Prealgebra,2
+42,10,17,0,Geometry,4
+43,5,4,0,Algebra,2
+44,50,70 \sqrt{2},0,Intermediate Algebra,5
+45,1.25,1.25,1,Prealgebra,5
+46,2,2,1,Geometry,3
+47,12,6,0,Precalculus,2
+48,-2,5,0,Algebra,5
+49,45718,\frac{3}{2},1,Algebra,2
+50,83,83,1,Prealgebra,4
+51,221,203,0,Number Theory,5
+52,-2,x^5 - x^4 + x^3 - x^2 + x - 1,0,Intermediate Algebra,2
+53,12,12,1,Prealgebra,5
+54,$-\frac{\pi}{6}$,-\frac{\pi}{6},1,Precalculus,2
+55,0.15,0.15,1,Prealgebra,2
+56,3,3,1,Algebra,4
+57,11,11,1,Algebra,3
+58,16,16,1,Intermediate Algebra,2
+59,9901,9901,1,Algebra,1
+60,5,5,1,Prealgebra,2
+61,"（6,31,-1)","(6,31,-1)",1,Intermediate Algebra,5
+62,-24,-256,0,Intermediate Algebra,3
+63,$\sqrt{13}$,4,0,Precalculus,5
+64,10,10,1,Intermediate Algebra,5
+65,35/64,\frac{35}{64},1,Precalculus,4
+66,1,1,1,Prealgebra,1
+67,x^3 - 5x^2 + 3x - 6,x^3+3x-6,0,Algebra,3
+68,16,10,0,Prealgebra,4
+69,46,46,1,Precalculus,4
+70,-1,-1,1,Intermediate Algebra,4
+71,40,40_9,0,Number Theory,2
+72,2516,2516_8,0,Number Theory,4
+73,3,3,1,Geometry,2
+74,$\frac{\sqrt{27}}{\sqrt{14}}$,\frac{3\sqrt{3}}{4},0,Algebra,4
+75,csc x cot x,\cot x,0,Precalculus,2
+76,11/36,\frac{11}{36},1,Counting & Probability,4
+77,0,0,1,Intermediate Algebra,2
+78,4,4,1,Algebra,1
+79,"(-2,1)","(-2,1)",1,Intermediate Algebra,4
+80,2,2,1,Prealgebra,1
+81,998,501,0,Intermediate Algebra,5
+82,8,3,0,Algebra,3
+83,45659,\frac{3}{2},0,Algebra,5
+84,2,2,1,Intermediate Algebra,2
+85,-5,-1,0,Algebra,4
+86,$\sqrt{5}$,\sqrt{5},1,Geometry,4
+87,240,240,1,Prealgebra,1
+88,2,1,0,Algebra,1
+89,2,2,1,Algebra,5
+90,3,21,0,Number Theory,4
+91,45718,\frac{3}{2},1,Prealgebra,3
+92,3,1,0,Algebra,3
+93,0.01536,\frac{448}{15625},0,Counting & Probability,4
+94,33,33,1,Algebra,4
+95,130,80,0,Prealgebra,5
+96,3,-4,0,Precalculus,2
+97,"{1 + \sqrt{19}, 1 - \sqrt{19}",1 \pm \sqrt{19},1,Intermediate Algebra,5
+98,East,\text{east},1,Prealgebra,1
+99,2k + 2,2k+2,1,Prealgebra,2
+100,$\begin{pmatrix} 4/3 \\ -1/3 \\ -1/3 \end{pmatrix}$,\begin{pmatrix} -1/3 \\ 2/3 \\ 5/3 \end{pmatrix},0,Precalculus,3
+101,90,145^\circ,0,Geometry,5
+102,65,850,0,Intermediate Algebra,5
+103,(a+5)(b+2),(a+5)(b+2),1,Intermediate Algebra,1
+104,3,"(3,4]",0,Intermediate Algebra,5
+105,20,40,0,Intermediate Algebra,4
+106,25,29,0,Prealgebra,3
+107,45750,\frac43,1,Intermediate Algebra,2
+108,9,9,1,Number Theory,2
+109,4,2,0,Intermediate Algebra,3
+110,120,120^\circ,1,Precalculus,5
+111,126,504,0,Intermediate Algebra,4
+112,350,210,0,Counting & Probability,3
+113,13,13,1,Algebra,4
+114,90000,8000,0,Algebra,2
+115,-5,-5,1,Intermediate Algebra,3
+116,5040,1260,0,Counting & Probability,2
+117,2,2,1,Algebra,2
+118,3,3,1,Algebra,2
+119,81,81,1,Intermediate Algebra,5
+120,-9,-9,1,Prealgebra,3
+121,odd,\text{even},0,Intermediate Algebra,2
+122,6,6,1,Prealgebra,2
+123,9,9,1,Algebra,3
+124,12,8,0,Geometry,4
+125,45965,\frac{11}{2},0,Algebra,4
+126,13,-3,0,Algebra,4
+127,-1,1+274i,0,Intermediate Algebra,4
+128,4210,4210_{5},1,Number Theory,3
+129,36,36,1,Algebra,3
+130,30,\frac{3840}{289},0,Geometry,5
+131,7,13,0,Number Theory,4
+132,8,8,1,Algebra,4
+133,4,4,1,Prealgebra,3
+134,120,120,1,Prealgebra,3
+135,16,16,1,Intermediate Algebra,4
+136,9,9,1,Prealgebra,5
+137,64,64,1,Intermediate Algebra,5
+138,204,204_5,1,Number Theory,4
+139,0.2,\frac{1}{3},0,Counting & Probability,4
+140,1,1,1,Intermediate Algebra,3
+141,13,13,1,Number Theory,4
+142,2,2,1,Number Theory,1
+143,28800,28800,1,Counting & Probability,5
+144,$3 \sqrt{6}$,3 \sqrt{5},0,Precalculus,3
+145,"(15, -29)","(15,-29)",1,Precalculus,1
+146,-1,-2,0,Intermediate Algebra,5
+147,$\frac{\sqrt{3}}{3}$,\frac{\sqrt{3}}{3},1,Algebra,3
+148,12,16,0,Intermediate Algebra,5
+149,11,11,1,Algebra,1
+150,49,49,1,Number Theory,2
+151,1,1,1,Intermediate Algebra,5
+152,144,144,1,Precalculus,5
+153,4,8,0,Geometry,5
+154,7/42,\frac{2}{21},0,Counting & Probability,4
+155,2\sqrt{244},2\sqrt{113},0,Geometry,5
+156,45661,\frac{1}{4},1,Counting & Probability,4
+157,30,30^\circ,1,Precalculus,3
+158,2,\frac65,0,Intermediate Algebra,2
+159,2107,2107,1,Algebra,4
+160,3.21,3.21,1,Algebra,4
+161,18,18,1,Number Theory,2
+162,6,6,1,Algebra,2
+163,45660,\dfrac{17}{50},0,Prealgebra,5
+164,355/36,-\frac{35}{9},0,Algebra,5
+165,$\sqrt{3}$,-\sqrt{3},1,Precalculus,2
+166,45660,\frac{4}{9},0,Prealgebra,4
+167,15/14,\frac{270}7\text{ degrees},0,Prealgebra,5
+168,65,65,1,Algebra,1
+169,7,19,0,Counting & Probability,5
+170,12,12,1,Geometry,2
+171,-48,1736,0,Algebra,5
+172,$\frac{13}{15}$,\frac{13}{15},1,Prealgebra,1
+173,350,350,1,Algebra,1
+174,1,4,0,Algebra,5
+175,2,2,1,Algebra,3
+176,4,3,0,Intermediate Algebra,2
+177,0.000042,0.0000672,0,Number Theory,3
+178,30,30^\circ,1,Geometry,3
+179,60,60,1,Prealgebra,2
+180,5x - 7y + 11z + 4 = 0,5x - 7y + 11z + 4 = 0,1,Precalculus,4
+181,3,3,1,Prealgebra,3
+182,45660,\frac{\sqrt{3}}{3},0,Algebra,3
+183,1251,1251,1,Prealgebra,2
+184,5,23,0,Algebra,4
+185,"[2, infinity)","(2,\infty)",0,Intermediate Algebra,5
+186,1,1,1,Algebra,1
+187,7,7,1,Number Theory,4
+188,7,7,1,Algebra,1
+189,6,6,1,Algebra,5
+190,160,160,1,Geometry,5
+191,45659,\frac{13}{18},0,Counting & Probability,5
+192,0,0,1,Algebra,2
+193,30,30,1,Geometry,3
+194,8,4,0,Intermediate Algebra,3
+195,45661,\frac{1}{4},1,Intermediate Algebra,5
+196,24,24,1,Intermediate Algebra,4
+197,1600,1600,1,Algebra,1
+198,8,6,0,Number Theory,5
+199,10080,"10,\!080",0,Counting & Probability,3
+200,17,17,1,Prealgebra,2
+201,70,40,0,Prealgebra,4
+202,38,66,0,Number Theory,4
+203,45691,\frac{2}{3},1,Algebra,5
+204,-1591914,12,0,Intermediate Algebra,3
+205,12,0,0,Intermediate Algebra,5
+206,"(2, -1, -7)",\begin{pmatrix} -2 \\ -14 \\ -7 \end{pmatrix},0,Precalculus,3
+207,"(3/2,-13)","\left( \frac{3}{2}, -13 \right)",1,Precalculus,2
+208,28,28,1,Counting & Probability,2
+209,1,1,1,Number Theory,3
+210,97,16,0,Number Theory,2
+211,6,10,0,Prealgebra,4
+212,0,5,0,Prealgebra,2
+213,56,56,1,Algebra,3
+214,1,2,0,Intermediate Algebra,4
+215,60,110,0,Counting & Probability,5
+216,2,2,1,Algebra,4
+217,8,6,0,Prealgebra,4
+218,111111000,"11,\! 111,\! 111,\! 100",0,Number Theory,4
+219,"(-1,6)","(-1,6)",1,Algebra,2
+220,45756,\frac{1}{2},0,Counting & Probability,4
+221,$\frac{16}{27}$,\frac{16}{27},1,Prealgebra,5
+222,45,900,0,Number Theory,3
+223,54,54,1,Geometry,4
+224,14,14,1,Number Theory,3
+225,3/256,\frac{9}{256},0,Precalculus,4
+226,1,11,0,Algebra,3
+227,3,3,1,Counting & Probability,3
+228,C,\text{(C)},1,Precalculus,3
+229,$144 \pi$,288 \pi,0,Precalculus,4
+230,90,90,1,Prealgebra,4
+231,$\frac{24}{5}$,\frac{16}{5},0,Intermediate Algebra,4
+232,8,10,0,Algebra,4
+233,998,\frac{1997}{2},0,Intermediate Algebra,5
+234,30,30^\circ,1,Precalculus,2
+235,132,34,0,Intermediate Algebra,3
+236,45786,\frac 59,1,Prealgebra,4
+237,36,12,0,Precalculus,4
+238,26,22,0,Intermediate Algebra,1
+239,-5,-4,0,Algebra,5
+240,13,16,0,Geometry,5
+241,24,116,0,Prealgebra,4
+242,47,17,0,Algebra,5
+243,26937,"\$32,\!348",0,Algebra,5
+244,3,3,1,Geometry,2
+245,8,8,1,Prealgebra,5
+246,-10,-13x+3,0,Intermediate Algebra,4
+247,8,8,1,Algebra,2
+248,-2,\frac{10}{11},0,Intermediate Algebra,3
+249,\[\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}\],\begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix},0,Precalculus,4
+250,11,17,0,Number Theory,4
+251,15,13,0,Algebra,4
+252,540,540,1,Counting & Probability,5
+253,100,81,0,Algebra,5
+254,45665,\frac{1}{8},1,Prealgebra,3
+255,28,28,1,Counting & Probability,5
+256,E,\text{(E)},1,Precalculus,2
+257,45890,\frac{8}{21},1,Prealgebra,3
+258,864,864 \mbox{ inches}^2,1,Geometry,4
+259,28,16,0,Algebra,3
+260,22,22,1,Intermediate Algebra,1
+261,120,120^\circ,1,Precalculus,3
+262,76,76^\circ,1,Geometry,3
+263,4,4,1,Prealgebra,1
+264,15,15,1,Geometry,4
+265,$5 \frac{2}{5}$,1\frac{4}{5},0,Geometry,5
+266,4005,4005,1,Algebra,2
+267,0.33,\dfrac{33}{100},1,Prealgebra,3
+268,180,180^\circ,1,Geometry,1
+269,1,1,1,Number Theory,1
+270,6,6,1,Counting & Probability,3
+271,12,10,0,Algebra,1
+272,333,333,1,Number Theory,4
+273,1330,1030,0,Number Theory,4
+274,833.33,1250,0,Prealgebra,4
+275,$18 + 2\pi$,18+2\pi,1,Geometry,5
+276,8,7,0,Algebra,2
+277,121,11,0,Algebra,5
+278,$\sqrt{53}$,\sqrt{53},1,Prealgebra,4
+279,255,255,1,Number Theory,3
+280,7\pi,7\pi,1,Prealgebra,5
+281,6,8,0,Number Theory,4
+282,36,36^\circ,1,Prealgebra,4
+283,168,129,0,Algebra,4
+284,1,1,1,Prealgebra,3
+285,no solutions,3 \pm 2 \sqrt{2},0,Precalculus,5
+286,440,440,1,Intermediate Algebra,4
+287,45779,\frac{17}{21},0,Intermediate Algebra,5
+288,9,36,0,Number Theory,5
+289,$\sqrt{30}$,7,0,Precalculus,5
+290,16,16,1,Intermediate Algebra,3
+291,-1,4,0,Algebra,3
+292,77,63,0,Counting & Probability,4
+293,0,898,0,Intermediate Algebra,4
+294,"(3/2, 8/3]","\left(\frac{3}{5},\frac{8}{3}\right]",0,Algebra,5
+295,73,58,0,Number Theory,4
+296,11,11,1,Precalculus,3
+297,E,\text{(B)},0,Intermediate Algebra,2
+298,102,103,0,Number Theory,4
+299,\begin{pmatrix} -18 \\ -49 \\ 96 \end{pmatrix},\begin{pmatrix} -18 \\ -49 \\ 96 \end{pmatrix},1,Precalculus,4
+300,63,63,1,Geometry,4
+301,12,12,1,Counting & Probability,4
+302,5.4,5.4 \text{ cents},1,Prealgebra,5
+303,5,5,1,Prealgebra,4
+304,28,28,1,Geometry,5
+305,9,9,1,Intermediate Algebra,3
+306,$\frac{8}{11}$,\frac9{19},0,Algebra,4
+307,8,6,0,Intermediate Algebra,5
+308,"$(-\infty, -0.5]$","(-\infty, 0]",0,Precalculus,2
+309,9,1+2\sqrt{3},0,Geometry,5
+310,16,14,0,Number Theory,3
+311,1,49,0,Algebra,2
+312,1,3,0,Number Theory,4
+313,"(5, inf)","(5,\infty)",1,Intermediate Algebra,1
+314,12蟺,12\pi,1,Prealgebra,5
+315,"(2, 4)","(2,4)",1,Geometry,2
+316,49,41,0,Algebra,4
+317,12,12,0,Algebra,2
+318,1,0,0,Intermediate Algebra,5
+319,(11+9a)/20,\frac{11+9a}{20},1,Algebra,2
+320,-96,-128,0,Algebra,3
+321,-1,-\frac{24}{25},0,Geometry,5
+322,10,10,1,Prealgebra,5
+323,-1,-1,1,Algebra,3
+324,45660,\frac{1}{3},1,Counting & Probability,5
+325,150,120,0,Geometry,4
+326,9,4,0,Geometry,2
+327,0.0099,\frac{9}{100},0,Precalculus,2
+328,50,15,0,Intermediate Algebra,5
+329,3,3,1,Algebra,5
+330,4,4,1,Prealgebra,4
+331,798,1940,0,Counting & Probability,5
+332,45841,\frac{13}{6},0,Algebra,5
+333,2,2,1,Intermediate Algebra,4
+334,5,3,0,Intermediate Algebra,4
+335,-180,-120,0,Algebra,3
+336,0,3,0,Number Theory,4
+337,13000,26000,0,Algebra,1
+338,6,6,1,Prealgebra,3
+339,4343,4343_6,0,Number Theory,3
+340,4k,2k,0,Intermediate Algebra,3
+341,37,55^\circ,0,Precalculus,3
+342,1,-2,0,Algebra,4
+343,2,2,1,Prealgebra,3
+344,58500,58500,0,Counting & Probability,2
+345,5,5,1,Intermediate Algebra,2
+346,-1,1,0,Algebra,3
+347,66,66,1,Algebra,4
+348,6r^2 - 4r - 24,6r^2-4r-24,1,Algebra,3
+349,4495,4495,1,Counting & Probability,2
+350,840,10080,0,Counting & Probability,4
+351,4,4,1,Number Theory,2
+352,45673,\frac{1}{16},1,Precalculus,3
+353,36,11 \sqrt{5} + 11,0,Precalculus,4
+354,480,480,1,Counting & Probability,4
+355,729,81,0,Algebra,4
+356,36,100,0,Intermediate Algebra,5
+357,"(-$\sqrt{5}$, -2) $\cup$ (-2, 2) $\cup$ (2, $\sqrt{5}$)","(-\sqrt{3}, \sqrt{3})",0,Algebra,5
+358,4,4,1,Prealgebra,5
+359,Ellipse,\text{ellipse},1,Intermediate Algebra,2
+360,2,6,0,Intermediate Algebra,4
+361,45754,\frac{7}{4},0,Precalculus,3
+362,$48$,16 \sqrt{3},0,Intermediate Algebra,4
+363,45661,\frac14,1,Counting & Probability,1
+364,45659,2,0,Algebra,2
+365,"(1, -8, -2, -8)","(1,-16,-4,43)",0,Intermediate Algebra,4
+366,8,8,1,Number Theory,5
+367,4,4,1,Number Theory,4
+368,1,1,1,Algebra,4
+369,23,31,0,Geometry,2
+370,108,21,0,Prealgebra,2
+371,-41,-41,1,Precalculus,1
+372,17,17,1,Intermediate Algebra,5
+373,50,90^\circ,0,Geometry,2
+374,$-\frac{5}{5} + \frac{10}{5}i$,1+2i,0,Algebra,5
+375,4,4,1,Algebra,1
+376,9,25,0,Number Theory,5
+377,"(8,-2)","(8,-2)",1,Geometry,4
+378,6,6,1,Number Theory,3
+379,2,3,0,Prealgebra,3
+380,11,12,0,Prealgebra,4
+381,"{(0,9) \cup (9,36)}","(0,9) \cup (9,36)",1,Intermediate Algebra,4
+382,45660,\frac{1}{2},0,Counting & Probability,5
+383,20000/pi - 400/pi^2,\frac{20000}{\pi},0,Intermediate Algebra,5
+384,"[-2, 7]","x \in [-2,7]",1,Algebra,4
+385,15x - 80,15x - 80,1,Prealgebra,2
+386,12,22,0,Prealgebra,5
+387,12,11,0,Algebra,3
+388,20,18,0,Algebra,1
+389,$\frac{11}{2}$,\frac{11}{2},1,Algebra,5
+390,21/25,\frac{\sqrt{21}}{5},0,Geometry,3
+391,6,12,0,Algebra,5
+392,-3,0,0,Algebra,5
+393,6,\sqrt{66},0,Precalculus,5
+394,45720,\frac 34,1,Algebra,3
+395,-0.375,-0.375,1,Intermediate Algebra,5
+396,4,4,1,Algebra,1
+397,2,2,1,Prealgebra,3
+398,25,23,0,Prealgebra,2
+399,Ian,\text{Navin},0,Prealgebra,4
+400,326.5,326.5,1,Prealgebra,2
+401,45730,\frac{14}{3},0,Geometry,5
+402,3,\frac{13}{4},0,Intermediate Algebra,5
+403,-2 - 9i,1 - 12i,0,Precalculus,3
+404,2,3,0,Number Theory,4
+405,3,3,1,Counting & Probability,1
+406,60,60,1,Prealgebra,4
+407,0,0,1,Number Theory,1
+408,9,9,1,Algebra,4
+409,$\begin{pmatrix} -5 \\ 0 \end{pmatrix}$,\begin{pmatrix} 1/5 \\ -18/5 \end{pmatrix},0,Precalculus,5
+410,20,2 \sqrt{5},0,Intermediate Algebra,4
+411,4,6,0,Prealgebra,2
+412,60,60,1,Prealgebra,3
+413,381,406,0,Intermediate Algebra,4
+414,5r^5,5r^5,1,Algebra,2
+415,-2,10,0,Algebra,4
+416,4,9,0,Number Theory,5
+417,45665,\frac{1}{8},0,Precalculus,3
+418,-3,-2,0,Algebra,5
+419,$\frac{8\sqrt{5}}{5}$,2\sqrt{5},0,Algebra,5
+420,"(3,-12,-15)",\begin{pmatrix} -7 \\ 16 \\ 5 \end{pmatrix},0,Precalculus,4
+421,$\frac{8}{49}$,\begin{pmatrix} 16/49 \\ 48/49 \\ 24/49 \end{pmatrix},0,Precalculus,3
+422,16,27,0,Precalculus,5
+423,-4,"\{1\pm\sqrt{5},-2\}",0,Intermediate Algebra,5
+424,1936,1440,0,Number Theory,5
+425,600,600,1,Algebra,5
+426,$\frac{1}{3} (a^2 + b^2 + c^2) + 4R^2$,3R^2,0,Precalculus,5
+427,$8\sqrt{2}$,6\sqrt{2},0,Geometry,3
+428,29,29,1,Algebra,2
+429,36,64,0,Intermediate Algebra,4
+430,5,50,0,Intermediate Algebra,3
+431,4.  5,4.5,1,Prealgebra,2
+432,"\[\left[ \frac{\pi^2}{8}, \frac{5 \pi^2}{4} \right]\]","\left[ \frac{\pi^2}{8}, \frac{5 \pi^2}{4} \right]",1,Precalculus,4
+433,331,331,1,Intermediate Algebra,5
+434,0.35625,0.35625,1,Number Theory,2
+435,32,32,1,Prealgebra,5
+436,"$(-\infty, 2) \cup (3, \infty)$","(-\infty, 2) \cup (3, \infty)",1,Algebra,5
+437,7,4,0,Counting & Probability,4
+438,2,3,0,Algebra,3
+439,4,4,1,Number Theory,2
+440,10,x^8 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1,0,Intermediate Algebra,3
+441,-14,14,0,Algebra,3
+442,550,550,1,Prealgebra,4
+443,256,256,1,Algebra,4
+444,45,45,1,Algebra,4
+445,0,\frac{1}{2},0,Counting & Probability,5
+446,15,15,1,Intermediate Algebra,4
+447,8,8,1,Algebra,4
+448,9,9,1,Prealgebra,1
+449,5,44,0,Number Theory,5
+450,55,47,0,Algebra,1
+451,24,64,0,Number Theory,5
+452,639/20,\frac{639}{40},0,Number Theory,3
+453,151,143,0,Algebra,2
+454,10,10,1,Algebra,2
+455,-5x + 33,y = 2x + 3,0,Precalculus,5
+456,6,6,1,Counting & Probability,2
+457,"1,-2","-2,1",0,Intermediate Algebra,1
+458,0,0,1,Number Theory,1
+459,31,41,0,Prealgebra,3
+460,15.3,\$18.90,0,Algebra,5
+461,75,75^\circ,1,Prealgebra,4
+462,9,12,0,Algebra,4
+463,59,59,1,Number Theory,2
+464,2,2,1,Algebra,2
+465,12,9,0,Intermediate Algebra,3
+466,121,121,1,Number Theory,4
+467,$12\pi$,8 \pi,0,Precalculus,5
+468,15,15\mbox{ cm}^2,1,Prealgebra,2
+469,5,8,0,Algebra,4
+470,25,25,1,Algebra,3
+471,3456,27648,0,Intermediate Algebra,5
+472,84,84,1,Prealgebra,3
+473,137.5,137 \frac{1}{2},0,Algebra,1
+474,6,7,0,Prealgebra,5
+475,3,3,1,Intermediate Algebra,1
+476,41,29,0,Counting & Probability,5
+477,200,200,1,Prealgebra,2
+478,3,2,0,Number Theory,3
+479,0,\frac{2}{1005},0,Intermediate Algebra,5
+480,2,2,1,Number Theory,5
+481,1,1,1,Precalculus,2
+482,$4n(2n+1)$,8n^2 + 4n + 1,0,Intermediate Algebra,5
+483,202,202,1,Number Theory,5
+484,45750,\frac{8}{15},0,Precalculus,3
+485,10,10,1,Intermediate Algebra,3
+486,13,13,1,Counting & Probability,2
+487,216,216,1,Geometry,3
+488,2,2,1,Number Theory,1
+489,36,\$36,1,Prealgebra,5
+490,15,15,1,Intermediate Algebra,3
+491,20,14,0,Intermediate Algebra,5
+492,576,64,0,Prealgebra,5
+493,-2x,y = -2x,1,Precalculus,3
+494,20,20,1,Algebra,5
+495,45750,\frac{1}{4},0,Intermediate Algebra,5
+496,"(2,4)","(2,12) \cup (12,102)",0,Intermediate Algebra,4
+497,1,\frac{5}{13},0,Intermediate Algebra,3
+498,5,\frac{7}{2},0,Geometry,5
+499,-1,-1,1,Intermediate Algebra,5
+500,106,106^\circ,1,Geometry,4

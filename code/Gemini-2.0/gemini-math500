@@ -1,0 +1,143 @@
+import numpy as np
+import pandas as pd
+import json
+import jsonlines
+import ast
+import time
+import re
+import google.generativeai as genai
+import difflib
+from sympy import sympify, sympify, latex
+
+# Configure API
+API_KEY = 'api'
+genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel('gemini-2.0-flash')
+
+# Initialize variables
+rpm = 15  # Number of questions per batch
+task_per = 500  # Total questions to process
+math_file = 'datasets/math500.jsonl'  # New JSONL file
+
+test_results = []  # List to store results
+
+def normalize_answer(answer):
+    """
+    Normalize the answer by removing spaces and converting common LaTeX formats
+    to a simpler form for easier comparison. This function can be extended to handle
+    more complex formatting.
+    """
+    # Remove spaces around LaTeX commands, simplify fractions, etc.
+    answer = answer.replace(" ", "")
+    answer = answer.replace("\\frac{", "").replace("}", "/")
+    answer = answer.replace("\\pi", "pi")
+    answer = answer.replace("$", "")  # Remove dollar signs used in LaTeX math mode
+    return answer
+
+def compare_answers(ai_answer, correct_answer):
+    """
+    Compare AI's answer with the correct answer, considering small formatting differences
+    and LaTeX expressions. Returns 1 if they match, otherwise 0.
+    """
+    ai_normalized = normalize_answer(ai_answer)
+    correct_normalized = normalize_answer(correct_answer)
+    
+    # Use sympy to parse and simplify the LaTeX or string representations of the answers
+    try:
+        ai_expr = sympify(ai_normalized)
+        correct_expr = sympify(correct_normalized)
+        # Use sympy's equality comparison to check if both expressions are mathematically equivalent
+        if ai_expr == correct_expr:
+            return 1
+    except Exception as e:
+        print(f"Error in sympify comparison: {e}")
+        # If sympify fails, fall back on string comparison
+        pass
+    
+    # Fall back on string comparison if sympy fails
+    if ai_normalized == correct_normalized:
+        return 1
+    else:
+        # Use difflib for partial matches (useful for LaTeX and similar formatting)
+        similarity = difflib.SequenceMatcher(None, ai_normalized, correct_normalized).ratio()
+        return 1 if similarity > 0.95 else 0  # If similarity is over 95%, consider it a match
+
+# Read and process questions in batches
+with open(math_file, 'r', encoding='utf8') as q_file:
+    for i, line in enumerate(q_file):
+        if i >= task_per:
+            break  # Stop after task_per questions
+        
+        try:
+            entity_dict = json.loads(line)  # Attempt to load the question
+            problem = entity_dict.get('problem', '')
+            correct_answer = entity_dict.get('answer', '').strip()
+            subject = entity_dict.get('subject', 'Unknown')
+            level = entity_dict.get('level', 'Unknown')
+            
+            if not problem or not correct_answer:
+                raise ValueError(f'Missing data in Question {i+1}')
+        
+        except (json.JSONDecodeError, ValueError) as e:
+            # Handle issues with loading the question or missing data
+            print(f'Error processing Question {i+1}: {e}. Continuing to next question.')
+            test_results.append({
+                'Question Number': i + 1,
+                'AI Answer': None,
+                'Correct Answer': None,
+                'Match': None,
+                'Subject': 'Unknown',
+                'Level': 'Unknown'
+            })
+            continue  # Skip to next question after handling the error
+
+        # Generate AI response
+        try:
+            response = model.generate_content(f"{problem} (no process, give me the answer as a plain number, without quotes.)")
+            ai_answer = response.text.strip()
+        except Exception as e:
+            print(f'Error generating response for Question {i+1}: {e}. Continuing to next question.')
+            ai_answer = None
+
+        # Compare answers
+        is_correct = compare_answers(ai_answer, correct_answer) if ai_answer is not None else 0
+        
+        # Store results
+        test_results.append({
+            'Question Number': i + 1,
+            'AI Answer': ai_answer,
+            'Correct Answer': correct_answer,
+            'Match': is_correct,
+            'Subject': subject,
+            'Level': level
+        })
+        
+        print(f'Processed Question {i+1}: AI Answer = {ai_answer}, Correct = {correct_answer}, Match = {is_correct}')
+        
+        # Rate-limiting to avoid API restrictions
+        if (i + 1) % rpm == 0:
+            print(f'Completed {i+1} questions. Sleeping for 90 seconds...')
+            time.sleep(90)
+
+# Convert results to DataFrame
+df = pd.DataFrame(test_results)
+print(df)
+
+# Save to CSV
+df.to_csv('gemini_math_results.csv', index=False)
+
+# Print Accuracy
+accuracy = df['Match'].mean() * 100 if not df.empty else 0
+print(f'Gemini Accuracy: {accuracy:.2f}%')
+
+
+
+
+
+
+
+
+
+
+
+
