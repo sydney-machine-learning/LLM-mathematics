@@ -81,7 +81,7 @@ cd LLM-mathematics
 
 The evaluation scripts are organised by model.
 
-###GPT-4o
+### GPT-4o
 
    ```bash
    cd code/GPT-4o
@@ -89,15 +89,17 @@ The evaluation scripts are organised by model.
    python gpt_math500.py
    python gpt_mit.py
    ```
-###DeepSeek-V3
-    ```bash
+### DeepSeek-V3
+ 	```bash
+    
     cd code/DeepSeek-V3
     python deepseek_gsm8k.py
     python deepseek_math500.py
     python deepseek_mit.py
-    ```
+   	```
 
-###Gemini-2.0
+### Gemini-2.0
+
    ```bash
    cd code/Gemini-2.0
    python gemini_GSM8K.py
@@ -132,6 +134,6 @@ To contribute:
 5. Submit a pull request.
 
 
-##📌 Notes
+## 📌 Notes
 - Scripts are currently organised by model rather than through a single unified entry script.
 - Output files may vary slightly across models and datasets.
