@@ -91,7 +91,6 @@ The evaluation scripts are organised by model.
    ```
 ### DeepSeek-V3
  	```bash
-    
     cd code/DeepSeek-V3
     python deepseek_gsm8k.py
     python deepseek_math500.py
