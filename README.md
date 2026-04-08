@@ -1,33 +1,40 @@
 
 # Evaluation of LLMs for Mathematical Problem Solving
 
-This repository presents a structured evaluation framework designed to assess and compare the mathematical problem-solving abilities of state-of-the-art Large Language Models (LLMs). The evaluation focuses on accuracy, reasoning quality, and error patterns across multiple datasets representing diverse mathematical domains.
+This repository presents a structured evaluation framework for assessing and comparing the mathematical problem-solving abilities of state-of-the-art Large Language Models (LLMs). The project focuses on model accuracy, reasoning quality, and common shortcomings across multiple datasets with different levels of mathematical difficulty.
 
 ## 🎯 Project Goals
 
-- **Benchmark LLMs** such as Gemini-2.0, ChatGPT-4o, and DeepSeek-V3 on challenging math datasets.
-- **Identify strengths and weaknesses** in the reasoning chains of LLM outputs using human-verified solutions.
-- **Categorize common error types**, such as logical flow issues, misinterpretation of problem conditions, and incomplete solutions.
-- **Visualize performance** using statistical graphs and heatmaps to facilitate comparative analysis.
-
+- Benchmark LLMs such as Gemini-2.0, ChatGPT-4o, and DeepSeek-V3 on mathematical reasoning datasets.
+- Compare model performance across tasks ranging from grade-school arithmetic to university-level mathematical problems.
+- Identify strengths and weaknesses in model outputs, such as missing intermediate steps, weak justification, imprecise reasoning, and notation issues.
+- Support both quantitative and qualitative analysis of LLMs for mathematical problem solving.
+  
 ## 📁 Repository Structure
 
-```bash
-Evaluation-of-LLMs-for-mathematical-problem-solving/
-├── code/             # Scripts for evaluation, analysis, and visualization
-├── datasets/         # Curated mathematical datasets with ground truth
-├── result/           # Accuracy scores, error classifications, and charts
-├── figures/          # Generated visualizations (e.g., histograms, pie charts)
-├── requirements.txt  # Python dependencies
+```text
+LLMs-mathematics/
+├── code/             # Evaluation scripts for each model
+│   ├── DeepSeek-V3/
+│   ├── GPT-4o/
+│   └── Gemini-2.0/
+├── datasets/         # Benchmark and university-level datasets
+│   ├── MIT_Dataset/
+│   ├── gsm8k.jsonl
+│   └── math500.jsonl
+├── result/           # Model outputs and evaluation results
+│   ├── DeepSeek/
+│   ├── GPT-4o/
+│   └── Gemini-2.0/
 └── README.md         # Project overview and usage guide
 ```
 
 ## 📦 Datasets
 
-This repository evaluates models on three datasets:
-- **GSM8K**: Grade-school math word problems, focusing on step-by-step arithmetic and logic.
-- **Math500**: A collection of problems from Algebra, Geometry, Number Theory, etc., grouped by difficulty levels.
-- **UNSW Problems**: University-level questions used in actual exams across topics like Optimization, Statistics, and Computational Finance.
+This repository currently evaluates models on three datasets:
+- GSM8K: Grade-school math word problems, focusing on multi-step arithmetic and basic reasoning.
+- MATH500: A collection of problems from domains such as Algebra, Geometry, Number Theory, Precalculus, and Counting & Probability.
+- MIT Dataset: University-level mathematical problems stored under MIT_Dataset, covering advanced topics such as optimisation, statistics, and related mathematical subjects.
 
 Each dataset includes:
 - Problem statements (with LaTeX or readable formatting)
@@ -36,69 +43,95 @@ Each dataset includes:
 
 ## 🧪 Evaluation Metrics
 
-The framework supports both **quantitative and qualitative** evaluation:
+The framework supports both quantitative and qualitative evaluation, including:
+- Final answer accuracy
+- Reasoning quality
+- Completeness of solutions
+- Common shortcoming analysis, such as:
+   •	missing intermediate steps
+	•	lack of justification
+	•	imprecise reasoning
+	•	unclear notation
+	•	weak logical flow
 
-- **Accuracy** (% of exactly correct answers)
-- **Chain-of-thought analysis** (quality of step-by-step reasoning)
-- **Shortcoming classification** (e.g., arithmetic mistake, misinterpretation, lack of logic)
 
 Visual tools include:
 - Histograms of model accuracy
 - Boxplots of scoring across subjects
 - Heatmaps of shortcomings correlated with subject areas
 
+The repository is intended to support comparative analysis of how different LLMs perform on mathematical reasoning tasks.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Python 3.8+
-- Recommended: virtualenv or conda environment
+- Recommended: a virtual environment or conda environment
+- Valid API access for the corresponding models
 
 ### Installation
 
 ```bash
-git clone https://github.com/SHARP-Mitsuko/Evaluation-of-LLMs-for-mathematical-problem-solving.git
-cd Evaluation-of-LLMs-for-mathematical-problem-solving
-pip install -r requirements.txt
+git clone https://github.com/sydney-machine-learning/LLM-mathematics.git
+cd LLM-mathematics
 ```
 
 ## 🛠️ Usage Instructions
 
-1. Navigate to the code directory:
-   ```bash
-   cd code
-   ```
+The evaluation scripts are organised by model.
 
-2. Run the model evaluation and scoring:
-   ```bash
-   python evaluate_models.py
-   ```
+###GPT-4o
 
-3. Generate visual analysis:
    ```bash
-   python generate_figures.py
+   cd code/GPT-4o
+   python gpt_GSM8K.py
+   python gpt_math500.py
+   python gpt_mit.py
    ```
+###DeepSeek-V3
+    ```bash
+    cd code/DeepSeek-V3
+    python deepseek_gsm8k.py
+    python deepseek_math500.py
+    python deepseek_mit.py
+    ```
 
-4. To update or add new AI responses, edit the respective CSV or JSONL files under `datasets/`.
+###Gemini-2.0
+   ```bash
+   cd code/Gemini-2.0
+   python gemini_GSM8K.py
+   python gemini_math500.py
+   python gemini_mit.py
+   ```
+Please make sure the required packages are installed and the corresponding API keys are configured before running the scripts.
+
 
 ## 📈 Output and Result Analysis
 
-- **`result/accuracy_summary.csv`**: Contains model-wise accuracy on each dataset.
-- **`result/shortcomings_by_subject.csv`**: Shows error breakdown by type and topic.
-- **`figures/`**: Includes exported `.png` files for histograms, pie charts, heatmaps, etc.
+Examples include:
+- result/GPT-4o/
+- result/DeepSeek/
+- result/Gemini-2.0/
 
-Use these files for:
-- Paper figures or presentations
-- Comparative model assessment
-- Insights into LLM failure modes in math reasoning
+These files can be used for:
+- result checking
+- comparative model analysis
+- qualitative error analysis
+- research reporting and visualisation
 
 ## 🤝 Contributing
 
-We welcome contributions to improve model evaluation, expand datasets, or refine error taxonomies.
+Contributions are welcome to improve the evaluation pipeline, extend datasets, or refine the analysis framework.
 
 To contribute:
 1. Fork the repository.
 2. Create a new branch: `git checkout -b improve-eval`.
-3. Make changes and commit: `git commit -am 'Enhance evaluation process'`.
-4. Push to the branch: `git push origin improve-eval`.
+3. Make your changes and commit them: `git commit -am 'Enhance evaluation process'`.
+4. Push the branch: `git push origin improve-eval`.
 5. Submit a pull request.
+
+
+##📌 Notes
+- Scripts are currently organised by model rather than through a single unified entry script.
+- Output files may vary slightly across models and datasets.
