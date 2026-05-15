@@ -2,35 +2,39 @@ import json
 import re
 import time
 import random
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from pathlib import Path
 from collections import Counter
 
 
-# Configure Gemini API
-API_KEY = "api"  # Replace with your API key
-genai.configure(api_key=API_KEY)
+# Gemini API setting
+API_KEY = " "  # Set API key before running
+client = genai.Client(api_key=API_KEY)
+MODEL_NAME = "gemini-2.5-flash" 
 
-model = genai.GenerativeModel("gemini-2.0-flash")
 
 DATA_PATH = "datasets/gsm8k.jsonl"
 OUTPUT_DIR = Path("results/gemini_gsm8k")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-#Main evaluation setting
+# Main evaluation setting
 total = 5000
 RANDOM_SEED = 42
 
-#Consistency setting
+# Number of repeated runs per question
 K = 3
 
-#API robustness setting
+# Retry settings
 MAX_RETRIES = 3
-RETRY_WAIT_SECONDS = 2
+RETRY_WAIT_SECONDS = 8
 
+BASE_PROMPT = ("You are a math expert. Provide only the numeric answer with no explanation, no units, no commas, no percent signs, and no additional text."
+              "Question:{question}")
 
-# Load data
+# Data Loading
 def load_jsonl(file_path):
+    """ Load a JSONL file. """
     data = []
     with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -40,13 +44,15 @@ def load_jsonl(file_path):
     return data
 
 def save_jsonl(file_path, rows):
+    """ Save rows to a JSONL file. """
     with open(file_path, "w", encoding="utf-8") as f:
         for row in rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
             
-train_data = load_jsonl(DATA_PATH)  # Path to dataset
+train_data = load_jsonl(DATA_PATH)  # Load GSM8K dataset
 
 def sample_data(data, total, seed=42):
+    """ Select a fixed random subset for reproducibility. """
     """Fixed random subset for reproducibility"""
     if total >= len(data):
         return data, list(range(len(data)))
@@ -56,8 +62,9 @@ def sample_data(data, total, seed=42):
     sampled_data = [data[i] for i in indices]
     return sampled_data, indices
     
-# Clean numeric string
+# Answer parsing utilities
 def clean_number(num_str):
+    """ Normalise a numeric string for somparison. """
     if not num_str:
         return None
     try:
@@ -68,17 +75,24 @@ def clean_number(num_str):
         return str(num_str)
 
 def extract_numeric_answer(text):
+    """ Extract the last numeric value from an answer text. """
     if not text:
         return None
-    numbers = re.findall(r"-?\d+\.?\d*", str(text))
+    text = str(text).replace(",","")
+    numbers = re.findall(r"-?\d+\.?\d*", text)
     return clean_number(numbers[-1]) if numbers else None
 
-# Call model with retry logic
+# Gemini model call
 def solve_math_problem(question):
+    """ Generate a numeric answer using the selected Gemini model. """
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            response = model.generate_content(
-                f"{question}\nProvide only the final numeric answer with no explanation, no units, no commas, no percent signs, and no additional text."
+            prompt = BASE_PROMPT.format(question=question)
+            response = client.models.generate_content(
+                model=MODEL_NAME,
+                contents=prompt,
+                config=types.GenerateContentConfig(temperature=0.1
+                )
             )
                
             answer = response.text.strip()
@@ -106,30 +120,33 @@ def solve_math_problem(question):
                 }
 
 def check_answer(pred_answer, correct_answer):
+    """ Compare the parsed model answer with the numeric reference answer. """
     correct_number = extract_numeric_answer(correct_answer)
     return pred_answer == correct_number
 
 def majority_answer(answer_list):
+    """ Return the most frequent valid answer. """
     valid_answers = [a for a in answer_list if a is not None]
     if not valid_answers:
         return None
     return Counter(valid_answers).most_common(1)[0][0]
 
 def compute_consistency(answer_list):
+    """ Compute the proportion of answers matching the majority answer. """
     valid_answers = [a for a in answer_list if a is not None]
     if not valid_answers:
         return 0.0
     maj = majority_answer(valid_answers)
     return sum(1 for a in answer_list if a ==maj) / len(answer_list)
 
-#Fixed subset
+# Select fixed subset for reproducibility
 train_data, sampled_indices = sample_data(train_data, total, RANDOM_SEED)
 
 with open(OUTPUT_DIR / "gsm8k_subset_indices_seed42.json", "w", encoding="utf-8") as f:
     json.dump(sampled_indices, f, ensure_ascii=False, indent=2)
 
 
-# Main testing workflow
+# Main evaluation loop
 correct_count = 0
 successful_count = 0
 consistency_sum = 0.0
@@ -137,7 +154,7 @@ consistency_sum = 0.0
 results =[]
 failed_cases = []
 
-for i in range(total):
+for i in range(len(train_data)):
         question = train_data[i]["question"]
         correct_answer = train_data[i]["answer"]
 
@@ -195,12 +212,12 @@ for i in range(total):
             print(f"Processed {i + 1}/{total} questions...")
                 
 
-# Output results
+# Output results and summary
 accuracy = (correct_count / successful_count) * 100 if successful_count > 0 else 0
 average_consistency = consistency_sum / successful_count if successful_count >0 else 0
 
 summary = {
-    "model": "gemini-2.0-flash",
+    "model": "gemini-2.5-flash",
     "dataset": "GSM8K",
     "total_requested": total,
     "total_actual": len(train_data),
