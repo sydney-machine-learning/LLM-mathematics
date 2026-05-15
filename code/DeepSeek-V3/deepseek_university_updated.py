@@ -10,9 +10,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ======================
 # Basic configuration
-# ======================
+
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
@@ -34,10 +33,8 @@ TEMPERATURE = 0.0
 if not DEEPSEEK_API_KEY:
     raise ValueError("未检测到 DEEPSEEK_API_KEY 环境变量，请先在 .env 或系统环境变量中设置。")
 
-
-# ======================
 # Helpers
-# ======================
+
 def clean_nan(obj):
     if isinstance(obj, float) and math.isnan(obj):
         return None
@@ -100,9 +97,8 @@ def load_input_csv(path: str) -> pd.DataFrame:
     return df
 
 
-# ======================
 # Prompt builders
-# ======================
+
 def build_solution_prompt(full_question: str, subquestion: str) -> str:
     return f"""You are a mathematics and statistics master's student.
 
@@ -164,9 +160,8 @@ Do not include any extra explanation outside the JSON object.
 """
 
 
-# ======================
 # API calls
-# ======================
+
 def call_deepseek_api(messages: List[Dict[str, str]], qid: str, subid: str) -> str:
     last_error = None
 
@@ -260,9 +255,8 @@ def grade_with_deepseek(subquestion: str, steps: List[Dict[str, Any]], qid: str,
         }
 
 
-# ======================
+
 # Main pipeline
-# ======================
 def generate_solutions(df: pd.DataFrame) -> List[Dict[str, Any]]:
     solutions = []
 
@@ -364,10 +358,8 @@ def summarize_scores(graded_results: List[Dict[str, Any]]) -> pd.DataFrame:
     df_summary.to_csv(SUMMARY_CSV, index=False, encoding="utf-8-sig")
     return df_summary
 
-
-# ======================
 # Run
-# ======================
+
 def main():
     df = load_input_csv(INPUT_CSV)
 
