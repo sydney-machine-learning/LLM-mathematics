@@ -121,7 +121,7 @@ These files can be used for:
 - research reporting and visualisation
 
 
-## Contributing
+## 🤝 Contributing
 
 This repository is mainly intended to support the experiments and documentation for the associated paper. If you find issues or have suggestions, please contact the authors or open an issue in the repository.
 
