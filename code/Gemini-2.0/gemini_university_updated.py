@@ -12,17 +12,17 @@ from google.genai import types
 
 load_dotenv()
 
-# ======================
+
 # Basic configuration
-# ======================
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 DEEPSEEK_MODEL = "deepseek-chat"
 
-INPUT_CSV = "mit_ocw_subquestions.csv"
+INPUT_CSV = "university_level_subquestions.csv" # WIP: structured CSV converted from PDF files is not included yet.
 
 SOLUTIONS_JSON = "gemini_subquestion_solutions.json"
 GRADING_JSON = "gemini_grading_results.json"
@@ -52,9 +52,8 @@ gemini_client = genai.Client(
 )
 
 
-# ======================
 # Helpers
-# ======================
+
 def clean_nan(obj):
     if isinstance(obj, float) and math.isnan(obj):
         return None
@@ -117,9 +116,9 @@ def load_input_csv(path: str) -> pd.DataFrame:
     return df
 
 
-# ======================
+
 # Prompt builders
-# ======================
+
 def build_solution_prompt(full_question: str, subquestion: str) -> str:
     return f"""You are a mathematics and statistics master's student.
 
@@ -226,9 +225,9 @@ Do not include any extra explanation outside the JSON object.
 """
 
 
-# ======================
+
 # Gemini generation
-# ======================
+
 def call_gemini_api(prompt: str, qid: str, subid: str) -> List[Dict[str, Any]]:
     last_error = None
 
@@ -269,9 +268,8 @@ def call_gemini_api(prompt: str, qid: str, subid: str) -> List[Dict[str, Any]]:
     }]
 
 
-# ======================
 # DeepSeek grading / taxonomy
-# ======================
+
 def call_deepseek_json(prompt: str, qid: str, subid: str) -> Dict[str, Any]:
     last_error = None
 
@@ -359,9 +357,9 @@ def classify_error_taxonomy(subquestion: str, steps: List[Dict[str, Any]], gradi
         }
 
 
-# ======================
+
 # Main pipeline
-# ======================
+
 def generate_solutions(df: pd.DataFrame) -> List[Dict[str, Any]]:
     solutions = []
 
