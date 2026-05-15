@@ -11,9 +11,8 @@ import openai
 
 load_dotenv()
 
-# ======================
 # Basic configuration
-# ======================
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
@@ -34,9 +33,8 @@ SLEEP_BETWEEN_RETRIES = 2
 client = openai.Client(api_key=OPENAI_API_KEY)
 
 
-# ======================
 # Helpers
-# ======================
+
 def clean_nan(obj):
     if isinstance(obj, float) and math.isnan(obj):
         return None
@@ -94,9 +92,8 @@ def load_input_csv(path: str) -> pd.DataFrame:
     return df
 
 
-# ======================
 # Prompt builders
-# ======================
+
 def build_solution_prompt(full_question: str, subquestion: str) -> str:
     return f"""You are a mathematics and statistics master's student.
 
@@ -158,9 +155,7 @@ Do not include any extra explanation outside the JSON object.
 """
 
 
-# ======================
 # API calls
-# ======================
 def call_gpt4o(prompt: str, qid: str, subid: str, model: str = GPT_MODEL) -> List[Dict[str, Any]]:
     last_error = None
 
@@ -251,9 +246,9 @@ def grade_with_deepseek(subquestion: str, steps: List[Dict[str, Any]], qid: str,
     }
 
 
-# ======================
+
 # Main pipeline
-# ======================
+
 def generate_solutions(df: pd.DataFrame) -> List[Dict[str, Any]]:
     solutions = []
 
@@ -357,9 +352,9 @@ def summarize_scores(graded_results: List[Dict[str, Any]]) -> pd.DataFrame:
     return df_summary
 
 
-# ======================
+
 # Run
-# ======================
+
 def main():
     df = load_input_csv(INPUT_CSV)
 
