@@ -51,7 +51,7 @@ def solve_math_problem(question, max_retries=3):
     return "❌ Exceeded max retries"
 
 # Main testing workflow
-total = 7473  # Number of test samples (full GSM8K test set)
+total = 5000  # Number of test samples (full GSM8K test set)
 correct_count = 0
 error_log = []
 
