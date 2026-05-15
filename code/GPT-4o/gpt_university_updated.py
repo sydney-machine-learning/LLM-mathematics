@@ -20,10 +20,10 @@ DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 GPT_MODEL = "gpt-4o"
 DEEPSEEK_MODEL = "deepseek-chat"
 
-INPUT_CSV = "mit_ocw_subquestions.csv"
-SOLUTIONS_JSON = "gpt4o_subquestion_solutions.json"
+INPUT_CSV = "university_level_subquestions.csv" # WIP: structured CSV converted from PDF files is not included yet.
+SOLUTIONS_JSON = "gpt4o_university_solutions.json"
 GRADING_JSON = "deepseek_grading_results.json"
-WRONG_JSON = "wrong_subquestions.json"
+WRONG_JSON = "wrong_university.json"
 SUMMARY_CSV = "score_distribution_by_category.csv"
 
 MAX_RETRIES = 3
