@@ -21,9 +21,9 @@ GPT_MODEL = "gpt-4o"
 DEEPSEEK_MODEL = "deepseek-chat"
 
 INPUT_CSV = "university_level_subquestions.csv" # WIP: structured CSV converted from PDF files is not included yet.
-SOLUTIONS_JSON = "gpt4o_university_solutions.json"
+SOLUTIONS_JSON = "gpt4o_subquestions_solutions.json"
 GRADING_JSON = "deepseek_grading_results.json"
-WRONG_JSON = "wrong_university.json"
+WRONG_JSON = "wrong_subquestions.json"
 SUMMARY_CSV = "score_distribution_by_category.csv"
 
 MAX_RETRIES = 3
