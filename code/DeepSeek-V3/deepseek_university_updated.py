@@ -18,7 +18,7 @@ DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 DEEPSEEK_MODEL = "deepseek-chat"
 
-INPUT_CSV = "mit_ocw_subquestions.csv"
+INPUT_CSV = "university_level_subquestions.csv" # WIP: structured CSV converted from PDF files is not included yet.
 SOLUTIONS_JSON = "deepseek_v3_subquestion_solutions.json"
 GRADING_JSON = "deepseek_v3_self_grading_results.json"
 WRONG_JSON = "deepseek_v3_wrong_subquestions.json"
