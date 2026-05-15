@@ -90,7 +90,7 @@ def solve_math_problem(question):
        
             gpt_answer = response.choices[0].message.content.strip()
 
-        # 🔹 Keep only the numeric part of GPT-4o's response, remove units, commas, percent signs, and extra zeros
+        # Keep only the numeric part of GPT-4o's response, remove units, commas, percent signs, and extra zeros
             numbers = re.findall(r"-?\d+\.?\d*", gpt_answer)  # Extract numbers
             return {
                 "success": True,
