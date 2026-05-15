@@ -1,4 +1,3 @@
-
 # Evaluation of LLMs for Mathematical Problem Solving
 
 This repository presents a structured evaluation framework for assessing and comparing the mathematical problem-solving abilities of state-of-the-art Large Language Models (LLMs). The project focuses on model accuracy, reasoning quality, and common shortcomings across multiple datasets with different levels of mathematical difficulty.
@@ -19,7 +18,7 @@ LLMs-mathematics/
 │   ├── GPT-4o/
 │   └── Gemini-2.0/
 ├── datasets/         # Benchmark and university-level datasets
-│   ├── MIT_Dataset/
+│   ├── university_level/
 │   ├── gsm8k.jsonl
 │   └── math500.jsonl
 ├── result/           # Model outputs and evaluation results
@@ -34,7 +33,7 @@ LLMs-mathematics/
 This repository currently evaluates models on three datasets:
 - GSM8K: Grade-school math word problems, focusing on multi-step arithmetic and basic reasoning.
 - MATH500: A collection of problems from domains such as Algebra, Geometry, Number Theory, Precalculus, and Counting & Probability.
-- MIT Dataset: University-level mathematical problems stored under MIT_Dataset, covering advanced topics such as optimisation, statistics, and related mathematical subjects.
+- MIT Dataset: University-level mathematical problems download from MIT OpenCourse Ware, covering advanced topics such as optimisation, statistics, and related mathematical subjects.
 
 Each dataset includes:
 - Problem statements (with LaTeX or readable formatting)
@@ -85,25 +84,25 @@ The evaluation scripts are organised by model.
 
    ```bash
    cd code/GPT-4o
-   python gpt_GSM8K.py
-   python gpt_math500.py
-   python gpt_mit.py
+   python gpt_gsm8k_paper_version.py
+   python gpt_math500_paper_version.py
+   python gpt_university_paper_version.py
    ```
 ### DeepSeek-V3
  ```bash
    cd code/DeepSeek-V3
-   python deepseek_GSM8K.py
-   python deepseek_math500.py
-   python deepseek_mit.py
+   python deepseek_gsm8k_paper_version.py
+   python deepseek_math500_paper_version.py
+   python deepseek_university_paper_version.py
  ```
 
 ### Gemini-2.0
 
    ```bash
    cd code/Gemini-2.0
-   python gemini_GSM8K.py
-   python gemini_math500.py
-   python gemini_mit.py
+   python gemini_gsm8k_paper_version.py
+   python gemini_math500_paper_version.py
+   python gemini_university_paper_version.py
    ```
 Please make sure the required packages are installed and the corresponding API keys are configured before running the scripts.
 
@@ -121,16 +120,10 @@ These files can be used for:
 - qualitative error analysis
 - research reporting and visualisation
 
-## 🤝 Contributing
 
-Contributions are welcome to improve the evaluation pipeline, extend datasets, or refine the analysis framework.
+## Contributing
 
-To contribute:
-1. Fork the repository.
-2. Create a new branch: `git checkout -b improve-eval`.
-3. Make your changes and commit them: `git commit -am 'Enhance evaluation process'`.
-4. Push the branch: `git push origin improve-eval`.
-5. Submit a pull request.
+This repository is mainly intended to support the experiments and documentation for the associated paper. If you find issues or have suggestions, please contact the authors or open an issue in the repository.
 
 
 ## 📌 Notes
